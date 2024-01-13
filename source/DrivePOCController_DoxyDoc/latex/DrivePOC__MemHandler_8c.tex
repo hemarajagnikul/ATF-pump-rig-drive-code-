@@ -1,0 +1,262 @@
+\hypertarget{DrivePOC__MemHandler_8c}{}\doxysection{Drive\+POC\+\_\+\+Mem\+Handler.\+c File Reference}
+\label{DrivePOC__MemHandler_8c}\index{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}}
+
+
+\+: Functionalities pertaining to all Memory and storage operations of the Drive POC Controller implementation  
+
+
+{\ttfamily \#include \char`\"{}Drive\+\_\+\+Parameters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Controller\+\_\+\+NXP.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Mem\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Comm\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Fault\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+gpio.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__group2_ga60432b48e4ac0d4794de84fdcaab3b8d}{Drive\+POC\+\_\+\+MH\+\_\+\+Update\+Encoder\+Speed}} (float rpm\+\_\+recd)
+\begin{DoxyCompactList}\small\item\em Function definition to update Encoder speed into Memory handler. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group__group2_gae30c8a394f7bfc165b103fb11ecc69d2}{Drive\+POC\+\_\+\+MH\+\_\+\+Get\+Encoder\+Speed}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to return Encoder speed from Memory handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gad928b89acef519cdff35ab0fe73fedd3}{Store\+\_\+\+Temperature\+\_\+from\+\_\+\+PT\+\_\+1000}} (void)
+\begin{DoxyCompactList}\small\item\em stores the value of temperature measured using PT-\/1000 RTD in the memory \end{DoxyCompactList}\item 
+void {\bfseries Get\+\_\+\+V\+\_\+\+F\+\_\+\+Duty\+\_\+\+Cycle} (void)
+\begin{DoxyCompactList}\small\item\em Function Defintion to give duty cycle during ramp up. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group3_gab15a0f985a5819c69574ff86075cff89}{Get\+\_\+\+Duty\+\_\+\+Cycle}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition that gets the value of duty cycle from the duty cycle array. \end{DoxyCompactList}\item 
+void {\bfseries Get\+\_\+\+Deceleration\+\_\+\+Duty\+\_\+\+Cycle} (void)
+\begin{DoxyCompactList}\small\item\em Function Declaration for Deceleration case. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gaa49e4fe7dcfb8f2868b17b6903451408}{Drive\+POC\+\_\+\+MH\+\_\+\+Get\+VIvalues}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to allocate the variables to corresponding structures. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gaea167be1e1d6d337e3230372688ea9e7}{Drive\+POC\+\_\+\+MH\+\_\+\+Update\+VIvalues}} (void)
+\begin{DoxyCompactList}\small\item\em Function scales the value of Current using the Sensor scaling factors. \end{DoxyCompactList}\item 
+bool {\bfseries Get\+\_\+\+Start\+\_\+\+Up\+\_\+status} (void)
+\begin{DoxyCompactList}\small\item\em Function Declaration to get Start Up state. \end{DoxyCompactList}\item 
+bool {\bfseries Get\+\_\+\+Stop\+\_\+status} (void)
+\begin{DoxyCompactList}\small\item\em Function Declaration to get Stop done signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a581644872847bba530ea6aa8602d83fb}\label{DrivePOC__MemHandler_8c_a581644872847bba530ea6aa8602d83fb}} 
+float\+\_\+t {\bfseries g\+\_\+temperature}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_af4fbdd59ccb953f7d888001ca650adf9}\label{DrivePOC__MemHandler_8c_af4fbdd59ccb953f7d888001ca650adf9}} 
+int {\bfseries g\+\_\+phase\+\_\+shift\+\_\+A} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a7507e0179f0f219f95de6d018baeda3d}\label{DrivePOC__MemHandler_8c_a7507e0179f0f219f95de6d018baeda3d}} 
+int {\bfseries g\+\_\+phase\+\_\+shift\+\_\+B} =LUT\+\_\+\+TEMP\+\_\+\+VAL
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a20f9d819fa560620d33bbb57144f3cbd}\label{DrivePOC__MemHandler_8c_a20f9d819fa560620d33bbb57144f3cbd}} 
+int {\bfseries g\+\_\+phase\+\_\+shift\+\_\+C} =LUT\+\_\+\+TEMP\+\_\+\+VAL$\ast$2
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a369f614b37dc9f4e75bfdea2e757f867}\label{DrivePOC__MemHandler_8c_a369f614b37dc9f4e75bfdea2e757f867}} 
+int {\bfseries accu} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_ad43c3812e6d13e0518d9f8b8f463ffcf}\label{DrivePOC__MemHandler_8c_ad43c3812e6d13e0518d9f8b8f463ffcf}} 
+int {\bfseries count} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_ac8ba1e75ba3db43ecd59d96c3b5bfd23}\label{DrivePOC__MemHandler_8c_ac8ba1e75ba3db43ecd59d96c3b5bfd23}} 
+float\+\_\+t {\bfseries freq\+\_\+prev} =(float\+\_\+t)\mbox{\hyperlink{Drive__Parameters_8h_a3ff435ff8937e2045dcd00a26064594c}{MIN\+\_\+\+FREQ}}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_afafb9425fdc5c52056311d808a9fd20f}\label{DrivePOC__MemHandler_8c_afafb9425fdc5c52056311d808a9fd20f}} 
+float\+\_\+t {\bfseries freq}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a96bef4d34a2e1500f936c0d4781a09e2}\label{DrivePOC__MemHandler_8c_a96bef4d34a2e1500f936c0d4781a09e2}} 
+float\+\_\+t {\bfseries accel\+\_\+del\+\_\+freq} =(FREQ\+\_\+\+NEEDED-\/\mbox{\hyperlink{Drive__Parameters_8h_a3ff435ff8937e2045dcd00a26064594c}{MIN\+\_\+\+FREQ}})$\ast$SWITCHINGTIME/(RAMP\+\_\+\+TIME)
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a65478799b8e2871a0badfc7ffe7fb522}\label{DrivePOC__MemHandler_8c_a65478799b8e2871a0badfc7ffe7fb522}} 
+float\+\_\+t {\bfseries decel\+\_\+del\+\_\+freq} =(FREQ\+\_\+\+NEEDED-\/\mbox{\hyperlink{Drive__Parameters_8h_a3ff435ff8937e2045dcd00a26064594c}{MIN\+\_\+\+FREQ}})$\ast$SWITCHINGTIME/(DECELERATION\+\_\+\+TIME)
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a1ba4c6426d29538ceed6a0db9b4e1df6}\label{DrivePOC__MemHandler_8c_a1ba4c6426d29538ceed6a0db9b4e1df6}} 
+int {\bfseries rem} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_af05b5f5b35cc19c9cd850334205a3cb0}\label{DrivePOC__MemHandler_8c_af05b5f5b35cc19c9cd850334205a3cb0}} 
+int {\bfseries start\+\_\+check} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_aa97c1fb8614f6f3d70f5df1787cc06a5}\label{DrivePOC__MemHandler_8c_aa97c1fb8614f6f3d70f5df1787cc06a5}} 
+int {\bfseries end\+\_\+check} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a33a08979edf0223e7c94763babfd4db4}\label{DrivePOC__MemHandler_8c_a33a08979edf0223e7c94763babfd4db4}} 
+bool {\bfseries start\+\_\+ok} =false
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a88cc740ce9bb584f9a5d91cf5060cc54}\label{DrivePOC__MemHandler_8c_a88cc740ce9bb584f9a5d91cf5060cc54}} 
+bool {\bfseries stop\+\_\+ok} =false
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_af32a1112f723a35252798b521c3af37f}\label{DrivePOC__MemHandler_8c_af32a1112f723a35252798b521c3af37f}} 
+int {\bfseries bit\+\_\+max} =BIT\+\_\+\+MAX
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a48db549e971880a2be7939018ce3ab2b}\label{DrivePOC__MemHandler_8c_a48db549e971880a2be7939018ce3ab2b}} 
+float\+\_\+t {\bfseries f\+\_\+freq\+\_\+map} =((float\+\_\+t)BIT\+\_\+\+MAX/(float\+\_\+t)FREQ\+\_\+\+NEEDED)
+\item 
+float\+\_\+t $\ast$ \mbox{\hyperlink{DrivePOC__MemHandler_8c_ac0c2ef1a03226048711384bbaaa6c8eb}{duty\+\_\+cycle}} =duty\+\_\+cycle\+\_\+50000hz\+\_\+669hz
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ Duty Cycle LUTs for 50k\+Hz Switching Frequency}\par
+\begin{DoxyCompactItemize}
+\item 
+float\+\_\+t \mbox{\hyperlink{DrivePOC__MemHandler_8c_a5a7b07b03c166ee86c2886ec456c3095}{duty\+\_\+cycle\+\_\+50000hz\+\_\+800hz}} \mbox{[}SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+50\+KHZ $\ast$3\mbox{]}
+\item 
+float\+\_\+t \mbox{\hyperlink{DrivePOC__MemHandler_8c_ac7e88ca75040065d8518a6cac68a9a5e}{duty\+\_\+cycle\+\_\+50000hz\+\_\+669hz}} \mbox{[}SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+50\+KHZ $\ast$3\mbox{]}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Duty Cycle LUTs for 40k\+Hz Switching Frequency}\par
+\begin{DoxyCompactItemize}
+\item 
+float\+\_\+t \mbox{\hyperlink{DrivePOC__MemHandler_8c_a388fe63ae48696a28949850ad00052bf}{duty\+\_\+cycle\+\_\+40000hz\+\_\+800hz}} \mbox{[}SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+40\+KHZ $\ast$3\mbox{]}
+\item 
+float\+\_\+t \mbox{\hyperlink{DrivePOC__MemHandler_8c_a676a8cd29ecd64c6fc5c2c46b1f246b7}{duty\+\_\+cycle\+\_\+40000hz\+\_\+669hz}} \mbox{[}SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+40\+KHZ $\ast$3\mbox{]}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Duty Cycle LUTs for 30k\+Hz Switching Frequency}\par
+\begin{DoxyCompactItemize}
+\item 
+float\+\_\+t \mbox{\hyperlink{DrivePOC__MemHandler_8c_ab4a66f7e42a35320b356931da4dbc12c}{duty\+\_\+cycle\+\_\+30000hz\+\_\+800hz}} \mbox{[}SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+30\+KHZ $\ast$3\mbox{]}
+\item 
+float\+\_\+t \mbox{\hyperlink{DrivePOC__MemHandler_8c_a9fe708aef1af31551e162b00ba788f24}{duty\+\_\+cycle\+\_\+30000hz\+\_\+669hz}} \mbox{[}SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+30\+KHZ $\ast$3\mbox{]}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Duty Cycle LUTs for 20k\+Hz Switching Frequency}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_ade3d95068339b6a2e8c7f55c1050346e}\label{DrivePOC__MemHandler_8c_ade3d95068339b6a2e8c7f55c1050346e}} 
+float\+\_\+t {\bfseries duty\+\_\+cycle\+\_\+20000hz\+\_\+1000hz} \mbox{[}SINE\+\_\+\+LUT\+\_\+1000\+HZ\+\_\+20\+KHZ $\ast$3\mbox{]} =\{0.\+5F,0.\+6710101F,0.\+8213938F,0.\+9330127F,0.\+9924039F,0.\+9924039F,0.\+9330127F,0.\+8213938F,0.\+6710101F,0.\+5000000F,0.\+3289899F,0.\+1786062F,0.\+6698730F,0.\+7596123F,0.\+007596123F,0.\+06698730F,0.\+1786062F,0.\+3289899F\}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a75c62b4fed22fe7be5b6c4e1c9aeb044}\label{DrivePOC__MemHandler_8c_a75c62b4fed22fe7be5b6c4e1c9aeb044}} 
+float\+\_\+t {\bfseries duty\+\_\+cycle\+\_\+20000hz\+\_\+800hz} \mbox{[}SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+20\+KHZ $\ast$3\mbox{]} =\{0.\+500000F,0.\+629410F,0.\+750000F,0.\+853553F,0.\+933013F,0.\+982963F,1.\+000000F,0.\+982963F,0.\+933013F,0.\+853553F,0.\+750000F,0.\+629410F,0.\+500000F,0.\+370590F,0.\+250000F,0.\+146447F,0.\+066987F,0.\+017037F,0.\+000000F,0.\+017037F,0.\+066987F,0.\+146447F,0.\+250000F,0.\+370590F\}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a7dd5b37f67cff3467f0b65a6b11fad57}\label{DrivePOC__MemHandler_8c_a7dd5b37f67cff3467f0b65a6b11fad57}} 
+float\+\_\+t {\bfseries duty\+\_\+cycle\+\_\+20000hz\+\_\+669hz} \mbox{[}SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+20\+KHZ $\ast$3\mbox{]} =\{0.\+500000F,0.\+603956F,0.\+703368F,0.\+793893F,0.\+871572F,0.\+933013F,0.\+975528F,0.\+997261F,0.\+997261F,0.\+975528F,0.\+933013F,0.\+871572F,0.\+793893F,0.\+703368F,0.\+603956F,0.\+500000F,0.\+396044F,0.\+296632F,0.\+206107F,0.\+128428F,0.\+066987F,0.\+024472F,0.\+002739F,0.\+002739F,0.\+024472F,0.\+066987F,0.\+128428F,0.\+206107F,0.\+296632F,0.\+396044F\}
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Duty Cycle LUTs for 10k\+Hz Switching Frequency}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a965cf7fe030b4d2c973f4b5da4cd2247}\label{DrivePOC__MemHandler_8c_a965cf7fe030b4d2c973f4b5da4cd2247}} 
+float\+\_\+t {\bfseries duty\+\_\+cycle\+\_\+10000hz\+\_\+800hz} \mbox{[}SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+10\+KHZ $\ast$3\mbox{]} =\{0.\+500000F,0.\+750000F,0.\+933013F,1.\+000000F,0.\+933013F,0.\+750000F,0.\+500000F,0.\+250000F,0.\+066987F,0.\+000000F,0.\+066987F,0.\+250000F\}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a5a76c493eda1a660cf63600484a0f8c2}\label{DrivePOC__MemHandler_8c_a5a76c493eda1a660cf63600484a0f8c2}} 
+float\+\_\+t {\bfseries duty\+\_\+cycle\+\_\+10000hz\+\_\+669hz} \mbox{[}SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+10\+KHZ $\ast$3\mbox{]} =\{0.\+500000F,0.\+703368F,0.\+871572F,0.\+975528F,0.\+997261F,0.\+933013F,0.\+793893F,0.\+603956F,0.\+396044F,0.\+206107F,0.\+066987F,0.\+002739F,0.\+024472F,0.\+128428F,0.\+296632F\}
+\end{DoxyCompactItemize}
+\end{Indent}
+\textbf{ }\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a973ef8293be2680812436e6e2aca2d0b}\label{DrivePOC__MemHandler_8c_a973ef8293be2680812436e6e2aca2d0b}} 
+uint8\+\_\+t $\ast$ {\bfseries p\+\_\+ads\+\_\+rx}
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a011f547b8820bd8df96e737fcfb4408e}\label{DrivePOC__MemHandler_8c_a011f547b8820bd8df96e737fcfb4408e}} 
+int16\+\_\+t {\bfseries g\+\_\+\+Ia} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_ad232738434e1dd1dee046b9367ac6126}\label{DrivePOC__MemHandler_8c_ad232738434e1dd1dee046b9367ac6126}} 
+int16\+\_\+t {\bfseries g\+\_\+\+Ib} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_ad4a92fb9a627e70c617383d8361542dd}\label{DrivePOC__MemHandler_8c_ad4a92fb9a627e70c617383d8361542dd}} 
+int16\+\_\+t {\bfseries g\+\_\+\+Ic} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_aa0626a28b0f4ea0c78cf759454d3c9d3}\label{DrivePOC__MemHandler_8c_aa0626a28b0f4ea0c78cf759454d3c9d3}} 
+int16\+\_\+t {\bfseries g\+\_\+\+Idc} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a53427af130bc5ddd2a60597065242e31}\label{DrivePOC__MemHandler_8c_a53427af130bc5ddd2a60597065242e31}} 
+int16\+\_\+t {\bfseries g\+\_\+\+Va} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_af1bf56bd979e6672e4c6c4c90b281d0e}\label{DrivePOC__MemHandler_8c_af1bf56bd979e6672e4c6c4c90b281d0e}} 
+int16\+\_\+t {\bfseries g\+\_\+\+Vb} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_ae0073ce9c99319eb214ef9f22dc44b1d}\label{DrivePOC__MemHandler_8c_ae0073ce9c99319eb214ef9f22dc44b1d}} 
+int16\+\_\+t {\bfseries g\+\_\+\+Vc} =0
+\item 
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a71755c62d76f813505ec0aa7f1543172}\label{DrivePOC__MemHandler_8c_a71755c62d76f813505ec0aa7f1543172}} 
+int16\+\_\+t {\bfseries g\+\_\+\+Vdc} =0
+\end{DoxyCompactItemize}
+
+
+
+\doxysubsection{Detailed Description}
+\+: Functionalities pertaining to all Memory and storage operations of the Drive POC Controller implementation 
+
+\begin{DoxyAuthor}{Author}
+\+: Sreedhar, Sangeerth @company \+: Agnikul Cosmos Private Limited
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) Agnikul Cosmos Private Limited All rights reserved.\end{center} }
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_ac0c2ef1a03226048711384bbaaa6c8eb}\label{DrivePOC__MemHandler_8c_ac0c2ef1a03226048711384bbaaa6c8eb}} 
+\index{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle@{duty\_cycle}}
+\index{duty\_cycle@{duty\_cycle}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}}
+\doxysubsubsection{\texorpdfstring{duty\_cycle}{duty\_cycle}}
+{\footnotesize\ttfamily float\+\_\+t$\ast$ duty\+\_\+cycle =duty\+\_\+cycle\+\_\+50000hz\+\_\+669hz}
+
+\texorpdfstring{$<$}{<} User Input -\/ User has to change this value declared to this pointer corresponding to the Switching frequency and AC Sine Frequency he/she wish to operate \mbox{\Hypertarget{DrivePOC__MemHandler_8c_a9fe708aef1af31551e162b00ba788f24}\label{DrivePOC__MemHandler_8c_a9fe708aef1af31551e162b00ba788f24}} 
+\index{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_30000hz\_669hz@{duty\_cycle\_30000hz\_669hz}}
+\index{duty\_cycle\_30000hz\_669hz@{duty\_cycle\_30000hz\_669hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}}
+\doxysubsubsection{\texorpdfstring{duty\_cycle\_30000hz\_669hz}{duty\_cycle\_30000hz\_669hz}}
+{\footnotesize\ttfamily float\+\_\+t duty\+\_\+cycle\+\_\+30000hz\+\_\+669hz\mbox{[}SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+30\+KHZ $\ast$3\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{0.500000F,0.569587F,0.637819F,0.703368F,0.764960F,0.821394F,0.871572F,0.914519F,0.949397F,0.975528F,0.992404F,0.999695F,0.997261F,0.985148F,0.963592F,0.933013F,0.894005F,0.847329F,0.793893F,0.734736F,0.671010F,0.603956F,0.534878F,0.465122F,0.396044F,0.328990F,0.265264F,0.206107F,0.152671F,0.105995F,0.066987F,0.036408F,0.014852F,0.002739F,0.000305F,}
+\DoxyCodeLine{        0.007596F,0.024472F,0.050603F,0.085481F,0.128428F,0.178606F,0.235040F,0.296632F,0.362181F,0.430413F\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_ab4a66f7e42a35320b356931da4dbc12c}\label{DrivePOC__MemHandler_8c_ab4a66f7e42a35320b356931da4dbc12c}} 
+\index{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_30000hz\_800hz@{duty\_cycle\_30000hz\_800hz}}
+\index{duty\_cycle\_30000hz\_800hz@{duty\_cycle\_30000hz\_800hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}}
+\doxysubsubsection{\texorpdfstring{duty\_cycle\_30000hz\_800hz}{duty\_cycle\_30000hz\_800hz}}
+{\footnotesize\ttfamily float\+\_\+t duty\+\_\+cycle\+\_\+30000hz\+\_\+800hz\mbox{[}SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+30\+KHZ $\ast$3\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{0.500000F,0.580206F,0.658334F,0.732362F,0.800371F,0.860601F,0.911492F,0.951725F,0.980259F,0.996354F,0.999594F,0.989895F,0.967508F,0.933013F,0.887302F,0.831561F,0.767233F,0.695983F,0.619658F,0.540233F,0.459767F,0.380342F,0.304017F,0.232767F,0.168439F,0.112698F,0.066987F,0.032492F,0.010105F,0.000406F,0.003646F,0.019741F,0.048275F,0.088508F,0.139399F,}
+\DoxyCodeLine{        0.199629F,0.267638F,0.341666F,0.419794F\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a676a8cd29ecd64c6fc5c2c46b1f246b7}\label{DrivePOC__MemHandler_8c_a676a8cd29ecd64c6fc5c2c46b1f246b7}} 
+\index{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_40000hz\_669hz@{duty\_cycle\_40000hz\_669hz}}
+\index{duty\_cycle\_40000hz\_669hz@{duty\_cycle\_40000hz\_669hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}}
+\doxysubsubsection{\texorpdfstring{duty\_cycle\_40000hz\_669hz}{duty\_cycle\_40000hz\_669hz}}
+{\footnotesize\ttfamily float\+\_\+t duty\+\_\+cycle\+\_\+40000hz\+\_\+669hz\mbox{[}SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+40\+KHZ $\ast$3\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{0.500000F,0.552264F,0.603956F,0.654508F,0.703368F,0.750000F,0.793893F,0.834565F,0.871572F,0.904508F,0.933013F,0.956773F,0.975528F,0.989074F,0.997261F,1.000000F,0.997261F,0.989074F,0.975528F,0.956773F,0.933013F,0.904508F,0.871572F,0.834565F,0.793893F,0.750000F,0.703368F,0.654508F,0.603956F,0.552264F,0.500000F,0.447736F,0.396044F,0.345492F,0.296632F,}
+\DoxyCodeLine{        0.250000F,0.206107F,0.165435F,0.128428F,0.095492F,0.066987F,0.043227F,0.024472F,0.010926F,0.002739F,0.000000F,0.002739F,0.010926F,0.024472F,0.043227F,0.066987F,0.095492F,0.128428F,0.165435F,0.206107F,0.250000F,0.296632F,0.345492F,0.396044F,0.447736F\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a388fe63ae48696a28949850ad00052bf}\label{DrivePOC__MemHandler_8c_a388fe63ae48696a28949850ad00052bf}} 
+\index{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_40000hz\_800hz@{duty\_cycle\_40000hz\_800hz}}
+\index{duty\_cycle\_40000hz\_800hz@{duty\_cycle\_40000hz\_800hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}}
+\doxysubsubsection{\texorpdfstring{duty\_cycle\_40000hz\_800hz}{duty\_cycle\_40000hz\_800hz}}
+{\footnotesize\ttfamily float\+\_\+t duty\+\_\+cycle\+\_\+40000hz\+\_\+800hz\mbox{[}SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+40\+KHZ $\ast$3\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{0.500000F,0.561444F,0.621957F,0.680621F,0.736547F,0.788887F,0.836848F,0.879702F,0.916801F,0.947582F,0.971577F,0.988424F,0.997867F,0.999763F,0.994083F,0.980913F,0.960453F,0.933013F,0.899009F,0.858956F,0.813462F,0.763216F,0.708980F,0.651576F,0.591875F,0.530780F,0.469220F,0.408125F,0.348424F,0.291020F,0.236784F,0.186538F,0.141044F,0.100991F,0.066987F,}
+\DoxyCodeLine{        0.039547F,0.019087F,0.005917F,0.000237F,0.002133F,0.011576F,0.028423F,0.052418F,0.083199F,0.120298F,0.163152F,0.211113F,0.263453F,0.319379F,0.378043F,0.438556F\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_ac7e88ca75040065d8518a6cac68a9a5e}\label{DrivePOC__MemHandler_8c_ac7e88ca75040065d8518a6cac68a9a5e}} 
+\index{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_50000hz\_669hz@{duty\_cycle\_50000hz\_669hz}}
+\index{duty\_cycle\_50000hz\_669hz@{duty\_cycle\_50000hz\_669hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}}
+\doxysubsubsection{\texorpdfstring{duty\_cycle\_50000hz\_669hz}{duty\_cycle\_50000hz\_669hz}}
+{\footnotesize\ttfamily float\+\_\+t duty\+\_\+cycle\+\_\+50000hz\+\_\+669hz\mbox{[}SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+50\+KHZ $\ast$3\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{0.500000F,0.541839F,0.583384F,0.624345F,0.664433F,0.703368F,0.740877F,0.776696F,0.810574F,0.842274F,0.871572F,0.898265F,0.922164F,0.943102F,0.960932F,0.975528F,0.986789F,0.994636F,0.999013F,0.999890F,0.997261F,0.991144F,0.981581F,0.968641F,0.952414F,0.933013F,0.910575F,0.885257F,0.857236F,0.826710F,0.793893F,0.759014F,0.722318F,0.684062F,0.644516F,}
+\DoxyCodeLine{        0.603956F,0.562667F,0.520938F,0.479062F,0.437333F,0.396044F,0.355484F,0.315938F,0.277682F,0.240986F,0.206107F,0.173290F,0.142764F,0.114743F,0.089425F,0.066987F,0.047586F,0.031359F,0.018419F,0.008856F,0.002739F,0.000110F,0.000987F,0.005364F,0.013211F,0.024472F,0.039068F,0.056898F,0.077836F,0.101735F,0.128428F,0.157726F,0.189426F,0.223304F,0.259123F,0.296632F,0.335567F,0.375655F,0.416616F,0.458161F\}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{DrivePOC__MemHandler_8c_a5a7b07b03c166ee86c2886ec456c3095}\label{DrivePOC__MemHandler_8c_a5a7b07b03c166ee86c2886ec456c3095}} 
+\index{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_50000hz\_800hz@{duty\_cycle\_50000hz\_800hz}}
+\index{duty\_cycle\_50000hz\_800hz@{duty\_cycle\_50000hz\_800hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}}
+\doxysubsubsection{\texorpdfstring{duty\_cycle\_50000hz\_800hz}{duty\_cycle\_50000hz\_800hz}}
+{\footnotesize\ttfamily float\+\_\+t duty\+\_\+cycle\+\_\+50000hz\+\_\+800hz\mbox{[}SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+50\+KHZ $\ast$3\mbox{]}}
+
+{\bfseries Initial value\+:}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{=\{0.500000F,0.549784F,0.599073F,0.647378F,0.694217F,0.739127F,0.781660F,0.821394F,0.857933F,0.890916F,0.920013F,0.944936F,0.965437F,0.981312F,0.992404F,0.998602F,0.999845F,0.996120F,0.987464F,0.973964F,0.955753F,0.933013F,0.905969F,0.874891F,0.840086F,0.801902F,0.760718F,0.716942F,0.671010F,0.623379F,0.574521F,0.524923F,0.475077F,0.425479F,0.376621F,}
+\DoxyCodeLine{        0.328990F,0.283058F,0.239282F,0.198098F,0.159914F,0.125109F,0.094031F,0.066987F,0.044247F,0.026036F,0.012536F,0.003880F,0.000155F,0.001398F,0.007596F,0.018688F,0.034563F,0.055064F,0.079987F,0.109084F,0.142067F,0.178606F,0.218340F,0.260873F,0.305783F,0.352622F,0.400927F,0.450216F\}}
+
+\end{DoxyCode}

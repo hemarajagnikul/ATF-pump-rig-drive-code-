@@ -1,0 +1,78 @@
+\hypertarget{Drive__Parameters_8h_source}{}\doxysection{Drive\+\_\+\+Parameters.\+h}
+\mbox{\hyperlink{Drive__Parameters_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{15 \textcolor{preprocessor}{\#include "{}math.h"{}}}
+\DoxyCodeLine{16 \textcolor{preprocessor}{\#include "{}stdlib.h"{}}}
+\DoxyCodeLine{17 \textcolor{comment}{/*This file will contain the motor and drive parameters*/}}
+\DoxyCodeLine{18 }
+\DoxyCodeLine{19 }
+\DoxyCodeLine{22 \textcolor{preprocessor}{\#define PI 3.14f}}
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#define LM 0.001296f            }}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#define RS 0.0054f              }}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#define RR 0.0043f              }}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#define LLS 0.000021f           }}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#define LLR 0.000011f           }}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#define J 0.009370048f          }}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#define B 0.0007f               }}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#define POLE 2                  }}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#define POLE\_PAIR 1             }}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#define F\_NOM   669             }}
+\DoxyCodeLine{33 \textcolor{preprocessor}{\#define V\_NOM\_LL\_RMS    345     }}
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define I\_NOM\_LL\_RMS    153     }}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define V\_NOM\_PHASE\_RMS 199     }}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define I\_NOM\_PHASE\_RMS 153     }}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define RATED\_PF    0.87f       }}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define MOTOR\_EFFICIENCY 0.934f }}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define MIN\_FREQ 1          }}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define MAX\_FREQ 669            }}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define LR 0.001307f            }}
+\DoxyCodeLine{42 \textcolor{preprocessor}{\#define FC 16                   }}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define WC 628.32f              }}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define VOUT\_INVERTER\_MAX 9000  }}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define VIN\_INVERTER\_MAX 9000   }}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define VOUT\_INVERTER\_MIN 20    }}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define VIN\_INVERTER\_MIN 20     }}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define IOUT\_INVERTER\_MAX 10000 }}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define IIN\_INVERTER\_MAX  10000 }}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define IOUT\_INVERTER\_MIN 2     }}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define IIN\_INVERTER\_MIN  2     }}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define MOTOR\_MAX\_TEMPERATURE 120}}
+\DoxyCodeLine{54 }
+\DoxyCodeLine{55 }
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define VDC\_NOM 560         }}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define VDC\_MIN 500         }}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define VDC\_MAX 1000        }}
+\DoxyCodeLine{62 }
+\DoxyCodeLine{65 \textcolor{preprocessor}{\#define TVECT 0.00001f}}
+\DoxyCodeLine{66 \textcolor{preprocessor}{\#define TSC 0.0004f}}
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define TS 0.00001f}}
+\DoxyCodeLine{72 }
+\DoxyCodeLine{73 }
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define CURRENT\_SENSOR\_SCALE\_FACTOR\_PHASE\_A 1.0F}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define CURRENT\_SENSOR\_SCALE\_FACTOR\_PHASE\_B 1.0F}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define CURRENT\_SENSOR\_SCALE\_FACTOR\_PHASE\_C 1.0F}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define CURRENT\_SENSOR\_SCALE\_FACTOR\_DC 1.0F}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define VOLTAGE\_SENSOR\_SCALE\_FACTOR\_PHASE\_A 140.0F}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define VOLTAGE\_SENSOR\_SCALE\_FACTOR\_PHASE\_B 140.0F}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define VOLTAGE\_SENSOR\_SCALE\_FACTOR\_PHASE\_C 140.0F}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define VOLTAGE\_SENSOR\_SCALE\_FACTOR\_DC 140.0F}}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{87 }
+\DoxyCodeLine{88 }
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define LUT\_TEMP\_VAL SINE\_LUT\_669HZ\_50KHZ}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define SWITCHING\_TIME T\_SWITCHING\_50KHZ}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define SWITCHING\_FREQUENCY 50175}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define LTC\_FACTOR LTC\_SWITCHING\_FREQ\_50KHZ}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define MODULATION\_INDEX 1.0F}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define FREQ\_NEEDED (int)669}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define RAMP\_TIME 2U}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define BIT\_MAX 4096}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define SWITCHINGTIME (float\_t) 1/SWITCHING\_FREQUENCY}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define FREQ\_MAP (float\_t)((float\_t)BIT\_MAX/(float\_t)MAX\_FREQ)}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define MAX\_NUM\_OF\_LUT\_SIZE SWITCHING\_FREQUENCY/MAX\_FREQ}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define START\_UP\_OK (int)(RAMP\_TIME*SWITCHING\_FREQUENCY)}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define DECELERATION\_TIME 3}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define STOP\_OK (int)(DECELERATION\_TIME*SWITCHING\_FREQUENCY)}}
+
+\end{DoxyCode}

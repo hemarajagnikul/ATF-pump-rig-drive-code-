@@ -1,0 +1,408 @@
+\hypertarget{Drive__Parameters_8h}{}\doxysection{Drive\+\_\+\+Parameters.\+h File Reference}
+\label{Drive__Parameters_8h}\index{Drive\_Parameters.h@{Drive\_Parameters.h}}
+
+
+\+: File containing the motor and drive constant parameters  
+
+
+{\ttfamily \#include \char`\"{}math.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdlib.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{Indent}\textbf{ MOTOR PARAMETERS}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a598a3330b3c21701223ee0ca14316eca}\label{Drive__Parameters_8h_a598a3330b3c21701223ee0ca14316eca}} 
+\#define {\bfseries PI}~3.\+14f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a4b3e3200940ab78533ae2126430fe840}{LM}}~0.\+001296f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_af8903d8eea3868940c60af887473b152}{RS}}~0.\+0054f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a63979cf6054f403eab1d354e6dcc4ce9}{RR}}~0.\+0043f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a336235de650bb1d00e4e055f7ff75c4c}{LLS}}~0.\+000021f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a8647ad154bf86a39e34c36ff4d36b367}{LLR}}~0.\+000011f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_ad59246fadffe0205c1ecfcd147c407f6}{J}}~0.\+009370048f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a111da81ae5883147168bbb8366377b10}{B}}~0.\+0007f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a5fe01600044af03db3baab922ab92795}{POLE}}~2
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a2cf650b11e8383f85342c7da87bf38c7}{POLE\+\_\+\+PAIR}}~1
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a2154e90c2018ddc2c5cb7569b61ad587}{F\+\_\+\+NOM}}~669
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_ad15c510ae72de9088bdaa13861cec3c2}{V\+\_\+\+NOM\+\_\+\+LL\+\_\+\+RMS}}~345
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a4a6eb35e7299b189e0a2d1896bdb7be8}{I\+\_\+\+NOM\+\_\+\+LL\+\_\+\+RMS}}~153
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_ae2bb810a09152a24c8fe9f2f95a6674f}{V\+\_\+\+NOM\+\_\+\+PHASE\+\_\+\+RMS}}~199
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a418ea937a27778dbf699f992a96b46fe}{I\+\_\+\+NOM\+\_\+\+PHASE\+\_\+\+RMS}}~153
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a9049cfe80f42f367d7d36cb91f448c7c}{RATED\+\_\+\+PF}}~0.\+87f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_ab9cedf3a90dfe7b213acf25fc1a22827}{MOTOR\+\_\+\+EFFICIENCY}}~0.\+934f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a3ff435ff8937e2045dcd00a26064594c}{MIN\+\_\+\+FREQ}}~1
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a9f1abe07c4d92ce70925be770153bb5d}{MAX\+\_\+\+FREQ}}~669
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a3572ba4e929ec4380493fcfbbde0efa2}{LR}}~0.\+001307f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a46116ed56661a1c5bffe91c80ceae694}{FC}}~16
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a3144fbd6db6d6cce459528ad51dace35}{WC}}~628.\+32f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a003c6e661eb747d7ad593e6be26417c4}{VOUT\+\_\+\+INVERTER\+\_\+\+MAX}}~9000
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_ada878e4036a14afd84f0da13f29077ec}{VIN\+\_\+\+INVERTER\+\_\+\+MAX}}~9000
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_afac33d25d4d7814dd3ed079099c8fd59}{VOUT\+\_\+\+INVERTER\+\_\+\+MIN}}~20
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_aed100a5b53c4e6da424e3e483c27f45f}{VIN\+\_\+\+INVERTER\+\_\+\+MIN}}~20
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_adb23370cc0f5d95d1581207be4d4e84e}{IOUT\+\_\+\+INVERTER\+\_\+\+MAX}}~10000
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_aea949972befe4b2be5973a82512d48ea}{IIN\+\_\+\+INVERTER\+\_\+\+MAX}}~10000
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a8b94ba310541e8e017bb3c99e39e4ad9}{IOUT\+\_\+\+INVERTER\+\_\+\+MIN}}~2
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a0a1d22f8bd5cfbff75122ebd5c4aa61b}{IIN\+\_\+\+INVERTER\+\_\+\+MIN}}~2
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a95e95ec1c650d122db16f2f7927f5479}{MOTOR\+\_\+\+MAX\+\_\+\+TEMPERATURE}}~120
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ BATTERY SIDE PARAMETERS}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a74fb5a72ba96613e63066be498b3e2ef}{VDC\+\_\+\+NOM}}~560
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_afdcde4446821030424d72190ebc83b6a}{VDC\+\_\+\+MIN}}~500
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a32c5c6b3fa70ddffa6e41aca89f5ce95}{VDC\+\_\+\+MAX}}~1000
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ SAMPLING RATES}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a1833bb496c5afb3c7f2c24c624645ff4}{TVECT}}~0.\+00001f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_a42ba4ed22c45ffcf7f1c3ede1c761894}{TSC}}~0.\+0004f
+\item 
+\#define \mbox{\hyperlink{Drive__Parameters_8h_aaade3232ef08cf18b4f3a20a0a2c6fb6}{TS}}~0.\+00001f
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ SENSOR PARAMETERS}\par
+{\em \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000001}{Todo}}]\+:-\/Ts value has to be updated after identifying latencies. \end{DoxyRefDesc}
+
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000002}{Todo}}]\+:-\/The current sensor scale factor values have to be updated. \end{DoxyRefDesc}
+}\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a7d4ef88d64ce6977e4276ea0997dc7c5}\label{Drive__Parameters_8h_a7d4ef88d64ce6977e4276ea0997dc7c5}} 
+\#define {\bfseries CURRENT\+\_\+\+SENSOR\+\_\+\+SCALE\+\_\+\+FACTOR\+\_\+\+PHASE\+\_\+A}~1.\+0F
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_ad4541e2fd64208bb0ead8a5f4fc5f57e}\label{Drive__Parameters_8h_ad4541e2fd64208bb0ead8a5f4fc5f57e}} 
+\#define {\bfseries CURRENT\+\_\+\+SENSOR\+\_\+\+SCALE\+\_\+\+FACTOR\+\_\+\+PHASE\+\_\+B}~1.\+0F
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a9e8a635056a8af5818b7f0c0fe096258}\label{Drive__Parameters_8h_a9e8a635056a8af5818b7f0c0fe096258}} 
+\#define {\bfseries CURRENT\+\_\+\+SENSOR\+\_\+\+SCALE\+\_\+\+FACTOR\+\_\+\+PHASE\+\_\+C}~1.\+0F
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a8855047481ca406dcba8347e0f7b31a5}\label{Drive__Parameters_8h_a8855047481ca406dcba8347e0f7b31a5}} 
+\#define {\bfseries CURRENT\+\_\+\+SENSOR\+\_\+\+SCALE\+\_\+\+FACTOR\+\_\+\+DC}~1.\+0F
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a6c468a017e360c8809586de3fa67593d}\label{Drive__Parameters_8h_a6c468a017e360c8809586de3fa67593d}} 
+\#define {\bfseries VOLTAGE\+\_\+\+SENSOR\+\_\+\+SCALE\+\_\+\+FACTOR\+\_\+\+PHASE\+\_\+A}~140.\+0F
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_aebe704429f377e3142ab411ae3172493}\label{Drive__Parameters_8h_aebe704429f377e3142ab411ae3172493}} 
+\#define {\bfseries VOLTAGE\+\_\+\+SENSOR\+\_\+\+SCALE\+\_\+\+FACTOR\+\_\+\+PHASE\+\_\+B}~140.\+0F
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a81a668a08d9c759848276fd349906907}\label{Drive__Parameters_8h_a81a668a08d9c759848276fd349906907}} 
+\#define {\bfseries VOLTAGE\+\_\+\+SENSOR\+\_\+\+SCALE\+\_\+\+FACTOR\+\_\+\+PHASE\+\_\+C}~140.\+0F
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a6a841017883277bf50081ece8b9faea4}\label{Drive__Parameters_8h_a6a841017883277bf50081ece8b9faea4}} 
+\#define {\bfseries VOLTAGE\+\_\+\+SENSOR\+\_\+\+SCALE\+\_\+\+FACTOR\+\_\+\+DC}~140.\+0F
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ User Inputs}\par
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_adf09900130b48504c427a468a6d0b5fd}\label{Drive__Parameters_8h_adf09900130b48504c427a468a6d0b5fd}} 
+\#define {\bfseries LUT\+\_\+\+TEMP\+\_\+\+VAL}~SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+50\+KHZ
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a3fbef5256ea7bf3c6d78d0b7a07843fb}\label{Drive__Parameters_8h_a3fbef5256ea7bf3c6d78d0b7a07843fb}} 
+\#define {\bfseries SWITCHING\+\_\+\+TIME}~T\+\_\+\+SWITCHING\+\_\+50\+KHZ
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_ae6716088d9ed2ed4966b1a698d994812}\label{Drive__Parameters_8h_ae6716088d9ed2ed4966b1a698d994812}} 
+\#define {\bfseries SWITCHING\+\_\+\+FREQUENCY}~50175
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a0b8a8e1f1536f7a98af2597ddcd49613}\label{Drive__Parameters_8h_a0b8a8e1f1536f7a98af2597ddcd49613}} 
+\#define {\bfseries LTC\+\_\+\+FACTOR}~LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+50\+KHZ
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a45655d7554a221d4d0c670d0f66b4118}\label{Drive__Parameters_8h_a45655d7554a221d4d0c670d0f66b4118}} 
+\#define {\bfseries MODULATION\+\_\+\+INDEX}~1.\+0F
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_aa3671cc17b0e2e80dec070257b86682b}\label{Drive__Parameters_8h_aa3671cc17b0e2e80dec070257b86682b}} 
+\#define {\bfseries FREQ\+\_\+\+NEEDED}~(int)669
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a3030e1144ac91d107411b6cfcc3825d5}\label{Drive__Parameters_8h_a3030e1144ac91d107411b6cfcc3825d5}} 
+\#define {\bfseries RAMP\+\_\+\+TIME}~2U
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_ad0de58215f6d6b460271e0a47ee375a8}\label{Drive__Parameters_8h_ad0de58215f6d6b460271e0a47ee375a8}} 
+\#define {\bfseries BIT\+\_\+\+MAX}~4096
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a7dc20d1164a2d4f3039edf471c71f5c2}\label{Drive__Parameters_8h_a7dc20d1164a2d4f3039edf471c71f5c2}} 
+\#define {\bfseries SWITCHINGTIME}~(float\+\_\+t) 1/SWITCHING\+\_\+\+FREQUENCY
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_aea885d1e27d0ae9d84e550cfd880aba3}\label{Drive__Parameters_8h_aea885d1e27d0ae9d84e550cfd880aba3}} 
+\#define {\bfseries FREQ\+\_\+\+MAP}~(float\+\_\+t)((float\+\_\+t)BIT\+\_\+\+MAX/(float\+\_\+t)\mbox{\hyperlink{Drive__Parameters_8h_a9f1abe07c4d92ce70925be770153bb5d}{MAX\+\_\+\+FREQ}})
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_aaefe39d5912f7722dcfab168598b381c}\label{Drive__Parameters_8h_aaefe39d5912f7722dcfab168598b381c}} 
+\#define {\bfseries MAX\+\_\+\+NUM\+\_\+\+OF\+\_\+\+LUT\+\_\+\+SIZE}~SWITCHING\+\_\+\+FREQUENCY/\mbox{\hyperlink{Drive__Parameters_8h_a9f1abe07c4d92ce70925be770153bb5d}{MAX\+\_\+\+FREQ}}
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_abfa60cdc1d4d58217248d45a8dbad7bf}\label{Drive__Parameters_8h_abfa60cdc1d4d58217248d45a8dbad7bf}} 
+\#define {\bfseries START\+\_\+\+UP\+\_\+\+OK}~(int)(RAMP\+\_\+\+TIME$\ast$SWITCHING\+\_\+\+FREQUENCY)
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_ae6025a687ef9d830ea7507893a7272ff}\label{Drive__Parameters_8h_ae6025a687ef9d830ea7507893a7272ff}} 
+\#define {\bfseries DECELERATION\+\_\+\+TIME}~3
+\item 
+\mbox{\Hypertarget{Drive__Parameters_8h_a50fda9bd01be10f67bc6ac30747d1e91}\label{Drive__Parameters_8h_a50fda9bd01be10f67bc6ac30747d1e91}} 
+\#define {\bfseries STOP\+\_\+\+OK}~(int)(DECELERATION\+\_\+\+TIME$\ast$SWITCHING\+\_\+\+FREQUENCY)
+\end{DoxyCompactItemize}
+\end{Indent}
+
+
+\doxysubsection{Detailed Description}
+\+: File containing the motor and drive constant parameters 
+
+\begin{DoxyAuthor}{Author}
+\+: Sreedhar, Sangeerth @company \+: Agnikul Cosmos Private Limited
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) Agnikul Cosmos Private Limited All rights reserved.\end{center} }
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{Drive__Parameters_8h_a111da81ae5883147168bbb8366377b10}\label{Drive__Parameters_8h_a111da81ae5883147168bbb8366377b10}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!B@{B}}
+\index{B@{B}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{B}{B}}
+{\footnotesize\ttfamily \#define B~0.\+0007f}
+
+Friction in Nms \mbox{\Hypertarget{Drive__Parameters_8h_a2154e90c2018ddc2c5cb7569b61ad587}\label{Drive__Parameters_8h_a2154e90c2018ddc2c5cb7569b61ad587}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!F\_NOM@{F\_NOM}}
+\index{F\_NOM@{F\_NOM}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{F\_NOM}{F\_NOM}}
+{\footnotesize\ttfamily \#define F\+\_\+\+NOM~669}
+
+Nominal frequency in Hz \mbox{\Hypertarget{Drive__Parameters_8h_a46116ed56661a1c5bffe91c80ceae694}\label{Drive__Parameters_8h_a46116ed56661a1c5bffe91c80ceae694}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!FC@{FC}}
+\index{FC@{FC}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{FC}{FC}}
+{\footnotesize\ttfamily \#define FC~16}
+
+Flux filter cut off frequency \mbox{\Hypertarget{Drive__Parameters_8h_a4a6eb35e7299b189e0a2d1896bdb7be8}\label{Drive__Parameters_8h_a4a6eb35e7299b189e0a2d1896bdb7be8}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!I\_NOM\_LL\_RMS@{I\_NOM\_LL\_RMS}}
+\index{I\_NOM\_LL\_RMS@{I\_NOM\_LL\_RMS}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{I\_NOM\_LL\_RMS}{I\_NOM\_LL\_RMS}}
+{\footnotesize\ttfamily \#define I\+\_\+\+NOM\+\_\+\+LL\+\_\+\+RMS~153}
+
+Rated line to line current in ampere \mbox{\Hypertarget{Drive__Parameters_8h_a418ea937a27778dbf699f992a96b46fe}\label{Drive__Parameters_8h_a418ea937a27778dbf699f992a96b46fe}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!I\_NOM\_PHASE\_RMS@{I\_NOM\_PHASE\_RMS}}
+\index{I\_NOM\_PHASE\_RMS@{I\_NOM\_PHASE\_RMS}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{I\_NOM\_PHASE\_RMS}{I\_NOM\_PHASE\_RMS}}
+{\footnotesize\ttfamily \#define I\+\_\+\+NOM\+\_\+\+PHASE\+\_\+\+RMS~153}
+
+Rated phase current in ampere \mbox{\Hypertarget{Drive__Parameters_8h_aea949972befe4b2be5973a82512d48ea}\label{Drive__Parameters_8h_aea949972befe4b2be5973a82512d48ea}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!IIN\_INVERTER\_MAX@{IIN\_INVERTER\_MAX}}
+\index{IIN\_INVERTER\_MAX@{IIN\_INVERTER\_MAX}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{IIN\_INVERTER\_MAX}{IIN\_INVERTER\_MAX}}
+{\footnotesize\ttfamily \#define IIN\+\_\+\+INVERTER\+\_\+\+MAX~10000}
+
+Inverter Input Current Maximum value \mbox{\Hypertarget{Drive__Parameters_8h_a0a1d22f8bd5cfbff75122ebd5c4aa61b}\label{Drive__Parameters_8h_a0a1d22f8bd5cfbff75122ebd5c4aa61b}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!IIN\_INVERTER\_MIN@{IIN\_INVERTER\_MIN}}
+\index{IIN\_INVERTER\_MIN@{IIN\_INVERTER\_MIN}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{IIN\_INVERTER\_MIN}{IIN\_INVERTER\_MIN}}
+{\footnotesize\ttfamily \#define IIN\+\_\+\+INVERTER\+\_\+\+MIN~2}
+
+Inverter Input Current Minimum value \mbox{\Hypertarget{Drive__Parameters_8h_adb23370cc0f5d95d1581207be4d4e84e}\label{Drive__Parameters_8h_adb23370cc0f5d95d1581207be4d4e84e}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!IOUT\_INVERTER\_MAX@{IOUT\_INVERTER\_MAX}}
+\index{IOUT\_INVERTER\_MAX@{IOUT\_INVERTER\_MAX}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{IOUT\_INVERTER\_MAX}{IOUT\_INVERTER\_MAX}}
+{\footnotesize\ttfamily \#define IOUT\+\_\+\+INVERTER\+\_\+\+MAX~10000}
+
+Inverter Output Current Maximum value \mbox{\Hypertarget{Drive__Parameters_8h_a8b94ba310541e8e017bb3c99e39e4ad9}\label{Drive__Parameters_8h_a8b94ba310541e8e017bb3c99e39e4ad9}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!IOUT\_INVERTER\_MIN@{IOUT\_INVERTER\_MIN}}
+\index{IOUT\_INVERTER\_MIN@{IOUT\_INVERTER\_MIN}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{IOUT\_INVERTER\_MIN}{IOUT\_INVERTER\_MIN}}
+{\footnotesize\ttfamily \#define IOUT\+\_\+\+INVERTER\+\_\+\+MIN~2}
+
+Inverter Output Current Minimum value \mbox{\Hypertarget{Drive__Parameters_8h_ad59246fadffe0205c1ecfcd147c407f6}\label{Drive__Parameters_8h_ad59246fadffe0205c1ecfcd147c407f6}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!J@{J}}
+\index{J@{J}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{J}{J}}
+{\footnotesize\ttfamily \#define J~0.\+009370048f}
+
+Moment of Inertia in kg$\ast$m$\ast$m \mbox{\Hypertarget{Drive__Parameters_8h_a8647ad154bf86a39e34c36ff4d36b367}\label{Drive__Parameters_8h_a8647ad154bf86a39e34c36ff4d36b367}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!LLR@{LLR}}
+\index{LLR@{LLR}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{LLR}{LLR}}
+{\footnotesize\ttfamily \#define LLR~0.\+000011f}
+
+Rotor Leakage Inductance in henry \mbox{\Hypertarget{Drive__Parameters_8h_a336235de650bb1d00e4e055f7ff75c4c}\label{Drive__Parameters_8h_a336235de650bb1d00e4e055f7ff75c4c}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!LLS@{LLS}}
+\index{LLS@{LLS}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{LLS}{LLS}}
+{\footnotesize\ttfamily \#define LLS~0.\+000021f}
+
+Stator Leakage Inductance in henry \mbox{\Hypertarget{Drive__Parameters_8h_a4b3e3200940ab78533ae2126430fe840}\label{Drive__Parameters_8h_a4b3e3200940ab78533ae2126430fe840}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!LM@{LM}}
+\index{LM@{LM}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{LM}{LM}}
+{\footnotesize\ttfamily \#define LM~0.\+001296f}
+
+Magnetizing Inductance in henry \mbox{\Hypertarget{Drive__Parameters_8h_a3572ba4e929ec4380493fcfbbde0efa2}\label{Drive__Parameters_8h_a3572ba4e929ec4380493fcfbbde0efa2}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!LR@{LR}}
+\index{LR@{LR}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{LR}{LR}}
+{\footnotesize\ttfamily \#define LR~0.\+001307f}
+
+Rotor inductance \mbox{\Hypertarget{Drive__Parameters_8h_a9f1abe07c4d92ce70925be770153bb5d}\label{Drive__Parameters_8h_a9f1abe07c4d92ce70925be770153bb5d}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!MAX\_FREQ@{MAX\_FREQ}}
+\index{MAX\_FREQ@{MAX\_FREQ}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{MAX\_FREQ}{MAX\_FREQ}}
+{\footnotesize\ttfamily \#define MAX\+\_\+\+FREQ~669}
+
+Maximum frequency in Hz \mbox{\Hypertarget{Drive__Parameters_8h_a3ff435ff8937e2045dcd00a26064594c}\label{Drive__Parameters_8h_a3ff435ff8937e2045dcd00a26064594c}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!MIN\_FREQ@{MIN\_FREQ}}
+\index{MIN\_FREQ@{MIN\_FREQ}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{MIN\_FREQ}{MIN\_FREQ}}
+{\footnotesize\ttfamily \#define MIN\+\_\+\+FREQ~1}
+
+Minimum frequency in Hz \mbox{\Hypertarget{Drive__Parameters_8h_ab9cedf3a90dfe7b213acf25fc1a22827}\label{Drive__Parameters_8h_ab9cedf3a90dfe7b213acf25fc1a22827}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!MOTOR\_EFFICIENCY@{MOTOR\_EFFICIENCY}}
+\index{MOTOR\_EFFICIENCY@{MOTOR\_EFFICIENCY}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_EFFICIENCY}{MOTOR\_EFFICIENCY}}
+{\footnotesize\ttfamily \#define MOTOR\+\_\+\+EFFICIENCY~0.\+934f}
+
+efficiency \mbox{\Hypertarget{Drive__Parameters_8h_a95e95ec1c650d122db16f2f7927f5479}\label{Drive__Parameters_8h_a95e95ec1c650d122db16f2f7927f5479}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!MOTOR\_MAX\_TEMPERATURE@{MOTOR\_MAX\_TEMPERATURE}}
+\index{MOTOR\_MAX\_TEMPERATURE@{MOTOR\_MAX\_TEMPERATURE}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{MOTOR\_MAX\_TEMPERATURE}{MOTOR\_MAX\_TEMPERATURE}}
+{\footnotesize\ttfamily \#define MOTOR\+\_\+\+MAX\+\_\+\+TEMPERATURE~120}
+
+Allowable maximum temperature for the Motor Windings in degree Celsius \mbox{\Hypertarget{Drive__Parameters_8h_a5fe01600044af03db3baab922ab92795}\label{Drive__Parameters_8h_a5fe01600044af03db3baab922ab92795}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!POLE@{POLE}}
+\index{POLE@{POLE}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{POLE}{POLE}}
+{\footnotesize\ttfamily \#define POLE~2}
+
+Number of poles \mbox{\Hypertarget{Drive__Parameters_8h_a2cf650b11e8383f85342c7da87bf38c7}\label{Drive__Parameters_8h_a2cf650b11e8383f85342c7da87bf38c7}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!POLE\_PAIR@{POLE\_PAIR}}
+\index{POLE\_PAIR@{POLE\_PAIR}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{POLE\_PAIR}{POLE\_PAIR}}
+{\footnotesize\ttfamily \#define POLE\+\_\+\+PAIR~1}
+
+Number of pole pairs \mbox{\Hypertarget{Drive__Parameters_8h_a9049cfe80f42f367d7d36cb91f448c7c}\label{Drive__Parameters_8h_a9049cfe80f42f367d7d36cb91f448c7c}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!RATED\_PF@{RATED\_PF}}
+\index{RATED\_PF@{RATED\_PF}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{RATED\_PF}{RATED\_PF}}
+{\footnotesize\ttfamily \#define RATED\+\_\+\+PF~0.\+87f}
+
+Rated power factor \mbox{\Hypertarget{Drive__Parameters_8h_a63979cf6054f403eab1d354e6dcc4ce9}\label{Drive__Parameters_8h_a63979cf6054f403eab1d354e6dcc4ce9}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!RR@{RR}}
+\index{RR@{RR}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{RR}{RR}}
+{\footnotesize\ttfamily \#define RR~0.\+0043f}
+
+Rotor resistance in ohm \mbox{\Hypertarget{Drive__Parameters_8h_af8903d8eea3868940c60af887473b152}\label{Drive__Parameters_8h_af8903d8eea3868940c60af887473b152}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!RS@{RS}}
+\index{RS@{RS}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{RS}{RS}}
+{\footnotesize\ttfamily \#define RS~0.\+0054f}
+
+Stator resistance in ohm \mbox{\Hypertarget{Drive__Parameters_8h_aaade3232ef08cf18b4f3a20a0a2c6fb6}\label{Drive__Parameters_8h_aaade3232ef08cf18b4f3a20a0a2c6fb6}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!TS@{TS}}
+\index{TS@{TS}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{TS}{TS}}
+{\footnotesize\ttfamily \#define TS~0.\+00001f}
+
+Sampling time for V\&I \mbox{\Hypertarget{Drive__Parameters_8h_a42ba4ed22c45ffcf7f1c3ede1c761894}\label{Drive__Parameters_8h_a42ba4ed22c45ffcf7f1c3ede1c761894}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!TSC@{TSC}}
+\index{TSC@{TSC}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{TSC}{TSC}}
+{\footnotesize\ttfamily \#define TSC~0.\+0004f}
+
+Slow loop running rate \mbox{\Hypertarget{Drive__Parameters_8h_a1833bb496c5afb3c7f2c24c624645ff4}\label{Drive__Parameters_8h_a1833bb496c5afb3c7f2c24c624645ff4}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!TVECT@{TVECT}}
+\index{TVECT@{TVECT}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{TVECT}{TVECT}}
+{\footnotesize\ttfamily \#define TVECT~0.\+00001f}
+
+Fast loop running rate \mbox{\Hypertarget{Drive__Parameters_8h_ad15c510ae72de9088bdaa13861cec3c2}\label{Drive__Parameters_8h_ad15c510ae72de9088bdaa13861cec3c2}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!V\_NOM\_LL\_RMS@{V\_NOM\_LL\_RMS}}
+\index{V\_NOM\_LL\_RMS@{V\_NOM\_LL\_RMS}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{V\_NOM\_LL\_RMS}{V\_NOM\_LL\_RMS}}
+{\footnotesize\ttfamily \#define V\+\_\+\+NOM\+\_\+\+LL\+\_\+\+RMS~345}
+
+Rated line to line voltage in volt \mbox{\Hypertarget{Drive__Parameters_8h_ae2bb810a09152a24c8fe9f2f95a6674f}\label{Drive__Parameters_8h_ae2bb810a09152a24c8fe9f2f95a6674f}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!V\_NOM\_PHASE\_RMS@{V\_NOM\_PHASE\_RMS}}
+\index{V\_NOM\_PHASE\_RMS@{V\_NOM\_PHASE\_RMS}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{V\_NOM\_PHASE\_RMS}{V\_NOM\_PHASE\_RMS}}
+{\footnotesize\ttfamily \#define V\+\_\+\+NOM\+\_\+\+PHASE\+\_\+\+RMS~199}
+
+Rated phase voltage in volt \mbox{\Hypertarget{Drive__Parameters_8h_a32c5c6b3fa70ddffa6e41aca89f5ce95}\label{Drive__Parameters_8h_a32c5c6b3fa70ddffa6e41aca89f5ce95}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!VDC\_MAX@{VDC\_MAX}}
+\index{VDC\_MAX@{VDC\_MAX}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{VDC\_MAX}{VDC\_MAX}}
+{\footnotesize\ttfamily \#define VDC\+\_\+\+MAX~1000}
+
+DC Maximum Voltage in volt \mbox{\Hypertarget{Drive__Parameters_8h_afdcde4446821030424d72190ebc83b6a}\label{Drive__Parameters_8h_afdcde4446821030424d72190ebc83b6a}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!VDC\_MIN@{VDC\_MIN}}
+\index{VDC\_MIN@{VDC\_MIN}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{VDC\_MIN}{VDC\_MIN}}
+{\footnotesize\ttfamily \#define VDC\+\_\+\+MIN~500}
+
+DC Minimum Voltage in volt \mbox{\Hypertarget{Drive__Parameters_8h_a74fb5a72ba96613e63066be498b3e2ef}\label{Drive__Parameters_8h_a74fb5a72ba96613e63066be498b3e2ef}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!VDC\_NOM@{VDC\_NOM}}
+\index{VDC\_NOM@{VDC\_NOM}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{VDC\_NOM}{VDC\_NOM}}
+{\footnotesize\ttfamily \#define VDC\+\_\+\+NOM~560}
+
+DC Nominal Voltage in volt \mbox{\Hypertarget{Drive__Parameters_8h_ada878e4036a14afd84f0da13f29077ec}\label{Drive__Parameters_8h_ada878e4036a14afd84f0da13f29077ec}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!VIN\_INVERTER\_MAX@{VIN\_INVERTER\_MAX}}
+\index{VIN\_INVERTER\_MAX@{VIN\_INVERTER\_MAX}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{VIN\_INVERTER\_MAX}{VIN\_INVERTER\_MAX}}
+{\footnotesize\ttfamily \#define VIN\+\_\+\+INVERTER\+\_\+\+MAX~9000}
+
+Inverter Input Voltage Maximum value \mbox{\Hypertarget{Drive__Parameters_8h_aed100a5b53c4e6da424e3e483c27f45f}\label{Drive__Parameters_8h_aed100a5b53c4e6da424e3e483c27f45f}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!VIN\_INVERTER\_MIN@{VIN\_INVERTER\_MIN}}
+\index{VIN\_INVERTER\_MIN@{VIN\_INVERTER\_MIN}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{VIN\_INVERTER\_MIN}{VIN\_INVERTER\_MIN}}
+{\footnotesize\ttfamily \#define VIN\+\_\+\+INVERTER\+\_\+\+MIN~20}
+
+Inverter Input Voltage Minimum value \mbox{\Hypertarget{Drive__Parameters_8h_a003c6e661eb747d7ad593e6be26417c4}\label{Drive__Parameters_8h_a003c6e661eb747d7ad593e6be26417c4}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!VOUT\_INVERTER\_MAX@{VOUT\_INVERTER\_MAX}}
+\index{VOUT\_INVERTER\_MAX@{VOUT\_INVERTER\_MAX}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{VOUT\_INVERTER\_MAX}{VOUT\_INVERTER\_MAX}}
+{\footnotesize\ttfamily \#define VOUT\+\_\+\+INVERTER\+\_\+\+MAX~9000}
+
+Inverter Output Voltage Maximum value \mbox{\Hypertarget{Drive__Parameters_8h_afac33d25d4d7814dd3ed079099c8fd59}\label{Drive__Parameters_8h_afac33d25d4d7814dd3ed079099c8fd59}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!VOUT\_INVERTER\_MIN@{VOUT\_INVERTER\_MIN}}
+\index{VOUT\_INVERTER\_MIN@{VOUT\_INVERTER\_MIN}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{VOUT\_INVERTER\_MIN}{VOUT\_INVERTER\_MIN}}
+{\footnotesize\ttfamily \#define VOUT\+\_\+\+INVERTER\+\_\+\+MIN~20}
+
+Inverter Output Voltage Minimum value \mbox{\Hypertarget{Drive__Parameters_8h_a3144fbd6db6d6cce459528ad51dace35}\label{Drive__Parameters_8h_a3144fbd6db6d6cce459528ad51dace35}} 
+\index{Drive\_Parameters.h@{Drive\_Parameters.h}!WC@{WC}}
+\index{WC@{WC}!Drive\_Parameters.h@{Drive\_Parameters.h}}
+\doxysubsubsection{\texorpdfstring{WC}{WC}}
+{\footnotesize\ttfamily \#define WC~628.\+32f}
+
+Speed filter cut off frequency 

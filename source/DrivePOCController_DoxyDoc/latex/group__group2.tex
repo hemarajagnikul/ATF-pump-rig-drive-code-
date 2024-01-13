@@ -1,0 +1,485 @@
+\hypertarget{group__group2}{}\doxysection{Memory Handler}
+\label{group__group2}\index{Memory Handler@{Memory Handler}}
+
+
+Memory Handler group.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__group2_ga60432b48e4ac0d4794de84fdcaab3b8d}{Drive\+POC\+\_\+\+MH\+\_\+\+Update\+Encoder\+Speed}} (float rpm\+\_\+recd)
+\begin{DoxyCompactList}\small\item\em Function definition to update Encoder speed into Memory handler. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group__group2_gae30c8a394f7bfc165b103fb11ecc69d2}{Drive\+POC\+\_\+\+MH\+\_\+\+Get\+Encoder\+Speed}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to return Encoder speed from Memory handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gad928b89acef519cdff35ab0fe73fedd3}{Store\+\_\+\+Temperature\+\_\+from\+\_\+\+PT\+\_\+1000}} (void)
+\begin{DoxyCompactList}\small\item\em stores the value of temperature measured using PT-\/1000 RTD in the memory \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gab15a0f985a5819c69574ff86075cff89}{Get\+\_\+\+Duty\+\_\+\+Cycle}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition that gets the value of duty cycle from the duty cycle array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gaea167be1e1d6d337e3230372688ea9e7}{Drive\+POC\+\_\+\+MH\+\_\+\+Update\+VIvalues}} (void)
+\begin{DoxyCompactList}\small\item\em Function scales the value of Current using the Sensor scaling factors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gaa49e4fe7dcfb8f2868b17b6903451408}{Drive\+POC\+\_\+\+MH\+\_\+\+Get\+VIvalues}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to allocate the variables to corresponding structures. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group2_ga431eb7a05ca65e8ddfd09ccc2a158d21}\label{group__group2_ga431eb7a05ca65e8ddfd09ccc2a158d21}} 
+void {\bfseries Get\+\_\+\+V\+\_\+\+F\+\_\+\+Duty\+\_\+\+Cycle} (void)
+\begin{DoxyCompactList}\small\item\em Function Defintion to give duty cycle during ramp up. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group2_ga75a218a14454fca58c8f13454795c6a0}\label{group__group2_ga75a218a14454fca58c8f13454795c6a0}} 
+void {\bfseries Get\+\_\+\+Deceleration\+\_\+\+Duty\+\_\+\+Cycle} (void)
+\begin{DoxyCompactList}\small\item\em Function Declaration for Deceleration case. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group2_ga3f6aab173dea5206b86c03f250161ecd}\label{group__group2_ga3f6aab173dea5206b86c03f250161ecd}} 
+bool {\bfseries Get\+\_\+\+Start\+\_\+\+Up\+\_\+status} (void)
+\begin{DoxyCompactList}\small\item\em Function Declaration to get Start Up state. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group2_ga1e88d389a98dbc4100b4d314b254c1b0}\label{group__group2_ga1e88d389a98dbc4100b4d314b254c1b0}} 
+bool {\bfseries Get\+\_\+\+Stop\+\_\+status} (void)
+\begin{DoxyCompactList}\small\item\em Function Declaration to get Stop done signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Sine Frequency}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group2_ga6f8653ee5174515e202b61766038adcc}\label{group__group2_ga6f8653ee5174515e202b61766038adcc}} 
+\#define {\bfseries FSINE\+\_\+800}~800
+\item 
+\mbox{\Hypertarget{group__group2_gae7da45c3db0b9f7d98efa14264a7a76b}\label{group__group2_gae7da45c3db0b9f7d98efa14264a7a76b}} 
+\#define {\bfseries FSINE\+\_\+669}~669
+\item 
+\mbox{\Hypertarget{group__group2_ga8700a9cb613b971388eedeada10b9903}\label{group__group2_ga8700a9cb613b971388eedeada10b9903}} 
+\#define {\bfseries FSINE\+\_\+600}~600
+\item 
+\mbox{\Hypertarget{group__group2_ga5407cb77c5a2f6fe1c87b564e9e73455}\label{group__group2_ga5407cb77c5a2f6fe1c87b564e9e73455}} 
+\#define {\bfseries FSINE\+\_\+500}~500
+\item 
+\mbox{\Hypertarget{group__group2_gab90ccb28746d8a981171f311099d85e0}\label{group__group2_gab90ccb28746d8a981171f311099d85e0}} 
+\#define {\bfseries FSINE\+\_\+400}~400
+\item 
+\mbox{\Hypertarget{group__group2_ga283feeb47254dffbd106a1e03483efb5}\label{group__group2_ga283feeb47254dffbd106a1e03483efb5}} 
+\#define {\bfseries FSINE\+\_\+300}~300
+\item 
+\mbox{\Hypertarget{group__group2_gaa59b3815a1fb1726a783a698270c4c26}\label{group__group2_gaa59b3815a1fb1726a783a698270c4c26}} 
+\#define {\bfseries FSINE\+\_\+200}~200
+\item 
+\mbox{\Hypertarget{group__group2_ga2fff5ad340042318c460b6e3cbc73829}\label{group__group2_ga2fff5ad340042318c460b6e3cbc73829}} 
+\#define {\bfseries FSINE\+\_\+100}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Switching Frequency 50k\+Hz Data}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group2_gadd3c6969bd8a4ebfa2082d51e5ce0636}\label{group__group2_gadd3c6969bd8a4ebfa2082d51e5ce0636}} 
+\#define {\bfseries FSWITCHING\+\_\+800\+HZ\+\_\+50\+KHZ}~50400
+\item 
+\mbox{\Hypertarget{group__group2_ga24ce9bf8c1f61257586851701ab0d39c}\label{group__group2_ga24ce9bf8c1f61257586851701ab0d39c}} 
+\#define {\bfseries FSWITCHING\+\_\+669\+HZ\+\_\+50\+KHZ}~50175
+\item 
+\mbox{\Hypertarget{group__group2_ga008c43888eb3ca9f361a6425663be07f}\label{group__group2_ga008c43888eb3ca9f361a6425663be07f}} 
+\#define {\bfseries FSWITCHING\+\_\+600\+HZ\+\_\+50\+KHZ}~50400
+\item 
+\mbox{\Hypertarget{group__group2_ga902bb5409543f954fba18d29cdca9d82}\label{group__group2_ga902bb5409543f954fba18d29cdca9d82}} 
+\#define {\bfseries FSWITCHING\+\_\+500\+HZ\+\_\+50\+KHZ}~49500
+\item 
+\mbox{\Hypertarget{group__group2_gad2be5633e12fda88cefb6aa0a778cd63}\label{group__group2_gad2be5633e12fda88cefb6aa0a778cd63}} 
+\#define {\bfseries FSWITCHING\+\_\+400\+HZ\+\_\+50\+KHZ}~50400
+\item 
+\mbox{\Hypertarget{group__group2_ga7e081d497ddb3fa4dbae2d392050ea80}\label{group__group2_ga7e081d497ddb3fa4dbae2d392050ea80}} 
+\#define {\bfseries FSWITCHING\+\_\+300\+HZ\+\_\+50\+KHZ}~50400
+\item 
+\mbox{\Hypertarget{group__group2_gaa99cc4c83e5daa2a2712c9c59d0ea923}\label{group__group2_gaa99cc4c83e5daa2a2712c9c59d0ea923}} 
+\#define {\bfseries FSWITCHING\+\_\+200\+HZ\+\_\+50\+KHZ}~49800
+\item 
+\mbox{\Hypertarget{group__group2_ga506ffb864f158aba7ba964fbb4b4158a}\label{group__group2_ga506ffb864f158aba7ba964fbb4b4158a}} 
+\#define {\bfseries FSWITCHING\+\_\+100\+HZ\+\_\+50\+KHZ}~50100
+\item 
+\mbox{\Hypertarget{group__group2_gafbbf55f847d0741929329c0d10b992cb}\label{group__group2_gafbbf55f847d0741929329c0d10b992cb}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+50\+KHZ}~21
+\item 
+\mbox{\Hypertarget{group__group2_gafad98c6a70b77a7d86ca335caa881c54}\label{group__group2_gafad98c6a70b77a7d86ca335caa881c54}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+50\+KHZ}~25
+\item 
+\mbox{\Hypertarget{group__group2_gaa6dc2068dc263d187bf38114ccc77de1}\label{group__group2_gaa6dc2068dc263d187bf38114ccc77de1}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+600\+HZ\+\_\+50\+KHZ}~28
+\item 
+\mbox{\Hypertarget{group__group2_gab52ea0a4697ca0cf085d3d7ea7afe23d}\label{group__group2_gab52ea0a4697ca0cf085d3d7ea7afe23d}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+500\+HZ\+\_\+50\+KHZ}~33
+\item 
+\mbox{\Hypertarget{group__group2_ga25889be19e331f89c439fbc946f2a294}\label{group__group2_ga25889be19e331f89c439fbc946f2a294}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+400\+HZ\+\_\+50\+KHZ}~42
+\item 
+\mbox{\Hypertarget{group__group2_gafed88a56de6a04474fc6f7dca5583f59}\label{group__group2_gafed88a56de6a04474fc6f7dca5583f59}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+300\+HZ\+\_\+50\+KHZ}~56
+\item 
+\mbox{\Hypertarget{group__group2_ga12a7453c2e2e2269da1bd24c3202d3ce}\label{group__group2_ga12a7453c2e2e2269da1bd24c3202d3ce}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+200\+HZ\+\_\+50\+KHZ}~83
+\item 
+\mbox{\Hypertarget{group__group2_ga53efafc84334317cc027ef3751bdcbd5}\label{group__group2_ga53efafc84334317cc027ef3751bdcbd5}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+100\+HZ\+\_\+50\+KHZ}~167
+\end{DoxyCompactItemize}
+\doxysubsection*{Switching Frequency 40k\+Hz Data}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group2_gae4acacb7810cc1e7ca2246ae36e27cfa}\label{group__group2_gae4acacb7810cc1e7ca2246ae36e27cfa}} 
+\#define {\bfseries FSWITCHING\+\_\+800\+HZ\+\_\+40\+KHZ}~40800
+\item 
+\mbox{\Hypertarget{group__group2_ga70c0974e44c25da4adbdc37df9e89f2f}\label{group__group2_ga70c0974e44c25da4adbdc37df9e89f2f}} 
+\#define {\bfseries FSWITCHING\+\_\+669\+HZ\+\_\+40\+KHZ}~40140
+\item 
+\mbox{\Hypertarget{group__group2_ga6619645892f78de17d1397b0889565d6}\label{group__group2_ga6619645892f78de17d1397b0889565d6}} 
+\#define {\bfseries FSWITCHING\+\_\+600\+HZ\+\_\+40\+KHZ}~39600
+\item 
+\mbox{\Hypertarget{group__group2_gab8be69e071215dbcdad640e82c8ce6d6}\label{group__group2_gab8be69e071215dbcdad640e82c8ce6d6}} 
+\#define {\bfseries FSWITCHING\+\_\+500\+HZ\+\_\+40\+KHZ}~40500
+\item 
+\mbox{\Hypertarget{group__group2_ga9f7094c8af766e2cd8c68d0f971c84c5}\label{group__group2_ga9f7094c8af766e2cd8c68d0f971c84c5}} 
+\#define {\bfseries FSWITCHING\+\_\+400\+HZ\+\_\+40\+KHZ}~39600
+\item 
+\mbox{\Hypertarget{group__group2_gac57fc28f2f1e3bc28c98a275605a63fb}\label{group__group2_gac57fc28f2f1e3bc28c98a275605a63fb}} 
+\#define {\bfseries FSWITCHING\+\_\+300\+HZ\+\_\+40\+KHZ}~39600
+\item 
+\mbox{\Hypertarget{group__group2_gac4969d70824cb988a09501ac45eb59d5}\label{group__group2_gac4969d70824cb988a09501ac45eb59d5}} 
+\#define {\bfseries FSWITCHING\+\_\+200\+HZ\+\_\+40\+KHZ}~40200
+\item 
+\mbox{\Hypertarget{group__group2_ga40a5f3744e0f9861765ecc4eacc40b70}\label{group__group2_ga40a5f3744e0f9861765ecc4eacc40b70}} 
+\#define {\bfseries FSWITCHING\+\_\+100\+HZ\+\_\+40\+KHZ}~40200
+\item 
+\mbox{\Hypertarget{group__group2_gab7e18ea4351a0b73aff85d1587883044}\label{group__group2_gab7e18ea4351a0b73aff85d1587883044}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+40\+KHZ}~17
+\item 
+\mbox{\Hypertarget{group__group2_gab3019f71eddb206acf408fcf45802b25}\label{group__group2_gab3019f71eddb206acf408fcf45802b25}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+40\+KHZ}~20
+\item 
+\mbox{\Hypertarget{group__group2_ga5f87030b093e9e749fdbb36d6311340a}\label{group__group2_ga5f87030b093e9e749fdbb36d6311340a}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+600\+HZ\+\_\+40\+KHZ}~22
+\item 
+\mbox{\Hypertarget{group__group2_ga56f1c7eefe0d184915c52e8ce72a0bd4}\label{group__group2_ga56f1c7eefe0d184915c52e8ce72a0bd4}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+500\+HZ\+\_\+40\+KHZ}~27
+\item 
+\mbox{\Hypertarget{group__group2_gaeed340726161ce7d1dd1dd408f672bfd}\label{group__group2_gaeed340726161ce7d1dd1dd408f672bfd}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+400\+HZ\+\_\+40\+KHZ}~33
+\item 
+\mbox{\Hypertarget{group__group2_ga2f3685a5b3c314fd641a85181da843fe}\label{group__group2_ga2f3685a5b3c314fd641a85181da843fe}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+300\+HZ\+\_\+40\+KHZ}~44
+\item 
+\mbox{\Hypertarget{group__group2_ga91538c80607dd3aa7751ac61268b65c1}\label{group__group2_ga91538c80607dd3aa7751ac61268b65c1}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+200\+HZ\+\_\+40\+KHZ}~67
+\item 
+\mbox{\Hypertarget{group__group2_gab45bfa852dba7dbf80995003ec67c06b}\label{group__group2_gab45bfa852dba7dbf80995003ec67c06b}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+100\+HZ\+\_\+40\+KHZ}~134
+\end{DoxyCompactItemize}
+\doxysubsection*{Switching Frequency 30k\+Hz Data}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group2_ga4351b9ae1920f617d0a5f1a91ad7e12e}\label{group__group2_ga4351b9ae1920f617d0a5f1a91ad7e12e}} 
+\#define {\bfseries FSWITCHING\+\_\+800\+HZ\+\_\+30\+KHZ}~31200
+\item 
+\mbox{\Hypertarget{group__group2_ga2946c32317d000ae928a72994b595039}\label{group__group2_ga2946c32317d000ae928a72994b595039}} 
+\#define {\bfseries FSWITCHING\+\_\+669\+HZ\+\_\+30\+KHZ}~30105
+\item 
+\mbox{\Hypertarget{group__group2_gaf7b1f2289ad027b434db05499b0ccb00}\label{group__group2_gaf7b1f2289ad027b434db05499b0ccb00}} 
+\#define {\bfseries FSWITCHING\+\_\+600\+HZ\+\_\+30\+KHZ}~30600
+\item 
+\mbox{\Hypertarget{group__group2_ga28c1485e635139a76b35c76e1e69ab5e}\label{group__group2_ga28c1485e635139a76b35c76e1e69ab5e}} 
+\#define {\bfseries FSWITCHING\+\_\+500\+HZ\+\_\+30\+KHZ}~30000
+\item 
+\mbox{\Hypertarget{group__group2_gac99600373c5d9194852f2f64e0885474}\label{group__group2_gac99600373c5d9194852f2f64e0885474}} 
+\#define {\bfseries FSWITCHING\+\_\+400\+HZ\+\_\+30\+KHZ}~30000
+\item 
+\mbox{\Hypertarget{group__group2_gac9cab35b34caa14446abaf1da2f7ff07}\label{group__group2_gac9cab35b34caa14446abaf1da2f7ff07}} 
+\#define {\bfseries FSWITCHING\+\_\+300\+HZ\+\_\+30\+KHZ}~29700
+\item 
+\mbox{\Hypertarget{group__group2_ga7c7c05f4021ad76087f633c25a0bbdd8}\label{group__group2_ga7c7c05f4021ad76087f633c25a0bbdd8}} 
+\#define {\bfseries FSWITCHING\+\_\+200\+HZ\+\_\+30\+KHZ}~30000
+\item 
+\mbox{\Hypertarget{group__group2_gadb468ce575d0909cc857af8f4f07bf95}\label{group__group2_gadb468ce575d0909cc857af8f4f07bf95}} 
+\#define {\bfseries FSWITCHING\+\_\+100\+HZ\+\_\+30\+KHZ}~30000
+\item 
+\mbox{\Hypertarget{group__group2_ga930e54cd7ea0a3a6c43fc22819e3562f}\label{group__group2_ga930e54cd7ea0a3a6c43fc22819e3562f}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+30\+KHZ}~13
+\item 
+\mbox{\Hypertarget{group__group2_ga93b8f66a780955dfc748b37b2b138c4f}\label{group__group2_ga93b8f66a780955dfc748b37b2b138c4f}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+30\+KHZ}~15
+\item 
+\mbox{\Hypertarget{group__group2_gaf5a1285e1637bc4e8a2b6bf74376115c}\label{group__group2_gaf5a1285e1637bc4e8a2b6bf74376115c}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+600\+HZ\+\_\+30\+KHZ}~17
+\item 
+\mbox{\Hypertarget{group__group2_ga5afa70415a6179be9bca62089caa2a70}\label{group__group2_ga5afa70415a6179be9bca62089caa2a70}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+500\+HZ\+\_\+30\+KHZ}~20
+\item 
+\mbox{\Hypertarget{group__group2_gade202895bed6546ab08ae26b32cf83c2}\label{group__group2_gade202895bed6546ab08ae26b32cf83c2}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+400\+HZ\+\_\+30\+KHZ}~25
+\item 
+\mbox{\Hypertarget{group__group2_gab202d9493bf0205c6a469d1c778aaf4d}\label{group__group2_gab202d9493bf0205c6a469d1c778aaf4d}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+300\+HZ\+\_\+30\+KHZ}~33
+\item 
+\mbox{\Hypertarget{group__group2_ga5c236e72ee12144a003faa22877a3f07}\label{group__group2_ga5c236e72ee12144a003faa22877a3f07}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+200\+HZ\+\_\+30\+KHZ}~50
+\item 
+\mbox{\Hypertarget{group__group2_gac568ef6de23e8e536ec1a6a7bc360971}\label{group__group2_gac568ef6de23e8e536ec1a6a7bc360971}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+100\+HZ\+\_\+30\+KHZ}~100
+\end{DoxyCompactItemize}
+\doxysubsection*{Switching Frequency 20k\+Hz Data}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group2_ga44d063c76f64b6c2f68cd407b33b7933}\label{group__group2_ga44d063c76f64b6c2f68cd407b33b7933}} 
+\#define {\bfseries FSWITCHING\+\_\+1000\+HZ\+\_\+20\+KHZ}~18000
+\item 
+\mbox{\Hypertarget{group__group2_ga14929638f6e87f91ff202ac3f5efa223}\label{group__group2_ga14929638f6e87f91ff202ac3f5efa223}} 
+\#define {\bfseries FSWITCHING\+\_\+800\+HZ\+\_\+20\+KHZ}~19200
+\item 
+\mbox{\Hypertarget{group__group2_ga5c651b87ba06a0a0d388bd20911c17f1}\label{group__group2_ga5c651b87ba06a0a0d388bd20911c17f1}} 
+\#define {\bfseries FSWITCHING\+\_\+669\+HZ\+\_\+20\+KHZ}~20070
+\item 
+\mbox{\Hypertarget{group__group2_ga6b86809a5723f36d593227e664f70101}\label{group__group2_ga6b86809a5723f36d593227e664f70101}} 
+\#define {\bfseries FSWITCHING\+\_\+600\+HZ\+\_\+20\+KHZ}~19800
+\item 
+\mbox{\Hypertarget{group__group2_ga19eb185efe2fcbc7cccc02697b8b651c}\label{group__group2_ga19eb185efe2fcbc7cccc02697b8b651c}} 
+\#define {\bfseries FSWITCHING\+\_\+500\+HZ\+\_\+20\+KHZ}~19500
+\item 
+\mbox{\Hypertarget{group__group2_ga412a0dfbc3ce01adb65e1e1e35eded54}\label{group__group2_ga412a0dfbc3ce01adb65e1e1e35eded54}} 
+\#define {\bfseries FSWITCHING\+\_\+400\+HZ\+\_\+20\+KHZ}~20400
+\item 
+\mbox{\Hypertarget{group__group2_gab2fac215ee978fd7ac705e30eaeb49dc}\label{group__group2_gab2fac215ee978fd7ac705e30eaeb49dc}} 
+\#define {\bfseries FSWITCHING\+\_\+300\+HZ\+\_\+20\+KHZ}~19800
+\item 
+\mbox{\Hypertarget{group__group2_ga9ba8affa5b16046d9140086b921ded4c}\label{group__group2_ga9ba8affa5b16046d9140086b921ded4c}} 
+\#define {\bfseries FSWITCHING\+\_\+200\+HZ\+\_\+20\+KHZ}~20400
+\item 
+\mbox{\Hypertarget{group__group2_gada140542142128d013bd71a4e73e4189}\label{group__group2_gada140542142128d013bd71a4e73e4189}} 
+\#define {\bfseries FSWITCHING\+\_\+100\+HZ\+\_\+20\+KHZ}~20100
+\item 
+\mbox{\Hypertarget{group__group2_ga0ab69e7911d6757f5256426f8f5d3e57}\label{group__group2_ga0ab69e7911d6757f5256426f8f5d3e57}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+1000\+HZ\+\_\+20\+KHZ}~6
+\item 
+\mbox{\Hypertarget{group__group2_gab50f35b5e422a1a70612b671dd67599f}\label{group__group2_gab50f35b5e422a1a70612b671dd67599f}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+20\+KHZ}~8
+\item 
+\mbox{\Hypertarget{group__group2_gaabe76a4f140cd124c41e738a43158e90}\label{group__group2_gaabe76a4f140cd124c41e738a43158e90}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+20\+KHZ}~10
+\item 
+\mbox{\Hypertarget{group__group2_gae4ac06d350ef355392a9fd5977fc86ec}\label{group__group2_gae4ac06d350ef355392a9fd5977fc86ec}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+600\+HZ\+\_\+20\+KHZ}~11
+\item 
+\mbox{\Hypertarget{group__group2_ga8688b3236347065f80e74992a05df2b0}\label{group__group2_ga8688b3236347065f80e74992a05df2b0}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+500\+HZ\+\_\+20\+KHZ}~13
+\item 
+\mbox{\Hypertarget{group__group2_gaf543adb9a183038ce62fddc960c6a3ba}\label{group__group2_gaf543adb9a183038ce62fddc960c6a3ba}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+400\+HZ\+\_\+20\+KHZ}~17
+\item 
+\mbox{\Hypertarget{group__group2_ga24e4e23679ccc5ddd58ce25a27830e6f}\label{group__group2_ga24e4e23679ccc5ddd58ce25a27830e6f}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+300\+HZ\+\_\+20\+KHZ}~22
+\item 
+\mbox{\Hypertarget{group__group2_ga5adbd61f682646d57ae436b4a5e78194}\label{group__group2_ga5adbd61f682646d57ae436b4a5e78194}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+200\+HZ\+\_\+20\+KHZ}~37
+\item 
+\mbox{\Hypertarget{group__group2_ga71c1f0c5e95998d4465b9100bf3607e2}\label{group__group2_ga71c1f0c5e95998d4465b9100bf3607e2}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+100\+HZ\+\_\+20\+KHZ}~67
+\end{DoxyCompactItemize}
+\doxysubsection*{Switching Frequency 10k\+Hz Data}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group2_gad20c250a4baeeaf6944f3dca2f47f1cd}\label{group__group2_gad20c250a4baeeaf6944f3dca2f47f1cd}} 
+\#define {\bfseries FSWITCHING\+\_\+800\+HZ\+\_\+10\+KHZ}~9600
+\item 
+\mbox{\Hypertarget{group__group2_ga995a36e2631a996efad5a2d736498b5f}\label{group__group2_ga995a36e2631a996efad5a2d736498b5f}} 
+\#define {\bfseries FSWITCHING\+\_\+669\+HZ\+\_\+10\+KHZ}~10035
+\item 
+\mbox{\Hypertarget{group__group2_gace2c8910ac9d9522dd9a1e4357b852b6}\label{group__group2_gace2c8910ac9d9522dd9a1e4357b852b6}} 
+\#define {\bfseries FSWITCHING\+\_\+600\+HZ\+\_\+10\+KHZ}~10800
+\item 
+\mbox{\Hypertarget{group__group2_gae757039df2bb03d5f1680d0e28de1352}\label{group__group2_gae757039df2bb03d5f1680d0e28de1352}} 
+\#define {\bfseries FSWITCHING\+\_\+500\+HZ\+\_\+10\+KHZ}~10500
+\item 
+\mbox{\Hypertarget{group__group2_gab3dc0b542a1e3a0ef13d47d8290ad46f}\label{group__group2_gab3dc0b542a1e3a0ef13d47d8290ad46f}} 
+\#define {\bfseries FSWITCHING\+\_\+400\+HZ\+\_\+10\+KHZ}~9600
+\item 
+\mbox{\Hypertarget{group__group2_ga993d976cd55201d1cb995406c4fad0d7}\label{group__group2_ga993d976cd55201d1cb995406c4fad0d7}} 
+\#define {\bfseries FSWITCHING\+\_\+300\+HZ\+\_\+10\+KHZ}~9900
+\item 
+\mbox{\Hypertarget{group__group2_ga6bed5e0326e8fc5666b4b4ed5001a8b2}\label{group__group2_ga6bed5e0326e8fc5666b4b4ed5001a8b2}} 
+\#define {\bfseries FSWITCHING\+\_\+200\+HZ\+\_\+10\+KHZ}~10200
+\item 
+\mbox{\Hypertarget{group__group2_gade214e2e4351b5ba2abed471967825a4}\label{group__group2_gade214e2e4351b5ba2abed471967825a4}} 
+\#define {\bfseries FSWITCHING\+\_\+100\+HZ\+\_\+10\+KHZ}~10200
+\item 
+\mbox{\Hypertarget{group__group2_ga0a3c2f7d5104807a546d2da05db3c202}\label{group__group2_ga0a3c2f7d5104807a546d2da05db3c202}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+10\+KHZ}~4
+\item 
+\mbox{\Hypertarget{group__group2_ga2064d7ad3b4d4f367cfa4af1cb77c87c}\label{group__group2_ga2064d7ad3b4d4f367cfa4af1cb77c87c}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+10\+KHZ}~5
+\item 
+\mbox{\Hypertarget{group__group2_ga1eb5d7418e97479805ba12be0e089c21}\label{group__group2_ga1eb5d7418e97479805ba12be0e089c21}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+600\+HZ\+\_\+10\+KHZ}~6
+\item 
+\mbox{\Hypertarget{group__group2_ga846e904dad907e3fba0d6ecee49021ee}\label{group__group2_ga846e904dad907e3fba0d6ecee49021ee}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+500\+HZ\+\_\+10\+KHZ}~7
+\item 
+\mbox{\Hypertarget{group__group2_ga526a5dee32eb3fbc90e67aa91aef31d8}\label{group__group2_ga526a5dee32eb3fbc90e67aa91aef31d8}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+400\+HZ\+\_\+10\+KHZ}~8
+\item 
+\mbox{\Hypertarget{group__group2_gad56a8503c3fc55175818f799df6be4ba}\label{group__group2_gad56a8503c3fc55175818f799df6be4ba}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+300\+HZ\+\_\+10\+KHZ}~11
+\item 
+\mbox{\Hypertarget{group__group2_ga753f6e8930622d264e9014a62e222edd}\label{group__group2_ga753f6e8930622d264e9014a62e222edd}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+200\+HZ\+\_\+10\+KHZ}~17
+\item 
+\mbox{\Hypertarget{group__group2_ga2a2a50cea021d96b1cadb0898047e427}\label{group__group2_ga2a2a50cea021d96b1cadb0898047e427}} 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+100\+HZ\+\_\+10\+KHZ}~34
+\end{DoxyCompactItemize}
+\doxysubsection*{Interrupt Timing values}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group2_ga60f1891b5956decbe0236311facdb0fb}\label{group__group2_ga60f1891b5956decbe0236311facdb0fb}} 
+\#define {\bfseries T\+\_\+\+SWITCHING\+\_\+50\+KHZ}~1000000/50000
+\item 
+\mbox{\Hypertarget{group__group2_ga626544edb0e17b9c9189ec56d4bce205}\label{group__group2_ga626544edb0e17b9c9189ec56d4bce205}} 
+\#define {\bfseries T\+\_\+\+SWITCHING\+\_\+40\+KHZ}~1000000/40000
+\item 
+\mbox{\Hypertarget{group__group2_gab6551cb49e19988b07c7a3c3b7b7938f}\label{group__group2_gab6551cb49e19988b07c7a3c3b7b7938f}} 
+\#define {\bfseries T\+\_\+\+SWITCHING\+\_\+30\+KHZ}~1000000/30000
+\item 
+\mbox{\Hypertarget{group__group2_ga908f934a484a6439345749c83f5f2b8a}\label{group__group2_ga908f934a484a6439345749c83f5f2b8a}} 
+\#define {\bfseries T\+\_\+\+SWITCHING\+\_\+20\+KHZ}~1000000/20000
+\item 
+\mbox{\Hypertarget{group__group2_ga7d5062a4aeb918bad65e0506c2c8dc47}\label{group__group2_ga7d5062a4aeb918bad65e0506c2c8dc47}} 
+\#define {\bfseries T\+\_\+\+SWITCHING\+\_\+10\+KHZ}~1000000/10000
+\end{DoxyCompactItemize}
+\doxysubsection*{LTC Interrupt Frequency}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group2_ga0981c622ec1518539de7a1206b014954}\label{group__group2_ga0981c622ec1518539de7a1206b014954}} 
+\#define {\bfseries LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+10\+KHZ}~10000
+\item 
+\mbox{\Hypertarget{group__group2_gae6425966469f6346968fc4b8305b583b}\label{group__group2_gae6425966469f6346968fc4b8305b583b}} 
+\#define {\bfseries LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+20\+KHZ}~20000
+\item 
+\mbox{\Hypertarget{group__group2_ga3543d25804abb12808494393f33aa8d1}\label{group__group2_ga3543d25804abb12808494393f33aa8d1}} 
+\#define {\bfseries LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+30\+KHZ}~30000
+\item 
+\mbox{\Hypertarget{group__group2_gad89a3adae49b55a9816db968419a9483}\label{group__group2_gad89a3adae49b55a9816db968419a9483}} 
+\#define {\bfseries LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+40\+KHZ}~40000
+\item 
+\mbox{\Hypertarget{group__group2_ga9d1f6cad6c2d71988473201687f60234}\label{group__group2_ga9d1f6cad6c2d71988473201687f60234}} 
+\#define {\bfseries LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+50\+KHZ}~50000
+\end{DoxyCompactItemize}
+\doxysubsection*{ADS Board Parameters}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group2_gad2370c348c2bb7c386fc2a1568951743}\label{group__group2_gad2370c348c2bb7c386fc2a1568951743}} 
+\#define {\bfseries ADS\+\_\+\+BOARD\+\_\+\+POSITIVE\+\_\+\+VOLTAGE\+\_\+\+LIMIT}~0x07\+FFF
+\item 
+\mbox{\Hypertarget{group__group2_gad41f174078df888de3fd2ab96ab91e48}\label{group__group2_gad41f174078df888de3fd2ab96ab91e48}} 
+\#define {\bfseries ADS\+\_\+\+BOARD\+\_\+\+ZERO\+\_\+\+VAL}~0.\+0F
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Memory Handler group. 
+
+Group pertaining to all Memory and storage operations of the Drive POC Controller implementation 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__group2_gae30c8a394f7bfc165b103fb11ecc69d2}\label{group__group2_gae30c8a394f7bfc165b103fb11ecc69d2}} 
+\index{Memory Handler@{Memory Handler}!DrivePOC\_MH\_GetEncoderSpeed@{DrivePOC\_MH\_GetEncoderSpeed}}
+\index{DrivePOC\_MH\_GetEncoderSpeed@{DrivePOC\_MH\_GetEncoderSpeed}!Memory Handler@{Memory Handler}}
+\doxysubsubsection{\texorpdfstring{DrivePOC\_MH\_GetEncoderSpeed()}{DrivePOC\_MH\_GetEncoderSpeed()}}
+{\footnotesize\ttfamily float Drive\+POC\+\_\+\+MH\+\_\+\+Get\+Encoder\+Speed (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to return Encoder speed from Memory handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+float -\/ Speed of encoder in RPM stored in Memory Handler 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group2_gaa49e4fe7dcfb8f2868b17b6903451408}\label{group__group2_gaa49e4fe7dcfb8f2868b17b6903451408}} 
+\index{Memory Handler@{Memory Handler}!DrivePOC\_MH\_GetVIvalues@{DrivePOC\_MH\_GetVIvalues}}
+\index{DrivePOC\_MH\_GetVIvalues@{DrivePOC\_MH\_GetVIvalues}!Memory Handler@{Memory Handler}}
+\doxysubsubsection{\texorpdfstring{DrivePOC\_MH\_GetVIvalues()}{DrivePOC\_MH\_GetVIvalues()}}
+{\footnotesize\ttfamily void Drive\+POC\+\_\+\+MH\+\_\+\+Get\+VIvalues (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to allocate the variables to corresponding structures. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em A} & global pointer variable \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group2_ga60432b48e4ac0d4794de84fdcaab3b8d}\label{group__group2_ga60432b48e4ac0d4794de84fdcaab3b8d}} 
+\index{Memory Handler@{Memory Handler}!DrivePOC\_MH\_UpdateEncoderSpeed@{DrivePOC\_MH\_UpdateEncoderSpeed}}
+\index{DrivePOC\_MH\_UpdateEncoderSpeed@{DrivePOC\_MH\_UpdateEncoderSpeed}!Memory Handler@{Memory Handler}}
+\doxysubsubsection{\texorpdfstring{DrivePOC\_MH\_UpdateEncoderSpeed()}{DrivePOC\_MH\_UpdateEncoderSpeed()}}
+{\footnotesize\ttfamily bool Drive\+POC\+\_\+\+MH\+\_\+\+Update\+Encoder\+Speed (\begin{DoxyParamCaption}\item[{float}]{rpm\+\_\+recd }\end{DoxyParamCaption})}
+
+
+
+Function definition to update Encoder speed into Memory handler. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em float} & rpm\+\_\+recd -\/ Speed of encoder calculated using input pulses in RPM \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+True, if successful 
+
+False, if failed 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group2_gaea167be1e1d6d337e3230372688ea9e7}\label{group__group2_gaea167be1e1d6d337e3230372688ea9e7}} 
+\index{Memory Handler@{Memory Handler}!DrivePOC\_MH\_UpdateVIvalues@{DrivePOC\_MH\_UpdateVIvalues}}
+\index{DrivePOC\_MH\_UpdateVIvalues@{DrivePOC\_MH\_UpdateVIvalues}!Memory Handler@{Memory Handler}}
+\doxysubsubsection{\texorpdfstring{DrivePOC\_MH\_UpdateVIvalues()}{DrivePOC\_MH\_UpdateVIvalues()}}
+{\footnotesize\ttfamily void Drive\+POC\+\_\+\+MH\+\_\+\+Update\+VIvalues (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function scales the value of Current using the Sensor scaling factors. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group2_gab15a0f985a5819c69574ff86075cff89}\label{group__group2_gab15a0f985a5819c69574ff86075cff89}} 
+\index{Memory Handler@{Memory Handler}!Get\_Duty\_Cycle@{Get\_Duty\_Cycle}}
+\index{Get\_Duty\_Cycle@{Get\_Duty\_Cycle}!Memory Handler@{Memory Handler}}
+\doxysubsubsection{\texorpdfstring{Get\_Duty\_Cycle()}{Get\_Duty\_Cycle()}}
+{\footnotesize\ttfamily void Get\+\_\+\+Duty\+\_\+\+Cycle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition that gets the value of duty cycle from the duty cycle array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group2_gad928b89acef519cdff35ab0fe73fedd3}\label{group__group2_gad928b89acef519cdff35ab0fe73fedd3}} 
+\index{Memory Handler@{Memory Handler}!Store\_Temperature\_from\_PT\_1000@{Store\_Temperature\_from\_PT\_1000}}
+\index{Store\_Temperature\_from\_PT\_1000@{Store\_Temperature\_from\_PT\_1000}!Memory Handler@{Memory Handler}}
+\doxysubsubsection{\texorpdfstring{Store\_Temperature\_from\_PT\_1000()}{Store\_Temperature\_from\_PT\_1000()}}
+{\footnotesize\ttfamily void Store\+\_\+\+Temperature\+\_\+from\+\_\+\+PT\+\_\+1000 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+stores the value of temperature measured using PT-\/1000 RTD in the memory 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Temperature} & value from ADC \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}

@@ -1,0 +1,62 @@
+\hypertarget{DrivePOC__Common__Header_8h_source}{}\doxysection{Drive\+POC\+\_\+\+Common\+\_\+\+Header.\+h}
+\mbox{\hyperlink{DrivePOC__Common__Header_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{17 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{18 \textcolor{comment}{ * Header inclusions}}
+\DoxyCodeLine{19 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{20 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{DrivePOC__Controller__NXP_8h}{DrivePOC\_Controller\_NXP.h}}"{}}}
+\DoxyCodeLine{21 }
+\DoxyCodeLine{23 \textcolor{preprocessor}{\#include "{}mlib\_FP.h"{}}}
+\DoxyCodeLine{24 \textcolor{preprocessor}{\#include "{}gflib\_FP.h"{}}}
+\DoxyCodeLine{25 \textcolor{preprocessor}{\#include "{}gdflib\_FP.h"{}}}
+\DoxyCodeLine{26 \textcolor{preprocessor}{\#include "{}gmclib\_FP.h"{}}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}amclib\_FP.h"{}}}
+\DoxyCodeLine{28 }
+\DoxyCodeLine{29 }
+\DoxyCodeLine{30 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{31 \textcolor{comment}{ * Structures and Enumerations}}
+\DoxyCodeLine{32 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{36 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}{Main\_SM\_States}}}
+\DoxyCodeLine{37 \{}
+\DoxyCodeLine{39     \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da931c2045ab9bbb412ad3e96e09f8c063}{MAIN\_SM\_INIT}} = 0,}
+\DoxyCodeLine{41     \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da2b1220e3a4f9eeb9d469b235eccdde13}{MAIN\_SM\_FAULT}}  = 1,}
+\DoxyCodeLine{43     \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da4427e7fdf21a686dc06954f644fbb51b}{MAIN\_SM\_STOP}}  = 2,}
+\DoxyCodeLine{45     \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da9b24242ae2ca3fd3cc8892b3d71c8411}{MAIN\_SM\_RUN}}   = 3}
+\DoxyCodeLine{46 \} \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}{Main\_SM\_States}};}
+\DoxyCodeLine{47 }
+\DoxyCodeLine{51 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}{Motor\_SM\_States}}}
+\DoxyCodeLine{52 \{}
+\DoxyCodeLine{54     \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0a41d4258e93f35253697ae594a47697ef}{MOTOR\_SM\_CALIB}}     = 0,}
+\DoxyCodeLine{56     \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0ae5618bb7cafce0afebea6f72c75330d3}{MOTOR\_SM\_READY}}     = 1,}
+\DoxyCodeLine{58     \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0af6b678ed24834c4ecdb8b11b4eb14eda}{MOTOR\_SM\_START}}       = 2,}
+\DoxyCodeLine{60     \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0ad43755cc2e3c894af718f229744500d0}{MOTOR\_SM\_SPIN}}      = 3,}
+\DoxyCodeLine{62     \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0a8a44ceae51285a1c602449e1359b3ebd}{MOTOR\_SM\_DECELERATE}} =4}
+\DoxyCodeLine{63 \} \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}{Motor\_SM\_States}};}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{68 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structMain__SM__ControlSig}{Main\_SM\_ControlSig}}}
+\DoxyCodeLine{69 \{}
+\DoxyCodeLine{70     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structMain__SM__ControlSig_a9a07855c736bccdb1a275319a66f570f}{main\_sm\_ctrl\_init\_done}}; }
+\DoxyCodeLine{71     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structMain__SM__ControlSig_a35ba16ac9dc10461a4757579f657c5ab}{main\_sm\_ctrl\_fault}};     }
+\DoxyCodeLine{72     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structMain__SM__ControlSig_a09fe2c91c98c1ddc600f0ffabeac7bec}{main\_sm\_ctrl\_stop}};      }
+\DoxyCodeLine{73     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structMain__SM__ControlSig_a29d3d318d4fa7e2d6df5506f304fe27e}{main\_sm\_ctrl\_run}};       }
+\DoxyCodeLine{74 \} \mbox{\hyperlink{DrivePOC__Common__Header_8h_a6adde33af397bff0026c48d7738182c0}{Main\_SM\_ControlSig}};}
+\DoxyCodeLine{75 }
+\DoxyCodeLine{79 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structMotor__SM__ControlSig}{Motor\_SM\_ControlSig}}}
+\DoxyCodeLine{80 \{}
+\DoxyCodeLine{81     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structMotor__SM__ControlSig_a44ceeda3a39c0bdb24d4de9588dc65a6}{calib}};   }
+\DoxyCodeLine{82     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structMotor__SM__ControlSig_a3dbe94701b54596342e069169514b400}{ready}};   }
+\DoxyCodeLine{83     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structMotor__SM__ControlSig_adc283d8c3dbf4615ba3e1968519acdf0}{start\_ok}}; }
+\DoxyCodeLine{84     \textcolor{keywordtype}{bool} \mbox{\hyperlink{structMotor__SM__ControlSig_a41df4a3ba3045a7c23526517d34f0bba}{spin}};  }
+\DoxyCodeLine{85 \} \mbox{\hyperlink{DrivePOC__Common__Header_8h_a87a1416796f57af74c58293a7307d0c3}{Motor\_SM\_ControlSig}};}
+\DoxyCodeLine{86 }
+\DoxyCodeLine{90 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structmcs__acim__open__loop__str}{mcs\_acim\_open\_loop\_str}}\{}
+\DoxyCodeLine{91     GMCLIB\_3COOR\_T\_F16 s\_dutyabc\_f16;}
+\DoxyCodeLine{92     GMCLIB\_3COOR\_T\_FLT s\_dutyabc\_flt;}
+\DoxyCodeLine{93     GMCLIB\_3COOR\_T\_FLT s\_iabc;}
+\DoxyCodeLine{94     GMCLIB\_3COOR\_T\_FLT s\_vabc;}
+\DoxyCodeLine{95     float\_t fltudcbus;}
+\DoxyCodeLine{96     float\_t fltidcbus;}
+\DoxyCodeLine{97 \}\mbox{\hyperlink{DrivePOC__Common__Header_8h_a96ac77f4544e09cc950d160a835a57c3}{mcs\_acim\_open\_loop\_str}};}
+
+\end{DoxyCode}

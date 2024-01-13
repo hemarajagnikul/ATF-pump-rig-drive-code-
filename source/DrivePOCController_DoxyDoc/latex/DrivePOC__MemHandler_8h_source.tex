@@ -1,0 +1,161 @@
+\hypertarget{DrivePOC__MemHandler_8h_source}{}\doxysection{Drive\+POC\+\_\+\+Mem\+Handler.\+h}
+\mbox{\hyperlink{DrivePOC__MemHandler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{26 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{27 \textcolor{comment}{ * Header inclusions}}
+\DoxyCodeLine{28 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}fsl\_debug\_console.h"{}}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include "{}gmclib\_types.h"{}}}
+\DoxyCodeLine{31 }
+\DoxyCodeLine{34 \textcolor{preprocessor}{\#define FSINE\_800 800}}
+\DoxyCodeLine{35 \textcolor{preprocessor}{\#define FSINE\_669 669}}
+\DoxyCodeLine{36 \textcolor{preprocessor}{\#define FSINE\_600 600}}
+\DoxyCodeLine{37 \textcolor{preprocessor}{\#define FSINE\_500 500}}
+\DoxyCodeLine{38 \textcolor{preprocessor}{\#define FSINE\_400 400}}
+\DoxyCodeLine{39 \textcolor{preprocessor}{\#define FSINE\_300 300}}
+\DoxyCodeLine{40 \textcolor{preprocessor}{\#define FSINE\_200 200}}
+\DoxyCodeLine{41 \textcolor{preprocessor}{\#define FSINE\_100 100}}
+\DoxyCodeLine{43 }
+\DoxyCodeLine{44 }
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define FSWITCHING\_800HZ\_50KHZ 50400}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define FSWITCHING\_669HZ\_50KHZ 50175}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define FSWITCHING\_600HZ\_50KHZ 50400}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define FSWITCHING\_500HZ\_50KHZ 49500}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define FSWITCHING\_400HZ\_50KHZ 50400}}
+\DoxyCodeLine{52 \textcolor{preprocessor}{\#define FSWITCHING\_300HZ\_50KHZ 50400}}
+\DoxyCodeLine{53 \textcolor{preprocessor}{\#define FSWITCHING\_200HZ\_50KHZ 49800}}
+\DoxyCodeLine{54 \textcolor{preprocessor}{\#define FSWITCHING\_100HZ\_50KHZ 50100}}
+\DoxyCodeLine{55 \textcolor{preprocessor}{\#define SINE\_LUT\_800HZ\_50KHZ    21}}
+\DoxyCodeLine{56 \textcolor{preprocessor}{\#define SINE\_LUT\_669HZ\_50KHZ    25}}
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define SINE\_LUT\_600HZ\_50KHZ    28}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define SINE\_LUT\_500HZ\_50KHZ    33}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define SINE\_LUT\_400HZ\_50KHZ    42}}
+\DoxyCodeLine{60 \textcolor{preprocessor}{\#define SINE\_LUT\_300HZ\_50KHZ    56}}
+\DoxyCodeLine{61 \textcolor{preprocessor}{\#define SINE\_LUT\_200HZ\_50KHZ    83}}
+\DoxyCodeLine{62 \textcolor{preprocessor}{\#define SINE\_LUT\_100HZ\_50KHZ    167}}
+\DoxyCodeLine{64 }
+\DoxyCodeLine{67 \textcolor{preprocessor}{\#define FSWITCHING\_800HZ\_40KHZ 40800}}
+\DoxyCodeLine{68 \textcolor{preprocessor}{\#define FSWITCHING\_669HZ\_40KHZ 40140}}
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define FSWITCHING\_600HZ\_40KHZ 39600}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define FSWITCHING\_500HZ\_40KHZ 40500}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define FSWITCHING\_400HZ\_40KHZ 39600}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define FSWITCHING\_300HZ\_40KHZ 39600}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define FSWITCHING\_200HZ\_40KHZ 40200}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define FSWITCHING\_100HZ\_40KHZ 40200}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define SINE\_LUT\_800HZ\_40KHZ    17}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define SINE\_LUT\_669HZ\_40KHZ    20}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define SINE\_LUT\_600HZ\_40KHZ    22}}
+\DoxyCodeLine{78 \textcolor{preprocessor}{\#define SINE\_LUT\_500HZ\_40KHZ    27}}
+\DoxyCodeLine{79 \textcolor{preprocessor}{\#define SINE\_LUT\_400HZ\_40KHZ    33}}
+\DoxyCodeLine{80 \textcolor{preprocessor}{\#define SINE\_LUT\_300HZ\_40KHZ    44}}
+\DoxyCodeLine{81 \textcolor{preprocessor}{\#define SINE\_LUT\_200HZ\_40KHZ    67}}
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define SINE\_LUT\_100HZ\_40KHZ    134}}
+\DoxyCodeLine{84 }
+\DoxyCodeLine{85 }
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define FSWITCHING\_800HZ\_30KHZ 31200}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define FSWITCHING\_669HZ\_30KHZ 30105}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define FSWITCHING\_600HZ\_30KHZ 30600}}
+\DoxyCodeLine{91 \textcolor{preprocessor}{\#define FSWITCHING\_500HZ\_30KHZ 30000}}
+\DoxyCodeLine{92 \textcolor{preprocessor}{\#define FSWITCHING\_400HZ\_30KHZ 30000}}
+\DoxyCodeLine{93 \textcolor{preprocessor}{\#define FSWITCHING\_300HZ\_30KHZ 29700}}
+\DoxyCodeLine{94 \textcolor{preprocessor}{\#define FSWITCHING\_200HZ\_30KHZ 30000}}
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define FSWITCHING\_100HZ\_30KHZ 30000}}
+\DoxyCodeLine{96 \textcolor{preprocessor}{\#define SINE\_LUT\_800HZ\_30KHZ    13}}
+\DoxyCodeLine{97 \textcolor{preprocessor}{\#define SINE\_LUT\_669HZ\_30KHZ    15}}
+\DoxyCodeLine{98 \textcolor{preprocessor}{\#define SINE\_LUT\_600HZ\_30KHZ    17}}
+\DoxyCodeLine{99 \textcolor{preprocessor}{\#define SINE\_LUT\_500HZ\_30KHZ    20}}
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define SINE\_LUT\_400HZ\_30KHZ    25}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define SINE\_LUT\_300HZ\_30KHZ    33}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define SINE\_LUT\_200HZ\_30KHZ    50}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define SINE\_LUT\_100HZ\_30KHZ    100}}
+\DoxyCodeLine{105 }
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define FSWITCHING\_1000HZ\_20KHZ 18000}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define FSWITCHING\_800HZ\_20KHZ 19200}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define FSWITCHING\_669HZ\_20KHZ 20070}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define FSWITCHING\_600HZ\_20KHZ 19800}}
+\DoxyCodeLine{112 \textcolor{preprocessor}{\#define FSWITCHING\_500HZ\_20KHZ 19500}}
+\DoxyCodeLine{113 \textcolor{preprocessor}{\#define FSWITCHING\_400HZ\_20KHZ 20400}}
+\DoxyCodeLine{114 \textcolor{preprocessor}{\#define FSWITCHING\_300HZ\_20KHZ 19800}}
+\DoxyCodeLine{115 \textcolor{preprocessor}{\#define FSWITCHING\_200HZ\_20KHZ 20400}}
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define FSWITCHING\_100HZ\_20KHZ 20100}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define SINE\_LUT\_1000HZ\_20KHZ   6}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define SINE\_LUT\_800HZ\_20KHZ    8}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define SINE\_LUT\_669HZ\_20KHZ    10}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define SINE\_LUT\_600HZ\_20KHZ    11}}
+\DoxyCodeLine{121 \textcolor{preprocessor}{\#define SINE\_LUT\_500HZ\_20KHZ    13}}
+\DoxyCodeLine{122 \textcolor{preprocessor}{\#define SINE\_LUT\_400HZ\_20KHZ    17}}
+\DoxyCodeLine{123 \textcolor{preprocessor}{\#define SINE\_LUT\_300HZ\_20KHZ    22}}
+\DoxyCodeLine{124 \textcolor{preprocessor}{\#define SINE\_LUT\_200HZ\_20KHZ    37}}
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define SINE\_LUT\_100HZ\_20KHZ    67}}
+\DoxyCodeLine{127 }
+\DoxyCodeLine{128 }
+\DoxyCodeLine{131 \textcolor{preprocessor}{\#define FSWITCHING\_800HZ\_10KHZ 9600}}
+\DoxyCodeLine{132 \textcolor{preprocessor}{\#define FSWITCHING\_669HZ\_10KHZ 10035}}
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define FSWITCHING\_600HZ\_10KHZ 10800}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define FSWITCHING\_500HZ\_10KHZ 10500}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define FSWITCHING\_400HZ\_10KHZ 9600}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define FSWITCHING\_300HZ\_10KHZ 9900}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define FSWITCHING\_200HZ\_10KHZ 10200}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define FSWITCHING\_100HZ\_10KHZ 10200}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define SINE\_LUT\_800HZ\_10KHZ    4}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define SINE\_LUT\_669HZ\_10KHZ    5}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define SINE\_LUT\_600HZ\_10KHZ    6}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define SINE\_LUT\_500HZ\_10KHZ    7}}
+\DoxyCodeLine{143 \textcolor{preprocessor}{\#define SINE\_LUT\_400HZ\_10KHZ    8}}
+\DoxyCodeLine{144 \textcolor{preprocessor}{\#define SINE\_LUT\_300HZ\_10KHZ    11}}
+\DoxyCodeLine{145 \textcolor{preprocessor}{\#define SINE\_LUT\_200HZ\_10KHZ    17}}
+\DoxyCodeLine{146 \textcolor{preprocessor}{\#define SINE\_LUT\_100HZ\_10KHZ    34}}
+\DoxyCodeLine{148 }
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define T\_SWITCHING\_50KHZ 1000000/50000}}
+\DoxyCodeLine{152 \textcolor{preprocessor}{\#define T\_SWITCHING\_40KHZ 1000000/40000}}
+\DoxyCodeLine{153 \textcolor{preprocessor}{\#define T\_SWITCHING\_30KHZ 1000000/30000}}
+\DoxyCodeLine{154 \textcolor{preprocessor}{\#define T\_SWITCHING\_20KHZ 1000000/20000}}
+\DoxyCodeLine{155 \textcolor{preprocessor}{\#define T\_SWITCHING\_10KHZ 1000000/10000}}
+\DoxyCodeLine{157 }
+\DoxyCodeLine{160 \textcolor{preprocessor}{\#define LTC\_SWITCHING\_FREQ\_10KHZ 10000}}
+\DoxyCodeLine{161 \textcolor{preprocessor}{\#define LTC\_SWITCHING\_FREQ\_20KHZ 20000}}
+\DoxyCodeLine{162 \textcolor{preprocessor}{\#define LTC\_SWITCHING\_FREQ\_30KHZ 30000}}
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define LTC\_SWITCHING\_FREQ\_40KHZ 40000}}
+\DoxyCodeLine{164 \textcolor{preprocessor}{\#define LTC\_SWITCHING\_FREQ\_50KHZ 50000}}
+\DoxyCodeLine{166 }
+\DoxyCodeLine{167 }
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define ADS\_BOARD\_POSITIVE\_VOLTAGE\_LIMIT 0x07FFF}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define ADS\_BOARD\_ZERO\_VAL 0.0F}}
+\DoxyCodeLine{173 }
+\DoxyCodeLine{174 }
+\DoxyCodeLine{175 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{176 \textcolor{comment}{ * Function prototypes}}
+\DoxyCodeLine{177 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{185 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__group2_ga60432b48e4ac0d4794de84fdcaab3b8d}{DrivePOC\_MH\_UpdateEncoderSpeed}}(\textcolor{keywordtype}{float} rpm\_recd);}
+\DoxyCodeLine{186 }
+\DoxyCodeLine{187 }
+\DoxyCodeLine{194 \textcolor{keywordtype}{float} \mbox{\hyperlink{group__group2_gae30c8a394f7bfc165b103fb11ecc69d2}{DrivePOC\_MH\_GetEncoderSpeed}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{195 }
+\DoxyCodeLine{196 }
+\DoxyCodeLine{202 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group2_gad928b89acef519cdff35ab0fe73fedd3}{Store\_Temperature\_from\_PT\_1000}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{203 }
+\DoxyCodeLine{204 }
+\DoxyCodeLine{205 }
+\DoxyCodeLine{211 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group2_gab15a0f985a5819c69574ff86075cff89}{Get\_Duty\_Cycle}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{212 }
+\DoxyCodeLine{213 }
+\DoxyCodeLine{219 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group2_gaea167be1e1d6d337e3230372688ea9e7}{DrivePOC\_MH\_UpdateVIvalues}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{220 }
+\DoxyCodeLine{221 }
+\DoxyCodeLine{227 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group2_gaa49e4fe7dcfb8f2868b17b6903451408}{DrivePOC\_MH\_GetVIvalues}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{228 }
+\DoxyCodeLine{229 }
+\DoxyCodeLine{233 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group2_ga431eb7a05ca65e8ddfd09ccc2a158d21}{Get\_V\_F\_Duty\_Cycle}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{234 }
+\DoxyCodeLine{235 }
+\DoxyCodeLine{239 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group2_ga75a218a14454fca58c8f13454795c6a0}{Get\_Deceleration\_Duty\_Cycle}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{240 }
+\DoxyCodeLine{241 }
+\DoxyCodeLine{245 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__group2_ga3f6aab173dea5206b86c03f250161ecd}{Get\_Start\_Up\_status}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{247 }
+\DoxyCodeLine{251 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__group2_ga1e88d389a98dbc4100b4d314b254c1b0}{Get\_Stop\_status}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{252 }
+
+\end{DoxyCode}

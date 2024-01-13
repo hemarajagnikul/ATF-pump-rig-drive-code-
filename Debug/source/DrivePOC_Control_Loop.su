@@ -1,0 +1,9 @@
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_gpio.h:182:20:GPIO_PortSet	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_gpio.h:193:20:GPIO_PortClear	16	static
+../source/DrivePOC_Control_Loop.c:60:20:Open_Loop_Control	48	static
+../source/DrivePOC_Control_Loop.c:77:6:Open_Loop_Control_Init	4	static
+../source/DrivePOC_Control_Loop.c:103:20:Open_Loop_MainStateMC	48	static
+../source/DrivePOC_Control_Loop.c:190:6:System_FaultDiag	4	static
+../source/DrivePOC_Control_Loop.c:202:6:PTC_FaultDiag	8	static
+../source/DrivePOC_Control_Loop.c:227:6:Open_Loop_MotorStateMC	8	static
+../source/DrivePOC_Control_Loop.c:318:6:Motor_SM_Calibration	16	static

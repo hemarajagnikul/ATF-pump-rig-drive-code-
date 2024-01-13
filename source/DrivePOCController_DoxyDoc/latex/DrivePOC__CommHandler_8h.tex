@@ -1,0 +1,720 @@
+\hypertarget{DrivePOC__CommHandler_8h}{}\doxysection{Drive\+POC\+\_\+\+Comm\+Handler.\+h File Reference}
+\label{DrivePOC__CommHandler_8h}\index{DrivePOC\_CommHandler.h@{DrivePOC\_CommHandler.h}}
+
+
+\+: Communication Handler functions providing for all interfacing between NXP to other sensors/systems as well PWM Generation  
+
+
+{\ttfamily \#include \char`\"{}fsl\+\_\+dspi\+\_\+edma.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+dspi.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+edma.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+dmamux.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+cmp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Common\+\_\+\+Header.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{Indent}\textbf{ RTD}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+LSB}~27
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+10}~(uint32\+\_\+t) 0xA $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+50}~(uint32\+\_\+t) 0xB $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+100}~(uint32\+\_\+t) 0xC $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+200}~(uint32\+\_\+t) 0xD $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+500}~(uint32\+\_\+t) 0xE $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+1000}~(uint32\+\_\+t) 0xF $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+1000\+\_\+375}~(uint32\+\_\+t) 0x10 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+NI\+\_\+120}~(uint32\+\_\+t) 0x11 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+CUSTOM}~(uint32\+\_\+t) 0x12 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Sense Resistor}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+SENSE\+\_\+\+RESISTOR}~(uint32\+\_\+t) 0x1D $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+NONE}~(uint32\+\_\+t) 0x0 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+ACTIVE\+\_\+\+ANALOG}~(uint32\+\_\+t) 0x1F $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSE\+\_\+\+RESISTOR\+\_\+\+VALUE\+\_\+\+LSB}~0
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Direct ADC}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+DIRECT\+\_\+\+ADC}~(uint32\+\_\+t) 0x1E $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Thermistor}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+44004\+\_\+2\+P252\+K\+\_\+25C}~(uint32\+\_\+t) 0x13 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+44005\+\_\+3\+K\+\_\+25C}~(uint32\+\_\+t) 0x14 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+44007\+\_\+5\+K\+\_\+25C}~(uint32\+\_\+t) 0x15 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+44006\+\_\+10\+K\+\_\+25C}~(uint32\+\_\+t) 0x16 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+44008\+\_\+30\+K\+\_\+25C}~(uint32\+\_\+t) 0x17 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+\+YSI\+\_\+400\+\_\+2\+P252\+K\+\_\+25C}~(uint32\+\_\+t) 0x18 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+1003\+K\+\_\+1\+K\+\_\+25C}~(uint32\+\_\+t) 0x19 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+\+CUSTOM\+\_\+\+STEINHART\+\_\+\+HART}~(uint32\+\_\+t) 0x1A $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+\+CUSTOM\+\_\+\+TABLE}~(uint32\+\_\+t) 0x1B $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Thermocouple}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+J\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x1 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+K\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x2 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+E\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x3 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+N\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x4 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+R\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x5 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+S\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x6 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+T\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x7 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+B\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x8 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+CUSTOM\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x9 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Off-\/\+Chip Diode}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+OFF\+\_\+\+CHIP\+\_\+\+DIODE}~(uint32\+\_\+t) 0x1C $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ rtd -\/ rsense channel}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB}~22
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+\+NONE}~(uint32\+\_\+t) 0x0 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+1}~(uint32\+\_\+t) 0x1 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+2}~(uint32\+\_\+t) 0x2 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+3}~(uint32\+\_\+t) 0x3 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+4}~(uint32\+\_\+t) 0x4 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+5}~(uint32\+\_\+t) 0x5 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+6}~(uint32\+\_\+t) 0x6 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+7}~(uint32\+\_\+t) 0x7 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+8}~(uint32\+\_\+t) 0x8 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+9}~(uint32\+\_\+t) 0x9 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+10}~(uint32\+\_\+t) 0xA $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ rtd -\/ num wires}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+LSB}~20
+\item 
+\#define {\bfseries RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+\_\+2\+\_\+\+WIRE}~(uint32\+\_\+t) 0x0 $<$$<$ RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+\_\+3\+\_\+\+WIRE}~(uint32\+\_\+t) 0x1 $<$$<$ RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+\_\+4\+\_\+\+WIRE}~(uint32\+\_\+t) 0x2 $<$$<$ RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+\_\+4\+\_\+\+WIRE\+\_\+\+KELVIN\+\_\+\+RSENSE}~(uint32\+\_\+t) 0x3 $<$$<$ RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ rtd -\/ excitation mode}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB}~18
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+NO\+\_\+\+ROTATION\+\_\+\+NO\+\_\+\+SHARING}~(uint32\+\_\+t) 0x0 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+NO\+\_\+\+ROTATION\+\_\+\+SHARING}~(uint32\+\_\+t) 0x1 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+ROTATION\+\_\+\+SHARING}~(uint32\+\_\+t) 0x2 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ rtd -\/ excitation current}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB}~14
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+EXTERNAL}~(uint32\+\_\+t) 0x0 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+5\+UA}~(uint32\+\_\+t) 0x1 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+10\+UA}~(uint32\+\_\+t) 0x2 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+25\+UA}~(uint32\+\_\+t) 0x3 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+50\+UA}~(uint32\+\_\+t) 0x4 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+100\+UA}~(uint32\+\_\+t) 0x5 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+250\+UA}~(uint32\+\_\+t) 0x6 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+500\+UA}~(uint32\+\_\+t) 0x7 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+1\+MA}~(uint32\+\_\+t) 0x8 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ rtd -\/ standard}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries RTD\+\_\+\+STANDARD\+\_\+\+LSB}~12
+\item 
+\#define {\bfseries RTD\+\_\+\+STANDARD\+\_\+\+\_\+\+EUROPEAN}~(uint32\+\_\+t) 0x0 $<$$<$ RTD\+\_\+\+STANDARD\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+STANDARD\+\_\+\+\_\+\+AMERICAN}~(uint32\+\_\+t) 0x1 $<$$<$ RTD\+\_\+\+STANDARD\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+STANDARD\+\_\+\+\_\+\+JAPANESE}~(uint32\+\_\+t) 0x2 $<$$<$ RTD\+\_\+\+STANDARD\+\_\+\+LSB
+\item 
+\#define {\bfseries RTD\+\_\+\+STANDARD\+\_\+\+\_\+\+ITS\+\_\+90}~(uint32\+\_\+t) 0x3 $<$$<$ RTD\+\_\+\+STANDARD\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ rtd-\/custom}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries RTD\+\_\+\+CUSTOM\+\_\+\+ADDRESS\+\_\+\+LSB}~6/$\ast$rtd -\/ custom address$\ast$/
+\item 
+\#define {\bfseries RTD\+\_\+\+CUSTOM\+\_\+\+LENGTH\+\_\+1\+\_\+\+LSB}~0/$\ast$rtd -\/ custom length-\/1$\ast$/
+\item 
+\#define {\bfseries RTD\+\_\+\+CUSTOM\+\_\+\+VALUES\+\_\+\+LSB}~31/$\ast$rtd -\/ custom values$\ast$/
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ active analog -\/ differential}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+DIFFERENTIAL\+\_\+\+LSB}~26
+\item 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+DIFFERENTIAL}~(uint32\+\_\+t) 0x0 $<$$<$ ACTIVE\+\_\+\+ANALOG\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+SINGLE\+\_\+\+ENDED}~(uint32\+\_\+t) 0x1 $<$$<$ ACTIVE\+\_\+\+ANALOG\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+CUSTOM\+\_\+\+ADDRESS\+\_\+\+LSB}~6  /$\ast$active analog -\/ custom address$\ast$/
+\item 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+CUSTOM\+\_\+\+LENGTH\+\_\+1\+\_\+\+LSB}~0 /$\ast$active analog -\/ custom length-\/1$\ast$/
+\item 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+CUSTOM\+\_\+\+VALUES\+\_\+\+LSB}~31  /$\ast$active analog -\/ custom values$\ast$/
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Direct ADC -\/ differential}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB}~26
+\item 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+DIFFERENTIAL}~(uint32\+\_\+t) 0x0 $<$$<$ DIRECT\+\_\+\+ADC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+SINGLE\+\_\+\+ENDED}~(uint32\+\_\+t) 0x1 $<$$<$ DIRECT\+\_\+\+ADC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Direct ADC -\/ custom}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+LSB}~25
+\item 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+\_\+\+NO}~(uint32\+\_\+t) 0x0 $<$$<$ DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+LSB
+\item 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+\_\+\+YES}~(uint32\+\_\+t) 0x1 $<$$<$ DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+LSB
+\item 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+ADDRESS\+\_\+\+LSB}~6 /$\ast$Direct ADC -\/ custom address$\ast$/
+\item 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+LENGTH\+\_\+1\+\_\+\+LSB}~0 /$\ast$Direct ADC -\/ custom length-\/1$\ast$/
+\item 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+VALUES\+\_\+\+LSB}~31 /$\ast$Direct ADC -\/ custom values$\ast$/
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ thermistor -\/ rsense channel}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB}~22
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+\+NONE}~(uint32\+\_\+t) 0x0 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+1}~(uint32\+\_\+t) 0x1 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+2}~(uint32\+\_\+t) 0x2 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+3}~(uint32\+\_\+t) 0x3 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+4}~(uint32\+\_\+t) 0x4 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+5}~(uint32\+\_\+t) 0x5 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+6}~(uint32\+\_\+t) 0x6 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+7}~(uint32\+\_\+t) 0x7 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+8}~(uint32\+\_\+t) 0x8 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+9}~(uint32\+\_\+t) 0x9 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+10}~(uint32\+\_\+t) 0xA $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ thermistor -\/ differential}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+DIFFERENTIAL\+\_\+\+LSB}~21
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+DIFFERENTIAL}~(uint32\+\_\+t) 0x0 $<$$<$ THERMISTOR\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+SINGLE\+\_\+\+ENDED}~(uint32\+\_\+t) 0x1 $<$$<$ THERMISTOR\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ thermistor -\/ excitation mode}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB}~19
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+NO\+\_\+\+SHARING\+\_\+\+NO\+\_\+\+ROTATION}~(uint32\+\_\+t) 0x0 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+SHARING\+\_\+\+ROTATION}~(uint32\+\_\+t) 0x1 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+SHARING\+\_\+\+NO\+\_\+\+ROTATION}~(uint32\+\_\+t) 0x2 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ thermistor -\/ excitation current}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB}~15
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+INVALID}~(uint32\+\_\+t) 0x0 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+250\+NA}~(uint32\+\_\+t) 0x1 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+500\+NA}~(uint32\+\_\+t) 0x2 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+1\+UA}~(uint32\+\_\+t) 0x3 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+5\+UA}~(uint32\+\_\+t) 0x4 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+10\+UA}~(uint32\+\_\+t) 0x5 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+25\+UA}~(uint32\+\_\+t) 0x6 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+50\+UA}~(uint32\+\_\+t) 0x7 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+100\+UA}~(uint32\+\_\+t) 0x8 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+250\+UA}~(uint32\+\_\+t) 0x9 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+500\+UA}~(uint32\+\_\+t) 0xA $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+1\+MA}~(uint32\+\_\+t) 0xB $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+AUTORANGE}~(uint32\+\_\+t) 0xC $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+INVALID\+\_\+}~(uint32\+\_\+t) 0xD $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+INVALID\+\_\+\+\_\+}~(uint32\+\_\+t) 0xE $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+EXTERNAL}~(uint32\+\_\+t) 0xF $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ thermistor-\/address}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+CUSTOM\+\_\+\+ADDRESS\+\_\+\+LSB}~6 /$\ast$ thermistor -\/ custom address$\ast$/
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+CUSTOM\+\_\+\+LENGTH\+\_\+1\+\_\+\+LSB}~0 /$\ast$thermistor -\/ custom length-\/1$\ast$/
+\item 
+\#define {\bfseries THERMISTOR\+\_\+\+CUSTOM\+\_\+\+VALUES\+\_\+\+LSB}~31  /$\ast$thermistor -\/ custom values$\ast$/
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Thermocouple -\/ cold junction ch}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB}~22
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+\+NONE}~(uint32\+\_\+t) 0x0 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+1}~(uint32\+\_\+t) 0x1 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+2}~(uint32\+\_\+t) 0x2 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+3}~(uint32\+\_\+t) 0x3 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+4}~(uint32\+\_\+t) 0x4 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+5}~(uint32\+\_\+t) 0x5 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+6}~(uint32\+\_\+t) 0x6 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+7}~(uint32\+\_\+t) 0x7 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+8}~(uint32\+\_\+t) 0x8 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+9}~(uint32\+\_\+t) 0x9 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+10}~(uint32\+\_\+t) 0xA $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ thermocouple -\/ differential}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries TC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB}~21
+\item 
+\#define {\bfseries TC\+\_\+\+DIFFERENTIAL}~(uint32\+\_\+t) 0x0 $<$$<$ TC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+SINGLE\+\_\+\+ENDED}~(uint32\+\_\+t) 0x1 $<$$<$ TC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ thermocouple -\/ open ckt detect}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+LSB}~20
+\item 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+\_\+\+NO}~(uint32\+\_\+t) 0x0 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+\_\+\+YES}~(uint32\+\_\+t) 0x1 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ thermocouple -\/ open ckt detect current}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+LSB}~18
+\item 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+\_\+10\+UA}~(uint32\+\_\+t) 0x0 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+\_\+100\+UA}~(uint32\+\_\+t) 0x1 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+\_\+500\+UA}~(uint32\+\_\+t) 0x2 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+\_\+1\+MA}~(uint32\+\_\+t) 0x3 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries TC\+\_\+\+CUSTOM\+\_\+\+ADDRESS\+\_\+\+LSB}~6 /$\ast$ tc -\/ custom address$\ast$/
+\item 
+\#define {\bfseries TC\+\_\+\+CUSTOM\+\_\+\+LENGTH\+\_\+1\+\_\+\+LSB}~0/$\ast$ tc -\/ custom length-\/1$\ast$/
+\item 
+\#define {\bfseries TC\+\_\+\+CUSTOM\+\_\+\+VALUES\+\_\+\+LSB}~31 /$\ast$tc -\/ custom values$\ast$/
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ off-\/chip diode -\/ differential}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries DIODE\+\_\+\+DIFFERENTIAL\+\_\+\+LSB}~26
+\item 
+\#define {\bfseries DIODE\+\_\+\+DIFFERENTIAL}~(uint32\+\_\+t) 0x0 $<$$<$ DIODE\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\#define {\bfseries DIODE\+\_\+\+SINGLE\+\_\+\+ENDED}~(uint32\+\_\+t) 0x1 $<$$<$ DIODE\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ diode -\/ num readings}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries DIODE\+\_\+\+NUM\+\_\+\+READINGS\+\_\+\+LSB}~25
+\item 
+\#define {\bfseries DIODE\+\_\+\+NUM\+\_\+\+READINGS\+\_\+\+\_\+2}~(uint32\+\_\+t) 0x0 $<$$<$ DIODE\+\_\+\+NUM\+\_\+\+READINGS\+\_\+\+LSB
+\item 
+\#define {\bfseries DIODE\+\_\+\+NUM\+\_\+\+READINGS\+\_\+\+\_\+3}~(uint32\+\_\+t) 0x1 $<$$<$ DIODE\+\_\+\+NUM\+\_\+\+READINGS\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ diode -\/ averaging on}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries DIODE\+\_\+\+AVERAGING\+\_\+\+ON\+\_\+\+LSB}~24
+\item 
+\#define {\bfseries DIODE\+\_\+\+AVERAGING\+\_\+\+OFF}~(uint32\+\_\+t) 0x0 $<$$<$ DIODE\+\_\+\+AVERAGING\+\_\+\+ON\+\_\+\+LSB
+\item 
+\#define {\bfseries DIODE\+\_\+\+AVERAGING\+\_\+\+ON}~(uint32\+\_\+t) 0x1 $<$$<$ DIODE\+\_\+\+AVERAGING\+\_\+\+ON\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ diode -\/ current}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries DIODE\+\_\+\+CURRENT\+\_\+\+LSB}~22
+\item 
+\#define {\bfseries DIODE\+\_\+\+CURRENT\+\_\+\+\_\+10\+UA\+\_\+40\+UA\+\_\+80\+UA}~(uint32\+\_\+t) 0x0 $<$$<$ DIODE\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries DIODE\+\_\+\+CURRENT\+\_\+\+\_\+20\+UA\+\_\+80\+UA\+\_\+160\+UA}~(uint32\+\_\+t) 0x1 $<$$<$ DIODE\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries DIODE\+\_\+\+CURRENT\+\_\+\+\_\+40\+UA\+\_\+160\+UA\+\_\+320\+UA}~(uint32\+\_\+t) 0x2 $<$$<$ DIODE\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries DIODE\+\_\+\+CURRENT\+\_\+\+\_\+80\+UA\+\_\+320\+UA\+\_\+640\+UA}~(uint32\+\_\+t) 0x3 $<$$<$ DIODE\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\#define {\bfseries DIODE\+\_\+\+IDEALITY\+\_\+\+FACTOR\+\_\+\+LSB}~0/$\ast$$\ast$diode -\/ ideality factor(eta)$\ast$/
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ GLOBAL CONFIGURATION CONSTANTS}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries REJECTION\+\_\+\+\_\+50\+\_\+60\+\_\+\+HZ}~(uint8\+\_\+t) 0x0
+\item 
+\#define {\bfseries REJECTION\+\_\+\+\_\+60\+\_\+\+HZ}~(uint8\+\_\+t) 0x1
+\item 
+\#define {\bfseries REJECTION\+\_\+\+\_\+50\+\_\+\+HZ}~(uint8\+\_\+t) 0x2
+\item 
+\#define {\bfseries TEMP\+\_\+\+UNIT\+\_\+\+\_\+C}~(uint8\+\_\+t) 0x0
+\item 
+\#define {\bfseries TEMP\+\_\+\+UNIT\+\_\+\+\_\+F}~(uint8\+\_\+t) 0x4
+\item 
+\#define {\bfseries ENABLE\+\_\+\+KELVIN\+\_\+3\+\_\+\+WIRE\+\_\+\+RTD\+\_\+\+MODE}~(uint8\+\_\+t) 0x10
+\item 
+\#define {\bfseries ENABLE\+\_\+\+KELVIN\+\_\+2\+\_\+\+WIRE\+\_\+\+RTD\+\_\+\+MODE}~(uint8\+\_\+t) 0x20
+\item 
+\#define {\bfseries ENABLE\+\_\+\+KELVIN\+\_\+\+DIFFERENTIAL\+\_\+\+THERMISTOR\+\_\+\+MODE}~(uint8\+\_\+t) 0x40
+\item 
+\#define {\bfseries DISABLE\+\_\+\+MINUS\+\_\+999}~(uint8\+\_\+t) 0x80
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ STATUS BYTE CONSTANTS}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries SENSOR\+\_\+\+HARD\+\_\+\+FAILURE}~(uint8\+\_\+t) 0x80
+\item 
+\#define {\bfseries ADC\+\_\+\+HARD\+\_\+\+FAILURE}~(uint8\+\_\+t) 0x40
+\item 
+\#define {\bfseries CJ\+\_\+\+HARD\+\_\+\+FAILURE}~(uint8\+\_\+t) 0x20
+\item 
+\#define {\bfseries CJ\+\_\+\+SOFT\+\_\+\+FAILURE}~(uint8\+\_\+t) 0x10
+\item 
+\#define {\bfseries SENSOR\+\_\+\+ABOVE}~(uint8\+\_\+t) 0x8
+\item 
+\#define {\bfseries SENSOR\+\_\+\+BELOW}~(uint8\+\_\+t) 0x4
+\item 
+\#define {\bfseries ADC\+\_\+\+RANGE\+\_\+\+ERROR}~(uint8\+\_\+t) 0x2
+\item 
+\#define {\bfseries VALID}~(uint8\+\_\+t) 0x1
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADDRESS BASE}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries COMMAND\+\_\+\+STATUS\+\_\+\+REGISTER}~(uint16\+\_\+t) 0x0000
+\item 
+\#define {\bfseries CH\+\_\+\+ADDRESS\+\_\+\+BASE}~(uint16\+\_\+t) 0x0200
+\item 
+\#define {\bfseries VOUT\+\_\+\+CH\+\_\+\+BASE}~(uint16\+\_\+t) 0x0060
+\item 
+\#define {\bfseries READ\+\_\+\+CH\+\_\+\+BASE}~(uint16\+\_\+t) 0x0010
+\item 
+\#define {\bfseries CONVERSION\+\_\+\+RESULT\+\_\+\+MEMORY\+\_\+\+BASE}~(uint16\+\_\+t) 0x0010
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ DATA to be sent in the MOSI line of MCU}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries WRITE\+\_\+\+TO\+\_\+\+RAM}~(uint8\+\_\+t) 0x02
+\item 
+\#define {\bfseries READ\+\_\+\+FROM\+\_\+\+RAM}~(uint8\+\_\+t) 0x03
+\item 
+\#define {\bfseries CONVERSION\+\_\+\+CONTROL\+\_\+\+BYTE}~(uint8\+\_\+t) 0x80
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ OUTPUT TYPE}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries VOLTAGE}~(uint8\+\_\+t) 0x01
+\item 
+\#define {\bfseries TEMPERATURE}~(uint8\+\_\+t) 0x02
+\item 
+\#define {\bfseries CODE}~(uint8\+\_\+t) 0x03
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ LTC DSPI EDMA Peripheral}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+BASEADDR}~SPI1
+\item 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASE}~DMAMUX\+\_\+\+BASE
+\item 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASE}~DMA\+\_\+\+BASE
+\item 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+RX\+\_\+\+REQUEST\+\_\+\+SOURCE}~k\+Dma\+Request\+Mux0\+SPI1
+\item 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+CLK\+\_\+\+SRC}~DSPI1\+\_\+\+CLK\+\_\+\+SRC
+\item 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+CLK\+\_\+\+FREQ}~CLOCK\+\_\+\+Get\+Freq(DSPI1\+\_\+\+CLK\+\_\+\+SRC)
+\item 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+PCS\+\_\+\+FOR\+\_\+\+INIT}~k\+DSPI\+\_\+\+Pcs0
+\item 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+PCS\+\_\+\+FOR\+\_\+\+TRANSFER}~k\+DSPI\+\_\+\+Master\+Pcs0
+\item 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASEADDR}~((DMAMUX\+\_\+\+Type $\ast$)(LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASE))
+\item 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASEADDR}~((DMA\+\_\+\+Type $\ast$)(LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASE))
+\item 
+\#define {\bfseries LTC\+\_\+\+TRANSFER\+\_\+\+SIZE}~8U        /$\ast$ Transfer data\+Size $\ast$/
+\item 
+\#define {\bfseries LTC\+\_\+\+TRANSFER\+\_\+\+BAUDRATE}~2000000U /$\ast$ Transfer baudrate -\/ 2M $\ast$/
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADS DSPI EDMA Peripheral}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries NUM\+\_\+\+CHANNEL}~8
+\item 
+\#define {\bfseries ADS\+\_\+\+ADC\+\_\+\+RANGE}~10.\+0F
+\item 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+BASEADDR}~SPI0
+\item 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASE}~DMAMUX\+\_\+\+BASE
+\item 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASE}~DMA\+\_\+\+BASE
+\item 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+RX\+\_\+\+REQUEST\+\_\+\+SOURCE}~k\+Dma\+Request\+Mux0\+SPI0\+Rx
+\item 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+TX\+\_\+\+REQUEST\+\_\+\+SOURCE}~k\+Dma\+Request\+Mux0\+SPI0\+Tx
+\item 
+\#define {\bfseries ADS\+\_\+\+MASTER\+\_\+\+CLK\+\_\+\+SRC}~DSPI0\+\_\+\+CLK\+\_\+\+SRC
+\item 
+\#define {\bfseries ADS\+\_\+\+MASTER\+\_\+\+CLK\+\_\+\+FREQ}~20000000
+\item 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+PCS\+\_\+\+FOR\+\_\+\+INIT}~k\+DSPI\+\_\+\+Pcs0
+\item 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+PCS\+\_\+\+FOR\+\_\+\+TRANSFER}~k\+DSPI\+\_\+\+Master\+Pcs0
+\item 
+\#define {\bfseries ADS\+\_\+\+TRANSFER\+\_\+\+SIZE}~2U$\ast$NUM\+\_\+\+CHANNEL        /$\ast$ Transfer data\+Size $\ast$/
+\item 
+\#define {\bfseries ADS\+\_\+\+TRANSFER\+\_\+\+BAUDRATE}~20000000U /$\ast$ Transfer baudrate -\/ 20M $\ast$/
+\item 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASEADDR}~((DMAMUX\+\_\+\+Type $\ast$)(ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASE))
+\item 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASEADDR}~((DMA\+\_\+\+Type $\ast$)(ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASE))
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ On-\/board Comparator for PTC-\/150}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries CMP\+\_\+\+BASE}~CMP0
+\item 
+\#define {\bfseries CMP\+\_\+\+USER\+\_\+\+CHANNEL}~1U
+\item 
+\#define {\bfseries CMP\+\_\+\+DAC\+\_\+\+CHANNEL}~7U
+\item 
+\#define {\bfseries CMP\+\_\+\+THRESHOLD}~31U
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Inbuilt ADC \& PT-\/1000 Sensor parameters}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries PT\+\_\+1000\+\_\+\+ADC16\+\_\+\+BASE}~ADC0
+\item 
+\#define {\bfseries PT\+\_\+1000\+\_\+\+ADC16\+\_\+\+CHANNEL\+\_\+\+GROUP}~0U
+\item 
+\#define {\bfseries PT\+\_\+1000\+\_\+\+ADC16\+\_\+\+USER\+\_\+\+CHANNEL}~8U /$\ast$ PTB0, ADC0\+\_\+\+SE8 $\ast$/
+\item 
+\#define {\bfseries FSL\+\_\+\+FEATURE\+\_\+\+ADC16\+\_\+\+MAX\+\_\+\+RESOLUTION}~(16)
+\item 
+\#define {\bfseries ALPHA}~0.\+00385F
+\item 
+\#define {\bfseries PT\+\_\+1000\+\_\+A}~3.\+908300E-\/3F
+\item 
+\#define {\bfseries PT\+\_\+1000\+\_\+B}~-\/5.\+775E-\/7
+\item 
+\#define {\bfseries PT\+\_\+1000\+\_\+C}~–4.\+183000E-\/12
+\item 
+\#define {\bfseries POTENTIAL\+\_\+\+DIVIDER\+\_\+\+INPUT}~3.\+0F
+\item 
+\#define {\bfseries RESISTANCE\+\_\+0\+\_\+\+DEG}~1000.\+0F
+\item 
+\#define {\bfseries POTENTIAL\+\_\+\+DIVIDER\+\_\+\+R1}~6800.\+0F
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__group1_ga936b95121740dcd9ea20c6ee9b8499c6}{Read\+From\+Encoder}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to read out of the FTM1 registers for Quadrature decoding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gaa27bbde4889e0d0c2af88f971efc86eb}{Print\+Debug\+Info}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to print debug data on the Serial terminal over UART @ 115200 bps baudrate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gac2344da1a44115aa81946f614ee2998a}{Drive\+POC\+\_\+\+Comm\+\_\+\+Handler\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to initialize the Communication Handler of the Drive POC controller for ADC and PWM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga2c0e86960979f0c8d21b864925b06e71}{PWM\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize PWM Signals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga5cc42dcb8e006443870b611ca0cb68bf}{Comparator\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Comparator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga19a5a24d8f5c2d00be06843a495ddd5c}{Drive\+POC\+\_\+\+Comm\+\_\+\+Handler\+\_\+\+PWMDis}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to disable PWM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gae8a039e738a656864bef5815889913e8}{Drive\+POC\+\_\+\+Update\+Duty\+Cyc}} (GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT duty\+Cycle)
+\begin{DoxyCompactList}\small\item\em Update duty cycle for PWM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gac1107f5f6c72c9ab14ff6ea86f18c3af}{LTC\+\_\+\+DSPI\+\_\+\+Master\+User\+Callback}} (SPI\+\_\+\+Type $\ast$base, dspi\+\_\+master\+\_\+edma\+\_\+handle\+\_\+t $\ast$handle, status\+\_\+t status, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Function definition used a callback to check if the EDMA Transfer is successful or not for LTC Board. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__group1_ga9993a5d8443105bb5e2914d4ad4ddb1f}{ltc\+\_\+get\+\_\+start\+\_\+address}} (uint16\+\_\+t base\+\_\+address, uint8\+\_\+t channel\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Function definition to get the start address corresponding to the channel number across which sensor is connected. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__group1_ga336dbaa064e6bba1fc575096133199da}{ltc\+\_\+transfer\+\_\+four\+\_\+bytes}} (uint8\+\_\+t ram\+\_\+read\+\_\+or\+\_\+write, uint16\+\_\+t start\+\_\+address, uint32\+\_\+t input\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Function definiton to transfer 4 bytes. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{group__group1_ga66a1bba7620c1a67fd7fb4ae4bbd7c9f}{ltc\+\_\+spi\+\_\+transfer\+\_\+block}} (uint8\+\_\+t TRANSFER\+\_\+\+SIZEE, uint8\+\_\+t $\ast$ttxx, uint8\+\_\+t $\ast$rrxx)
+\begin{DoxyCompactList}\small\item\em Function definition for SPI Transfer @detail The communication is Half Duplex Mode. \end{DoxyCompactList}\item 
+void {\bfseries ltc\+\_\+configure\+\_\+channels} (uint8\+\_\+t channel\+\_\+number, uint32\+\_\+t channel\+\_\+assignment\+\_\+data)
+\item 
+void \mbox{\hyperlink{group__group1_gaaea8539607f1d674bd030d8ef251f599}{delay}} (int delay\+\_\+in\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Function which creates a delay in milli second @detail uses NOP -\/ No Operation inside a for loop to create delays. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__group1_ga9a33778832e23a4ce65543112b784fa1}{ltc\+\_\+transfer\+\_\+byte}} (uint8\+\_\+t ram\+\_\+read\+\_\+or\+\_\+write, uint16\+\_\+t start\+\_\+address, uint8\+\_\+t input\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Function definition for transfer of a single byte data. \end{DoxyCompactList}\item 
+float\+\_\+t \mbox{\hyperlink{group__group1_gaa26f5a25edf4ca557dd24185d913cc0f}{ltc\+\_\+measure\+\_\+channel}} (uint8\+\_\+t channel\+\_\+number, uint8\+\_\+t channel\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Function definition to measure the sensor output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gaca8184369749d0fb9f532f422d25d4c3}{ltc\+\_\+convert\+\_\+channel}} (uint8\+\_\+t channel\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Function definition which performs the Initiate conversion action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga447a441ee97f9760235110c6aa307108}{ltc\+\_\+wait\+\_\+for\+\_\+process\+\_\+to\+\_\+finish}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to check if the value 0x40 is being returned by the LTC Board in MOSI line of the LTC Board(\+MISO Line of the MCU) which in turn indicates that the transfer of Initiate Conversion Command is a success. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__group1_ga84730584378fdee2a73cabeae52d4379}{ltc\+\_\+get\+\_\+result}} (uint8\+\_\+t channel\+\_\+number, uint8\+\_\+t channel\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Function which receives the Temperature or the Voltage value measured in the MISO line of the MCU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga3163af2185016acf05814b0ee9612fee}{ltc\+\_\+print\+\_\+conversion\+\_\+result}} (uint32\+\_\+t raw\+\_\+conversion\+\_\+result, uint8\+\_\+t channel\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Function definition to print the output in the console window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gab486a29142443fde0da3b9444d2492f4}{ltc\+\_\+read\+\_\+voltage\+\_\+or\+\_\+resistance\+\_\+results}} (uint8\+\_\+t channel\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Function definition to calculate if the value needed is in terms of Voltage or Resistance instead of Temperature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga155b5d4f8a5138b51b2c3ed45b9bf062}{ltc\+\_\+print\+\_\+fault\+\_\+data}} (uint8\+\_\+t fault\+\_\+byte)
+\begin{DoxyCompactList}\small\item\em Function to print the Fault byte in the console window indicating the kind of fault as per the Datasheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga615dc6530f76b9e64add88b068bc294b}{ltc\+\_\+spi\+\_\+edma\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the DSPI \& EDMA Peripheral. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gafae9a1d5efe50d7e2634e7da7f9fc844}{comparator\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the Comparator Peripherals for PTC-\/150. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga30ca3958eb9512ca2bab9c081a4f1afc}{Inbuilt\+ADC\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to initialize the Inbuilt ADC. \end{DoxyCompactList}\item 
+float\+\_\+t \mbox{\hyperlink{group__group1_gac11c6a9a24445569e9ce1dd74afa67d4}{Collect\+\_\+\+Data\+\_\+from\+\_\+\+PT\+\_\+1000}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to collect the Temperature value. \end{DoxyCompactList}\item 
+bool\+\_\+t \mbox{\hyperlink{group__group1_gad1a49a12ac2a47584d08073502f6ac47}{Measure\+\_\+from\+\_\+\+PTC\+\_\+150}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to measure from PTC-\/150. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gad18e426e6b33595650afa5d6f316c7a1}{ads\+\_\+spi\+\_\+edma\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes SPI0 instance for Communication with the ADS8588 board. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{group__group1_ga2907e74fbd54f58b87493c76a4064e4d}{ads\+\_\+spi\+\_\+transfer\+\_\+block}} (uint8\+\_\+t $\ast$rrxx)
+\begin{DoxyCompactList}\small\item\em Used for receiving the current and voltage value from the ADS8588 board using SPI Protocol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga63a4ac611cc61804358df31db508d294}{ADS\+\_\+\+DSPI\+\_\+\+Master\+User\+Callback}} (SPI\+\_\+\+Type $\ast$base, dspi\+\_\+master\+\_\+edma\+\_\+handle\+\_\+t $\ast$handle, status\+\_\+t status, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Function definition used a callback to check if the EDMA Transfer is successful or not for ADS Board. \end{DoxyCompactList}\item 
+void {\bfseries DAC\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Function definition for DAC. \end{DoxyCompactList}\item 
+void {\bfseries DAC\+\_\+\+Update} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmcs__acim__open__loop__str}{mcs\+\_\+acim\+\_\+open\+\_\+loop\+\_\+str}} \mbox{\hyperlink{group__group1_gafd0f238eac6ce65f1b83150b2f80ebee}{s\+\_\+open\+\_\+loop}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Communication Handler functions providing for all interfacing between NXP to other sensors/systems as well PWM Generation 
+
+\begin{DoxyAuthor}{Author}
+\+: Sreedhar, Sangeerth @company \+: Agnikul Cosmos Private Limited
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) Agnikul Cosmos Private Limited All rights reserved.\end{center} }

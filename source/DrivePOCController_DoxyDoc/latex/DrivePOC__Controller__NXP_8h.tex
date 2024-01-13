@@ -1,0 +1,107 @@
+\hypertarget{DrivePOC__Controller__NXP_8h}{}\doxysection{Drive\+POC\+\_\+\+Controller\+\_\+\+NXP.\+h File Reference}
+\label{DrivePOC__Controller__NXP_8h}\index{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}}
+
+
+\+: Main header file for implementing the Drive POC Controller using NXP microcontroller on the FRDM-\/\+KV31F eval board  
+
+
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Mem\+Handler.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{DrivePOC__Controller__NXP_8h_ab2b19379a4be1370a24efdffd4a0c531}{PIT\+\_\+\+IRQ\+\_\+\+HANDLER}}~PIT0\+\_\+\+IRQHandler
+\item 
+\#define \mbox{\hyperlink{DrivePOC__Controller__NXP_8h_a5e2f2a63c91f6a3fc3efaa78c0f40e62}{PIT\+\_\+\+IRQ\+\_\+\+ID}}~PIT0\+\_\+\+IRQn
+\item 
+\#define \mbox{\hyperlink{DrivePOC__Controller__NXP_8h_a411cc0f5ce23365479e23727ea7e27a9}{PIT\+\_\+\+SOURCE\+\_\+\+CLOCK}}~CLOCK\+\_\+\+Get\+Freq(k\+CLOCK\+\_\+\+Bus\+Clk)
+\item 
+\#define \mbox{\hyperlink{DrivePOC__Controller__NXP_8h_a11bd0d145291e913dcbf5d81791aa045}{FTM\+\_\+\+SOURCE\+\_\+\+CLOCK}}~CLOCK\+\_\+\+Get\+Freq(k\+CLOCK\+\_\+\+Bus\+Clk)
+\end{DoxyCompactItemize}
+\begin{Indent}\textbf{ DEFINES FOR DIFFERENT TIMES OF EXPECTED INTERRUPTS}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define \mbox{\hyperlink{DrivePOC__Controller__NXP_8h_a22a9630f0e60dd22c7fade0011b3fdbc}{LTC\+\_\+\+FREQ}}~20000
+\item 
+\#define \mbox{\hyperlink{DrivePOC__Controller__NXP_8h_a15ca2438b5b9d2bf7cdeabb566619dd1}{PRINTING\+\_\+\+FREQ}}~100000U
+\item 
+\mbox{\Hypertarget{DrivePOC__Controller__NXP_8h_a880e8427dd0fd4f933d279acaa5fed4d}\label{DrivePOC__Controller__NXP_8h_a880e8427dd0fd4f933d279acaa5fed4d}} 
+\#define {\bfseries SLOW\+\_\+\+LOOP\+\_\+\+TIME}~400U
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{DrivePOC__Controller__NXP_8h_a0cfd1baa25e34da0ea9b21c6e953db5c}{PIT\+\_\+\+Configuration}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to configure the Periodic Interrupt Timer (PIT) @detail The function calls the PIT Handler which runs every 100us or 50us or 33us or 25us or 20 us based on the Switching Frequency For 10k\+Hz -\/ 100 us For 20k\+Hz -\/ 50 us For 30k\+Hz -\/ 33 us For 40k\+Hz -\/ 25 us For 50k\+Hz -\/ 20 us. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main header file for implementing the Drive POC Controller using NXP microcontroller on the FRDM-\/\+KV31F eval board 
+
+\begin{DoxyAuthor}{Author}
+\+: Sreedhar, Sangeerth @company \+: Agnikul Cosmos Private Limited
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) Agnikul Cosmos Private Limited All rights reserved.\end{center} }
+
+\doxysubsection{Macro Definition Documentation}
+\mbox{\Hypertarget{DrivePOC__Controller__NXP_8h_a11bd0d145291e913dcbf5d81791aa045}\label{DrivePOC__Controller__NXP_8h_a11bd0d145291e913dcbf5d81791aa045}} 
+\index{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!FTM\_SOURCE\_CLOCK@{FTM\_SOURCE\_CLOCK}}
+\index{FTM\_SOURCE\_CLOCK@{FTM\_SOURCE\_CLOCK}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}}
+\doxysubsubsection{\texorpdfstring{FTM\_SOURCE\_CLOCK}{FTM\_SOURCE\_CLOCK}}
+{\footnotesize\ttfamily \#define FTM\+\_\+\+SOURCE\+\_\+\+CLOCK~CLOCK\+\_\+\+Get\+Freq(k\+CLOCK\+\_\+\+Bus\+Clk)}
+
+Source clock for FTM \mbox{\Hypertarget{DrivePOC__Controller__NXP_8h_a22a9630f0e60dd22c7fade0011b3fdbc}\label{DrivePOC__Controller__NXP_8h_a22a9630f0e60dd22c7fade0011b3fdbc}} 
+\index{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!LTC\_FREQ@{LTC\_FREQ}}
+\index{LTC\_FREQ@{LTC\_FREQ}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}}
+\doxysubsubsection{\texorpdfstring{LTC\_FREQ}{LTC\_FREQ}}
+{\footnotesize\ttfamily \#define LTC\+\_\+\+FREQ~20000}
+
+Every 1 sec the LTC Interrupt will be working irrespective of the Switching Frequency \mbox{\Hypertarget{DrivePOC__Controller__NXP_8h_ab2b19379a4be1370a24efdffd4a0c531}\label{DrivePOC__Controller__NXP_8h_ab2b19379a4be1370a24efdffd4a0c531}} 
+\index{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!PIT\_IRQ\_HANDLER@{PIT\_IRQ\_HANDLER}}
+\index{PIT\_IRQ\_HANDLER@{PIT\_IRQ\_HANDLER}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}}
+\doxysubsubsection{\texorpdfstring{PIT\_IRQ\_HANDLER}{PIT\_IRQ\_HANDLER}}
+{\footnotesize\ttfamily \#define PIT\+\_\+\+IRQ\+\_\+\+HANDLER(\begin{DoxyParamCaption}\item[{}]{void }\end{DoxyParamCaption})~PIT0\+\_\+\+IRQHandler}
+
+Defining the peripheral ID of PIT \mbox{\Hypertarget{DrivePOC__Controller__NXP_8h_a5e2f2a63c91f6a3fc3efaa78c0f40e62}\label{DrivePOC__Controller__NXP_8h_a5e2f2a63c91f6a3fc3efaa78c0f40e62}} 
+\index{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!PIT\_IRQ\_ID@{PIT\_IRQ\_ID}}
+\index{PIT\_IRQ\_ID@{PIT\_IRQ\_ID}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}}
+\doxysubsubsection{\texorpdfstring{PIT\_IRQ\_ID}{PIT\_IRQ\_ID}}
+{\footnotesize\ttfamily \#define PIT\+\_\+\+IRQ\+\_\+\+ID~PIT0\+\_\+\+IRQn}
+
+Defining the IRQ ID of PIT \mbox{\Hypertarget{DrivePOC__Controller__NXP_8h_a411cc0f5ce23365479e23727ea7e27a9}\label{DrivePOC__Controller__NXP_8h_a411cc0f5ce23365479e23727ea7e27a9}} 
+\index{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!PIT\_SOURCE\_CLOCK@{PIT\_SOURCE\_CLOCK}}
+\index{PIT\_SOURCE\_CLOCK@{PIT\_SOURCE\_CLOCK}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}}
+\doxysubsubsection{\texorpdfstring{PIT\_SOURCE\_CLOCK}{PIT\_SOURCE\_CLOCK}}
+{\footnotesize\ttfamily \#define PIT\+\_\+\+SOURCE\+\_\+\+CLOCK~CLOCK\+\_\+\+Get\+Freq(k\+CLOCK\+\_\+\+Bus\+Clk)}
+
+Source clock for PIT driver \mbox{\Hypertarget{DrivePOC__Controller__NXP_8h_a15ca2438b5b9d2bf7cdeabb566619dd1}\label{DrivePOC__Controller__NXP_8h_a15ca2438b5b9d2bf7cdeabb566619dd1}} 
+\index{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!PRINTING\_FREQ@{PRINTING\_FREQ}}
+\index{PRINTING\_FREQ@{PRINTING\_FREQ}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}}
+\doxysubsubsection{\texorpdfstring{PRINTING\_FREQ}{PRINTING\_FREQ}}
+{\footnotesize\ttfamily \#define PRINTING\+\_\+\+FREQ~100000U}
+
+Factor for 1000 ms 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{DrivePOC__Controller__NXP_8h_a0cfd1baa25e34da0ea9b21c6e953db5c}\label{DrivePOC__Controller__NXP_8h_a0cfd1baa25e34da0ea9b21c6e953db5c}} 
+\index{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!PIT\_Configuration@{PIT\_Configuration}}
+\index{PIT\_Configuration@{PIT\_Configuration}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}}
+\doxysubsubsection{\texorpdfstring{PIT\_Configuration()}{PIT\_Configuration()}}
+{\footnotesize\ttfamily void PIT\+\_\+\+Configuration (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to configure the Periodic Interrupt Timer (PIT) @detail The function calls the PIT Handler which runs every 100us or 50us or 33us or 25us or 20 us based on the Switching Frequency For 10k\+Hz -\/ 100 us For 20k\+Hz -\/ 50 us For 30k\+Hz -\/ 33 us For 40k\+Hz -\/ 25 us For 50k\+Hz -\/ 20 us. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Enable timer interrupts for channel 0

@@ -1,0 +1,100 @@
+\hypertarget{DrivePOC__Controller__NXP_8c}{}\doxysection{Drive\+POC\+\_\+\+Controller\+\_\+\+NXP.\+c File Reference}
+\label{DrivePOC__Controller__NXP_8c}\index{DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}}
+
+
+\+: Main header file for implementing the Drive POC Controller using NXP microcontroller on the FRDM-\/\+KV31F eval board  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}peripherals.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}pin\+\_\+mux.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}clock\+\_\+config.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}MKV31\+F51212.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+debug\+\_\+console.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+ftm.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+pit.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+common.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gmclib\+\_\+\+FP.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}time.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+\_\+\+Parameters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Controller\+\_\+\+NXP.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Comm\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Control\+\_\+\+Loop.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Mem\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Fault\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mcdrv\+\_\+frdmkv31f.\+h\char`\"{}}\newline
+\doxysubsection*{Global Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{DrivePOC__Controller__NXP_8c_a42629907852db3c365ed0ed1957c8e45}\label{DrivePOC__Controller__NXP_8c_a42629907852db3c365ed0ed1957c8e45}} 
+volatile uint32\+\_\+t {\bfseries g\+\_\+loop\+\_\+counter} = 0U
+\item 
+\mbox{\Hypertarget{DrivePOC__Controller__NXP_8c_ac372ee3821aa7a8b840c746609da63c1}\label{DrivePOC__Controller__NXP_8c_ac372ee3821aa7a8b840c746609da63c1}} 
+bool\+\_\+t {\bfseries g\+\_\+temperature\+\_\+check}
+\item 
+\mbox{\Hypertarget{DrivePOC__Controller__NXP_8c_aab825bfd6069055503f7214c7ef3ec99}\label{DrivePOC__Controller__NXP_8c_aab825bfd6069055503f7214c7ef3ec99}} 
+GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT {\bfseries s\+\_\+pwm\+\_\+duty\+\_\+cycle}
+\item 
+\mbox{\Hypertarget{DrivePOC__Controller__NXP_8c_a2b3b0c2dbbebd9d657d5f46132d0a717}\label{DrivePOC__Controller__NXP_8c_a2b3b0c2dbbebd9d657d5f46132d0a717}} 
+bool {\bfseries decrement} = false
+\item 
+void \mbox{\hyperlink{DrivePOC__Controller__NXP_8c_a0cfd1baa25e34da0ea9b21c6e953db5c}{PIT\+\_\+\+Configuration}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to configure the Periodic Interrupt Timer (PIT) @detail The function calls the PIT Handler which runs every 100us or 50us or 33us or 25us or 20 us based on the Switching Frequency For 10k\+Hz -\/ 100 us For 20k\+Hz -\/ 50 us For 30k\+Hz -\/ 33 us For 40k\+Hz -\/ 25 us For 50k\+Hz -\/ 20 us. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{DrivePOC__Controller__NXP_8c_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\item 
+void \mbox{\hyperlink{DrivePOC__Controller__NXP_8c_ac8ea1c4c146407388b47c0ab30d411f4}{PIT\+\_\+\+IRQ\+\_\+\+HANDLER}} (void)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Main header file for implementing the Drive POC Controller using NXP microcontroller on the FRDM-\/\+KV31F eval board 
+
+\begin{DoxyAuthor}{Author}
+\+: Sreedhar, Sangeerth @company \+: Agnikul Cosmos Private Limited
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) Agnikul Cosmos Private Limited All rights reserved.\end{center} }
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{DrivePOC__Controller__NXP_8c_a840291bc02cba5474a4cb46a9b9566fe}\label{DrivePOC__Controller__NXP_8c_a840291bc02cba5474a4cb46a9b9566fe}} 
+\index{DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}!main@{main}}
+\index{main@{main}!DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Init board hardware.
+
+Init FSL debug console.
+
+Initialize peripherals used
+
+Additional initializations (ADC in the future)
+
+PIT configuration\mbox{\Hypertarget{DrivePOC__Controller__NXP_8c_a0cfd1baa25e34da0ea9b21c6e953db5c}\label{DrivePOC__Controller__NXP_8c_a0cfd1baa25e34da0ea9b21c6e953db5c}} 
+\index{DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}!PIT\_Configuration@{PIT\_Configuration}}
+\index{PIT\_Configuration@{PIT\_Configuration}!DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}}
+\doxysubsubsection{\texorpdfstring{PIT\_Configuration()}{PIT\_Configuration()}}
+{\footnotesize\ttfamily void PIT\+\_\+\+Configuration (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to configure the Periodic Interrupt Timer (PIT) @detail The function calls the PIT Handler which runs every 100us or 50us or 33us or 25us or 20 us based on the Switching Frequency For 10k\+Hz -\/ 100 us For 20k\+Hz -\/ 50 us For 30k\+Hz -\/ 33 us For 40k\+Hz -\/ 25 us For 50k\+Hz -\/ 20 us. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Enable timer interrupts for channel 0\mbox{\Hypertarget{DrivePOC__Controller__NXP_8c_ac8ea1c4c146407388b47c0ab30d411f4}\label{DrivePOC__Controller__NXP_8c_ac8ea1c4c146407388b47c0ab30d411f4}} 
+\index{DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}!PIT\_IRQ\_HANDLER@{PIT\_IRQ\_HANDLER}}
+\index{PIT\_IRQ\_HANDLER@{PIT\_IRQ\_HANDLER}!DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}}
+\doxysubsubsection{\texorpdfstring{PIT\_IRQ\_HANDLER()}{PIT\_IRQ\_HANDLER()}}
+{\footnotesize\ttfamily void PIT\+\_\+\+IRQ\+\_\+\+HANDLER (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+Printing debug data over UART on serial terminal

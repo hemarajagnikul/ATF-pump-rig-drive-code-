@@ -1,0 +1,11 @@
+../source/DrivePOC_MemHandler.c:121:6:DrivePOC_MH_UpdateEncoderSpeed	16	static
+../source/DrivePOC_MemHandler.c:134:7:DrivePOC_MH_GetEncoderSpeed	4	static
+../source/DrivePOC_MemHandler.c:146:6:Store_Temperature_from_PT_1000	8	static
+../source/DrivePOC_MemHandler.c:157:6:Get_V_F_Duty_Cycle	24	static
+../source/DrivePOC_MemHandler.c:328:6:Get_Duty_Cycle	24	static
+../source/DrivePOC_MemHandler.c:512:6:Get_Deceleration_Duty_Cycle	24	static
+../source/DrivePOC_MemHandler.c:688:6:DrivePOC_MH_GetVIvalues	8	static
+../source/DrivePOC_MemHandler.c:704:6:DrivePOC_MH_UpdateVIvalues	4	static
+../source/DrivePOC_MemHandler.c:731:6:Get_Start_Up_status	4	static
+../source/DrivePOC_MemHandler.c:739:6:Get_Stop_status	4	static
+../source/DrivePOC_MemHandler.c:744:6:is_motor_stopped	4	static

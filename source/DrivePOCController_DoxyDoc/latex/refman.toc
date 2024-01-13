@@ -1,0 +1,188 @@
+\@ifundefined {etoctocstyle}{\let \etoc@startlocaltoc \@gobble \let \etoc@settocdepth \@gobble \let \etoc@depthtag \@gobble \let \etoc@setlocaltop \@gobble }{}
+\contentsline {chapter}{\numberline {1}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POCController}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Todo List}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Module Index}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Modules}{5}{section.3.1}%
+\contentsline {chapter}{\numberline {4}Data Structure Index}{7}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Data Structures}{7}{section.4.1}%
+\contentsline {chapter}{\numberline {5}File Index}{9}{chapter.5}%
+\contentsline {section}{\numberline {5.1}File List}{9}{section.5.1}%
+\contentsline {chapter}{\numberline {6}Module Documentation}{11}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Communication Handler}{11}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{19}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Function Documentation}{19}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}ADS\_DSPI\_MasterUserCallback()}{19}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}ads\_spi\_edma\_init()}{20}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}ads\_spi\_transfer\_block()}{20}{subsubsection.6.1.2.3}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}Collect\_Data\_from\_PT\_1000()}{20}{subsubsection.6.1.2.4}%
+\contentsline {subsubsection}{\numberline {6.1.2.5}Comparator\_Init()}{20}{subsubsection.6.1.2.5}%
+\contentsline {subsubsection}{\numberline {6.1.2.6}comparator\_init()}{21}{subsubsection.6.1.2.6}%
+\contentsline {subsubsection}{\numberline {6.1.2.7}delay()}{21}{subsubsection.6.1.2.7}%
+\contentsline {subsubsection}{\numberline {6.1.2.8}DrivePOC\_Comm\_Handler\_Init()}{21}{subsubsection.6.1.2.8}%
+\contentsline {subsubsection}{\numberline {6.1.2.9}DrivePOC\_Comm\_Handler\_PWMDis()}{21}{subsubsection.6.1.2.9}%
+\contentsline {subsubsection}{\numberline {6.1.2.10}DrivePOC\_UpdateDutyCyc()}{22}{subsubsection.6.1.2.10}%
+\contentsline {subsubsection}{\numberline {6.1.2.11}InbuiltADC\_Init()}{22}{subsubsection.6.1.2.11}%
+\contentsline {subsubsection}{\numberline {6.1.2.12}ltc\_convert\_channel()}{22}{subsubsection.6.1.2.12}%
+\contentsline {subsubsection}{\numberline {6.1.2.13}LTC\_DSPI\_MasterUserCallback()}{23}{subsubsection.6.1.2.13}%
+\contentsline {subsubsection}{\numberline {6.1.2.14}ltc\_get\_result()}{23}{subsubsection.6.1.2.14}%
+\contentsline {subsubsection}{\numberline {6.1.2.15}ltc\_get\_start\_address()}{23}{subsubsection.6.1.2.15}%
+\contentsline {subsubsection}{\numberline {6.1.2.16}ltc\_measure\_channel()}{24}{subsubsection.6.1.2.16}%
+\contentsline {subsubsection}{\numberline {6.1.2.17}ltc\_print\_conversion\_result()}{24}{subsubsection.6.1.2.17}%
+\contentsline {subsubsection}{\numberline {6.1.2.18}ltc\_print\_fault\_data()}{25}{subsubsection.6.1.2.18}%
+\contentsline {subsubsection}{\numberline {6.1.2.19}ltc\_read\_voltage\_or\_resistance\_results()}{25}{subsubsection.6.1.2.19}%
+\contentsline {subsubsection}{\numberline {6.1.2.20}ltc\_spi\_edma\_init()}{25}{subsubsection.6.1.2.20}%
+\contentsline {subsubsection}{\numberline {6.1.2.21}ltc\_spi\_transfer\_block()}{26}{subsubsection.6.1.2.21}%
+\contentsline {subsubsection}{\numberline {6.1.2.22}ltc\_transfer\_byte()}{26}{subsubsection.6.1.2.22}%
+\contentsline {subsubsection}{\numberline {6.1.2.23}ltc\_transfer\_four\_bytes()}{26}{subsubsection.6.1.2.23}%
+\contentsline {subsubsection}{\numberline {6.1.2.24}ltc\_wait\_for\_process\_to\_finish()}{27}{subsubsection.6.1.2.24}%
+\contentsline {subsubsection}{\numberline {6.1.2.25}Measure\_from\_PTC\_150()}{27}{subsubsection.6.1.2.25}%
+\contentsline {subsubsection}{\numberline {6.1.2.26}PrintDebugInfo()}{27}{subsubsection.6.1.2.26}%
+\contentsline {subsubsection}{\numberline {6.1.2.27}PWM\_Init()}{29}{subsubsection.6.1.2.27}%
+\contentsline {subsubsection}{\numberline {6.1.2.28}ReadFromEncoder()}{29}{subsubsection.6.1.2.28}%
+\contentsline {subsection}{\numberline {6.1.3}Variable Documentation}{29}{subsection.6.1.3}%
+\contentsline {subsubsection}{\numberline {6.1.3.1}s\_open\_loop}{29}{subsubsection.6.1.3.1}%
+\contentsline {section}{\numberline {6.2}V/F Control Algorithm}{29}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{30}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Function Documentation}{30}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}Get\_Duty\_Cycle()}{30}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}Motor\_SM\_Calibration()}{30}{subsubsection.6.2.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.3}Motor\_SM\_Ready()}{31}{subsubsection.6.2.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.2.4}Open\_Loop\_Control()}{31}{subsubsection.6.2.2.4}%
+\contentsline {subsubsection}{\numberline {6.2.2.5}Open\_Loop\_MainStateMC()}{31}{subsubsection.6.2.2.5}%
+\contentsline {subsubsection}{\numberline {6.2.2.6}Open\_Loop\_MotorStateMC()}{32}{subsubsection.6.2.2.6}%
+\contentsline {subsubsection}{\numberline {6.2.2.7}PTC\_FaultDiag()}{33}{subsubsection.6.2.2.7}%
+\contentsline {subsubsection}{\numberline {6.2.2.8}System\_FaultDiag()}{33}{subsubsection.6.2.2.8}%
+\contentsline {section}{\numberline {6.3}Fault Handler}{33}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{33}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Function Documentation}{33}{subsection.6.3.2}%
+\contentsline {subsubsection}{\numberline {6.3.2.1}Get\_Fault\_Duty\_Cycle()}{34}{subsubsection.6.3.2.1}%
+\contentsline {section}{\numberline {6.4}Memory Handler}{34}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{37}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Function Documentation}{37}{subsection.6.4.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.1}DrivePOC\_MH\_GetEncoderSpeed()}{37}{subsubsection.6.4.2.1}%
+\contentsline {subsubsection}{\numberline {6.4.2.2}DrivePOC\_MH\_GetVIvalues()}{37}{subsubsection.6.4.2.2}%
+\contentsline {subsubsection}{\numberline {6.4.2.3}DrivePOC\_MH\_UpdateEncoderSpeed()}{37}{subsubsection.6.4.2.3}%
+\contentsline {subsubsection}{\numberline {6.4.2.4}DrivePOC\_MH\_UpdateVIvalues()}{38}{subsubsection.6.4.2.4}%
+\contentsline {subsubsection}{\numberline {6.4.2.5}Get\_Duty\_Cycle()}{38}{subsubsection.6.4.2.5}%
+\contentsline {subsubsection}{\numberline {6.4.2.6}Store\_Temperature\_from\_PT\_1000()}{38}{subsubsection.6.4.2.6}%
+\contentsline {chapter}{\numberline {7}Data Structure Documentation}{39}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SM\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Control\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sig Struct Reference}{39}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Detailed Description}{39}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Field Documentation}{39}{subsection.7.1.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.1}main\_sm\_ctrl\_fault}{39}{subsubsection.7.1.2.1}%
+\contentsline {subsubsection}{\numberline {7.1.2.2}main\_sm\_ctrl\_init\_done}{39}{subsubsection.7.1.2.2}%
+\contentsline {subsubsection}{\numberline {7.1.2.3}main\_sm\_ctrl\_run}{39}{subsubsection.7.1.2.3}%
+\contentsline {subsubsection}{\numberline {7.1.2.4}main\_sm\_ctrl\_stop}{39}{subsubsection.7.1.2.4}%
+\contentsline {section}{\numberline {7.2}mcs\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}acim\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}open\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}loop\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}str Struct Reference}{40}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Detailed Description}{40}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}Motor\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}SM\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Control\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Sig Struct Reference}{40}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}Detailed Description}{40}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}Field Documentation}{40}{subsection.7.3.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.1}calib}{40}{subsubsection.7.3.2.1}%
+\contentsline {subsubsection}{\numberline {7.3.2.2}ready}{40}{subsubsection.7.3.2.2}%
+\contentsline {subsubsection}{\numberline {7.3.2.3}spin}{40}{subsubsection.7.3.2.3}%
+\contentsline {subsubsection}{\numberline {7.3.2.4}start\_ok}{41}{subsubsection.7.3.2.4}%
+\contentsline {chapter}{\numberline {8}File Documentation}{43}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Parameters.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{43}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Detailed Description}{44}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Macro Definition Documentation}{44}{subsection.8.1.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.1}B}{44}{subsubsection.8.1.2.1}%
+\contentsline {subsubsection}{\numberline {8.1.2.2}F\_NOM}{45}{subsubsection.8.1.2.2}%
+\contentsline {subsubsection}{\numberline {8.1.2.3}FC}{45}{subsubsection.8.1.2.3}%
+\contentsline {subsubsection}{\numberline {8.1.2.4}I\_NOM\_LL\_RMS}{45}{subsubsection.8.1.2.4}%
+\contentsline {subsubsection}{\numberline {8.1.2.5}I\_NOM\_PHASE\_RMS}{45}{subsubsection.8.1.2.5}%
+\contentsline {subsubsection}{\numberline {8.1.2.6}IIN\_INVERTER\_MAX}{45}{subsubsection.8.1.2.6}%
+\contentsline {subsubsection}{\numberline {8.1.2.7}IIN\_INVERTER\_MIN}{45}{subsubsection.8.1.2.7}%
+\contentsline {subsubsection}{\numberline {8.1.2.8}IOUT\_INVERTER\_MAX}{45}{subsubsection.8.1.2.8}%
+\contentsline {subsubsection}{\numberline {8.1.2.9}IOUT\_INVERTER\_MIN}{45}{subsubsection.8.1.2.9}%
+\contentsline {subsubsection}{\numberline {8.1.2.10}J}{45}{subsubsection.8.1.2.10}%
+\contentsline {subsubsection}{\numberline {8.1.2.11}LLR}{45}{subsubsection.8.1.2.11}%
+\contentsline {subsubsection}{\numberline {8.1.2.12}LLS}{45}{subsubsection.8.1.2.12}%
+\contentsline {subsubsection}{\numberline {8.1.2.13}LM}{45}{subsubsection.8.1.2.13}%
+\contentsline {subsubsection}{\numberline {8.1.2.14}LR}{46}{subsubsection.8.1.2.14}%
+\contentsline {subsubsection}{\numberline {8.1.2.15}MAX\_FREQ}{46}{subsubsection.8.1.2.15}%
+\contentsline {subsubsection}{\numberline {8.1.2.16}MIN\_FREQ}{46}{subsubsection.8.1.2.16}%
+\contentsline {subsubsection}{\numberline {8.1.2.17}MOTOR\_EFFICIENCY}{46}{subsubsection.8.1.2.17}%
+\contentsline {subsubsection}{\numberline {8.1.2.18}MOTOR\_MAX\_TEMPERATURE}{46}{subsubsection.8.1.2.18}%
+\contentsline {subsubsection}{\numberline {8.1.2.19}POLE}{46}{subsubsection.8.1.2.19}%
+\contentsline {subsubsection}{\numberline {8.1.2.20}POLE\_PAIR}{46}{subsubsection.8.1.2.20}%
+\contentsline {subsubsection}{\numberline {8.1.2.21}RATED\_PF}{46}{subsubsection.8.1.2.21}%
+\contentsline {subsubsection}{\numberline {8.1.2.22}RR}{46}{subsubsection.8.1.2.22}%
+\contentsline {subsubsection}{\numberline {8.1.2.23}RS}{46}{subsubsection.8.1.2.23}%
+\contentsline {subsubsection}{\numberline {8.1.2.24}TS}{46}{subsubsection.8.1.2.24}%
+\contentsline {subsubsection}{\numberline {8.1.2.25}TSC}{46}{subsubsection.8.1.2.25}%
+\contentsline {subsubsection}{\numberline {8.1.2.26}TVECT}{47}{subsubsection.8.1.2.26}%
+\contentsline {subsubsection}{\numberline {8.1.2.27}V\_NOM\_LL\_RMS}{47}{subsubsection.8.1.2.27}%
+\contentsline {subsubsection}{\numberline {8.1.2.28}V\_NOM\_PHASE\_RMS}{47}{subsubsection.8.1.2.28}%
+\contentsline {subsubsection}{\numberline {8.1.2.29}VDC\_MAX}{47}{subsubsection.8.1.2.29}%
+\contentsline {subsubsection}{\numberline {8.1.2.30}VDC\_MIN}{47}{subsubsection.8.1.2.30}%
+\contentsline {subsubsection}{\numberline {8.1.2.31}VDC\_NOM}{47}{subsubsection.8.1.2.31}%
+\contentsline {subsubsection}{\numberline {8.1.2.32}VIN\_INVERTER\_MAX}{47}{subsubsection.8.1.2.32}%
+\contentsline {subsubsection}{\numberline {8.1.2.33}VIN\_INVERTER\_MIN}{47}{subsubsection.8.1.2.33}%
+\contentsline {subsubsection}{\numberline {8.1.2.34}VOUT\_INVERTER\_MAX}{47}{subsubsection.8.1.2.34}%
+\contentsline {subsubsection}{\numberline {8.1.2.35}VOUT\_INVERTER\_MIN}{47}{subsubsection.8.1.2.35}%
+\contentsline {subsubsection}{\numberline {8.1.2.36}WC}{47}{subsubsection.8.1.2.36}%
+\contentsline {section}{\numberline {8.2}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Parameters.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{48}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Comm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{48}{section.8.3}%
+\contentsline {subsection}{\numberline {8.3.1}Detailed Description}{51}{subsection.8.3.1}%
+\contentsline {section}{\numberline {8.4}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Comm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{51}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{59}{subsection.8.4.1}%
+\contentsline {section}{\numberline {8.5}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Comm\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{59}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Common\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Header.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{64}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Detailed Description}{64}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Typedef Documentation}{65}{subsection.8.6.2}%
+\contentsline {subsubsection}{\numberline {8.6.2.1}Main\_SM\_ControlSig}{65}{subsubsection.8.6.2.1}%
+\contentsline {subsubsection}{\numberline {8.6.2.2}Main\_SM\_States}{65}{subsubsection.8.6.2.2}%
+\contentsline {subsubsection}{\numberline {8.6.2.3}mcs\_acim\_open\_loop\_str}{65}{subsubsection.8.6.2.3}%
+\contentsline {subsubsection}{\numberline {8.6.2.4}Motor\_SM\_ControlSig}{65}{subsubsection.8.6.2.4}%
+\contentsline {subsubsection}{\numberline {8.6.2.5}Motor\_SM\_States}{65}{subsubsection.8.6.2.5}%
+\contentsline {subsection}{\numberline {8.6.3}Enumeration Type Documentation}{65}{subsection.8.6.3}%
+\contentsline {subsubsection}{\numberline {8.6.3.1}Main\_SM\_States}{65}{subsubsection.8.6.3.1}%
+\contentsline {subsubsection}{\numberline {8.6.3.2}Motor\_SM\_States}{65}{subsubsection.8.6.3.2}%
+\contentsline {section}{\numberline {8.7}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Common\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Header.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{66}{section.8.7}%
+\contentsline {section}{\numberline {8.8}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Control\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Loop.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{66}{section.8.8}%
+\contentsline {subsection}{\numberline {8.8.1}Detailed Description}{67}{subsection.8.8.1}%
+\contentsline {subsection}{\numberline {8.8.2}Variable Documentation}{67}{subsection.8.8.2}%
+\contentsline {subsubsection}{\numberline {8.8.2.1}main\_ctrl\_sig}{67}{subsubsection.8.8.2.1}%
+\contentsline {subsubsection}{\numberline {8.8.2.2}main\_sm\_state}{68}{subsubsection.8.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.8.2.3}motor\_ctrl\_sig}{68}{subsubsection.8.8.2.3}%
+\contentsline {subsubsection}{\numberline {8.8.2.4}motor\_sm\_state}{68}{subsubsection.8.8.2.4}%
+\contentsline {section}{\numberline {8.9}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Control\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Loop.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{68}{section.8.9}%
+\contentsline {subsection}{\numberline {8.9.1}Detailed Description}{68}{subsection.8.9.1}%
+\contentsline {section}{\numberline {8.10}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Control\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Loop.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{69}{section.8.10}%
+\contentsline {section}{\numberline {8.11}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}NXP.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{69}{section.8.11}%
+\contentsline {subsection}{\numberline {8.11.1}Detailed Description}{70}{subsection.8.11.1}%
+\contentsline {subsection}{\numberline {8.11.2}Function Documentation}{70}{subsection.8.11.2}%
+\contentsline {subsubsection}{\numberline {8.11.2.1}main()}{70}{subsubsection.8.11.2.1}%
+\contentsline {subsubsection}{\numberline {8.11.2.2}PIT\_Configuration()}{70}{subsubsection.8.11.2.2}%
+\contentsline {subsubsection}{\numberline {8.11.2.3}PIT\_IRQ\_HANDLER()}{71}{subsubsection.8.11.2.3}%
+\contentsline {section}{\numberline {8.12}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}NXP.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{71}{section.8.12}%
+\contentsline {subsection}{\numberline {8.12.1}Detailed Description}{71}{subsection.8.12.1}%
+\contentsline {subsection}{\numberline {8.12.2}Macro Definition Documentation}{71}{subsection.8.12.2}%
+\contentsline {subsubsection}{\numberline {8.12.2.1}FTM\_SOURCE\_CLOCK}{71}{subsubsection.8.12.2.1}%
+\contentsline {subsubsection}{\numberline {8.12.2.2}LTC\_FREQ}{72}{subsubsection.8.12.2.2}%
+\contentsline {subsubsection}{\numberline {8.12.2.3}PIT\_IRQ\_HANDLER}{72}{subsubsection.8.12.2.3}%
+\contentsline {subsubsection}{\numberline {8.12.2.4}PIT\_IRQ\_ID}{72}{subsubsection.8.12.2.4}%
+\contentsline {subsubsection}{\numberline {8.12.2.5}PIT\_SOURCE\_CLOCK}{72}{subsubsection.8.12.2.5}%
+\contentsline {subsubsection}{\numberline {8.12.2.6}PRINTING\_FREQ}{72}{subsubsection.8.12.2.6}%
+\contentsline {subsection}{\numberline {8.12.3}Function Documentation}{72}{subsection.8.12.3}%
+\contentsline {subsubsection}{\numberline {8.12.3.1}PIT\_Configuration()}{72}{subsubsection.8.12.3.1}%
+\contentsline {section}{\numberline {8.13}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Controller\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}NXP.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{72}{section.8.13}%
+\contentsline {section}{\numberline {8.14}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fault\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{73}{section.8.14}%
+\contentsline {subsection}{\numberline {8.14.1}Detailed Description}{73}{subsection.8.14.1}%
+\contentsline {section}{\numberline {8.15}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fault\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{73}{section.8.15}%
+\contentsline {subsection}{\numberline {8.15.1}Detailed Description}{73}{subsection.8.15.1}%
+\contentsline {section}{\numberline {8.16}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Fault\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{74}{section.8.16}%
+\contentsline {section}{\numberline {8.17}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}c File Reference}{74}{section.8.17}%
+\contentsline {subsection}{\numberline {8.17.1}Detailed Description}{76}{subsection.8.17.1}%
+\contentsline {subsection}{\numberline {8.17.2}Variable Documentation}{76}{subsection.8.17.2}%
+\contentsline {subsubsection}{\numberline {8.17.2.1}duty\_cycle}{76}{subsubsection.8.17.2.1}%
+\contentsline {subsubsection}{\numberline {8.17.2.2}duty\_cycle\_30000hz\_669hz}{76}{subsubsection.8.17.2.2}%
+\contentsline {subsubsection}{\numberline {8.17.2.3}duty\_cycle\_30000hz\_800hz}{76}{subsubsection.8.17.2.3}%
+\contentsline {subsubsection}{\numberline {8.17.2.4}duty\_cycle\_40000hz\_669hz}{76}{subsubsection.8.17.2.4}%
+\contentsline {subsubsection}{\numberline {8.17.2.5}duty\_cycle\_40000hz\_800hz}{77}{subsubsection.8.17.2.5}%
+\contentsline {subsubsection}{\numberline {8.17.2.6}duty\_cycle\_50000hz\_669hz}{77}{subsubsection.8.17.2.6}%
+\contentsline {subsubsection}{\numberline {8.17.2.7}duty\_cycle\_50000hz\_800hz}{77}{subsubsection.8.17.2.7}%
+\contentsline {section}{\numberline {8.18}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h File Reference}{77}{section.8.18}%
+\contentsline {subsection}{\numberline {8.18.1}Detailed Description}{80}{subsection.8.18.1}%
+\contentsline {section}{\numberline {8.19}Drive\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}POC\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Mem\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Handler.\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}h}{80}{section.8.19}%

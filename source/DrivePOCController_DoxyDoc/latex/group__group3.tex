@@ -1,0 +1,194 @@
+\hypertarget{group__group3}{}\doxysection{V/F Control Algorithm}
+\label{group__group3}\index{V/F Control Algorithm@{V/F Control Algorithm}}
+
+
+V/F Control Algorithm group.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__group3_ga67746f80d67531d9c29f17f8a321363f}{PTC\+\_\+\+Fault\+Diag}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition corresponding to fault indicated by PTC 150 Thermocouple. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group3_gae110c246c0fce9c80c7ad12bc459dc74}{System\+\_\+\+Fault\+Diag}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition corresponding to the Fault diagnosis. \end{DoxyCompactList}\item 
+GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT \mbox{\hyperlink{group__group3_gac3cbcbb610e7e3c14f35b1fcb7504175}{Open\+\_\+\+Loop\+\_\+\+Main\+State\+MC}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition corresponding to the main state machine of V/F control algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group3_gaeecdb2045aa23ffbe042d06cf52705c4}{Open\+\_\+\+Loop\+\_\+\+Motor\+State\+MC}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition corresponding to the Motor state machine of V/F Control algorithm. \end{DoxyCompactList}\item 
+GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT \mbox{\hyperlink{group__group3_ga86acfc11d1f407811dbf2c51ac907631}{Open\+\_\+\+Loop\+\_\+\+Control}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition corresponding to the Fast loop of the V/F control algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group3_gab15a0f985a5819c69574ff86075cff89}{Get\+\_\+\+Duty\+\_\+\+Cycle}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition that gets the value of duty cycle from the duty cycle array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group3_gad85161f5f120d41e5351ff8f3b8caa21}{Motor\+\_\+\+SM\+\_\+\+Calibration}} (void)
+\begin{DoxyCompactList}\small\item\em ADC Calibration phase. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group3_ga2cf150d01bcaf784c94ffdaa486354b3}{Motor\+\_\+\+SM\+\_\+\+Ready}} (void)
+\begin{DoxyCompactList}\small\item\em Motor Ready State -\/ Checks the Ready state of Gate Driver(both Ready-\/1 and Ready-\/2) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+V/F Control Algorithm group. 
+
+Group pertaining to all functionalities of the V/F Control Algorithm in the Drive POC Controller implementation 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__group3_gab15a0f985a5819c69574ff86075cff89}\label{group__group3_gab15a0f985a5819c69574ff86075cff89}} 
+\index{V/F Control Algorithm@{V/F Control Algorithm}!Get\_Duty\_Cycle@{Get\_Duty\_Cycle}}
+\index{Get\_Duty\_Cycle@{Get\_Duty\_Cycle}!V/F Control Algorithm@{V/F Control Algorithm}}
+\doxysubsubsection{\texorpdfstring{Get\_Duty\_Cycle()}{Get\_Duty\_Cycle()}}
+{\footnotesize\ttfamily void Get\+\_\+\+Duty\+\_\+\+Cycle (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition that gets the value of duty cycle from the duty cycle array. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group3_gad85161f5f120d41e5351ff8f3b8caa21}\label{group__group3_gad85161f5f120d41e5351ff8f3b8caa21}} 
+\index{V/F Control Algorithm@{V/F Control Algorithm}!Motor\_SM\_Calibration@{Motor\_SM\_Calibration}}
+\index{Motor\_SM\_Calibration@{Motor\_SM\_Calibration}!V/F Control Algorithm@{V/F Control Algorithm}}
+\doxysubsubsection{\texorpdfstring{Motor\_SM\_Calibration()}{Motor\_SM\_Calibration()}}
+{\footnotesize\ttfamily void Motor\+\_\+\+SM\+\_\+\+Calibration (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+ADC Calibration phase. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+Configure Channels at which the sensors are connected in LTC Board
+
+Set the Global Configuration Register\mbox{\Hypertarget{group__group3_ga2cf150d01bcaf784c94ffdaa486354b3}\label{group__group3_ga2cf150d01bcaf784c94ffdaa486354b3}} 
+\index{V/F Control Algorithm@{V/F Control Algorithm}!Motor\_SM\_Ready@{Motor\_SM\_Ready}}
+\index{Motor\_SM\_Ready@{Motor\_SM\_Ready}!V/F Control Algorithm@{V/F Control Algorithm}}
+\doxysubsubsection{\texorpdfstring{Motor\_SM\_Ready()}{Motor\_SM\_Ready()}}
+{\footnotesize\ttfamily void Motor\+\_\+\+SM\+\_\+\+Ready (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Motor Ready State -\/ Checks the Ready state of Gate Driver(both Ready-\/1 and Ready-\/2) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em none} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+none 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group3_ga86acfc11d1f407811dbf2c51ac907631}\label{group__group3_ga86acfc11d1f407811dbf2c51ac907631}} 
+\index{V/F Control Algorithm@{V/F Control Algorithm}!Open\_Loop\_Control@{Open\_Loop\_Control}}
+\index{Open\_Loop\_Control@{Open\_Loop\_Control}!V/F Control Algorithm@{V/F Control Algorithm}}
+\doxysubsubsection{\texorpdfstring{Open\_Loop\_Control()}{Open\_Loop\_Control()}}
+{\footnotesize\ttfamily GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT Open\+\_\+\+Loop\+\_\+\+Control (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition corresponding to the Fast loop of the V/F control algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT duty\+Cycles 
+\end{DoxyReturn}
+Function call for the Main state machine of Open Loop algorithm\mbox{\Hypertarget{group__group3_gac3cbcbb610e7e3c14f35b1fcb7504175}\label{group__group3_gac3cbcbb610e7e3c14f35b1fcb7504175}} 
+\index{V/F Control Algorithm@{V/F Control Algorithm}!Open\_Loop\_MainStateMC@{Open\_Loop\_MainStateMC}}
+\index{Open\_Loop\_MainStateMC@{Open\_Loop\_MainStateMC}!V/F Control Algorithm@{V/F Control Algorithm}}
+\doxysubsubsection{\texorpdfstring{Open\_Loop\_MainStateMC()}{Open\_Loop\_MainStateMC()}}
+{\footnotesize\ttfamily GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT Open\+\_\+\+Loop\+\_\+\+Main\+State\+MC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition corresponding to the main state machine of V/F control algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT duty\+Cycles
+\end{DoxyReturn}
+• Fault—the system detected a fault condition and waits until it is cleared. • Init—initialization of variables. • Stop—the system is initialized and waiting for the Run command. • Run—the system is running; it can be stopped by the Stop command. The following are transition functions between these state functions\+:
+
+• Init → Stop —the initialization is done, the system is entering the Stop state. • Stop → Run —the Run command is applied, the system is entering the Run state (if the Run command is acknowledged). • Run → Stop —the Stop command is applied, the system is entering the Stop state (if the Stop command is acknowledged). • Fault → Stop —the fault flag is cleared, the system is entering the Stop state. • \mbox{[}Init, Stop, Run\mbox{]} → Fault—a fault condition occurred, the system is entering the Fault state.
+
+The following image shows the software flow
+\begin{DoxyImageNoCaption}
+  \mbox{\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{software_flow.jpg}}
+\end{DoxyImageNoCaption}
+
+
+Checking for faults / run command\mbox{\Hypertarget{group__group3_gaeecdb2045aa23ffbe042d06cf52705c4}\label{group__group3_gaeecdb2045aa23ffbe042d06cf52705c4}} 
+\index{V/F Control Algorithm@{V/F Control Algorithm}!Open\_Loop\_MotorStateMC@{Open\_Loop\_MotorStateMC}}
+\index{Open\_Loop\_MotorStateMC@{Open\_Loop\_MotorStateMC}!V/F Control Algorithm@{V/F Control Algorithm}}
+\doxysubsubsection{\texorpdfstring{Open\_Loop\_MotorStateMC()}{Open\_Loop\_MotorStateMC()}}
+{\footnotesize\ttfamily void Open\+\_\+\+Loop\+\_\+\+Motor\+State\+MC (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition corresponding to the Motor state machine of V/F Control algorithm. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None
+\end{DoxyReturn}
+The motor state machines are based on the main state machine structure. The Run state sub-\/states are added on top of the main structure to control the motors properly \begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000007}{Todo}}]\+: To check if this Ready state in Motor State Machine is required in future for any of the testings \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__group3_ga67746f80d67531d9c29f17f8a321363f}\label{group__group3_ga67746f80d67531d9c29f17f8a321363f}} 
+\index{V/F Control Algorithm@{V/F Control Algorithm}!PTC\_FaultDiag@{PTC\_FaultDiag}}
+\index{PTC\_FaultDiag@{PTC\_FaultDiag}!V/F Control Algorithm@{V/F Control Algorithm}}
+\doxysubsubsection{\texorpdfstring{PTC\_FaultDiag()}{PTC\_FaultDiag()}}
+{\footnotesize\ttfamily void PTC\+\_\+\+Fault\+Diag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition corresponding to fault indicated by PTC 150 Thermocouple. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group3_gae110c246c0fce9c80c7ad12bc459dc74}\label{group__group3_gae110c246c0fce9c80c7ad12bc459dc74}} 
+\index{V/F Control Algorithm@{V/F Control Algorithm}!System\_FaultDiag@{System\_FaultDiag}}
+\index{System\_FaultDiag@{System\_FaultDiag}!V/F Control Algorithm@{V/F Control Algorithm}}
+\doxysubsubsection{\texorpdfstring{System\_FaultDiag()}{System\_FaultDiag()}}
+{\footnotesize\ttfamily void System\+\_\+\+Fault\+Diag (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition corresponding to the Fault diagnosis. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000006}{Todo}}]\+: Add other functional checks to detect faults. \end{DoxyRefDesc}

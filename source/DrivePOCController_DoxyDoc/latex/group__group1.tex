@@ -1,0 +1,1489 @@
+\hypertarget{group__group1}{}\doxysection{Communication Handler}
+\label{group__group1}\index{Communication Handler@{Communication Handler}}
+
+
+Communication Handler group.  
+
+
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__group1_ga936b95121740dcd9ea20c6ee9b8499c6}{Read\+From\+Encoder}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to read out of the FTM1 registers for Quadrature decoding. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gaa27bbde4889e0d0c2af88f971efc86eb}{Print\+Debug\+Info}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to print debug data on the Serial terminal over UART @ 115200 bps baudrate. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gac2344da1a44115aa81946f614ee2998a}{Drive\+POC\+\_\+\+Comm\+\_\+\+Handler\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to initialize the Communication Handler of the Drive POC controller for ADC and PWM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga2c0e86960979f0c8d21b864925b06e71}{PWM\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize PWM Signals. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga5cc42dcb8e006443870b611ca0cb68bf}{Comparator\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Initialize Comparator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga19a5a24d8f5c2d00be06843a495ddd5c}{Drive\+POC\+\_\+\+Comm\+\_\+\+Handler\+\_\+\+PWMDis}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to disable PWM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gae8a039e738a656864bef5815889913e8}{Drive\+POC\+\_\+\+Update\+Duty\+Cyc}} (GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT duty\+Cycle)
+\begin{DoxyCompactList}\small\item\em Update duty cycle for PWM. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gac1107f5f6c72c9ab14ff6ea86f18c3af}{LTC\+\_\+\+DSPI\+\_\+\+Master\+User\+Callback}} (SPI\+\_\+\+Type $\ast$base, dspi\+\_\+master\+\_\+edma\+\_\+handle\+\_\+t $\ast$handle, status\+\_\+t status, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Function definition used a callback to check if the EDMA Transfer is successful or not for LTC Board. \end{DoxyCompactList}\item 
+uint16\+\_\+t \mbox{\hyperlink{group__group1_ga9993a5d8443105bb5e2914d4ad4ddb1f}{ltc\+\_\+get\+\_\+start\+\_\+address}} (uint16\+\_\+t base\+\_\+address, uint8\+\_\+t channel\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Function definition to get the start address corresponding to the channel number across which sensor is connected. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__group1_ga336dbaa064e6bba1fc575096133199da}{ltc\+\_\+transfer\+\_\+four\+\_\+bytes}} (uint8\+\_\+t ram\+\_\+read\+\_\+or\+\_\+write, uint16\+\_\+t start\+\_\+address, uint32\+\_\+t input\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Function definiton to transfer 4 bytes. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{group__group1_ga66a1bba7620c1a67fd7fb4ae4bbd7c9f}{ltc\+\_\+spi\+\_\+transfer\+\_\+block}} (uint8\+\_\+t TRANSFER\+\_\+\+SIZEE, uint8\+\_\+t $\ast$ttxx, uint8\+\_\+t $\ast$rrxx)
+\begin{DoxyCompactList}\small\item\em Function definition for SPI Transfer @detail The communication is Half Duplex Mode. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group1_gaaff79283d0e9130e97a35937bc3569cc}\label{group__group1_gaaff79283d0e9130e97a35937bc3569cc}} 
+void {\bfseries ltc\+\_\+configure\+\_\+channels} (uint8\+\_\+t channel\+\_\+number, uint32\+\_\+t channel\+\_\+assignment\+\_\+data)
+\item 
+void \mbox{\hyperlink{group__group1_gaaea8539607f1d674bd030d8ef251f599}{delay}} (int delay\+\_\+in\+\_\+ms)
+\begin{DoxyCompactList}\small\item\em Function which creates a delay in milli second @detail uses NOP -\/ No Operation inside a for loop to create delays. \end{DoxyCompactList}\item 
+uint8\+\_\+t \mbox{\hyperlink{group__group1_ga9a33778832e23a4ce65543112b784fa1}{ltc\+\_\+transfer\+\_\+byte}} (uint8\+\_\+t ram\+\_\+read\+\_\+or\+\_\+write, uint16\+\_\+t start\+\_\+address, uint8\+\_\+t input\+\_\+data)
+\begin{DoxyCompactList}\small\item\em Function definition for transfer of a single byte data. \end{DoxyCompactList}\item 
+float\+\_\+t \mbox{\hyperlink{group__group1_gaa26f5a25edf4ca557dd24185d913cc0f}{ltc\+\_\+measure\+\_\+channel}} (uint8\+\_\+t channel\+\_\+number, uint8\+\_\+t channel\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Function definition to measure the sensor output. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gaca8184369749d0fb9f532f422d25d4c3}{ltc\+\_\+convert\+\_\+channel}} (uint8\+\_\+t channel\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Function definition which performs the Initiate conversion action. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga447a441ee97f9760235110c6aa307108}{ltc\+\_\+wait\+\_\+for\+\_\+process\+\_\+to\+\_\+finish}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to check if the value 0x40 is being returned by the LTC Board in MOSI line of the LTC Board(\+MISO Line of the MCU) which in turn indicates that the transfer of Initiate Conversion Command is a success. \end{DoxyCompactList}\item 
+uint32\+\_\+t \mbox{\hyperlink{group__group1_ga84730584378fdee2a73cabeae52d4379}{ltc\+\_\+get\+\_\+result}} (uint8\+\_\+t channel\+\_\+number, uint8\+\_\+t channel\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Function which receives the Temperature or the Voltage value measured in the MISO line of the MCU. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga3163af2185016acf05814b0ee9612fee}{ltc\+\_\+print\+\_\+conversion\+\_\+result}} (uint32\+\_\+t raw\+\_\+conversion\+\_\+result, uint8\+\_\+t channel\+\_\+output)
+\begin{DoxyCompactList}\small\item\em Function definition to print the output in the console window. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gab486a29142443fde0da3b9444d2492f4}{ltc\+\_\+read\+\_\+voltage\+\_\+or\+\_\+resistance\+\_\+results}} (uint8\+\_\+t channel\+\_\+number)
+\begin{DoxyCompactList}\small\item\em Function definition to calculate if the value needed is in terms of Voltage or Resistance instead of Temperature. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga155b5d4f8a5138b51b2c3ed45b9bf062}{ltc\+\_\+print\+\_\+fault\+\_\+data}} (uint8\+\_\+t fault\+\_\+byte)
+\begin{DoxyCompactList}\small\item\em Function to print the Fault byte in the console window indicating the kind of fault as per the Datasheet. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga615dc6530f76b9e64add88b068bc294b}{ltc\+\_\+spi\+\_\+edma\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the DSPI \& EDMA Peripheral. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gafae9a1d5efe50d7e2634e7da7f9fc844}{comparator\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes the Comparator Peripherals for PTC-\/150. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga30ca3958eb9512ca2bab9c081a4f1afc}{Inbuilt\+ADC\+\_\+\+Init}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to initialize the Inbuilt ADC. \end{DoxyCompactList}\item 
+float\+\_\+t \mbox{\hyperlink{group__group1_gac11c6a9a24445569e9ce1dd74afa67d4}{Collect\+\_\+\+Data\+\_\+from\+\_\+\+PT\+\_\+1000}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to collect the Temperature value. \end{DoxyCompactList}\item 
+bool\+\_\+t \mbox{\hyperlink{group__group1_gad1a49a12ac2a47584d08073502f6ac47}{Measure\+\_\+from\+\_\+\+PTC\+\_\+150}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to measure from PTC-\/150. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_gad18e426e6b33595650afa5d6f316c7a1}{ads\+\_\+spi\+\_\+edma\+\_\+init}} (void)
+\begin{DoxyCompactList}\small\item\em Initializes SPI0 instance for Communication with the ADS8588 board. \end{DoxyCompactList}\item 
+uint8\+\_\+t $\ast$ \mbox{\hyperlink{group__group1_ga2907e74fbd54f58b87493c76a4064e4d}{ads\+\_\+spi\+\_\+transfer\+\_\+block}} (uint8\+\_\+t $\ast$rrxx)
+\begin{DoxyCompactList}\small\item\em Used for receiving the current and voltage value from the ADS8588 board using SPI Protocol. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group1_ga63a4ac611cc61804358df31db508d294}{ADS\+\_\+\+DSPI\+\_\+\+Master\+User\+Callback}} (SPI\+\_\+\+Type $\ast$base, dspi\+\_\+master\+\_\+edma\+\_\+handle\+\_\+t $\ast$handle, status\+\_\+t status, void $\ast$user\+Data)
+\begin{DoxyCompactList}\small\item\em Function definition used a callback to check if the EDMA Transfer is successful or not for ADS Board. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group1_ga4500c15ee6b13637e00fd6b901b60224}\label{group__group1_ga4500c15ee6b13637e00fd6b901b60224}} 
+void {\bfseries DAC\+\_\+init} (void)
+\begin{DoxyCompactList}\small\item\em Function definition for DAC. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__group1_ga7f939ba8f6862b5cd4d4a070e8a1cfe7}\label{group__group1_ga7f939ba8f6862b5cd4d4a070e8a1cfe7}} 
+void {\bfseries DAC\+\_\+\+Update} (void)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structmcs__acim__open__loop__str}{mcs\+\_\+acim\+\_\+open\+\_\+loop\+\_\+str}} \mbox{\hyperlink{group__group1_gafd0f238eac6ce65f1b83150b2f80ebee}{s\+\_\+open\+\_\+loop}}
+\end{DoxyCompactItemize}
+\doxysubsection*{RTD}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga3ddb584e278a3f4184e8cce8bc1f1f2a}\label{group__group1_ga3ddb584e278a3f4184e8cce8bc1f1f2a}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+LSB}~27
+\item 
+\mbox{\Hypertarget{group__group1_ga9fc3fe7d7671d084721af8f8bfe93336}\label{group__group1_ga9fc3fe7d7671d084721af8f8bfe93336}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+10}~(uint32\+\_\+t) 0xA $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga1ebe7a31251ff3f05ac1c16fc123504f}\label{group__group1_ga1ebe7a31251ff3f05ac1c16fc123504f}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+50}~(uint32\+\_\+t) 0xB $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga8438cf2de8c788423b9f441de10a3415}\label{group__group1_ga8438cf2de8c788423b9f441de10a3415}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+100}~(uint32\+\_\+t) 0xC $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga933373c74b03f2626755e49840c172a8}\label{group__group1_ga933373c74b03f2626755e49840c172a8}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+200}~(uint32\+\_\+t) 0xD $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gadc613c99f80e057345f416e79020683a}\label{group__group1_gadc613c99f80e057345f416e79020683a}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+500}~(uint32\+\_\+t) 0xE $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga1b405bdff53c7c37871d7e9039e33ec5}\label{group__group1_ga1b405bdff53c7c37871d7e9039e33ec5}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+1000}~(uint32\+\_\+t) 0xF $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga07c7e342fcb5c4d065c0f1d0ccaea69c}\label{group__group1_ga07c7e342fcb5c4d065c0f1d0ccaea69c}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+PT\+\_\+1000\+\_\+375}~(uint32\+\_\+t) 0x10 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga6fa7d817da28b42892909824985a0c38}\label{group__group1_ga6fa7d817da28b42892909824985a0c38}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+NI\+\_\+120}~(uint32\+\_\+t) 0x11 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gad125e28deae384878070245626575815}\label{group__group1_gad125e28deae384878070245626575815}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+RTD\+\_\+\+CUSTOM}~(uint32\+\_\+t) 0x12 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{Sense Resistor}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga56a1fb94ceea8ec929b42167261a8039}\label{group__group1_ga56a1fb94ceea8ec929b42167261a8039}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+SENSE\+\_\+\+RESISTOR}~(uint32\+\_\+t) 0x1D $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga799671cb25c3ba414e31ed170572fbc3}\label{group__group1_ga799671cb25c3ba414e31ed170572fbc3}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+NONE}~(uint32\+\_\+t) 0x0 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga4ad1bde37d75448992881bd03ebeac37}\label{group__group1_ga4ad1bde37d75448992881bd03ebeac37}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+ACTIVE\+\_\+\+ANALOG}~(uint32\+\_\+t) 0x1F $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga802000f29b903b4c153dc00949856a07}\label{group__group1_ga802000f29b903b4c153dc00949856a07}} 
+\#define {\bfseries SENSE\+\_\+\+RESISTOR\+\_\+\+VALUE\+\_\+\+LSB}~0
+\end{DoxyCompactItemize}
+\doxysubsection*{Direct ADC}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga74d39d88fceb3afbe0b3401affde6a0e}\label{group__group1_ga74d39d88fceb3afbe0b3401affde6a0e}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+DIRECT\+\_\+\+ADC}~(uint32\+\_\+t) 0x1E $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{Thermistor}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga2f817417ad83f4ba792ff6bb0ebbf39e}\label{group__group1_ga2f817417ad83f4ba792ff6bb0ebbf39e}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+44004\+\_\+2\+P252\+K\+\_\+25C}~(uint32\+\_\+t) 0x13 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaafb9f64dda0aba6ae90c91f54aaffec0}\label{group__group1_gaafb9f64dda0aba6ae90c91f54aaffec0}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+44005\+\_\+3\+K\+\_\+25C}~(uint32\+\_\+t) 0x14 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga40abf1bd02f7fceab0cfedd81ee5a20e}\label{group__group1_ga40abf1bd02f7fceab0cfedd81ee5a20e}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+44007\+\_\+5\+K\+\_\+25C}~(uint32\+\_\+t) 0x15 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaf23ef7b43fda59864853e841ae06ebaf}\label{group__group1_gaf23ef7b43fda59864853e841ae06ebaf}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+44006\+\_\+10\+K\+\_\+25C}~(uint32\+\_\+t) 0x16 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga49a39b2057f6774a1b2c274e849848c3}\label{group__group1_ga49a39b2057f6774a1b2c274e849848c3}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+44008\+\_\+30\+K\+\_\+25C}~(uint32\+\_\+t) 0x17 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga86a322f335640624f34558f2ae30443b}\label{group__group1_ga86a322f335640624f34558f2ae30443b}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+\+YSI\+\_\+400\+\_\+2\+P252\+K\+\_\+25C}~(uint32\+\_\+t) 0x18 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaa5e2b5e560b92c7e2bec0b0909a2855c}\label{group__group1_gaa5e2b5e560b92c7e2bec0b0909a2855c}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+1003\+K\+\_\+1\+K\+\_\+25C}~(uint32\+\_\+t) 0x19 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga0c0cbcf55079ac59c3d67b41822d8843}\label{group__group1_ga0c0cbcf55079ac59c3d67b41822d8843}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+\+CUSTOM\+\_\+\+STEINHART\+\_\+\+HART}~(uint32\+\_\+t) 0x1A $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gadb7d9c3e7e20330609457fb45635a49c}\label{group__group1_gadb7d9c3e7e20330609457fb45635a49c}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+THERMISTOR\+\_\+\+CUSTOM\+\_\+\+TABLE}~(uint32\+\_\+t) 0x1B $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{Thermocouple}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga67f51b4e8905b80616e64caf1745d764}\label{group__group1_ga67f51b4e8905b80616e64caf1745d764}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+J\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x1 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga2de94277a9f5b778baa25f5c1baeb774}\label{group__group1_ga2de94277a9f5b778baa25f5c1baeb774}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+K\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x2 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga9b1733d5847bd614141b3d2cff2390f3}\label{group__group1_ga9b1733d5847bd614141b3d2cff2390f3}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+E\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x3 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga267f8f33c38e9be0f5baf5063323a64b}\label{group__group1_ga267f8f33c38e9be0f5baf5063323a64b}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+N\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x4 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga799e51c56b0eda92aba3b126e77ce9f9}\label{group__group1_ga799e51c56b0eda92aba3b126e77ce9f9}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+R\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x5 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gabc02897a0b962ca1a3e002d37d6bb221}\label{group__group1_gabc02897a0b962ca1a3e002d37d6bb221}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+S\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x6 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga57cae1eeb939b81471597845066f6b0d}\label{group__group1_ga57cae1eeb939b81471597845066f6b0d}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+T\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x7 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaa7d4a317336521552d0417f152a2b61b}\label{group__group1_gaa7d4a317336521552d0417f152a2b61b}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+TYPE\+\_\+\+B\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x8 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga54ef0a8c16d98cd0cdd5dd0f6c83065e}\label{group__group1_ga54ef0a8c16d98cd0cdd5dd0f6c83065e}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+CUSTOM\+\_\+\+THERMOCOUPLE}~(uint32\+\_\+t) 0x9 $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{Off-\/\+Chip Diode}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga5ddb60fa44868df818e78a7e17ffde8d}\label{group__group1_ga5ddb60fa44868df818e78a7e17ffde8d}} 
+\#define {\bfseries SENSOR\+\_\+\+TYPE\+\_\+\+\_\+\+OFF\+\_\+\+CHIP\+\_\+\+DIODE}~(uint32\+\_\+t) 0x1C $<$$<$ SENSOR\+\_\+\+TYPE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{rtd -\/ rsense channel}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_gac7ea6b96a2fbea89e0e246ff5d356b2b}\label{group__group1_gac7ea6b96a2fbea89e0e246ff5d356b2b}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB}~22
+\item 
+\mbox{\Hypertarget{group__group1_ga01c24099be57f5850276ee59a3cdd463}\label{group__group1_ga01c24099be57f5850276ee59a3cdd463}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+\+NONE}~(uint32\+\_\+t) 0x0 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaeb7d1594a70f1928a8c83def3a3a1805}\label{group__group1_gaeb7d1594a70f1928a8c83def3a3a1805}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+1}~(uint32\+\_\+t) 0x1 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga4db1198d980a12ec6930811c02c40fd0}\label{group__group1_ga4db1198d980a12ec6930811c02c40fd0}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+2}~(uint32\+\_\+t) 0x2 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gadc99a00b1a2d2e9017cad9de2657f19d}\label{group__group1_gadc99a00b1a2d2e9017cad9de2657f19d}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+3}~(uint32\+\_\+t) 0x3 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga05109b5b11ddff74b65cc636bc8a541c}\label{group__group1_ga05109b5b11ddff74b65cc636bc8a541c}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+4}~(uint32\+\_\+t) 0x4 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaf1b0dfbda6f80376791866b49677acd6}\label{group__group1_gaf1b0dfbda6f80376791866b49677acd6}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+5}~(uint32\+\_\+t) 0x5 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga16643b52ed72c52bf8168f3fa3c8be34}\label{group__group1_ga16643b52ed72c52bf8168f3fa3c8be34}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+6}~(uint32\+\_\+t) 0x6 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga80e3b824832844bc1d5bbb7d153f8250}\label{group__group1_ga80e3b824832844bc1d5bbb7d153f8250}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+7}~(uint32\+\_\+t) 0x7 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga461bb6b9c75e7ffec65b2540dedcf534}\label{group__group1_ga461bb6b9c75e7ffec65b2540dedcf534}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+8}~(uint32\+\_\+t) 0x8 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gad3f62e47d996046785b0ebce96995a00}\label{group__group1_gad3f62e47d996046785b0ebce96995a00}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+9}~(uint32\+\_\+t) 0x9 $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaffc7f0e8f8dd2b69d0eb96bb3abc8bd3}\label{group__group1_gaffc7f0e8f8dd2b69d0eb96bb3abc8bd3}} 
+\#define {\bfseries RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+10}~(uint32\+\_\+t) 0xA $<$$<$ RTD\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{rtd -\/ num wires}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_gaefac6214326b8fc317ff8b3b5aa484a9}\label{group__group1_gaefac6214326b8fc317ff8b3b5aa484a9}} 
+\#define {\bfseries RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+LSB}~20
+\item 
+\mbox{\Hypertarget{group__group1_ga95e3717b384cfca7b98eab84c4832ce2}\label{group__group1_ga95e3717b384cfca7b98eab84c4832ce2}} 
+\#define {\bfseries RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+\_\+2\+\_\+\+WIRE}~(uint32\+\_\+t) 0x0 $<$$<$ RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga3b39a3858ceed1c35b6f83df8457d129}\label{group__group1_ga3b39a3858ceed1c35b6f83df8457d129}} 
+\#define {\bfseries RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+\_\+3\+\_\+\+WIRE}~(uint32\+\_\+t) 0x1 $<$$<$ RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga6917ee573c9783861cc8c166475134c1}\label{group__group1_ga6917ee573c9783861cc8c166475134c1}} 
+\#define {\bfseries RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+\_\+4\+\_\+\+WIRE}~(uint32\+\_\+t) 0x2 $<$$<$ RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga3442a140902b082e2bc6ba0765f166e2}\label{group__group1_ga3442a140902b082e2bc6ba0765f166e2}} 
+\#define {\bfseries RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+\_\+4\+\_\+\+WIRE\+\_\+\+KELVIN\+\_\+\+RSENSE}~(uint32\+\_\+t) 0x3 $<$$<$ RTD\+\_\+\+NUM\+\_\+\+WIRES\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{rtd -\/ excitation mode}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga4bbeceb7f0c230dbaffba42e01032c0e}\label{group__group1_ga4bbeceb7f0c230dbaffba42e01032c0e}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB}~18
+\item 
+\mbox{\Hypertarget{group__group1_ga19faea9853f47983f4f940228072efd2}\label{group__group1_ga19faea9853f47983f4f940228072efd2}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+NO\+\_\+\+ROTATION\+\_\+\+NO\+\_\+\+SHARING}~(uint32\+\_\+t) 0x0 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gad8c6703a8c36b6a19b9eb8abb91720f8}\label{group__group1_gad8c6703a8c36b6a19b9eb8abb91720f8}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+NO\+\_\+\+ROTATION\+\_\+\+SHARING}~(uint32\+\_\+t) 0x1 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga52cd6c3b9d46f7ef323a47fd06b26dee}\label{group__group1_ga52cd6c3b9d46f7ef323a47fd06b26dee}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+ROTATION\+\_\+\+SHARING}~(uint32\+\_\+t) 0x2 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{rtd -\/ excitation current}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_gac3ed8e4eb021d9eb0a15bf5c475a69f4}\label{group__group1_gac3ed8e4eb021d9eb0a15bf5c475a69f4}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB}~14
+\item 
+\mbox{\Hypertarget{group__group1_gaad31a67ff5180a88db4dd9bf5bdca078}\label{group__group1_gaad31a67ff5180a88db4dd9bf5bdca078}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+EXTERNAL}~(uint32\+\_\+t) 0x0 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gad400bfec36e43c66fcad11a16ac74222}\label{group__group1_gad400bfec36e43c66fcad11a16ac74222}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+5\+UA}~(uint32\+\_\+t) 0x1 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga8bdc8134f08ff68e62de50e29499f0a3}\label{group__group1_ga8bdc8134f08ff68e62de50e29499f0a3}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+10\+UA}~(uint32\+\_\+t) 0x2 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga1c604c0a4ec34b513f282afa13df4ef5}\label{group__group1_ga1c604c0a4ec34b513f282afa13df4ef5}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+25\+UA}~(uint32\+\_\+t) 0x3 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gafec33d12a442f58b119e1be62ab2e692}\label{group__group1_gafec33d12a442f58b119e1be62ab2e692}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+50\+UA}~(uint32\+\_\+t) 0x4 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga295877f8e9f2870d5d4a922cb8dc3af8}\label{group__group1_ga295877f8e9f2870d5d4a922cb8dc3af8}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+100\+UA}~(uint32\+\_\+t) 0x5 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga4b2dbb97a589bf2d22b1dcb2eca2167a}\label{group__group1_ga4b2dbb97a589bf2d22b1dcb2eca2167a}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+250\+UA}~(uint32\+\_\+t) 0x6 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga65676af61095026b18d54fd2a42a190d}\label{group__group1_ga65676af61095026b18d54fd2a42a190d}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+500\+UA}~(uint32\+\_\+t) 0x7 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga8ca54363dd7ce24505bf9487664000d1}\label{group__group1_ga8ca54363dd7ce24505bf9487664000d1}} 
+\#define {\bfseries RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+1\+MA}~(uint32\+\_\+t) 0x8 $<$$<$ RTD\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{rtd -\/ standard}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga92b07cb3f6beeb8aba6fc5c21b2815c7}\label{group__group1_ga92b07cb3f6beeb8aba6fc5c21b2815c7}} 
+\#define {\bfseries RTD\+\_\+\+STANDARD\+\_\+\+LSB}~12
+\item 
+\mbox{\Hypertarget{group__group1_ga7741d8b5970c21fb01810fbea9c47c2f}\label{group__group1_ga7741d8b5970c21fb01810fbea9c47c2f}} 
+\#define {\bfseries RTD\+\_\+\+STANDARD\+\_\+\+\_\+\+EUROPEAN}~(uint32\+\_\+t) 0x0 $<$$<$ RTD\+\_\+\+STANDARD\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga4f5defbc220a9d05a8ac0f5032744c9b}\label{group__group1_ga4f5defbc220a9d05a8ac0f5032744c9b}} 
+\#define {\bfseries RTD\+\_\+\+STANDARD\+\_\+\+\_\+\+AMERICAN}~(uint32\+\_\+t) 0x1 $<$$<$ RTD\+\_\+\+STANDARD\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gac7cd7f7c5087ebec38305fce043c1ea9}\label{group__group1_gac7cd7f7c5087ebec38305fce043c1ea9}} 
+\#define {\bfseries RTD\+\_\+\+STANDARD\+\_\+\+\_\+\+JAPANESE}~(uint32\+\_\+t) 0x2 $<$$<$ RTD\+\_\+\+STANDARD\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaa9424fc14b9b4763d20905f9c3d8f9a5}\label{group__group1_gaa9424fc14b9b4763d20905f9c3d8f9a5}} 
+\#define {\bfseries RTD\+\_\+\+STANDARD\+\_\+\+\_\+\+ITS\+\_\+90}~(uint32\+\_\+t) 0x3 $<$$<$ RTD\+\_\+\+STANDARD\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{rtd-\/custom}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_gadd29e86f45b6f68d4207ced919015dbd}\label{group__group1_gadd29e86f45b6f68d4207ced919015dbd}} 
+\#define {\bfseries RTD\+\_\+\+CUSTOM\+\_\+\+ADDRESS\+\_\+\+LSB}~6/$\ast$rtd -\/ custom address$\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_gaacb2419c68b9a7263b0516c8972a6a9a}\label{group__group1_gaacb2419c68b9a7263b0516c8972a6a9a}} 
+\#define {\bfseries RTD\+\_\+\+CUSTOM\+\_\+\+LENGTH\+\_\+1\+\_\+\+LSB}~0/$\ast$rtd -\/ custom length-\/1$\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_ga7fc463c31f377c8c75ef5ac8f09c84c8}\label{group__group1_ga7fc463c31f377c8c75ef5ac8f09c84c8}} 
+\#define {\bfseries RTD\+\_\+\+CUSTOM\+\_\+\+VALUES\+\_\+\+LSB}~31/$\ast$rtd -\/ custom values$\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{active analog -\/ differential}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga5532f9f34a0cfff20c439cba608a1bc1}\label{group__group1_ga5532f9f34a0cfff20c439cba608a1bc1}} 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+DIFFERENTIAL\+\_\+\+LSB}~26
+\item 
+\mbox{\Hypertarget{group__group1_ga13f7ee4eb72604afa92f8741e3da88f1}\label{group__group1_ga13f7ee4eb72604afa92f8741e3da88f1}} 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+DIFFERENTIAL}~(uint32\+\_\+t) 0x0 $<$$<$ ACTIVE\+\_\+\+ANALOG\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga115661720354ba18de01c59c915415d3}\label{group__group1_ga115661720354ba18de01c59c915415d3}} 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+SINGLE\+\_\+\+ENDED}~(uint32\+\_\+t) 0x1 $<$$<$ ACTIVE\+\_\+\+ANALOG\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaae0676cac7d22cfb5acd7147f16604ab}\label{group__group1_gaae0676cac7d22cfb5acd7147f16604ab}} 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+CUSTOM\+\_\+\+ADDRESS\+\_\+\+LSB}~6  /$\ast$active analog -\/ custom address$\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_gac24f5a761d3049c60f88d90e970228dd}\label{group__group1_gac24f5a761d3049c60f88d90e970228dd}} 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+CUSTOM\+\_\+\+LENGTH\+\_\+1\+\_\+\+LSB}~0 /$\ast$active analog -\/ custom length-\/1$\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_gaccfe6f93c7ed432d95f05699dd0ac92f}\label{group__group1_gaccfe6f93c7ed432d95f05699dd0ac92f}} 
+\#define {\bfseries ACTIVE\+\_\+\+ANALOG\+\_\+\+CUSTOM\+\_\+\+VALUES\+\_\+\+LSB}~31  /$\ast$active analog -\/ custom values$\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Direct ADC -\/ differential}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga28c29886d390dba35d9dee04ccc77b07}\label{group__group1_ga28c29886d390dba35d9dee04ccc77b07}} 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB}~26
+\item 
+\mbox{\Hypertarget{group__group1_ga1deec97f84c46c6f0c79d0c490f4f4fd}\label{group__group1_ga1deec97f84c46c6f0c79d0c490f4f4fd}} 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+DIFFERENTIAL}~(uint32\+\_\+t) 0x0 $<$$<$ DIRECT\+\_\+\+ADC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga3414daeae700a64b45faa58c0a5465c4}\label{group__group1_ga3414daeae700a64b45faa58c0a5465c4}} 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+SINGLE\+\_\+\+ENDED}~(uint32\+\_\+t) 0x1 $<$$<$ DIRECT\+\_\+\+ADC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{Direct ADC -\/ custom}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga0fbe43ea7dd6f55f0c5c5a8ad41e81a4}\label{group__group1_ga0fbe43ea7dd6f55f0c5c5a8ad41e81a4}} 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+LSB}~25
+\item 
+\mbox{\Hypertarget{group__group1_ga7c14502902daf19b6574bd9b2e95e0ba}\label{group__group1_ga7c14502902daf19b6574bd9b2e95e0ba}} 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+\_\+\+NO}~(uint32\+\_\+t) 0x0 $<$$<$ DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga4f99e3890c6eea00e486d0f1555726c2}\label{group__group1_ga4f99e3890c6eea00e486d0f1555726c2}} 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+\_\+\+YES}~(uint32\+\_\+t) 0x1 $<$$<$ DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga30c8f9f5ab85da71d83ac7fa17d395c9}\label{group__group1_ga30c8f9f5ab85da71d83ac7fa17d395c9}} 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+ADDRESS\+\_\+\+LSB}~6 /$\ast$Direct ADC -\/ custom address$\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_ga8823d6eb3bdce221e82b21bda976befd}\label{group__group1_ga8823d6eb3bdce221e82b21bda976befd}} 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+LENGTH\+\_\+1\+\_\+\+LSB}~0 /$\ast$Direct ADC -\/ custom length-\/1$\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_gafe03a5c4c15a41f4288d1ef4186105ee}\label{group__group1_gafe03a5c4c15a41f4288d1ef4186105ee}} 
+\#define {\bfseries DIRECT\+\_\+\+ADC\+\_\+\+CUSTOM\+\_\+\+VALUES\+\_\+\+LSB}~31 /$\ast$Direct ADC -\/ custom values$\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{thermistor -\/ rsense channel}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga93da6343f5827e59a18a963a03e9324a}\label{group__group1_ga93da6343f5827e59a18a963a03e9324a}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB}~22
+\item 
+\mbox{\Hypertarget{group__group1_ga7aa8a98bc8f68004843088a2eaafbaf1}\label{group__group1_ga7aa8a98bc8f68004843088a2eaafbaf1}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+\+NONE}~(uint32\+\_\+t) 0x0 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gad9221bbd4cc509d28f2896666d72d7ce}\label{group__group1_gad9221bbd4cc509d28f2896666d72d7ce}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+1}~(uint32\+\_\+t) 0x1 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga815a3da1525d29f862a37b4f92bf3b2f}\label{group__group1_ga815a3da1525d29f862a37b4f92bf3b2f}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+2}~(uint32\+\_\+t) 0x2 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga8e975f01658bcf3654706702f161f563}\label{group__group1_ga8e975f01658bcf3654706702f161f563}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+3}~(uint32\+\_\+t) 0x3 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaff6a608964a4359d5a23d0b818cc462a}\label{group__group1_gaff6a608964a4359d5a23d0b818cc462a}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+4}~(uint32\+\_\+t) 0x4 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gac164f61bb4e904246fd2e5cb13a2e191}\label{group__group1_gac164f61bb4e904246fd2e5cb13a2e191}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+5}~(uint32\+\_\+t) 0x5 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga51e36e270811da9a6db23966cfa4053c}\label{group__group1_ga51e36e270811da9a6db23966cfa4053c}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+6}~(uint32\+\_\+t) 0x6 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga4ff6a268d616d7fc51edb86ede951aa1}\label{group__group1_ga4ff6a268d616d7fc51edb86ede951aa1}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+7}~(uint32\+\_\+t) 0x7 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga727aebac44c9cba5e84839a0f259cbd5}\label{group__group1_ga727aebac44c9cba5e84839a0f259cbd5}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+8}~(uint32\+\_\+t) 0x8 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gab7d814a34b38fe826c693db026f13be1}\label{group__group1_gab7d814a34b38fe826c693db026f13be1}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+9}~(uint32\+\_\+t) 0x9 $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga7f7375fe35b47c87c69abac4b4a79b7d}\label{group__group1_ga7f7375fe35b47c87c69abac4b4a79b7d}} 
+\#define {\bfseries THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+\_\+10}~(uint32\+\_\+t) 0xA $<$$<$ THERMISTOR\+\_\+\+RSENSE\+\_\+\+CHANNEL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{thermistor -\/ differential}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga11a3dcd76021d39b20ff51faeccafafc}\label{group__group1_ga11a3dcd76021d39b20ff51faeccafafc}} 
+\#define {\bfseries THERMISTOR\+\_\+\+DIFFERENTIAL\+\_\+\+LSB}~21
+\item 
+\mbox{\Hypertarget{group__group1_ga973855c91e71456cc90de9397e94fa42}\label{group__group1_ga973855c91e71456cc90de9397e94fa42}} 
+\#define {\bfseries THERMISTOR\+\_\+\+DIFFERENTIAL}~(uint32\+\_\+t) 0x0 $<$$<$ THERMISTOR\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga1e15712b54c264a90be2400476343ac3}\label{group__group1_ga1e15712b54c264a90be2400476343ac3}} 
+\#define {\bfseries THERMISTOR\+\_\+\+SINGLE\+\_\+\+ENDED}~(uint32\+\_\+t) 0x1 $<$$<$ THERMISTOR\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{thermistor -\/ excitation mode}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_gacfe8a0f1badcd64106f3f1fd8d9490a6}\label{group__group1_gacfe8a0f1badcd64106f3f1fd8d9490a6}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB}~19
+\item 
+\mbox{\Hypertarget{group__group1_gaade62471d232b0f4ca0206e153975945}\label{group__group1_gaade62471d232b0f4ca0206e153975945}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+NO\+\_\+\+SHARING\+\_\+\+NO\+\_\+\+ROTATION}~(uint32\+\_\+t) 0x0 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga048367eae561e67493615e3f89eb581d}\label{group__group1_ga048367eae561e67493615e3f89eb581d}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+SHARING\+\_\+\+ROTATION}~(uint32\+\_\+t) 0x1 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga3a287f65380f1348e8ec09f1f50ff02e}\label{group__group1_ga3a287f65380f1348e8ec09f1f50ff02e}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+\_\+\+SHARING\+\_\+\+NO\+\_\+\+ROTATION}~(uint32\+\_\+t) 0x2 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+MODE\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{thermistor -\/ excitation current}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_gab40d90305fbe5b8c297aaf114f9cba6d}\label{group__group1_gab40d90305fbe5b8c297aaf114f9cba6d}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB}~15
+\item 
+\mbox{\Hypertarget{group__group1_ga7e33d1468b52b181ebe00c307addbe5b}\label{group__group1_ga7e33d1468b52b181ebe00c307addbe5b}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+INVALID}~(uint32\+\_\+t) 0x0 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga3fa4316c736026b27c6447715d6323c5}\label{group__group1_ga3fa4316c736026b27c6447715d6323c5}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+250\+NA}~(uint32\+\_\+t) 0x1 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga59b495b6a655215cd7c681aa28d38428}\label{group__group1_ga59b495b6a655215cd7c681aa28d38428}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+500\+NA}~(uint32\+\_\+t) 0x2 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga7343120c63cb40ef90a12bdc42e0bc90}\label{group__group1_ga7343120c63cb40ef90a12bdc42e0bc90}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+1\+UA}~(uint32\+\_\+t) 0x3 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga4bb13661b7758e91feae66104d628028}\label{group__group1_ga4bb13661b7758e91feae66104d628028}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+5\+UA}~(uint32\+\_\+t) 0x4 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaca7d6557f42c3a081f60631616a9eb45}\label{group__group1_gaca7d6557f42c3a081f60631616a9eb45}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+10\+UA}~(uint32\+\_\+t) 0x5 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaeeda9c57b8cea714cefad44d555c4778}\label{group__group1_gaeeda9c57b8cea714cefad44d555c4778}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+25\+UA}~(uint32\+\_\+t) 0x6 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga2d2effdc57192618d839f347d87e4c25}\label{group__group1_ga2d2effdc57192618d839f347d87e4c25}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+50\+UA}~(uint32\+\_\+t) 0x7 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaa42b6a58bea034eb6f661c5223dbfd58}\label{group__group1_gaa42b6a58bea034eb6f661c5223dbfd58}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+100\+UA}~(uint32\+\_\+t) 0x8 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaeb426f9e4506993e68d9e34d0c9f487d}\label{group__group1_gaeb426f9e4506993e68d9e34d0c9f487d}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+250\+UA}~(uint32\+\_\+t) 0x9 $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga10fead6cb5c2e2533c77b0eee10e063a}\label{group__group1_ga10fead6cb5c2e2533c77b0eee10e063a}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+500\+UA}~(uint32\+\_\+t) 0xA $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gae05c9497a4c050722e117b070953799e}\label{group__group1_gae05c9497a4c050722e117b070953799e}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+1\+MA}~(uint32\+\_\+t) 0xB $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga2f894323f022168198bad0e6319e5c33}\label{group__group1_ga2f894323f022168198bad0e6319e5c33}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+AUTORANGE}~(uint32\+\_\+t) 0xC $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga8d476c440e08381303d40c365a5484b3}\label{group__group1_ga8d476c440e08381303d40c365a5484b3}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+INVALID\+\_\+}~(uint32\+\_\+t) 0xD $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga5347a6aebdb07964042a5f4603a8d86f}\label{group__group1_ga5347a6aebdb07964042a5f4603a8d86f}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+INVALID\+\_\+\+\_\+}~(uint32\+\_\+t) 0xE $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga6b68bdd847f87c068051a6c78d2d7b96}\label{group__group1_ga6b68bdd847f87c068051a6c78d2d7b96}} 
+\#define {\bfseries THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+\_\+\+EXTERNAL}~(uint32\+\_\+t) 0xF $<$$<$ THERMISTOR\+\_\+\+EXCITATION\+\_\+\+CURRENT\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{thermistor-\/address}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga193792482bfcfac902380a1559fcf8ea}\label{group__group1_ga193792482bfcfac902380a1559fcf8ea}} 
+\#define {\bfseries THERMISTOR\+\_\+\+CUSTOM\+\_\+\+ADDRESS\+\_\+\+LSB}~6 /$\ast$ thermistor -\/ custom address$\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_gaeae4a33617d46e8847fe62068c0202b3}\label{group__group1_gaeae4a33617d46e8847fe62068c0202b3}} 
+\#define {\bfseries THERMISTOR\+\_\+\+CUSTOM\+\_\+\+LENGTH\+\_\+1\+\_\+\+LSB}~0 /$\ast$thermistor -\/ custom length-\/1$\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_ga8f44974fc2f766587bfd4b94ca943a6c}\label{group__group1_ga8f44974fc2f766587bfd4b94ca943a6c}} 
+\#define {\bfseries THERMISTOR\+\_\+\+CUSTOM\+\_\+\+VALUES\+\_\+\+LSB}~31  /$\ast$thermistor -\/ custom values$\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{Thermocouple -\/ cold junction ch}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga592d8e21f3d5d8136e139a532cd0e79e}\label{group__group1_ga592d8e21f3d5d8136e139a532cd0e79e}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB}~22
+\item 
+\mbox{\Hypertarget{group__group1_gae3bae1e2823ad94ac9df9dc5d81da2cd}\label{group__group1_gae3bae1e2823ad94ac9df9dc5d81da2cd}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+\+NONE}~(uint32\+\_\+t) 0x0 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga9b53966cbc246b3dab506c76ff7a22f1}\label{group__group1_ga9b53966cbc246b3dab506c76ff7a22f1}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+1}~(uint32\+\_\+t) 0x1 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaf8e7952f2d3f71e45931f85801894322}\label{group__group1_gaf8e7952f2d3f71e45931f85801894322}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+2}~(uint32\+\_\+t) 0x2 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaec30f33f55f77f8cac3db3f6f451d51c}\label{group__group1_gaec30f33f55f77f8cac3db3f6f451d51c}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+3}~(uint32\+\_\+t) 0x3 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gae747b5a46fd3fdda5c4d5f9c25a9aac9}\label{group__group1_gae747b5a46fd3fdda5c4d5f9c25a9aac9}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+4}~(uint32\+\_\+t) 0x4 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga90a5a2326a2c7406ff039e2e3d8c4b7c}\label{group__group1_ga90a5a2326a2c7406ff039e2e3d8c4b7c}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+5}~(uint32\+\_\+t) 0x5 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gabdb4b67b5076c085b873d1103f7313bb}\label{group__group1_gabdb4b67b5076c085b873d1103f7313bb}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+6}~(uint32\+\_\+t) 0x6 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga541fbddd9cbb5d2eca140d5ebc1db052}\label{group__group1_ga541fbddd9cbb5d2eca140d5ebc1db052}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+7}~(uint32\+\_\+t) 0x7 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga289f8d713b7abfc3d6ca8074c2c2e6d2}\label{group__group1_ga289f8d713b7abfc3d6ca8074c2c2e6d2}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+8}~(uint32\+\_\+t) 0x8 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaf2ad08109715ab4cf1a2f945825b774b}\label{group__group1_gaf2ad08109715ab4cf1a2f945825b774b}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+9}~(uint32\+\_\+t) 0x9 $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaf379e8b4f83d37462566632479f0f9f5}\label{group__group1_gaf379e8b4f83d37462566632479f0f9f5}} 
+\#define {\bfseries TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+\_\+10}~(uint32\+\_\+t) 0xA $<$$<$ TC\+\_\+\+COLD\+\_\+\+JUNCTION\+\_\+\+CH\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{thermocouple -\/ differential}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_gad4efdfc89f9a32a87bb243e8c41be76f}\label{group__group1_gad4efdfc89f9a32a87bb243e8c41be76f}} 
+\#define {\bfseries TC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB}~21
+\item 
+\mbox{\Hypertarget{group__group1_gaa53b385138cce1c4fc34e98daccb62a5}\label{group__group1_gaa53b385138cce1c4fc34e98daccb62a5}} 
+\#define {\bfseries TC\+\_\+\+DIFFERENTIAL}~(uint32\+\_\+t) 0x0 $<$$<$ TC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gafcef21e40b10053d68427a64f06c4313}\label{group__group1_gafcef21e40b10053d68427a64f06c4313}} 
+\#define {\bfseries TC\+\_\+\+SINGLE\+\_\+\+ENDED}~(uint32\+\_\+t) 0x1 $<$$<$ TC\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{thermocouple -\/ open ckt detect}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga617784eaf531da41cb82ea74ef0aac5c}\label{group__group1_ga617784eaf531da41cb82ea74ef0aac5c}} 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+LSB}~20
+\item 
+\mbox{\Hypertarget{group__group1_gaaea5c48476542efdf0b0b4d36293f79d}\label{group__group1_gaaea5c48476542efdf0b0b4d36293f79d}} 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+\_\+\+NO}~(uint32\+\_\+t) 0x0 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga6066bd97bf47c72e6b8632d8d5bb31c0}\label{group__group1_ga6066bd97bf47c72e6b8632d8d5bb31c0}} 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+\_\+\+YES}~(uint32\+\_\+t) 0x1 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{thermocouple -\/ open ckt detect current}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga5b1e51c66f781b1b446f977b3e198597}\label{group__group1_ga5b1e51c66f781b1b446f977b3e198597}} 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+LSB}~18
+\item 
+\mbox{\Hypertarget{group__group1_ga6a40fdc09eea8555bf367eaea80cc267}\label{group__group1_ga6a40fdc09eea8555bf367eaea80cc267}} 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+\_\+10\+UA}~(uint32\+\_\+t) 0x0 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga1a99497502b6b6ec5833b9d12f4105c6}\label{group__group1_ga1a99497502b6b6ec5833b9d12f4105c6}} 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+\_\+100\+UA}~(uint32\+\_\+t) 0x1 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga5fa7c99df149470a542a9310240b640d}\label{group__group1_ga5fa7c99df149470a542a9310240b640d}} 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+\_\+500\+UA}~(uint32\+\_\+t) 0x2 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gab57c884d17cb3376016647d7f294ac5a}\label{group__group1_gab57c884d17cb3376016647d7f294ac5a}} 
+\#define {\bfseries TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+\_\+1\+MA}~(uint32\+\_\+t) 0x3 $<$$<$ TC\+\_\+\+OPEN\+\_\+\+CKT\+\_\+\+DETECT\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga7cbf9190fa5362ec1131a3e119d69902}\label{group__group1_ga7cbf9190fa5362ec1131a3e119d69902}} 
+\#define {\bfseries TC\+\_\+\+CUSTOM\+\_\+\+ADDRESS\+\_\+\+LSB}~6 /$\ast$ tc -\/ custom address$\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_ga86946c114c7addb5d228c79c16834b75}\label{group__group1_ga86946c114c7addb5d228c79c16834b75}} 
+\#define {\bfseries TC\+\_\+\+CUSTOM\+\_\+\+LENGTH\+\_\+1\+\_\+\+LSB}~0/$\ast$ tc -\/ custom length-\/1$\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_ga411197b4a5160150840fcad2edf0a0c5}\label{group__group1_ga411197b4a5160150840fcad2edf0a0c5}} 
+\#define {\bfseries TC\+\_\+\+CUSTOM\+\_\+\+VALUES\+\_\+\+LSB}~31 /$\ast$tc -\/ custom values$\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{off-\/chip diode -\/ differential}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga1abb945738286b28b90618b941cf8c9c}\label{group__group1_ga1abb945738286b28b90618b941cf8c9c}} 
+\#define {\bfseries DIODE\+\_\+\+DIFFERENTIAL\+\_\+\+LSB}~26
+\item 
+\mbox{\Hypertarget{group__group1_ga18e3c5c2f49720a724988173fbc9ee7b}\label{group__group1_ga18e3c5c2f49720a724988173fbc9ee7b}} 
+\#define {\bfseries DIODE\+\_\+\+DIFFERENTIAL}~(uint32\+\_\+t) 0x0 $<$$<$ DIODE\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gaace40b99cae24a7647af392cc57211d2}\label{group__group1_gaace40b99cae24a7647af392cc57211d2}} 
+\#define {\bfseries DIODE\+\_\+\+SINGLE\+\_\+\+ENDED}~(uint32\+\_\+t) 0x1 $<$$<$ DIODE\+\_\+\+DIFFERENTIAL\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{diode -\/ num readings}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_gad0fd5af475423a98afffddb0bad05a05}\label{group__group1_gad0fd5af475423a98afffddb0bad05a05}} 
+\#define {\bfseries DIODE\+\_\+\+NUM\+\_\+\+READINGS\+\_\+\+LSB}~25
+\item 
+\mbox{\Hypertarget{group__group1_ga6b4f12453ca0ab048cd4c5b51590b895}\label{group__group1_ga6b4f12453ca0ab048cd4c5b51590b895}} 
+\#define {\bfseries DIODE\+\_\+\+NUM\+\_\+\+READINGS\+\_\+\+\_\+2}~(uint32\+\_\+t) 0x0 $<$$<$ DIODE\+\_\+\+NUM\+\_\+\+READINGS\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gac7d8bad03cb8ecddc669fca652296fc8}\label{group__group1_gac7d8bad03cb8ecddc669fca652296fc8}} 
+\#define {\bfseries DIODE\+\_\+\+NUM\+\_\+\+READINGS\+\_\+\+\_\+3}~(uint32\+\_\+t) 0x1 $<$$<$ DIODE\+\_\+\+NUM\+\_\+\+READINGS\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{diode -\/ averaging on}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga6116ba97b3bce035cbf76a18ebeb448a}\label{group__group1_ga6116ba97b3bce035cbf76a18ebeb448a}} 
+\#define {\bfseries DIODE\+\_\+\+AVERAGING\+\_\+\+ON\+\_\+\+LSB}~24
+\item 
+\mbox{\Hypertarget{group__group1_ga81c1eb5d4d7fd5a8ffe04ac630c6f84b}\label{group__group1_ga81c1eb5d4d7fd5a8ffe04ac630c6f84b}} 
+\#define {\bfseries DIODE\+\_\+\+AVERAGING\+\_\+\+OFF}~(uint32\+\_\+t) 0x0 $<$$<$ DIODE\+\_\+\+AVERAGING\+\_\+\+ON\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga6eb1d481be34d5090250f347c52c7863}\label{group__group1_ga6eb1d481be34d5090250f347c52c7863}} 
+\#define {\bfseries DIODE\+\_\+\+AVERAGING\+\_\+\+ON}~(uint32\+\_\+t) 0x1 $<$$<$ DIODE\+\_\+\+AVERAGING\+\_\+\+ON\+\_\+\+LSB
+\end{DoxyCompactItemize}
+\doxysubsection*{diode -\/ current}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga8ce7fbb13221561910b78bb6dd7e7c76}\label{group__group1_ga8ce7fbb13221561910b78bb6dd7e7c76}} 
+\#define {\bfseries DIODE\+\_\+\+CURRENT\+\_\+\+LSB}~22
+\item 
+\mbox{\Hypertarget{group__group1_ga7b023d19fc4de6734390006385669feb}\label{group__group1_ga7b023d19fc4de6734390006385669feb}} 
+\#define {\bfseries DIODE\+\_\+\+CURRENT\+\_\+\+\_\+10\+UA\+\_\+40\+UA\+\_\+80\+UA}~(uint32\+\_\+t) 0x0 $<$$<$ DIODE\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga6df13538337a23b200ab2499b8198b4a}\label{group__group1_ga6df13538337a23b200ab2499b8198b4a}} 
+\#define {\bfseries DIODE\+\_\+\+CURRENT\+\_\+\+\_\+20\+UA\+\_\+80\+UA\+\_\+160\+UA}~(uint32\+\_\+t) 0x1 $<$$<$ DIODE\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga4ac2f267d4dd14fa597c828b7703bbad}\label{group__group1_ga4ac2f267d4dd14fa597c828b7703bbad}} 
+\#define {\bfseries DIODE\+\_\+\+CURRENT\+\_\+\+\_\+40\+UA\+\_\+160\+UA\+\_\+320\+UA}~(uint32\+\_\+t) 0x2 $<$$<$ DIODE\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_ga7b2a51408b2adfd60004b454fa27ef23}\label{group__group1_ga7b2a51408b2adfd60004b454fa27ef23}} 
+\#define {\bfseries DIODE\+\_\+\+CURRENT\+\_\+\+\_\+80\+UA\+\_\+320\+UA\+\_\+640\+UA}~(uint32\+\_\+t) 0x3 $<$$<$ DIODE\+\_\+\+CURRENT\+\_\+\+LSB
+\item 
+\mbox{\Hypertarget{group__group1_gac470bcbba9661a7edefdd4a2b7a154bc}\label{group__group1_gac470bcbba9661a7edefdd4a2b7a154bc}} 
+\#define {\bfseries DIODE\+\_\+\+IDEALITY\+\_\+\+FACTOR\+\_\+\+LSB}~0/$\ast$$\ast$diode -\/ ideality factor(eta)$\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{GLOBAL CONFIGURATION CONSTANTS}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga0f2d2e9d860963a4136a30c0222bd110}\label{group__group1_ga0f2d2e9d860963a4136a30c0222bd110}} 
+\#define {\bfseries REJECTION\+\_\+\+\_\+50\+\_\+60\+\_\+\+HZ}~(uint8\+\_\+t) 0x0
+\item 
+\mbox{\Hypertarget{group__group1_ga0d5781ead1529672cfb904a36ecff240}\label{group__group1_ga0d5781ead1529672cfb904a36ecff240}} 
+\#define {\bfseries REJECTION\+\_\+\+\_\+60\+\_\+\+HZ}~(uint8\+\_\+t) 0x1
+\item 
+\mbox{\Hypertarget{group__group1_gab30baef0df98d9ac09216ccf47b1c3c2}\label{group__group1_gab30baef0df98d9ac09216ccf47b1c3c2}} 
+\#define {\bfseries REJECTION\+\_\+\+\_\+50\+\_\+\+HZ}~(uint8\+\_\+t) 0x2
+\item 
+\mbox{\Hypertarget{group__group1_gab095ca1b8d5438f58b3f054e25752e24}\label{group__group1_gab095ca1b8d5438f58b3f054e25752e24}} 
+\#define {\bfseries TEMP\+\_\+\+UNIT\+\_\+\+\_\+C}~(uint8\+\_\+t) 0x0
+\item 
+\mbox{\Hypertarget{group__group1_ga392e0911324ade39765f505345b24158}\label{group__group1_ga392e0911324ade39765f505345b24158}} 
+\#define {\bfseries TEMP\+\_\+\+UNIT\+\_\+\+\_\+F}~(uint8\+\_\+t) 0x4
+\item 
+\mbox{\Hypertarget{group__group1_ga28014eabda8c99925d188f9d9c02e16b}\label{group__group1_ga28014eabda8c99925d188f9d9c02e16b}} 
+\#define {\bfseries ENABLE\+\_\+\+KELVIN\+\_\+3\+\_\+\+WIRE\+\_\+\+RTD\+\_\+\+MODE}~(uint8\+\_\+t) 0x10
+\item 
+\mbox{\Hypertarget{group__group1_gad784e747487dc51c9d91f5f5a57ff86f}\label{group__group1_gad784e747487dc51c9d91f5f5a57ff86f}} 
+\#define {\bfseries ENABLE\+\_\+\+KELVIN\+\_\+2\+\_\+\+WIRE\+\_\+\+RTD\+\_\+\+MODE}~(uint8\+\_\+t) 0x20
+\item 
+\mbox{\Hypertarget{group__group1_gad46bec9075af26284e8aec3813c48e47}\label{group__group1_gad46bec9075af26284e8aec3813c48e47}} 
+\#define {\bfseries ENABLE\+\_\+\+KELVIN\+\_\+\+DIFFERENTIAL\+\_\+\+THERMISTOR\+\_\+\+MODE}~(uint8\+\_\+t) 0x40
+\item 
+\mbox{\Hypertarget{group__group1_ga335c773c995a53cff4a4f2834575af10}\label{group__group1_ga335c773c995a53cff4a4f2834575af10}} 
+\#define {\bfseries DISABLE\+\_\+\+MINUS\+\_\+999}~(uint8\+\_\+t) 0x80
+\end{DoxyCompactItemize}
+\doxysubsection*{STATUS BYTE CONSTANTS}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga82bc700c39ee7817b912703a40034ac3}\label{group__group1_ga82bc700c39ee7817b912703a40034ac3}} 
+\#define {\bfseries SENSOR\+\_\+\+HARD\+\_\+\+FAILURE}~(uint8\+\_\+t) 0x80
+\item 
+\mbox{\Hypertarget{group__group1_ga8bd8597fd4fe3673d9cce68b0569a5cc}\label{group__group1_ga8bd8597fd4fe3673d9cce68b0569a5cc}} 
+\#define {\bfseries ADC\+\_\+\+HARD\+\_\+\+FAILURE}~(uint8\+\_\+t) 0x40
+\item 
+\mbox{\Hypertarget{group__group1_ga276f5c1fe728a0615804405dab762d08}\label{group__group1_ga276f5c1fe728a0615804405dab762d08}} 
+\#define {\bfseries CJ\+\_\+\+HARD\+\_\+\+FAILURE}~(uint8\+\_\+t) 0x20
+\item 
+\mbox{\Hypertarget{group__group1_ga38c4391b844b02d097398f641b1750b0}\label{group__group1_ga38c4391b844b02d097398f641b1750b0}} 
+\#define {\bfseries CJ\+\_\+\+SOFT\+\_\+\+FAILURE}~(uint8\+\_\+t) 0x10
+\item 
+\mbox{\Hypertarget{group__group1_ga25576d56f03f7bf24eeb73d8d928ffa1}\label{group__group1_ga25576d56f03f7bf24eeb73d8d928ffa1}} 
+\#define {\bfseries SENSOR\+\_\+\+ABOVE}~(uint8\+\_\+t) 0x8
+\item 
+\mbox{\Hypertarget{group__group1_ga9a08f8bac83621dd61bd48d8fc9985f8}\label{group__group1_ga9a08f8bac83621dd61bd48d8fc9985f8}} 
+\#define {\bfseries SENSOR\+\_\+\+BELOW}~(uint8\+\_\+t) 0x4
+\item 
+\mbox{\Hypertarget{group__group1_ga29b8e8e2076c704c9ab667b20a710181}\label{group__group1_ga29b8e8e2076c704c9ab667b20a710181}} 
+\#define {\bfseries ADC\+\_\+\+RANGE\+\_\+\+ERROR}~(uint8\+\_\+t) 0x2
+\item 
+\mbox{\Hypertarget{group__group1_gad47ac60ff0cfac53148a07bc32fc7585}\label{group__group1_gad47ac60ff0cfac53148a07bc32fc7585}} 
+\#define {\bfseries VALID}~(uint8\+\_\+t) 0x1
+\end{DoxyCompactItemize}
+\doxysubsection*{ADDRESS BASE}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga7c5acb365e65febf4355cae505ef04c6}\label{group__group1_ga7c5acb365e65febf4355cae505ef04c6}} 
+\#define {\bfseries COMMAND\+\_\+\+STATUS\+\_\+\+REGISTER}~(uint16\+\_\+t) 0x0000
+\item 
+\mbox{\Hypertarget{group__group1_ga0a4d626460424335bbaebfd521772b24}\label{group__group1_ga0a4d626460424335bbaebfd521772b24}} 
+\#define {\bfseries CH\+\_\+\+ADDRESS\+\_\+\+BASE}~(uint16\+\_\+t) 0x0200
+\item 
+\mbox{\Hypertarget{group__group1_ga545b3e87ce1443343549a1d781f4bdf1}\label{group__group1_ga545b3e87ce1443343549a1d781f4bdf1}} 
+\#define {\bfseries VOUT\+\_\+\+CH\+\_\+\+BASE}~(uint16\+\_\+t) 0x0060
+\item 
+\mbox{\Hypertarget{group__group1_ga099fd7a6d8e94beb9adc801f10ea4f98}\label{group__group1_ga099fd7a6d8e94beb9adc801f10ea4f98}} 
+\#define {\bfseries READ\+\_\+\+CH\+\_\+\+BASE}~(uint16\+\_\+t) 0x0010
+\item 
+\mbox{\Hypertarget{group__group1_gaa9e387e09d4036dbdaf631823acea3d1}\label{group__group1_gaa9e387e09d4036dbdaf631823acea3d1}} 
+\#define {\bfseries CONVERSION\+\_\+\+RESULT\+\_\+\+MEMORY\+\_\+\+BASE}~(uint16\+\_\+t) 0x0010
+\end{DoxyCompactItemize}
+\doxysubsection*{DATA to be sent in the MOSI line of MCU}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga919e977008b5735a8d6bfeacaf8d3790}\label{group__group1_ga919e977008b5735a8d6bfeacaf8d3790}} 
+\#define {\bfseries WRITE\+\_\+\+TO\+\_\+\+RAM}~(uint8\+\_\+t) 0x02
+\item 
+\mbox{\Hypertarget{group__group1_gaef87cee930022293ca4316a43be59faf}\label{group__group1_gaef87cee930022293ca4316a43be59faf}} 
+\#define {\bfseries READ\+\_\+\+FROM\+\_\+\+RAM}~(uint8\+\_\+t) 0x03
+\item 
+\mbox{\Hypertarget{group__group1_ga03bbb5ec9ca956ff03e2881540c41979}\label{group__group1_ga03bbb5ec9ca956ff03e2881540c41979}} 
+\#define {\bfseries CONVERSION\+\_\+\+CONTROL\+\_\+\+BYTE}~(uint8\+\_\+t) 0x80
+\end{DoxyCompactItemize}
+\doxysubsection*{OUTPUT TYPE}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga95f77a4b46f8270143622e8f7de8faa7}\label{group__group1_ga95f77a4b46f8270143622e8f7de8faa7}} 
+\#define {\bfseries VOLTAGE}~(uint8\+\_\+t) 0x01
+\item 
+\mbox{\Hypertarget{group__group1_gaf4e8dcb1c210baad2e179d49669eabff}\label{group__group1_gaf4e8dcb1c210baad2e179d49669eabff}} 
+\#define {\bfseries TEMPERATURE}~(uint8\+\_\+t) 0x02
+\item 
+\mbox{\Hypertarget{group__group1_gae6527c8381eb3f23b7fd6d6efec6ffc7}\label{group__group1_gae6527c8381eb3f23b7fd6d6efec6ffc7}} 
+\#define {\bfseries CODE}~(uint8\+\_\+t) 0x03
+\end{DoxyCompactItemize}
+\doxysubsection*{LTC DSPI EDMA Peripheral}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga8e728880e6caef6a017588966430acec}\label{group__group1_ga8e728880e6caef6a017588966430acec}} 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+BASEADDR}~SPI1
+\item 
+\mbox{\Hypertarget{group__group1_ga3dafdb1e53fa5891000aadaa0e278857}\label{group__group1_ga3dafdb1e53fa5891000aadaa0e278857}} 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASE}~DMAMUX\+\_\+\+BASE
+\item 
+\mbox{\Hypertarget{group__group1_gae41c8e829d017994960ed064919135e9}\label{group__group1_gae41c8e829d017994960ed064919135e9}} 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASE}~DMA\+\_\+\+BASE
+\item 
+\mbox{\Hypertarget{group__group1_ga1ab73b04f84e3bf35358462811ee84ed}\label{group__group1_ga1ab73b04f84e3bf35358462811ee84ed}} 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+RX\+\_\+\+REQUEST\+\_\+\+SOURCE}~k\+Dma\+Request\+Mux0\+SPI1
+\item 
+\mbox{\Hypertarget{group__group1_ga3e15a1c41ae40171e3e3d3138280954c}\label{group__group1_ga3e15a1c41ae40171e3e3d3138280954c}} 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+CLK\+\_\+\+SRC}~DSPI1\+\_\+\+CLK\+\_\+\+SRC
+\item 
+\mbox{\Hypertarget{group__group1_ga7ebd197d1b127b96cecb63b97aa1fa3f}\label{group__group1_ga7ebd197d1b127b96cecb63b97aa1fa3f}} 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+CLK\+\_\+\+FREQ}~CLOCK\+\_\+\+Get\+Freq(DSPI1\+\_\+\+CLK\+\_\+\+SRC)
+\item 
+\mbox{\Hypertarget{group__group1_ga6acce474d2ff46d6f9291b95084c1a3c}\label{group__group1_ga6acce474d2ff46d6f9291b95084c1a3c}} 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+PCS\+\_\+\+FOR\+\_\+\+INIT}~k\+DSPI\+\_\+\+Pcs0
+\item 
+\mbox{\Hypertarget{group__group1_gacab83a255159a4a2f70ae4e728637a7c}\label{group__group1_gacab83a255159a4a2f70ae4e728637a7c}} 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+PCS\+\_\+\+FOR\+\_\+\+TRANSFER}~k\+DSPI\+\_\+\+Master\+Pcs0
+\item 
+\mbox{\Hypertarget{group__group1_ga2f750122f415e2f3dd57595c80560591}\label{group__group1_ga2f750122f415e2f3dd57595c80560591}} 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASEADDR}~((DMAMUX\+\_\+\+Type $\ast$)(LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASE))
+\item 
+\mbox{\Hypertarget{group__group1_gadf6a9ad7603721491f1f734c5c248b10}\label{group__group1_gadf6a9ad7603721491f1f734c5c248b10}} 
+\#define {\bfseries LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASEADDR}~((DMA\+\_\+\+Type $\ast$)(LTC\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASE))
+\item 
+\mbox{\Hypertarget{group__group1_ga1498bed516de94abddc5b069a2b9353e}\label{group__group1_ga1498bed516de94abddc5b069a2b9353e}} 
+\#define {\bfseries LTC\+\_\+\+TRANSFER\+\_\+\+SIZE}~8U        /$\ast$ Transfer data\+Size $\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_ga4c73253414f729a4532306b0379a6eb6}\label{group__group1_ga4c73253414f729a4532306b0379a6eb6}} 
+\#define {\bfseries LTC\+\_\+\+TRANSFER\+\_\+\+BAUDRATE}~2000000U /$\ast$ Transfer baudrate -\/ 2M $\ast$/
+\end{DoxyCompactItemize}
+\doxysubsection*{ADS DSPI EDMA Peripheral}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga50c6971393c2c4aefc88bded44452f2c}\label{group__group1_ga50c6971393c2c4aefc88bded44452f2c}} 
+\#define {\bfseries NUM\+\_\+\+CHANNEL}~8
+\item 
+\mbox{\Hypertarget{group__group1_gaba31080701087f99d1e049d1be60e0d0}\label{group__group1_gaba31080701087f99d1e049d1be60e0d0}} 
+\#define {\bfseries ADS\+\_\+\+ADC\+\_\+\+RANGE}~10.\+0F
+\item 
+\mbox{\Hypertarget{group__group1_gadc06f354398c38791d8ab91d9b9cffac}\label{group__group1_gadc06f354398c38791d8ab91d9b9cffac}} 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+BASEADDR}~SPI0
+\item 
+\mbox{\Hypertarget{group__group1_ga8f445606d3432e7cb57f60b79bddab64}\label{group__group1_ga8f445606d3432e7cb57f60b79bddab64}} 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASE}~DMAMUX\+\_\+\+BASE
+\item 
+\mbox{\Hypertarget{group__group1_ga09443415a5786736d36b7d10ee630fa0}\label{group__group1_ga09443415a5786736d36b7d10ee630fa0}} 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASE}~DMA\+\_\+\+BASE
+\item 
+\mbox{\Hypertarget{group__group1_ga609f43dd77055c3ac17e7be7ed79dc40}\label{group__group1_ga609f43dd77055c3ac17e7be7ed79dc40}} 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+RX\+\_\+\+REQUEST\+\_\+\+SOURCE}~k\+Dma\+Request\+Mux0\+SPI0\+Rx
+\item 
+\mbox{\Hypertarget{group__group1_gad384e9fe719ca12d13fe0a6f4f4bab3b}\label{group__group1_gad384e9fe719ca12d13fe0a6f4f4bab3b}} 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+TX\+\_\+\+REQUEST\+\_\+\+SOURCE}~k\+Dma\+Request\+Mux0\+SPI0\+Tx
+\item 
+\mbox{\Hypertarget{group__group1_ga29fcca052d1e25bc8348939f96583f14}\label{group__group1_ga29fcca052d1e25bc8348939f96583f14}} 
+\#define {\bfseries ADS\+\_\+\+MASTER\+\_\+\+CLK\+\_\+\+SRC}~DSPI0\+\_\+\+CLK\+\_\+\+SRC
+\item 
+\mbox{\Hypertarget{group__group1_ga9b397e2d7f31145e5a2c3c96110f94da}\label{group__group1_ga9b397e2d7f31145e5a2c3c96110f94da}} 
+\#define {\bfseries ADS\+\_\+\+MASTER\+\_\+\+CLK\+\_\+\+FREQ}~20000000
+\item 
+\mbox{\Hypertarget{group__group1_ga341c33d21ed6e2900875efcfc9e68cce}\label{group__group1_ga341c33d21ed6e2900875efcfc9e68cce}} 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+PCS\+\_\+\+FOR\+\_\+\+INIT}~k\+DSPI\+\_\+\+Pcs0
+\item 
+\mbox{\Hypertarget{group__group1_ga18bf687d30cdb9b9048c3932d3cceab9}\label{group__group1_ga18bf687d30cdb9b9048c3932d3cceab9}} 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+PCS\+\_\+\+FOR\+\_\+\+TRANSFER}~k\+DSPI\+\_\+\+Master\+Pcs0
+\item 
+\mbox{\Hypertarget{group__group1_ga3bc8452c862140be5da1735ca5df8768}\label{group__group1_ga3bc8452c862140be5da1735ca5df8768}} 
+\#define {\bfseries ADS\+\_\+\+TRANSFER\+\_\+\+SIZE}~2U$\ast$NUM\+\_\+\+CHANNEL        /$\ast$ Transfer data\+Size $\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_ga7e54d0ab0011a14db1c9930a27402116}\label{group__group1_ga7e54d0ab0011a14db1c9930a27402116}} 
+\#define {\bfseries ADS\+\_\+\+TRANSFER\+\_\+\+BAUDRATE}~20000000U /$\ast$ Transfer baudrate -\/ 20M $\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_gafef57ebbc936c285f7cbbe67851412d9}\label{group__group1_gafef57ebbc936c285f7cbbe67851412d9}} 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASEADDR}~((DMAMUX\+\_\+\+Type $\ast$)(ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+MUX\+\_\+\+BASE))
+\item 
+\mbox{\Hypertarget{group__group1_gaff19f7cbf42eca1d293e03d44cada5a9}\label{group__group1_gaff19f7cbf42eca1d293e03d44cada5a9}} 
+\#define {\bfseries ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASEADDR}~((DMA\+\_\+\+Type $\ast$)(ADS\+\_\+\+DSPI\+\_\+\+MASTER\+\_\+\+DMA\+\_\+\+BASE))
+\end{DoxyCompactItemize}
+\doxysubsection*{On-\/board Comparator for PTC-\/150}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_gaf7c13c5cdd3f974c6a5c412447d17cec}\label{group__group1_gaf7c13c5cdd3f974c6a5c412447d17cec}} 
+\#define {\bfseries CMP\+\_\+\+BASE}~CMP0
+\item 
+\mbox{\Hypertarget{group__group1_gaed5f5753ed20e83089c2df6544800861}\label{group__group1_gaed5f5753ed20e83089c2df6544800861}} 
+\#define {\bfseries CMP\+\_\+\+USER\+\_\+\+CHANNEL}~1U
+\item 
+\mbox{\Hypertarget{group__group1_gabd986ce29f9c70bc1d811c2caf717759}\label{group__group1_gabd986ce29f9c70bc1d811c2caf717759}} 
+\#define {\bfseries CMP\+\_\+\+DAC\+\_\+\+CHANNEL}~7U
+\item 
+\mbox{\Hypertarget{group__group1_ga2911f914f16be929251db372d9a05057}\label{group__group1_ga2911f914f16be929251db372d9a05057}} 
+\#define {\bfseries CMP\+\_\+\+THRESHOLD}~31U
+\end{DoxyCompactItemize}
+\doxysubsection*{Inbuilt ADC \& PT-\/1000 Sensor parameters}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__group1_ga702cce739ad2d3934e8f06446a5cf351}\label{group__group1_ga702cce739ad2d3934e8f06446a5cf351}} 
+\#define {\bfseries PT\+\_\+1000\+\_\+\+ADC16\+\_\+\+BASE}~ADC0
+\item 
+\mbox{\Hypertarget{group__group1_gab796b4e96896370eafa084f2ea30b43b}\label{group__group1_gab796b4e96896370eafa084f2ea30b43b}} 
+\#define {\bfseries PT\+\_\+1000\+\_\+\+ADC16\+\_\+\+CHANNEL\+\_\+\+GROUP}~0U
+\item 
+\mbox{\Hypertarget{group__group1_ga3349504aae067b4c931e3b129b20bdaa}\label{group__group1_ga3349504aae067b4c931e3b129b20bdaa}} 
+\#define {\bfseries PT\+\_\+1000\+\_\+\+ADC16\+\_\+\+USER\+\_\+\+CHANNEL}~8U /$\ast$ PTB0, ADC0\+\_\+\+SE8 $\ast$/
+\item 
+\mbox{\Hypertarget{group__group1_gaeea9de52f85aa2f36c6135292f54d4b6}\label{group__group1_gaeea9de52f85aa2f36c6135292f54d4b6}} 
+\#define {\bfseries FSL\+\_\+\+FEATURE\+\_\+\+ADC16\+\_\+\+MAX\+\_\+\+RESOLUTION}~(16)
+\item 
+\mbox{\Hypertarget{group__group1_gaf5abd28c44c29b7397c84f1fec4b1d84}\label{group__group1_gaf5abd28c44c29b7397c84f1fec4b1d84}} 
+\#define {\bfseries ALPHA}~0.\+00385F
+\item 
+\mbox{\Hypertarget{group__group1_ga3e3ba2f1fe9601d320102a96a615b362}\label{group__group1_ga3e3ba2f1fe9601d320102a96a615b362}} 
+\#define {\bfseries PT\+\_\+1000\+\_\+A}~3.\+908300E-\/3F
+\item 
+\mbox{\Hypertarget{group__group1_ga9996b29ee7e13f6dee7854335c85c8ec}\label{group__group1_ga9996b29ee7e13f6dee7854335c85c8ec}} 
+\#define {\bfseries PT\+\_\+1000\+\_\+B}~-\/5.\+775E-\/7
+\item 
+\mbox{\Hypertarget{group__group1_gae5f3cbe4369fee5dff4b92e520e9ea86}\label{group__group1_gae5f3cbe4369fee5dff4b92e520e9ea86}} 
+\#define {\bfseries PT\+\_\+1000\+\_\+C}~–4.\+183000E-\/12
+\item 
+\mbox{\Hypertarget{group__group1_ga0c62281ace34a7124d16d49820b5f3c5}\label{group__group1_ga0c62281ace34a7124d16d49820b5f3c5}} 
+\#define {\bfseries POTENTIAL\+\_\+\+DIVIDER\+\_\+\+INPUT}~3.\+0F
+\item 
+\mbox{\Hypertarget{group__group1_ga2f8889534ee926982c709df0652e04d9}\label{group__group1_ga2f8889534ee926982c709df0652e04d9}} 
+\#define {\bfseries RESISTANCE\+\_\+0\+\_\+\+DEG}~1000.\+0F
+\item 
+\mbox{\Hypertarget{group__group1_gafa86b8bedfa2516121e7fc74dc73db8a}\label{group__group1_gafa86b8bedfa2516121e7fc74dc73db8a}} 
+\#define {\bfseries POTENTIAL\+\_\+\+DIVIDER\+\_\+\+R1}~6800.\+0F
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Communication Handler group. 
+
+Group pertaining to all communication in/out of the NXP controller 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__group1_ga63a4ac611cc61804358df31db508d294}\label{group__group1_ga63a4ac611cc61804358df31db508d294}} 
+\index{Communication Handler@{Communication Handler}!ADS\_DSPI\_MasterUserCallback@{ADS\_DSPI\_MasterUserCallback}}
+\index{ADS\_DSPI\_MasterUserCallback@{ADS\_DSPI\_MasterUserCallback}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ADS\_DSPI\_MasterUserCallback()}{ADS\_DSPI\_MasterUserCallback()}}
+{\footnotesize\ttfamily void ADS\+\_\+\+DSPI\+\_\+\+Master\+User\+Callback (\begin{DoxyParamCaption}\item[{SPI\+\_\+\+Type $\ast$}]{base,  }\item[{dspi\+\_\+master\+\_\+edma\+\_\+handle\+\_\+t $\ast$}]{handle,  }\item[{status\+\_\+t}]{status,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Function definition used a callback to check if the EDMA Transfer is successful or not for ADS Board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & DSPI peripheral base address \\
+\hline
+{\em handle} & DSPI handle pointer to dspi\+\_\+master\+\_\+edma\+\_\+handle\+\_\+t \\
+\hline
+{\em status} & using the status flag verifies if the EDMA Transfer is successful or not \\
+\hline
+{\em user\+Data} & A callback function parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_gad18e426e6b33595650afa5d6f316c7a1}\label{group__group1_gad18e426e6b33595650afa5d6f316c7a1}} 
+\index{Communication Handler@{Communication Handler}!ads\_spi\_edma\_init@{ads\_spi\_edma\_init}}
+\index{ads\_spi\_edma\_init@{ads\_spi\_edma\_init}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ads\_spi\_edma\_init()}{ads\_spi\_edma\_init()}}
+{\footnotesize\ttfamily void ads\+\_\+spi\+\_\+edma\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes SPI0 instance for Communication with the ADS8588 board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_ga2907e74fbd54f58b87493c76a4064e4d}\label{group__group1_ga2907e74fbd54f58b87493c76a4064e4d}} 
+\index{Communication Handler@{Communication Handler}!ads\_spi\_transfer\_block@{ads\_spi\_transfer\_block}}
+\index{ads\_spi\_transfer\_block@{ads\_spi\_transfer\_block}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ads\_spi\_transfer\_block()}{ads\_spi\_transfer\_block()}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ ads\+\_\+spi\+\_\+transfer\+\_\+block (\begin{DoxyParamCaption}\item[{uint8\+\_\+t $\ast$}]{rrxx }\end{DoxyParamCaption})}
+
+
+
+Used for receiving the current and voltage value from the ADS8588 board using SPI Protocol. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em starting} & address value for the array which will store the current voltage values \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+starting address 
+\end{DoxyReturn}
+\begin{DoxyAttention}{Attention}
+The syntax is with a pointer. This was made in this format keeping in mind the problem of dangling pointer. 
+\end{DoxyAttention}
+\mbox{\Hypertarget{group__group1_gac11c6a9a24445569e9ce1dd74afa67d4}\label{group__group1_gac11c6a9a24445569e9ce1dd74afa67d4}} 
+\index{Communication Handler@{Communication Handler}!Collect\_Data\_from\_PT\_1000@{Collect\_Data\_from\_PT\_1000}}
+\index{Collect\_Data\_from\_PT\_1000@{Collect\_Data\_from\_PT\_1000}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{Collect\_Data\_from\_PT\_1000()}{Collect\_Data\_from\_PT\_1000()}}
+{\footnotesize\ttfamily float\+\_\+t Collect\+\_\+\+Data\+\_\+from\+\_\+\+PT\+\_\+1000 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to collect the Temperature value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_ga5cc42dcb8e006443870b611ca0cb68bf}\label{group__group1_ga5cc42dcb8e006443870b611ca0cb68bf}} 
+\index{Communication Handler@{Communication Handler}!Comparator\_Init@{Comparator\_Init}}
+\index{Comparator\_Init@{Comparator\_Init}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{Comparator\_Init()}{Comparator\_Init()}}
+{\footnotesize\ttfamily void Comparator\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize Comparator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_gafae9a1d5efe50d7e2634e7da7f9fc844}\label{group__group1_gafae9a1d5efe50d7e2634e7da7f9fc844}} 
+\index{Communication Handler@{Communication Handler}!comparator\_init@{comparator\_init}}
+\index{comparator\_init@{comparator\_init}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{comparator\_init()}{comparator\_init()}}
+{\footnotesize\ttfamily void comparator\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the Comparator Peripherals for PTC-\/150. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_gaaea8539607f1d674bd030d8ef251f599}\label{group__group1_gaaea8539607f1d674bd030d8ef251f599}} 
+\index{Communication Handler@{Communication Handler}!delay@{delay}}
+\index{delay@{delay}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{delay()}{delay()}}
+{\footnotesize\ttfamily void delay (\begin{DoxyParamCaption}\item[{int}]{delay\+\_\+in\+\_\+ms }\end{DoxyParamCaption})}
+
+
+
+Function which creates a delay in milli second @detail uses NOP -\/ No Operation inside a for loop to create delays. 
+
+\begin{DoxyNote}{Note}
+Can standardize this function using Counter to provide delays 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em delay\+\_\+in\+\_\+ms} & Delay value in milliseconds \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group1_gac2344da1a44115aa81946f614ee2998a}\label{group__group1_gac2344da1a44115aa81946f614ee2998a}} 
+\index{Communication Handler@{Communication Handler}!DrivePOC\_Comm\_Handler\_Init@{DrivePOC\_Comm\_Handler\_Init}}
+\index{DrivePOC\_Comm\_Handler\_Init@{DrivePOC\_Comm\_Handler\_Init}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{DrivePOC\_Comm\_Handler\_Init()}{DrivePOC\_Comm\_Handler\_Init()}}
+{\footnotesize\ttfamily void Drive\+POC\+\_\+\+Comm\+\_\+\+Handler\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to initialize the Communication Handler of the Drive POC controller for ADC and PWM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_ga19a5a24d8f5c2d00be06843a495ddd5c}\label{group__group1_ga19a5a24d8f5c2d00be06843a495ddd5c}} 
+\index{Communication Handler@{Communication Handler}!DrivePOC\_Comm\_Handler\_PWMDis@{DrivePOC\_Comm\_Handler\_PWMDis}}
+\index{DrivePOC\_Comm\_Handler\_PWMDis@{DrivePOC\_Comm\_Handler\_PWMDis}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{DrivePOC\_Comm\_Handler\_PWMDis()}{DrivePOC\_Comm\_Handler\_PWMDis()}}
+{\footnotesize\ttfamily void Drive\+POC\+\_\+\+Comm\+\_\+\+Handler\+\_\+\+PWMDis (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to disable PWM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_gae8a039e738a656864bef5815889913e8}\label{group__group1_gae8a039e738a656864bef5815889913e8}} 
+\index{Communication Handler@{Communication Handler}!DrivePOC\_UpdateDutyCyc@{DrivePOC\_UpdateDutyCyc}}
+\index{DrivePOC\_UpdateDutyCyc@{DrivePOC\_UpdateDutyCyc}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{DrivePOC\_UpdateDutyCyc()}{DrivePOC\_UpdateDutyCyc()}}
+{\footnotesize\ttfamily void Drive\+POC\+\_\+\+Update\+Duty\+Cyc (\begin{DoxyParamCaption}\item[{GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT}]{duty\+Cycle }\end{DoxyParamCaption})}
+
+
+
+Update duty cycle for PWM. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em duty\+Cycle} & -\/ Duty cycle value in GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+PWM duty cycles calculation and update
+
+Enable PWM output\mbox{\Hypertarget{group__group1_ga30ca3958eb9512ca2bab9c081a4f1afc}\label{group__group1_ga30ca3958eb9512ca2bab9c081a4f1afc}} 
+\index{Communication Handler@{Communication Handler}!InbuiltADC\_Init@{InbuiltADC\_Init}}
+\index{InbuiltADC\_Init@{InbuiltADC\_Init}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{InbuiltADC\_Init()}{InbuiltADC\_Init()}}
+{\footnotesize\ttfamily void Inbuilt\+ADC\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to initialize the Inbuilt ADC. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_gaca8184369749d0fb9f532f422d25d4c3}\label{group__group1_gaca8184369749d0fb9f532f422d25d4c3}} 
+\index{Communication Handler@{Communication Handler}!ltc\_convert\_channel@{ltc\_convert\_channel}}
+\index{ltc\_convert\_channel@{ltc\_convert\_channel}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_convert\_channel()}{ltc\_convert\_channel()}}
+{\footnotesize\ttfamily void ltc\+\_\+convert\+\_\+channel (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+Function definition which performs the Initiate conversion action. 
+
+A conversion is initiated by writing a measurement command into RAM memory location 0x000 and this function block takes care of this 
+\begin{DoxyParams}{Parameters}
+{\em channel\+\_\+number} & Channel number at which the sensor is connected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+If the sensor is connected between n and n-\/1 th channel the channel number to be chosen is n and not n-\/1 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_gac1107f5f6c72c9ab14ff6ea86f18c3af}\label{group__group1_gac1107f5f6c72c9ab14ff6ea86f18c3af}} 
+\index{Communication Handler@{Communication Handler}!LTC\_DSPI\_MasterUserCallback@{LTC\_DSPI\_MasterUserCallback}}
+\index{LTC\_DSPI\_MasterUserCallback@{LTC\_DSPI\_MasterUserCallback}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{LTC\_DSPI\_MasterUserCallback()}{LTC\_DSPI\_MasterUserCallback()}}
+{\footnotesize\ttfamily void LTC\+\_\+\+DSPI\+\_\+\+Master\+User\+Callback (\begin{DoxyParamCaption}\item[{SPI\+\_\+\+Type $\ast$}]{base,  }\item[{dspi\+\_\+master\+\_\+edma\+\_\+handle\+\_\+t $\ast$}]{handle,  }\item[{status\+\_\+t}]{status,  }\item[{void $\ast$}]{user\+Data }\end{DoxyParamCaption})}
+
+
+
+Function definition used a callback to check if the EDMA Transfer is successful or not for LTC Board. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base} & DSPI peripheral base address \\
+\hline
+{\em handle} & DSPI handle pointer to dspi\+\_\+master\+\_\+edma\+\_\+handle\+\_\+t \\
+\hline
+{\em status} & using the status flag verifies if the EDMA Transfer is successful or not \\
+\hline
+{\em user\+Data} & A callback function parameter \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_ga84730584378fdee2a73cabeae52d4379}\label{group__group1_ga84730584378fdee2a73cabeae52d4379}} 
+\index{Communication Handler@{Communication Handler}!ltc\_get\_result@{ltc\_get\_result}}
+\index{ltc\_get\_result@{ltc\_get\_result}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_get\_result()}{ltc\_get\_result()}}
+{\footnotesize\ttfamily uint32\+\_\+t ltc\+\_\+get\+\_\+result (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel\+\_\+number,  }\item[{uint8\+\_\+t}]{channel\+\_\+output }\end{DoxyParamCaption})}
+
+
+
+Function which receives the Temperature or the Voltage value measured in the MISO line of the MCU. 
+
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000004}{Todo}}]Update the function based on Interrupt pin of LTC2986 \end{DoxyRefDesc}
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+\_\+number} & Channel number at which the sensor is connected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+If the sensor is connected between n and n-\/1 th channel the channel number to be chosen is n and not n-\/1 
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+\_\+output} & Specify the kind of output, if the output we need is Voltage or Temperature or Resistance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group1_ga9993a5d8443105bb5e2914d4ad4ddb1f}\label{group__group1_ga9993a5d8443105bb5e2914d4ad4ddb1f}} 
+\index{Communication Handler@{Communication Handler}!ltc\_get\_start\_address@{ltc\_get\_start\_address}}
+\index{ltc\_get\_start\_address@{ltc\_get\_start\_address}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_get\_start\_address()}{ltc\_get\_start\_address()}}
+{\footnotesize\ttfamily uint16\+\_\+t ltc\+\_\+get\+\_\+start\+\_\+address (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{base\+\_\+address,  }\item[{uint8\+\_\+t}]{channel\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+Function definition to get the start address corresponding to the channel number across which sensor is connected. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em base\+\_\+address} & base address of the memory location \\
+\hline
+{\em channel\+\_\+number} & represents the nth channel where the sensor gets connected to that particular channel and (n-\/1)th channel where n\texorpdfstring{$>$}{>}1 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+start address corresponding to that channel 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_gaa26f5a25edf4ca557dd24185d913cc0f}\label{group__group1_gaa26f5a25edf4ca557dd24185d913cc0f}} 
+\index{Communication Handler@{Communication Handler}!ltc\_measure\_channel@{ltc\_measure\_channel}}
+\index{ltc\_measure\_channel@{ltc\_measure\_channel}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_measure\_channel()}{ltc\_measure\_channel()}}
+{\footnotesize\ttfamily float\+\_\+t ltc\+\_\+measure\+\_\+channel (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel\+\_\+number,  }\item[{uint8\+\_\+t}]{channel\+\_\+output }\end{DoxyParamCaption})}
+
+
+
+Function definition to measure the sensor output. 
+
+We can measure the output in terms of Voltage, Resistance or Temperature and this function will have print options to display the result in the console window and hence its output is of void kind 
+\begin{DoxyParams}{Parameters}
+{\em channel\+\_\+number} & Channel number at which the sensor is connected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+If the sensor is connected between n and n-\/1 th channel the channel number to be chosen is n and not n-\/1 
+\end{DoxyAttention}
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+\_\+output} & Specify the kind of output, if the output we need is Voltage or Temperature or Resistance \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxyAttention}{Attention}
+We have to update this part of code specific to the state machine because the value need not be printed and it has to be given as an input to the state machine to check if the Temperature values are well within the limits 
+\end{DoxyAttention}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000003}{Todo}}]Update this function according to state machine \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__group1_ga3163af2185016acf05814b0ee9612fee}\label{group__group1_ga3163af2185016acf05814b0ee9612fee}} 
+\index{Communication Handler@{Communication Handler}!ltc\_print\_conversion\_result@{ltc\_print\_conversion\_result}}
+\index{ltc\_print\_conversion\_result@{ltc\_print\_conversion\_result}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_print\_conversion\_result()}{ltc\_print\_conversion\_result()}}
+{\footnotesize\ttfamily void ltc\+\_\+print\+\_\+conversion\+\_\+result (\begin{DoxyParamCaption}\item[{uint32\+\_\+t}]{raw\+\_\+conversion\+\_\+result,  }\item[{uint8\+\_\+t}]{channel\+\_\+output }\end{DoxyParamCaption})}
+
+
+
+Function definition to print the output in the console window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em raw\+\_\+conversion\+\_\+result} & 32 bit output obtained in the MISO line of the MCU \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Of this 32 bit first 8 bit represent the kind of Fault -\/ Refer to Page-\/num-\/36 in the LTC Board. This shows the fault bits for the Temperature sensor if it is of RTD kind 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+\_\+output} & Specify the kind of output, if the output we need is Voltage or Temperature or Resistance \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{group__group1_ga155b5d4f8a5138b51b2c3ed45b9bf062}\label{group__group1_ga155b5d4f8a5138b51b2c3ed45b9bf062}} 
+\index{Communication Handler@{Communication Handler}!ltc\_print\_fault\_data@{ltc\_print\_fault\_data}}
+\index{ltc\_print\_fault\_data@{ltc\_print\_fault\_data}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_print\_fault\_data()}{ltc\_print\_fault\_data()}}
+{\footnotesize\ttfamily void ltc\+\_\+print\+\_\+fault\+\_\+data (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{fault\+\_\+byte }\end{DoxyParamCaption})}
+
+
+
+Function to print the Fault byte in the console window indicating the kind of fault as per the Datasheet. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fault\+\_\+byte} & The first 8-\/bits obtained in the MISO Line of the MCU after the Initiate Conversion command indicates the Fault byte \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_gab486a29142443fde0da3b9444d2492f4}\label{group__group1_gab486a29142443fde0da3b9444d2492f4}} 
+\index{Communication Handler@{Communication Handler}!ltc\_read\_voltage\_or\_resistance\_results@{ltc\_read\_voltage\_or\_resistance\_results}}
+\index{ltc\_read\_voltage\_or\_resistance\_results@{ltc\_read\_voltage\_or\_resistance\_results}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_read\_voltage\_or\_resistance\_results()}{ltc\_read\_voltage\_or\_resistance\_results()}}
+{\footnotesize\ttfamily void ltc\+\_\+read\+\_\+voltage\+\_\+or\+\_\+resistance\+\_\+results (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{channel\+\_\+number }\end{DoxyParamCaption})}
+
+
+
+Function definition to calculate if the value needed is in terms of Voltage or Resistance instead of Temperature. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em channel\+\_\+number} & Channel number at which the sensor is connected \\
+\hline
+\end{DoxyParams}
+\begin{DoxyAttention}{Attention}
+If the sensor is connected between n and n-\/1 th channel the channel number to be chosen is n and not n-\/1 
+\end{DoxyAttention}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_ga615dc6530f76b9e64add88b068bc294b}\label{group__group1_ga615dc6530f76b9e64add88b068bc294b}} 
+\index{Communication Handler@{Communication Handler}!ltc\_spi\_edma\_init@{ltc\_spi\_edma\_init}}
+\index{ltc\_spi\_edma\_init@{ltc\_spi\_edma\_init}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_spi\_edma\_init()}{ltc\_spi\_edma\_init()}}
+{\footnotesize\ttfamily void ltc\+\_\+spi\+\_\+edma\+\_\+init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initializes the DSPI \& EDMA Peripheral. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+DMA Mux setting and EDMA init
+
+DMA MUX init
+
+Set up dspi master\mbox{\Hypertarget{group__group1_ga66a1bba7620c1a67fd7fb4ae4bbd7c9f}\label{group__group1_ga66a1bba7620c1a67fd7fb4ae4bbd7c9f}} 
+\index{Communication Handler@{Communication Handler}!ltc\_spi\_transfer\_block@{ltc\_spi\_transfer\_block}}
+\index{ltc\_spi\_transfer\_block@{ltc\_spi\_transfer\_block}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_spi\_transfer\_block()}{ltc\_spi\_transfer\_block()}}
+{\footnotesize\ttfamily uint8\+\_\+t $\ast$ ltc\+\_\+spi\+\_\+transfer\+\_\+block (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{TRANSFER\+\_\+\+SIZEE,  }\item[{uint8\+\_\+t $\ast$}]{ttxx,  }\item[{uint8\+\_\+t $\ast$}]{rrxx }\end{DoxyParamCaption})}
+
+
+
+Function definition for SPI Transfer @detail The communication is Half Duplex Mode. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em TRANSFER\+\_\+\+SIZEE} & number of bytes getting transferred \\
+\hline
+{\em ttxx} & array pointer to send TRANSFER\+\_\+\+SIZEE of bytes from MCU to LTC Board \\
+\hline
+{\em rrxx} & array point to receive TRANSFER\+\_\+\+SIZEE of bytes from LTC Board to MCU \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+Had given the receive byte address also as an input because, without this the received value will disappear once the code exits this function block and this will lead to dangling pointer issue 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__group1_ga9a33778832e23a4ce65543112b784fa1}\label{group__group1_ga9a33778832e23a4ce65543112b784fa1}} 
+\index{Communication Handler@{Communication Handler}!ltc\_transfer\_byte@{ltc\_transfer\_byte}}
+\index{ltc\_transfer\_byte@{ltc\_transfer\_byte}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_transfer\_byte()}{ltc\_transfer\_byte()}}
+{\footnotesize\ttfamily uint8\+\_\+t ltc\+\_\+transfer\+\_\+byte (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ram\+\_\+read\+\_\+or\+\_\+write,  }\item[{uint16\+\_\+t}]{start\+\_\+address,  }\item[{uint8\+\_\+t}]{input\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Function definition for transfer of a single byte data. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em ram\+\_\+read\+\_\+or\+\_\+write} & Read or Write Signal \\
+\hline
+{\em start\+\_\+address} & Address Specific to Channel \\
+\hline
+{\em input\+\_\+data} & The data that has to be sent via the MOSI line of the MCU to the LTC Board (i.\+e.) input to LTC Board \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+This function is used while transferring Global Configuration Parameters 
+\end{DoxyNote}
+\mbox{\Hypertarget{group__group1_ga336dbaa064e6bba1fc575096133199da}\label{group__group1_ga336dbaa064e6bba1fc575096133199da}} 
+\index{Communication Handler@{Communication Handler}!ltc\_transfer\_four\_bytes@{ltc\_transfer\_four\_bytes}}
+\index{ltc\_transfer\_four\_bytes@{ltc\_transfer\_four\_bytes}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_transfer\_four\_bytes()}{ltc\_transfer\_four\_bytes()}}
+{\footnotesize\ttfamily uint32\+\_\+t ltc\+\_\+transfer\+\_\+four\+\_\+bytes (\begin{DoxyParamCaption}\item[{uint8\+\_\+t}]{ram\+\_\+read\+\_\+or\+\_\+write,  }\item[{uint16\+\_\+t}]{start\+\_\+address,  }\item[{uint32\+\_\+t}]{input\+\_\+data }\end{DoxyParamCaption})}
+
+
+
+Function definiton to transfer 4 bytes. 
+
+This function is used only while the Channel Assignment Data(\+Memory address Data specific to the channel) is being sent from the MCU to the LTC Board and also while receiving the measured temperature/voltage data from the LTC Board to the MCU 
+\begin{DoxyParams}{Parameters}
+{\em ram\+\_\+read\+\_\+or\+\_\+write} & Read or Write signal is sent first from the MCU to the LTC Board \\
+\hline
+{\em start\+\_\+address} & Channel specific address \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__group1_ga9993a5d8443105bb5e2914d4ad4ddb1f}{ltc\+\_\+get\+\_\+start\+\_\+address()}} 
+\end{DoxySeeAlso}
+
+\begin{DoxyParams}{Parameters}
+{\em input\+\_\+data} & Represents the data which is sent as an input to the LTC Board from the MCU through MOSI Line \\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__group1_ga66a1bba7620c1a67fd7fb4ae4bbd7c9f}{ltc\+\_\+spi\+\_\+transfer\+\_\+block()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__group1_ga447a441ee97f9760235110c6aa307108}\label{group__group1_ga447a441ee97f9760235110c6aa307108}} 
+\index{Communication Handler@{Communication Handler}!ltc\_wait\_for\_process\_to\_finish@{ltc\_wait\_for\_process\_to\_finish}}
+\index{ltc\_wait\_for\_process\_to\_finish@{ltc\_wait\_for\_process\_to\_finish}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ltc\_wait\_for\_process\_to\_finish()}{ltc\_wait\_for\_process\_to\_finish()}}
+{\footnotesize\ttfamily void ltc\+\_\+wait\+\_\+for\+\_\+process\+\_\+to\+\_\+finish (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to check if the value 0x40 is being returned by the LTC Board in MOSI line of the LTC Board(\+MISO Line of the MCU) which in turn indicates that the transfer of Initiate Conversion Command is a success. 
+
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__group1_gaca8184369749d0fb9f532f422d25d4c3}{ltc\+\_\+convert\+\_\+channel()}} 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__group1_gad1a49a12ac2a47584d08073502f6ac47}\label{group__group1_gad1a49a12ac2a47584d08073502f6ac47}} 
+\index{Communication Handler@{Communication Handler}!Measure\_from\_PTC\_150@{Measure\_from\_PTC\_150}}
+\index{Measure\_from\_PTC\_150@{Measure\_from\_PTC\_150}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{Measure\_from\_PTC\_150()}{Measure\_from\_PTC\_150()}}
+{\footnotesize\ttfamily bool\+\_\+t Measure\+\_\+from\+\_\+\+PTC\+\_\+150 (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to measure from PTC-\/150. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Boolean value \textquotesingle{}1\textquotesingle{} denotes that the output is higher than the set threshold value and \textquotesingle{}0\textquotesingle{} denotes that the output is lower than the threshold 
+\end{DoxyReturn}
+\begin{DoxyRefDesc}{Todo}
+\item[\mbox{\hyperlink{todo__todo000005}{Todo}}]Update the threshold according to VIN \& R1 \end{DoxyRefDesc}
+\mbox{\Hypertarget{group__group1_gaa27bbde4889e0d0c2af88f971efc86eb}\label{group__group1_gaa27bbde4889e0d0c2af88f971efc86eb}} 
+\index{Communication Handler@{Communication Handler}!PrintDebugInfo@{PrintDebugInfo}}
+\index{PrintDebugInfo@{PrintDebugInfo}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{PrintDebugInfo()}{PrintDebugInfo()}}
+{\footnotesize\ttfamily void Print\+Debug\+Info (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to print debug data on the Serial terminal over UART @ 115200 bps baudrate. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_ga2c0e86960979f0c8d21b864925b06e71}\label{group__group1_ga2c0e86960979f0c8d21b864925b06e71}} 
+\index{Communication Handler@{Communication Handler}!PWM\_Init@{PWM\_Init}}
+\index{PWM\_Init@{PWM\_Init}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{PWM\_Init()}{PWM\_Init()}}
+{\footnotesize\ttfamily void PWM\+\_\+\+Init (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Initialize PWM Signals. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__group1_ga936b95121740dcd9ea20c6ee9b8499c6}\label{group__group1_ga936b95121740dcd9ea20c6ee9b8499c6}} 
+\index{Communication Handler@{Communication Handler}!ReadFromEncoder@{ReadFromEncoder}}
+\index{ReadFromEncoder@{ReadFromEncoder}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{ReadFromEncoder()}{ReadFromEncoder()}}
+{\footnotesize\ttfamily void Read\+From\+Encoder (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Function definition to read out of the FTM1 registers for Quadrature decoding. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em None} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+None 
+\end{DoxyReturn}
+
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{group__group1_gafd0f238eac6ce65f1b83150b2f80ebee}\label{group__group1_gafd0f238eac6ce65f1b83150b2f80ebee}} 
+\index{Communication Handler@{Communication Handler}!s\_open\_loop@{s\_open\_loop}}
+\index{s\_open\_loop@{s\_open\_loop}!Communication Handler@{Communication Handler}}
+\doxysubsubsection{\texorpdfstring{s\_open\_loop}{s\_open\_loop}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structmcs__acim__open__loop__str}{mcs\+\_\+acim\+\_\+open\+\_\+loop\+\_\+str}} s\+\_\+open\+\_\+loop\hspace{0.3cm}{\ttfamily [extern]}}
+
+V/F Control Algorithm parameters 

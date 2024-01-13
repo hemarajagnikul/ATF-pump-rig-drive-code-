@@ -1,0 +1,269 @@
+\indexentry{Communication Handler@{Communication Handler}|hyperpage}{11}
+\indexentry{Communication Handler@{Communication Handler}!ADS\_DSPI\_MasterUserCallback@{ADS\_DSPI\_MasterUserCallback}|hyperpage}{19}
+\indexentry{ADS\_DSPI\_MasterUserCallback@{ADS\_DSPI\_MasterUserCallback}!Communication Handler@{Communication Handler}|hyperpage}{19}
+\indexentry{Communication Handler@{Communication Handler}!ads\_spi\_edma\_init@{ads\_spi\_edma\_init}|hyperpage}{20}
+\indexentry{ads\_spi\_edma\_init@{ads\_spi\_edma\_init}!Communication Handler@{Communication Handler}|hyperpage}{20}
+\indexentry{Communication Handler@{Communication Handler}!ads\_spi\_transfer\_block@{ads\_spi\_transfer\_block}|hyperpage}{20}
+\indexentry{ads\_spi\_transfer\_block@{ads\_spi\_transfer\_block}!Communication Handler@{Communication Handler}|hyperpage}{20}
+\indexentry{Communication Handler@{Communication Handler}!Collect\_Data\_from\_PT\_1000@{Collect\_Data\_from\_PT\_1000}|hyperpage}{20}
+\indexentry{Collect\_Data\_from\_PT\_1000@{Collect\_Data\_from\_PT\_1000}!Communication Handler@{Communication Handler}|hyperpage}{20}
+\indexentry{Communication Handler@{Communication Handler}!Comparator\_Init@{Comparator\_Init}|hyperpage}{20}
+\indexentry{Comparator\_Init@{Comparator\_Init}!Communication Handler@{Communication Handler}|hyperpage}{20}
+\indexentry{Communication Handler@{Communication Handler}!comparator\_init@{comparator\_init}|hyperpage}{21}
+\indexentry{comparator\_init@{comparator\_init}!Communication Handler@{Communication Handler}|hyperpage}{21}
+\indexentry{Communication Handler@{Communication Handler}!delay@{delay}|hyperpage}{21}
+\indexentry{delay@{delay}!Communication Handler@{Communication Handler}|hyperpage}{21}
+\indexentry{Communication Handler@{Communication Handler}!DrivePOC\_Comm\_Handler\_Init@{DrivePOC\_Comm\_Handler\_Init}|hyperpage}{21}
+\indexentry{DrivePOC\_Comm\_Handler\_Init@{DrivePOC\_Comm\_Handler\_Init}!Communication Handler@{Communication Handler}|hyperpage}{21}
+\indexentry{Communication Handler@{Communication Handler}!DrivePOC\_Comm\_Handler\_PWMDis@{DrivePOC\_Comm\_Handler\_PWMDis}|hyperpage}{21}
+\indexentry{DrivePOC\_Comm\_Handler\_PWMDis@{DrivePOC\_Comm\_Handler\_PWMDis}!Communication Handler@{Communication Handler}|hyperpage}{21}
+\indexentry{Communication Handler@{Communication Handler}!DrivePOC\_UpdateDutyCyc@{DrivePOC\_UpdateDutyCyc}|hyperpage}{22}
+\indexentry{DrivePOC\_UpdateDutyCyc@{DrivePOC\_UpdateDutyCyc}!Communication Handler@{Communication Handler}|hyperpage}{22}
+\indexentry{Communication Handler@{Communication Handler}!InbuiltADC\_Init@{InbuiltADC\_Init}|hyperpage}{22}
+\indexentry{InbuiltADC\_Init@{InbuiltADC\_Init}!Communication Handler@{Communication Handler}|hyperpage}{22}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_convert\_channel@{ltc\_convert\_channel}|hyperpage}{22}
+\indexentry{ltc\_convert\_channel@{ltc\_convert\_channel}!Communication Handler@{Communication Handler}|hyperpage}{22}
+\indexentry{Communication Handler@{Communication Handler}!LTC\_DSPI\_MasterUserCallback@{LTC\_DSPI\_MasterUserCallback}|hyperpage}{23}
+\indexentry{LTC\_DSPI\_MasterUserCallback@{LTC\_DSPI\_MasterUserCallback}!Communication Handler@{Communication Handler}|hyperpage}{23}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_get\_result@{ltc\_get\_result}|hyperpage}{23}
+\indexentry{ltc\_get\_result@{ltc\_get\_result}!Communication Handler@{Communication Handler}|hyperpage}{23}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_get\_start\_address@{ltc\_get\_start\_address}|hyperpage}{23}
+\indexentry{ltc\_get\_start\_address@{ltc\_get\_start\_address}!Communication Handler@{Communication Handler}|hyperpage}{23}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_measure\_channel@{ltc\_measure\_channel}|hyperpage}{24}
+\indexentry{ltc\_measure\_channel@{ltc\_measure\_channel}!Communication Handler@{Communication Handler}|hyperpage}{24}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_print\_conversion\_result@{ltc\_print\_conversion\_result}|hyperpage}{24}
+\indexentry{ltc\_print\_conversion\_result@{ltc\_print\_conversion\_result}!Communication Handler@{Communication Handler}|hyperpage}{24}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_print\_fault\_data@{ltc\_print\_fault\_data}|hyperpage}{25}
+\indexentry{ltc\_print\_fault\_data@{ltc\_print\_fault\_data}!Communication Handler@{Communication Handler}|hyperpage}{25}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_read\_voltage\_or\_resistance\_results@{ltc\_read\_voltage\_or\_resistance\_results}|hyperpage}{25}
+\indexentry{ltc\_read\_voltage\_or\_resistance\_results@{ltc\_read\_voltage\_or\_resistance\_results}!Communication Handler@{Communication Handler}|hyperpage}{25}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_spi\_edma\_init@{ltc\_spi\_edma\_init}|hyperpage}{25}
+\indexentry{ltc\_spi\_edma\_init@{ltc\_spi\_edma\_init}!Communication Handler@{Communication Handler}|hyperpage}{25}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_spi\_transfer\_block@{ltc\_spi\_transfer\_block}|hyperpage}{26}
+\indexentry{ltc\_spi\_transfer\_block@{ltc\_spi\_transfer\_block}!Communication Handler@{Communication Handler}|hyperpage}{26}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_transfer\_byte@{ltc\_transfer\_byte}|hyperpage}{26}
+\indexentry{ltc\_transfer\_byte@{ltc\_transfer\_byte}!Communication Handler@{Communication Handler}|hyperpage}{26}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_transfer\_four\_bytes@{ltc\_transfer\_four\_bytes}|hyperpage}{26}
+\indexentry{ltc\_transfer\_four\_bytes@{ltc\_transfer\_four\_bytes}!Communication Handler@{Communication Handler}|hyperpage}{26}
+\indexentry{Communication Handler@{Communication Handler}!ltc\_wait\_for\_process\_to\_finish@{ltc\_wait\_for\_process\_to\_finish}|hyperpage}{27}
+\indexentry{ltc\_wait\_for\_process\_to\_finish@{ltc\_wait\_for\_process\_to\_finish}!Communication Handler@{Communication Handler}|hyperpage}{27}
+\indexentry{Communication Handler@{Communication Handler}!Measure\_from\_PTC\_150@{Measure\_from\_PTC\_150}|hyperpage}{27}
+\indexentry{Measure\_from\_PTC\_150@{Measure\_from\_PTC\_150}!Communication Handler@{Communication Handler}|hyperpage}{27}
+\indexentry{Communication Handler@{Communication Handler}!PrintDebugInfo@{PrintDebugInfo}|hyperpage}{27}
+\indexentry{PrintDebugInfo@{PrintDebugInfo}!Communication Handler@{Communication Handler}|hyperpage}{27}
+\indexentry{Communication Handler@{Communication Handler}!PWM\_Init@{PWM\_Init}|hyperpage}{29}
+\indexentry{PWM\_Init@{PWM\_Init}!Communication Handler@{Communication Handler}|hyperpage}{29}
+\indexentry{Communication Handler@{Communication Handler}!ReadFromEncoder@{ReadFromEncoder}|hyperpage}{29}
+\indexentry{ReadFromEncoder@{ReadFromEncoder}!Communication Handler@{Communication Handler}|hyperpage}{29}
+\indexentry{Communication Handler@{Communication Handler}!s\_open\_loop@{s\_open\_loop}|hyperpage}{29}
+\indexentry{s\_open\_loop@{s\_open\_loop}!Communication Handler@{Communication Handler}|hyperpage}{29}
+\indexentry{V/F Control Algorithm@{V/F Control Algorithm}|hyperpage}{29}
+\indexentry{V/F Control Algorithm@{V/F Control Algorithm}!Get\_Duty\_Cycle@{Get\_Duty\_Cycle}|hyperpage}{30}
+\indexentry{Get\_Duty\_Cycle@{Get\_Duty\_Cycle}!V/F Control Algorithm@{V/F Control Algorithm}|hyperpage}{30}
+\indexentry{V/F Control Algorithm@{V/F Control Algorithm}!Motor\_SM\_Calibration@{Motor\_SM\_Calibration}|hyperpage}{30}
+\indexentry{Motor\_SM\_Calibration@{Motor\_SM\_Calibration}!V/F Control Algorithm@{V/F Control Algorithm}|hyperpage}{30}
+\indexentry{V/F Control Algorithm@{V/F Control Algorithm}!Motor\_SM\_Ready@{Motor\_SM\_Ready}|hyperpage}{30}
+\indexentry{Motor\_SM\_Ready@{Motor\_SM\_Ready}!V/F Control Algorithm@{V/F Control Algorithm}|hyperpage}{30}
+\indexentry{V/F Control Algorithm@{V/F Control Algorithm}!Open\_Loop\_Control@{Open\_Loop\_Control}|hyperpage}{31}
+\indexentry{Open\_Loop\_Control@{Open\_Loop\_Control}!V/F Control Algorithm@{V/F Control Algorithm}|hyperpage}{31}
+\indexentry{V/F Control Algorithm@{V/F Control Algorithm}!Open\_Loop\_MainStateMC@{Open\_Loop\_MainStateMC}|hyperpage}{31}
+\indexentry{Open\_Loop\_MainStateMC@{Open\_Loop\_MainStateMC}!V/F Control Algorithm@{V/F Control Algorithm}|hyperpage}{31}
+\indexentry{V/F Control Algorithm@{V/F Control Algorithm}!Open\_Loop\_MotorStateMC@{Open\_Loop\_MotorStateMC}|hyperpage}{32}
+\indexentry{Open\_Loop\_MotorStateMC@{Open\_Loop\_MotorStateMC}!V/F Control Algorithm@{V/F Control Algorithm}|hyperpage}{32}
+\indexentry{V/F Control Algorithm@{V/F Control Algorithm}!PTC\_FaultDiag@{PTC\_FaultDiag}|hyperpage}{33}
+\indexentry{PTC\_FaultDiag@{PTC\_FaultDiag}!V/F Control Algorithm@{V/F Control Algorithm}|hyperpage}{33}
+\indexentry{V/F Control Algorithm@{V/F Control Algorithm}!System\_FaultDiag@{System\_FaultDiag}|hyperpage}{33}
+\indexentry{System\_FaultDiag@{System\_FaultDiag}!V/F Control Algorithm@{V/F Control Algorithm}|hyperpage}{33}
+\indexentry{Fault Handler@{Fault Handler}|hyperpage}{33}
+\indexentry{Fault Handler@{Fault Handler}!Get\_Fault\_Duty\_Cycle@{Get\_Fault\_Duty\_Cycle}|hyperpage}{33}
+\indexentry{Get\_Fault\_Duty\_Cycle@{Get\_Fault\_Duty\_Cycle}!Fault Handler@{Fault Handler}|hyperpage}{33}
+\indexentry{Memory Handler@{Memory Handler}|hyperpage}{34}
+\indexentry{Memory Handler@{Memory Handler}!DrivePOC\_MH\_GetEncoderSpeed@{DrivePOC\_MH\_GetEncoderSpeed}|hyperpage}{37}
+\indexentry{DrivePOC\_MH\_GetEncoderSpeed@{DrivePOC\_MH\_GetEncoderSpeed}!Memory Handler@{Memory Handler}|hyperpage}{37}
+\indexentry{Memory Handler@{Memory Handler}!DrivePOC\_MH\_GetVIvalues@{DrivePOC\_MH\_GetVIvalues}|hyperpage}{37}
+\indexentry{DrivePOC\_MH\_GetVIvalues@{DrivePOC\_MH\_GetVIvalues}!Memory Handler@{Memory Handler}|hyperpage}{37}
+\indexentry{Memory Handler@{Memory Handler}!DrivePOC\_MH\_UpdateEncoderSpeed@{DrivePOC\_MH\_UpdateEncoderSpeed}|hyperpage}{37}
+\indexentry{DrivePOC\_MH\_UpdateEncoderSpeed@{DrivePOC\_MH\_UpdateEncoderSpeed}!Memory Handler@{Memory Handler}|hyperpage}{37}
+\indexentry{Memory Handler@{Memory Handler}!DrivePOC\_MH\_UpdateVIvalues@{DrivePOC\_MH\_UpdateVIvalues}|hyperpage}{38}
+\indexentry{DrivePOC\_MH\_UpdateVIvalues@{DrivePOC\_MH\_UpdateVIvalues}!Memory Handler@{Memory Handler}|hyperpage}{38}
+\indexentry{Memory Handler@{Memory Handler}!Get\_Duty\_Cycle@{Get\_Duty\_Cycle}|hyperpage}{38}
+\indexentry{Get\_Duty\_Cycle@{Get\_Duty\_Cycle}!Memory Handler@{Memory Handler}|hyperpage}{38}
+\indexentry{Memory Handler@{Memory Handler}!Store\_Temperature\_from\_PT\_1000@{Store\_Temperature\_from\_PT\_1000}|hyperpage}{38}
+\indexentry{Store\_Temperature\_from\_PT\_1000@{Store\_Temperature\_from\_PT\_1000}!Memory Handler@{Memory Handler}|hyperpage}{38}
+\indexentry{Main\_SM\_ControlSig@{Main\_SM\_ControlSig}|hyperpage}{39}
+\indexentry{Main\_SM\_ControlSig@{Main\_SM\_ControlSig}!main\_sm\_ctrl\_fault@{main\_sm\_ctrl\_fault}|hyperpage}{39}
+\indexentry{main\_sm\_ctrl\_fault@{main\_sm\_ctrl\_fault}!Main\_SM\_ControlSig@{Main\_SM\_ControlSig}|hyperpage}{39}
+\indexentry{Main\_SM\_ControlSig@{Main\_SM\_ControlSig}!main\_sm\_ctrl\_init\_done@{main\_sm\_ctrl\_init\_done}|hyperpage}{39}
+\indexentry{main\_sm\_ctrl\_init\_done@{main\_sm\_ctrl\_init\_done}!Main\_SM\_ControlSig@{Main\_SM\_ControlSig}|hyperpage}{39}
+\indexentry{Main\_SM\_ControlSig@{Main\_SM\_ControlSig}!main\_sm\_ctrl\_run@{main\_sm\_ctrl\_run}|hyperpage}{39}
+\indexentry{main\_sm\_ctrl\_run@{main\_sm\_ctrl\_run}!Main\_SM\_ControlSig@{Main\_SM\_ControlSig}|hyperpage}{39}
+\indexentry{Main\_SM\_ControlSig@{Main\_SM\_ControlSig}!main\_sm\_ctrl\_stop@{main\_sm\_ctrl\_stop}|hyperpage}{39}
+\indexentry{main\_sm\_ctrl\_stop@{main\_sm\_ctrl\_stop}!Main\_SM\_ControlSig@{Main\_SM\_ControlSig}|hyperpage}{39}
+\indexentry{mcs\_acim\_open\_loop\_str@{mcs\_acim\_open\_loop\_str}|hyperpage}{40}
+\indexentry{Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}|hyperpage}{40}
+\indexentry{Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}!calib@{calib}|hyperpage}{40}
+\indexentry{calib@{calib}!Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}|hyperpage}{40}
+\indexentry{Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}!ready@{ready}|hyperpage}{40}
+\indexentry{ready@{ready}!Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}|hyperpage}{40}
+\indexentry{Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}!spin@{spin}|hyperpage}{40}
+\indexentry{spin@{spin}!Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}|hyperpage}{40}
+\indexentry{Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}!start\_ok@{start\_ok}|hyperpage}{40}
+\indexentry{start\_ok@{start\_ok}!Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}|hyperpage}{40}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{43}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!B@{B}|hyperpage}{44}
+\indexentry{B@{B}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{44}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!F\_NOM@{F\_NOM}|hyperpage}{44}
+\indexentry{F\_NOM@{F\_NOM}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{44}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!FC@{FC}|hyperpage}{45}
+\indexentry{FC@{FC}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!I\_NOM\_LL\_RMS@{I\_NOM\_LL\_RMS}|hyperpage}{45}
+\indexentry{I\_NOM\_LL\_RMS@{I\_NOM\_LL\_RMS}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!I\_NOM\_PHASE\_RMS@{I\_NOM\_PHASE\_RMS}|hyperpage}{45}
+\indexentry{I\_NOM\_PHASE\_RMS@{I\_NOM\_PHASE\_RMS}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!IIN\_INVERTER\_MAX@{IIN\_INVERTER\_MAX}|hyperpage}{45}
+\indexentry{IIN\_INVERTER\_MAX@{IIN\_INVERTER\_MAX}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!IIN\_INVERTER\_MIN@{IIN\_INVERTER\_MIN}|hyperpage}{45}
+\indexentry{IIN\_INVERTER\_MIN@{IIN\_INVERTER\_MIN}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!IOUT\_INVERTER\_MAX@{IOUT\_INVERTER\_MAX}|hyperpage}{45}
+\indexentry{IOUT\_INVERTER\_MAX@{IOUT\_INVERTER\_MAX}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!IOUT\_INVERTER\_MIN@{IOUT\_INVERTER\_MIN}|hyperpage}{45}
+\indexentry{IOUT\_INVERTER\_MIN@{IOUT\_INVERTER\_MIN}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!J@{J}|hyperpage}{45}
+\indexentry{J@{J}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!LLR@{LLR}|hyperpage}{45}
+\indexentry{LLR@{LLR}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!LLS@{LLS}|hyperpage}{45}
+\indexentry{LLS@{LLS}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!LM@{LM}|hyperpage}{45}
+\indexentry{LM@{LM}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!LR@{LR}|hyperpage}{45}
+\indexentry{LR@{LR}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{45}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!MAX\_FREQ@{MAX\_FREQ}|hyperpage}{46}
+\indexentry{MAX\_FREQ@{MAX\_FREQ}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!MIN\_FREQ@{MIN\_FREQ}|hyperpage}{46}
+\indexentry{MIN\_FREQ@{MIN\_FREQ}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!MOTOR\_EFFICIENCY@{MOTOR\_EFFICIENCY}|hyperpage}{46}
+\indexentry{MOTOR\_EFFICIENCY@{MOTOR\_EFFICIENCY}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!MOTOR\_MAX\_TEMPERATURE@{MOTOR\_MAX\_TEMPERATURE}|hyperpage}{46}
+\indexentry{MOTOR\_MAX\_TEMPERATURE@{MOTOR\_MAX\_TEMPERATURE}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!POLE@{POLE}|hyperpage}{46}
+\indexentry{POLE@{POLE}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!POLE\_PAIR@{POLE\_PAIR}|hyperpage}{46}
+\indexentry{POLE\_PAIR@{POLE\_PAIR}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!RATED\_PF@{RATED\_PF}|hyperpage}{46}
+\indexentry{RATED\_PF@{RATED\_PF}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!RR@{RR}|hyperpage}{46}
+\indexentry{RR@{RR}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!RS@{RS}|hyperpage}{46}
+\indexentry{RS@{RS}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!TS@{TS}|hyperpage}{46}
+\indexentry{TS@{TS}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!TSC@{TSC}|hyperpage}{46}
+\indexentry{TSC@{TSC}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!TVECT@{TVECT}|hyperpage}{46}
+\indexentry{TVECT@{TVECT}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{46}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!V\_NOM\_LL\_RMS@{V\_NOM\_LL\_RMS}|hyperpage}{47}
+\indexentry{V\_NOM\_LL\_RMS@{V\_NOM\_LL\_RMS}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{47}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!V\_NOM\_PHASE\_RMS@{V\_NOM\_PHASE\_RMS}|hyperpage}{47}
+\indexentry{V\_NOM\_PHASE\_RMS@{V\_NOM\_PHASE\_RMS}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{47}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!VDC\_MAX@{VDC\_MAX}|hyperpage}{47}
+\indexentry{VDC\_MAX@{VDC\_MAX}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{47}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!VDC\_MIN@{VDC\_MIN}|hyperpage}{47}
+\indexentry{VDC\_MIN@{VDC\_MIN}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{47}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!VDC\_NOM@{VDC\_NOM}|hyperpage}{47}
+\indexentry{VDC\_NOM@{VDC\_NOM}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{47}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!VIN\_INVERTER\_MAX@{VIN\_INVERTER\_MAX}|hyperpage}{47}
+\indexentry{VIN\_INVERTER\_MAX@{VIN\_INVERTER\_MAX}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{47}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!VIN\_INVERTER\_MIN@{VIN\_INVERTER\_MIN}|hyperpage}{47}
+\indexentry{VIN\_INVERTER\_MIN@{VIN\_INVERTER\_MIN}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{47}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!VOUT\_INVERTER\_MAX@{VOUT\_INVERTER\_MAX}|hyperpage}{47}
+\indexentry{VOUT\_INVERTER\_MAX@{VOUT\_INVERTER\_MAX}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{47}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!VOUT\_INVERTER\_MIN@{VOUT\_INVERTER\_MIN}|hyperpage}{47}
+\indexentry{VOUT\_INVERTER\_MIN@{VOUT\_INVERTER\_MIN}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{47}
+\indexentry{Drive\_Parameters.h@{Drive\_Parameters.h}!WC@{WC}|hyperpage}{47}
+\indexentry{WC@{WC}!Drive\_Parameters.h@{Drive\_Parameters.h}|hyperpage}{47}
+\indexentry{DrivePOC\_CommHandler.c@{DrivePOC\_CommHandler.c}|hyperpage}{48}
+\indexentry{DrivePOC\_CommHandler.h@{DrivePOC\_CommHandler.h}|hyperpage}{51}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{64}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Main\_SM\_ControlSig@{Main\_SM\_ControlSig}|hyperpage}{65}
+\indexentry{Main\_SM\_ControlSig@{Main\_SM\_ControlSig}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Main\_SM\_States@{Main\_SM\_States}|hyperpage}{65}
+\indexentry{Main\_SM\_States@{Main\_SM\_States}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!mcs\_acim\_open\_loop\_str@{mcs\_acim\_open\_loop\_str}|hyperpage}{65}
+\indexentry{mcs\_acim\_open\_loop\_str@{mcs\_acim\_open\_loop\_str}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}|hyperpage}{65}
+\indexentry{Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Motor\_SM\_States@{Motor\_SM\_States}|hyperpage}{65}
+\indexentry{Motor\_SM\_States@{Motor\_SM\_States}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Main\_SM\_States@{Main\_SM\_States}|hyperpage}{65}
+\indexentry{Main\_SM\_States@{Main\_SM\_States}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{MAIN\_SM\_INIT@{MAIN\_SM\_INIT}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MAIN\_SM\_INIT@{MAIN\_SM\_INIT}|hyperpage}{65}
+\indexentry{MAIN\_SM\_FAULT@{MAIN\_SM\_FAULT}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MAIN\_SM\_FAULT@{MAIN\_SM\_FAULT}|hyperpage}{65}
+\indexentry{MAIN\_SM\_STOP@{MAIN\_SM\_STOP}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MAIN\_SM\_STOP@{MAIN\_SM\_STOP}|hyperpage}{65}
+\indexentry{MAIN\_SM\_RUN@{MAIN\_SM\_RUN}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MAIN\_SM\_RUN@{MAIN\_SM\_RUN}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Motor\_SM\_States@{Motor\_SM\_States}|hyperpage}{65}
+\indexentry{Motor\_SM\_States@{Motor\_SM\_States}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{MOTOR\_SM\_CALIB@{MOTOR\_SM\_CALIB}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{65}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MOTOR\_SM\_CALIB@{MOTOR\_SM\_CALIB}|hyperpage}{65}
+\indexentry{MOTOR\_SM\_READY@{MOTOR\_SM\_READY}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{66}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MOTOR\_SM\_READY@{MOTOR\_SM\_READY}|hyperpage}{66}
+\indexentry{MOTOR\_SM\_START@{MOTOR\_SM\_START}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{66}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MOTOR\_SM\_START@{MOTOR\_SM\_START}|hyperpage}{66}
+\indexentry{MOTOR\_SM\_SPIN@{MOTOR\_SM\_SPIN}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{66}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MOTOR\_SM\_SPIN@{MOTOR\_SM\_SPIN}|hyperpage}{66}
+\indexentry{MOTOR\_SM\_DECELERATE@{MOTOR\_SM\_DECELERATE}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}|hyperpage}{66}
+\indexentry{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MOTOR\_SM\_DECELERATE@{MOTOR\_SM\_DECELERATE}|hyperpage}{66}
+\indexentry{DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}|hyperpage}{66}
+\indexentry{DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}!main\_ctrl\_sig@{main\_ctrl\_sig}|hyperpage}{67}
+\indexentry{main\_ctrl\_sig@{main\_ctrl\_sig}!DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}|hyperpage}{67}
+\indexentry{DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}!main\_sm\_state@{main\_sm\_state}|hyperpage}{67}
+\indexentry{main\_sm\_state@{main\_sm\_state}!DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}|hyperpage}{67}
+\indexentry{DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}!motor\_ctrl\_sig@{motor\_ctrl\_sig}|hyperpage}{68}
+\indexentry{motor\_ctrl\_sig@{motor\_ctrl\_sig}!DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}|hyperpage}{68}
+\indexentry{DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}!motor\_sm\_state@{motor\_sm\_state}|hyperpage}{68}
+\indexentry{motor\_sm\_state@{motor\_sm\_state}!DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}|hyperpage}{68}
+\indexentry{DrivePOC\_Control\_Loop.h@{DrivePOC\_Control\_Loop.h}|hyperpage}{68}
+\indexentry{DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}|hyperpage}{69}
+\indexentry{DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}!main@{main}|hyperpage}{70}
+\indexentry{main@{main}!DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}|hyperpage}{70}
+\indexentry{DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}!PIT\_Configuration@{PIT\_Configuration}|hyperpage}{70}
+\indexentry{PIT\_Configuration@{PIT\_Configuration}!DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}|hyperpage}{70}
+\indexentry{DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}!PIT\_IRQ\_HANDLER@{PIT\_IRQ\_HANDLER}|hyperpage}{70}
+\indexentry{PIT\_IRQ\_HANDLER@{PIT\_IRQ\_HANDLER}!DrivePOC\_Controller\_NXP.c@{DrivePOC\_Controller\_NXP.c}|hyperpage}{70}
+\indexentry{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}|hyperpage}{71}
+\indexentry{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!FTM\_SOURCE\_CLOCK@{FTM\_SOURCE\_CLOCK}|hyperpage}{71}
+\indexentry{FTM\_SOURCE\_CLOCK@{FTM\_SOURCE\_CLOCK}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}|hyperpage}{71}
+\indexentry{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!LTC\_FREQ@{LTC\_FREQ}|hyperpage}{71}
+\indexentry{LTC\_FREQ@{LTC\_FREQ}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}|hyperpage}{71}
+\indexentry{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!PIT\_IRQ\_HANDLER@{PIT\_IRQ\_HANDLER}|hyperpage}{72}
+\indexentry{PIT\_IRQ\_HANDLER@{PIT\_IRQ\_HANDLER}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}|hyperpage}{72}
+\indexentry{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!PIT\_IRQ\_ID@{PIT\_IRQ\_ID}|hyperpage}{72}
+\indexentry{PIT\_IRQ\_ID@{PIT\_IRQ\_ID}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}|hyperpage}{72}
+\indexentry{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!PIT\_SOURCE\_CLOCK@{PIT\_SOURCE\_CLOCK}|hyperpage}{72}
+\indexentry{PIT\_SOURCE\_CLOCK@{PIT\_SOURCE\_CLOCK}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}|hyperpage}{72}
+\indexentry{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!PRINTING\_FREQ@{PRINTING\_FREQ}|hyperpage}{72}
+\indexentry{PRINTING\_FREQ@{PRINTING\_FREQ}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}|hyperpage}{72}
+\indexentry{DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}!PIT\_Configuration@{PIT\_Configuration}|hyperpage}{72}
+\indexentry{PIT\_Configuration@{PIT\_Configuration}!DrivePOC\_Controller\_NXP.h@{DrivePOC\_Controller\_NXP.h}|hyperpage}{72}
+\indexentry{DrivePOC\_FaultHandler.c@{DrivePOC\_FaultHandler.c}|hyperpage}{73}
+\indexentry{DrivePOC\_FaultHandler.h@{DrivePOC\_FaultHandler.h}|hyperpage}{73}
+\indexentry{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}|hyperpage}{74}
+\indexentry{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle@{duty\_cycle}|hyperpage}{76}
+\indexentry{duty\_cycle@{duty\_cycle}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}|hyperpage}{76}
+\indexentry{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_30000hz\_669hz@{duty\_cycle\_30000hz\_669hz}|hyperpage}{76}
+\indexentry{duty\_cycle\_30000hz\_669hz@{duty\_cycle\_30000hz\_669hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}|hyperpage}{76}
+\indexentry{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_30000hz\_800hz@{duty\_cycle\_30000hz\_800hz}|hyperpage}{76}
+\indexentry{duty\_cycle\_30000hz\_800hz@{duty\_cycle\_30000hz\_800hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}|hyperpage}{76}
+\indexentry{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_40000hz\_669hz@{duty\_cycle\_40000hz\_669hz}|hyperpage}{76}
+\indexentry{duty\_cycle\_40000hz\_669hz@{duty\_cycle\_40000hz\_669hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}|hyperpage}{76}
+\indexentry{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_40000hz\_800hz@{duty\_cycle\_40000hz\_800hz}|hyperpage}{76}
+\indexentry{duty\_cycle\_40000hz\_800hz@{duty\_cycle\_40000hz\_800hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}|hyperpage}{76}
+\indexentry{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_50000hz\_669hz@{duty\_cycle\_50000hz\_669hz}|hyperpage}{77}
+\indexentry{duty\_cycle\_50000hz\_669hz@{duty\_cycle\_50000hz\_669hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}|hyperpage}{77}
+\indexentry{DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}!duty\_cycle\_50000hz\_800hz@{duty\_cycle\_50000hz\_800hz}|hyperpage}{77}
+\indexentry{duty\_cycle\_50000hz\_800hz@{duty\_cycle\_50000hz\_800hz}!DrivePOC\_MemHandler.c@{DrivePOC\_MemHandler.c}|hyperpage}{77}
+\indexentry{DrivePOC\_MemHandler.h@{DrivePOC\_MemHandler.h}|hyperpage}{77}

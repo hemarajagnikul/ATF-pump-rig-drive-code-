@@ -1,0 +1,37 @@
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_dmamux.h:75:20:DMAMUX_EnableChannel	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_dmamux.h:109:20:DMAMUX_SetSource	24	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_ftm.h:949:24:FTM_GetQuadDecoderCounterValue	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_gpio.h:162:20:GPIO_PinWrite	32	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_dac.h:187:20:DAC_Enable	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_adc16.h:367:20:ADC16_EnableHardwareTrigger	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_adc16.h:491:24:ADC16_GetChannelConversionValue	16	static
+../source/DrivePOC_CommHandler.c:101:19:ReadFromEncoder	8	static
+../source/DrivePOC_CommHandler.c:234:6:DrivePOC_Comm_Handler_Init	8	static
+../source/DrivePOC_CommHandler.c:249:6:PWM_Init	24	static
+../source/DrivePOC_CommHandler.c:272:6:Comparator_Init	24	static
+../source/DrivePOC_CommHandler.c:290:6:DrivePOC_Comm_Handler_PWMDis	8	static
+../source/DrivePOC_CommHandler.c:302:6:DrivePOC_UpdateDutyCyc	24	static
+../source/DrivePOC_CommHandler.c:342:10:ltc_get_start_address	16	static
+../source/DrivePOC_CommHandler.c:359:10:ltc_transfer_four_bytes	32	static
+../source/DrivePOC_CommHandler.c:393:10:ltc_spi_transfer_block	32	static
+../source/DrivePOC_CommHandler.c:426:6:ltc_configure_channels	24	static
+../source/DrivePOC_CommHandler.c:443:6:LTC_DSPI_MasterUserCallback	24	static
+../source/DrivePOC_CommHandler.c:459:6:delay	24	static
+../source/DrivePOC_CommHandler.c:477:9:ltc_transfer_byte	32	static
+../source/DrivePOC_CommHandler.c:503:9:ltc_measure_channel	24	static
+../source/DrivePOC_CommHandler.c:524:6:ltc_convert_channel	24	static
+../source/DrivePOC_CommHandler.c:540:6:ltc_wait_for_process_to_finish	16	static
+../source/DrivePOC_CommHandler.c:560:10:ltc_get_result	24	static
+../source/DrivePOC_CommHandler.c:578:6:ltc_print_conversion_result	24	static
+../source/DrivePOC_CommHandler.c:609:6:ltc_read_voltage_or_resistance_results	32	static
+../source/DrivePOC_CommHandler.c:626:6:ltc_print_fault_data	16	static
+../source/DrivePOC_CommHandler.c:656:6:ltc_spi_edma_init	32	static
+../source/DrivePOC_CommHandler.c:726:9:Collect_Data_from_PT_1000	8	static
+../source/DrivePOC_CommHandler.c:881:8:Measure_from_PTC_150	16	static
+../source/DrivePOC_CommHandler.c:900:6:InbuiltADC_Init	8	static
+../source/DrivePOC_CommHandler.c:935:6:ads_spi_edma_init	16	static
+../source/DrivePOC_CommHandler.c:1017:10:ads_spi_transfer_block	16	static
+../source/DrivePOC_CommHandler.c:1110:6:ADS_DSPI_MasterUserCallback	24	static
+../source/DrivePOC_CommHandler.c:1122:6:DAC_init	8	static
+../source/DrivePOC_CommHandler.c:1139:6:DAC_Update	16	static
+../source/DrivePOC_CommHandler.c:1146:6:RMS_Mean_Calc	24	static

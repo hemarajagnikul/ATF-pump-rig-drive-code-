@@ -1,0 +1,2 @@
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/utilities/fsl_debug_console.h:157:24:DbgConsole_Init	24	static
+../board/board.c:25:6:BOARD_InitDebugConsole	16	static

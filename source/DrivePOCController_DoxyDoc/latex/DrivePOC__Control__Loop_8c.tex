@@ -1,0 +1,88 @@
+\hypertarget{DrivePOC__Control__Loop_8c}{}\doxysection{Drive\+POC\+\_\+\+Control\+\_\+\+Loop.\+c File Reference}
+\label{DrivePOC__Control__Loop_8c}\index{DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}}
+
+
+\+: Functionalities pertaining to the V/F controls-\/\+Algorithm\textquotesingle{}s state machines (Main \& Motor)  
+
+
+{\ttfamily \#include \char`\"{}Drive\+\_\+\+Parameters.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}stdbool.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}board.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+debug\+\_\+console.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+cmp.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}fsl\+\_\+gpio.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Controller\+\_\+\+NXP.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Comm\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Mem\+Handler.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Control\+\_\+\+Loop.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Fault\+Handler.\+h\char`\"{}}\newline
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT \mbox{\hyperlink{group__group3_ga86acfc11d1f407811dbf2c51ac907631}{Open\+\_\+\+Loop\+\_\+\+Control}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition corresponding to the Fast loop of the V/F control algorithm. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{DrivePOC__Control__Loop_8c_aeb2a88b87f8c80c3993e3029349927da}\label{DrivePOC__Control__Loop_8c_aeb2a88b87f8c80c3993e3029349927da}} 
+void {\bfseries Open\+\_\+\+Loop\+\_\+\+Control\+\_\+\+Init} (void)
+\item 
+GMCLIB\+\_\+3\+COOR\+\_\+\+T\+\_\+\+FLT \mbox{\hyperlink{group__group3_gac3cbcbb610e7e3c14f35b1fcb7504175}{Open\+\_\+\+Loop\+\_\+\+Main\+State\+MC}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition corresponding to the main state machine of V/F control algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group3_gae110c246c0fce9c80c7ad12bc459dc74}{System\+\_\+\+Fault\+Diag}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition corresponding to the Fault diagnosis. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group3_ga67746f80d67531d9c29f17f8a321363f}{PTC\+\_\+\+Fault\+Diag}} ()
+\begin{DoxyCompactList}\small\item\em Function definition corresponding to fault indicated by PTC 150 Thermocouple. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group3_gaeecdb2045aa23ffbe042d06cf52705c4}{Open\+\_\+\+Loop\+\_\+\+Motor\+State\+MC}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition corresponding to the Motor state machine of V/F Control algorithm. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group3_gad85161f5f120d41e5351ff8f3b8caa21}{Motor\+\_\+\+SM\+\_\+\+Calibration}} (void)
+\begin{DoxyCompactList}\small\item\em ADC Calibration phase. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}{Main\+\_\+\+SM\+\_\+\+States}} \mbox{\hyperlink{DrivePOC__Control__Loop_8c_aa3e57c5daced54639cc7a6ee0c0e760e}{main\+\_\+sm\+\_\+state}}
+\item 
+\mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}{Motor\+\_\+\+SM\+\_\+\+States}} \mbox{\hyperlink{DrivePOC__Control__Loop_8c_a09b1e2aa773043d3aec869b43ab66da3}{motor\+\_\+sm\+\_\+state}}
+\item 
+\mbox{\hyperlink{structMain__SM__ControlSig}{Main\+\_\+\+SM\+\_\+\+Control\+Sig}} \mbox{\hyperlink{DrivePOC__Control__Loop_8c_ae24e48c5e63c46967861b5f541dd46a3}{main\+\_\+ctrl\+\_\+sig}}
+\item 
+\mbox{\hyperlink{structMotor__SM__ControlSig}{Motor\+\_\+\+SM\+\_\+\+Control\+Sig}} \mbox{\hyperlink{DrivePOC__Control__Loop_8c_a5d50f0fd8652f6c49b6d241a1fbe09c9}{motor\+\_\+ctrl\+\_\+sig}}
+\item 
+\mbox{\hyperlink{structmcs__acim__open__loop__str}{mcs\+\_\+acim\+\_\+open\+\_\+loop\+\_\+str}} \mbox{\hyperlink{group__group1_gafd0f238eac6ce65f1b83150b2f80ebee}{s\+\_\+open\+\_\+loop}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Functionalities pertaining to the V/F controls-\/\+Algorithm\textquotesingle{}s state machines (Main \& Motor) 
+
+\begin{DoxyAuthor}{Author}
+\+: Sreedhar, Sangeerth @company \+: Agnikul Cosmos Private Limited
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) Agnikul Cosmos Private Limited All rights reserved.\end{center} }
+
+\doxysubsection{Variable Documentation}
+\mbox{\Hypertarget{DrivePOC__Control__Loop_8c_ae24e48c5e63c46967861b5f541dd46a3}\label{DrivePOC__Control__Loop_8c_ae24e48c5e63c46967861b5f541dd46a3}} 
+\index{DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}!main\_ctrl\_sig@{main\_ctrl\_sig}}
+\index{main\_ctrl\_sig@{main\_ctrl\_sig}!DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}}
+\doxysubsubsection{\texorpdfstring{main\_ctrl\_sig}{main\_ctrl\_sig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMain__SM__ControlSig}{Main\+\_\+\+SM\+\_\+\+Control\+Sig}} main\+\_\+ctrl\+\_\+sig}
+
+Main state machine -\/ control signals for state transition \mbox{\Hypertarget{DrivePOC__Control__Loop_8c_aa3e57c5daced54639cc7a6ee0c0e760e}\label{DrivePOC__Control__Loop_8c_aa3e57c5daced54639cc7a6ee0c0e760e}} 
+\index{DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}!main\_sm\_state@{main\_sm\_state}}
+\index{main\_sm\_state@{main\_sm\_state}!DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}}
+\doxysubsubsection{\texorpdfstring{main\_sm\_state}{main\_sm\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}{Main\+\_\+\+SM\+\_\+\+States}} main\+\_\+sm\+\_\+state}
+
+Main state machine -\/ States \mbox{\Hypertarget{DrivePOC__Control__Loop_8c_a5d50f0fd8652f6c49b6d241a1fbe09c9}\label{DrivePOC__Control__Loop_8c_a5d50f0fd8652f6c49b6d241a1fbe09c9}} 
+\index{DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}!motor\_ctrl\_sig@{motor\_ctrl\_sig}}
+\index{motor\_ctrl\_sig@{motor\_ctrl\_sig}!DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}}
+\doxysubsubsection{\texorpdfstring{motor\_ctrl\_sig}{motor\_ctrl\_sig}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structMotor__SM__ControlSig}{Motor\+\_\+\+SM\+\_\+\+Control\+Sig}} motor\+\_\+ctrl\+\_\+sig}
+
+Motor state machine -\/ control signals for state transition \mbox{\Hypertarget{DrivePOC__Control__Loop_8c_a09b1e2aa773043d3aec869b43ab66da3}\label{DrivePOC__Control__Loop_8c_a09b1e2aa773043d3aec869b43ab66da3}} 
+\index{DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}!motor\_sm\_state@{motor\_sm\_state}}
+\index{motor\_sm\_state@{motor\_sm\_state}!DrivePOC\_Control\_Loop.c@{DrivePOC\_Control\_Loop.c}}
+\doxysubsubsection{\texorpdfstring{motor\_sm\_state}{motor\_sm\_state}}
+{\footnotesize\ttfamily \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}{Motor\+\_\+\+SM\+\_\+\+States}} motor\+\_\+sm\+\_\+state}
+
+Motor state machine -\/ Run sub-\/states 

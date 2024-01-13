@@ -1,0 +1,10 @@
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/CMSIS/core_cm4.h:1679:22:__NVIC_EnableIRQ	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/CMSIS/core_cm4.h:1809:22:__NVIC_SetPriority	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_common.h:747:28:EnableIRQ	24	static
+../CM4F_RTCESL_4.5.1_MCUX/MCDRV/mcdrv_frdmkv31f.c:46:6:MCDRV_Init_M1	8	static
+../CM4F_RTCESL_4.5.1_MCUX/MCDRV/mcdrv_frdmkv31f.c:74:6:InitClock	8	static
+../CM4F_RTCESL_4.5.1_MCUX/MCDRV/mcdrv_frdmkv31f.c:98:6:InitFTM0	4	static
+../CM4F_RTCESL_4.5.1_MCUX/MCDRV/mcdrv_frdmkv31f.c:208:6:InitFTM2	8	static
+../CM4F_RTCESL_4.5.1_MCUX/MCDRV/mcdrv_frdmkv31f.c:252:6:InitADC16	16	static
+../CM4F_RTCESL_4.5.1_MCUX/MCDRV/mcdrv_frdmkv31f.c:412:6:InitPDB	8	static
+../CM4F_RTCESL_4.5.1_MCUX/MCDRV/mcdrv_frdmkv31f.c:465:6:InitCMP1	4	static

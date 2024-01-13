@@ -1,0 +1,12 @@
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_clock.h:602:20:CLOCK_EnableClock	24	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_port.h:243:20:PORT_SetPinConfig	32	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_port.h:346:20:PORT_SetPinMux	24	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_port.h:361:20:PORT_EnablePinsDigitalFilter	24	static
+../board/pin_mux.c:132:6:BOARD_InitBootPins	8	static
+../board/pin_mux.c:184:6:BOARD_InitPins	48	static
+../board/pin_mux.c:380:6:BOARD_InitBUTTONsPins	24	static
+../board/pin_mux.c:458:6:BOARD_InitLEDsPins	32	static
+../board/pin_mux.c:568:6:BOARD_InitDEBUG_UARTPins	16	static
+../board/pin_mux.c:633:6:BOARD_InitTHERPins	4	static
+../board/pin_mux.c:661:6:BOARD_InitACCELPins	24	static
+../board/pin_mux.c:779:6:BOARD_InitOSCPins	8	static

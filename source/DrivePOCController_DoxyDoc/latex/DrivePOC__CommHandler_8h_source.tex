@@ -1,0 +1,391 @@
+\hypertarget{DrivePOC__CommHandler_8h_source}{}\doxysection{Drive\+POC\+\_\+\+Comm\+Handler.\+h}
+\mbox{\hyperlink{DrivePOC__CommHandler_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 }
+\DoxyCodeLine{24 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{25 \textcolor{comment}{ * Header inclusions}}
+\DoxyCodeLine{26 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{27 \textcolor{preprocessor}{\#include "{}fsl\_dspi\_edma.h"{}}}
+\DoxyCodeLine{28 \textcolor{preprocessor}{\#include "{}fsl\_dspi.h"{}}}
+\DoxyCodeLine{29 \textcolor{preprocessor}{\#include "{}fsl\_edma.h"{}}}
+\DoxyCodeLine{30 \textcolor{preprocessor}{\#include "{}fsl\_dmamux.h"{}}}
+\DoxyCodeLine{31 \textcolor{preprocessor}{\#include "{}fsl\_cmp.h"{}}}
+\DoxyCodeLine{32 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{DrivePOC__Common__Header_8h}{DrivePOC\_Common\_Header.h}}"{}}}
+\DoxyCodeLine{33 }
+\DoxyCodeLine{34 \textcolor{keyword}{extern} \mbox{\hyperlink{structmcs__acim__open__loop__str}{mcs\_acim\_open\_loop\_str}} \mbox{\hyperlink{group__group1_gafd0f238eac6ce65f1b83150b2f80ebee}{s\_open\_loop}};}
+\DoxyCodeLine{35 }
+\DoxyCodeLine{36 }
+\DoxyCodeLine{37 \textcolor{comment}{//**********************************************************************************************************}}
+\DoxyCodeLine{38 \textcolor{comment}{// -\/-\/ SENSOR TYPES -\/-\/}}
+\DoxyCodeLine{39 \textcolor{comment}{//**********************************************************************************************************}}
+\DoxyCodeLine{42 \textcolor{comment}{}\textcolor{preprocessor}{\#define SENSOR\_TYPE\_LSB 27}}
+\DoxyCodeLine{43 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_RTD\_PT\_10 (uint32\_t) 0xA << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{44 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_RTD\_PT\_50 (uint32\_t) 0xB << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{45 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_RTD\_PT\_100 (uint32\_t) 0xC << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{46 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_RTD\_PT\_200 (uint32\_t) 0xD << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{47 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_RTD\_PT\_500 (uint32\_t) 0xE << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{48 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_RTD\_PT\_1000 (uint32\_t) 0xF << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{49 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_RTD\_PT\_1000\_375 (uint32\_t) 0x10 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{50 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_RTD\_NI\_120 (uint32\_t) 0x11 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{51 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_RTD\_CUSTOM (uint32\_t) 0x12 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{53 }
+\DoxyCodeLine{54 }
+\DoxyCodeLine{57 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_SENSE\_RESISTOR (uint32\_t) 0x1D << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{58 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_NONE (uint32\_t) 0x0 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{59 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_ACTIVE\_ANALOG (uint32\_t) 0x1F << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{61 }
+\DoxyCodeLine{64 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_DIRECT\_ADC (uint32\_t) 0x1E << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{66 }
+\DoxyCodeLine{69 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_THERMISTOR\_44004\_2P252K\_25C (uint32\_t) 0x13 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{70 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_THERMISTOR\_44005\_3K\_25C (uint32\_t) 0x14 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{71 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_THERMISTOR\_44007\_5K\_25C (uint32\_t) 0x15 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{72 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_THERMISTOR\_44006\_10K\_25C (uint32\_t) 0x16 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{73 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_THERMISTOR\_44008\_30K\_25C (uint32\_t) 0x17 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{74 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_THERMISTOR\_YSI\_400\_2P252K\_25C (uint32\_t) 0x18 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{75 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_THERMISTOR\_1003K\_1K\_25C (uint32\_t) 0x19 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{76 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_THERMISTOR\_CUSTOM\_STEINHART\_HART (uint32\_t) 0x1A << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{77 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_THERMISTOR\_CUSTOM\_TABLE (uint32\_t) 0x1B << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{79 }
+\DoxyCodeLine{82 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_TYPE\_J\_THERMOCOUPLE (uint32\_t) 0x1 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{83 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_TYPE\_K\_THERMOCOUPLE (uint32\_t) 0x2 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{84 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_TYPE\_E\_THERMOCOUPLE (uint32\_t) 0x3 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{85 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_TYPE\_N\_THERMOCOUPLE (uint32\_t) 0x4 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{86 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_TYPE\_R\_THERMOCOUPLE (uint32\_t) 0x5 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{87 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_TYPE\_S\_THERMOCOUPLE (uint32\_t) 0x6 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{88 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_TYPE\_T\_THERMOCOUPLE (uint32\_t) 0x7 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{89 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_TYPE\_B\_THERMOCOUPLE (uint32\_t) 0x8 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{90 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_CUSTOM\_THERMOCOUPLE (uint32\_t) 0x9 << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{92 }
+\DoxyCodeLine{95 \textcolor{preprocessor}{\#define SENSOR\_TYPE\_\_OFF\_CHIP\_DIODE (uint32\_t) 0x1C << SENSOR\_TYPE\_LSB}}
+\DoxyCodeLine{97 }
+\DoxyCodeLine{100 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_LSB 22}}
+\DoxyCodeLine{101 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_NONE (uint32\_t) 0x0 << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{102 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_1 (uint32\_t) 0x1 << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{103 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_2 (uint32\_t) 0x2 << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{104 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_3 (uint32\_t) 0x3 << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{105 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_4 (uint32\_t) 0x4 << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{106 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_5 (uint32\_t) 0x5 << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{107 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_6 (uint32\_t) 0x6 << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{108 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_7 (uint32\_t) 0x7 << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{109 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_8 (uint32\_t) 0x8 << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{110 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_9 (uint32\_t) 0x9 << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{111 \textcolor{preprocessor}{\#define RTD\_RSENSE\_CHANNEL\_\_10 (uint32\_t) 0xA << RTD\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{113 }
+\DoxyCodeLine{116 \textcolor{preprocessor}{\#define RTD\_NUM\_WIRES\_LSB 20}}
+\DoxyCodeLine{117 \textcolor{preprocessor}{\#define RTD\_NUM\_WIRES\_\_2\_WIRE (uint32\_t) 0x0 << RTD\_NUM\_WIRES\_LSB}}
+\DoxyCodeLine{118 \textcolor{preprocessor}{\#define RTD\_NUM\_WIRES\_\_3\_WIRE (uint32\_t) 0x1 << RTD\_NUM\_WIRES\_LSB}}
+\DoxyCodeLine{119 \textcolor{preprocessor}{\#define RTD\_NUM\_WIRES\_\_4\_WIRE (uint32\_t) 0x2 << RTD\_NUM\_WIRES\_LSB}}
+\DoxyCodeLine{120 \textcolor{preprocessor}{\#define RTD\_NUM\_WIRES\_\_4\_WIRE\_KELVIN\_RSENSE (uint32\_t) 0x3 << RTD\_NUM\_WIRES\_LSB}}
+\DoxyCodeLine{122 }
+\DoxyCodeLine{125 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_MODE\_LSB 18}}
+\DoxyCodeLine{126 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_MODE\_\_NO\_ROTATION\_NO\_SHARING (uint32\_t) 0x0 << RTD\_EXCITATION\_MODE\_LSB}}
+\DoxyCodeLine{127 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_MODE\_\_NO\_ROTATION\_SHARING (uint32\_t) 0x1 << RTD\_EXCITATION\_MODE\_LSB}}
+\DoxyCodeLine{128 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_MODE\_\_ROTATION\_SHARING (uint32\_t) 0x2 << RTD\_EXCITATION\_MODE\_LSB}}
+\DoxyCodeLine{130 }
+\DoxyCodeLine{133 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_CURRENT\_LSB 14}}
+\DoxyCodeLine{134 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_CURRENT\_\_EXTERNAL (uint32\_t) 0x0 << RTD\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{135 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_CURRENT\_\_5UA (uint32\_t) 0x1 << RTD\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{136 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_CURRENT\_\_10UA (uint32\_t) 0x2 << RTD\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{137 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_CURRENT\_\_25UA (uint32\_t) 0x3 << RTD\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{138 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_CURRENT\_\_50UA (uint32\_t) 0x4 << RTD\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{139 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_CURRENT\_\_100UA (uint32\_t) 0x5 << RTD\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{140 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_CURRENT\_\_250UA (uint32\_t) 0x6 << RTD\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{141 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_CURRENT\_\_500UA (uint32\_t) 0x7 << RTD\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{142 \textcolor{preprocessor}{\#define RTD\_EXCITATION\_CURRENT\_\_1MA (uint32\_t) 0x8 << RTD\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{144 }
+\DoxyCodeLine{147 \textcolor{preprocessor}{\#define RTD\_STANDARD\_LSB 12}}
+\DoxyCodeLine{148 \textcolor{preprocessor}{\#define RTD\_STANDARD\_\_EUROPEAN (uint32\_t) 0x0 << RTD\_STANDARD\_LSB}}
+\DoxyCodeLine{149 \textcolor{preprocessor}{\#define RTD\_STANDARD\_\_AMERICAN (uint32\_t) 0x1 << RTD\_STANDARD\_LSB}}
+\DoxyCodeLine{150 \textcolor{preprocessor}{\#define RTD\_STANDARD\_\_JAPANESE (uint32\_t) 0x2 << RTD\_STANDARD\_LSB}}
+\DoxyCodeLine{151 \textcolor{preprocessor}{\#define RTD\_STANDARD\_\_ITS\_90 (uint32\_t) 0x3 << RTD\_STANDARD\_LSB}}
+\DoxyCodeLine{153 }
+\DoxyCodeLine{156 \textcolor{preprocessor}{\#define RTD\_CUSTOM\_ADDRESS\_LSB 6}\textcolor{comment}{/*rtd -\/ custom address*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#define RTD\_CUSTOM\_LENGTH\_1\_LSB 0}\textcolor{comment}{/*rtd -\/ custom length-\/1*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{158 \textcolor{preprocessor}{\#define RTD\_CUSTOM\_VALUES\_LSB 31}\textcolor{comment}{/*rtd -\/ custom values*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{160 }
+\DoxyCodeLine{163 \textcolor{preprocessor}{\#define SENSE\_RESISTOR\_VALUE\_LSB 0}}
+\DoxyCodeLine{165 }
+\DoxyCodeLine{168 \textcolor{preprocessor}{\#define ACTIVE\_ANALOG\_DIFFERENTIAL\_LSB 26}}
+\DoxyCodeLine{169 \textcolor{preprocessor}{\#define ACTIVE\_ANALOG\_DIFFERENTIAL (uint32\_t) 0x0 << ACTIVE\_ANALOG\_DIFFERENTIAL\_LSB}}
+\DoxyCodeLine{170 \textcolor{preprocessor}{\#define ACTIVE\_ANALOG\_SINGLE\_ENDED (uint32\_t) 0x1 << ACTIVE\_ANALOG\_DIFFERENTIAL\_LSB}}
+\DoxyCodeLine{171 \textcolor{preprocessor}{\#define ACTIVE\_ANALOG\_CUSTOM\_ADDRESS\_LSB 6  }\textcolor{comment}{/*active analog -\/ custom address*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{172 \textcolor{preprocessor}{\#define ACTIVE\_ANALOG\_CUSTOM\_LENGTH\_1\_LSB 0 }\textcolor{comment}{/*active analog -\/ custom length-\/1*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{173 \textcolor{preprocessor}{\#define ACTIVE\_ANALOG\_CUSTOM\_VALUES\_LSB 31  }\textcolor{comment}{/*active analog -\/ custom values*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{175 }
+\DoxyCodeLine{176 }
+\DoxyCodeLine{179 \textcolor{preprocessor}{\#define DIRECT\_ADC\_DIFFERENTIAL\_LSB 26}}
+\DoxyCodeLine{180 \textcolor{preprocessor}{\#define DIRECT\_ADC\_DIFFERENTIAL (uint32\_t) 0x0 << DIRECT\_ADC\_DIFFERENTIAL\_LSB}}
+\DoxyCodeLine{181 \textcolor{preprocessor}{\#define DIRECT\_ADC\_SINGLE\_ENDED (uint32\_t) 0x1 << DIRECT\_ADC\_DIFFERENTIAL\_LSB}}
+\DoxyCodeLine{183 }
+\DoxyCodeLine{186 \textcolor{preprocessor}{\#define DIRECT\_ADC\_CUSTOM\_LSB 25}}
+\DoxyCodeLine{187 \textcolor{preprocessor}{\#define DIRECT\_ADC\_CUSTOM\_\_NO (uint32\_t) 0x0 << DIRECT\_ADC\_CUSTOM\_LSB}}
+\DoxyCodeLine{188 \textcolor{preprocessor}{\#define DIRECT\_ADC\_CUSTOM\_\_YES (uint32\_t) 0x1 << DIRECT\_ADC\_CUSTOM\_LSB}}
+\DoxyCodeLine{189 \textcolor{preprocessor}{\#define DIRECT\_ADC\_CUSTOM\_ADDRESS\_LSB 6 }\textcolor{comment}{/*Direct ADC -\/ custom address*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{190 \textcolor{preprocessor}{\#define DIRECT\_ADC\_CUSTOM\_LENGTH\_1\_LSB 0 }\textcolor{comment}{/*Direct ADC -\/ custom length-\/1*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{191 \textcolor{preprocessor}{\#define DIRECT\_ADC\_CUSTOM\_VALUES\_LSB 31 }\textcolor{comment}{/*Direct ADC -\/ custom values*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{193 }
+\DoxyCodeLine{194 }
+\DoxyCodeLine{197 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_LSB 22}}
+\DoxyCodeLine{198 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_NONE (uint32\_t) 0x0 << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{199 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_1 (uint32\_t) 0x1 << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{200 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_2 (uint32\_t) 0x2 << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{201 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_3 (uint32\_t) 0x3 << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{202 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_4 (uint32\_t) 0x4 << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{203 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_5 (uint32\_t) 0x5 << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{204 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_6 (uint32\_t) 0x6 << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{205 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_7 (uint32\_t) 0x7 << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{206 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_8 (uint32\_t) 0x8 << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{207 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_9 (uint32\_t) 0x9 << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{208 \textcolor{preprocessor}{\#define THERMISTOR\_RSENSE\_CHANNEL\_\_10 (uint32\_t) 0xA << THERMISTOR\_RSENSE\_CHANNEL\_LSB}}
+\DoxyCodeLine{210 }
+\DoxyCodeLine{213 \textcolor{preprocessor}{\#define THERMISTOR\_DIFFERENTIAL\_LSB 21}}
+\DoxyCodeLine{214 \textcolor{preprocessor}{\#define THERMISTOR\_DIFFERENTIAL (uint32\_t) 0x0 << THERMISTOR\_DIFFERENTIAL\_LSB}}
+\DoxyCodeLine{215 \textcolor{preprocessor}{\#define THERMISTOR\_SINGLE\_ENDED (uint32\_t) 0x1 << THERMISTOR\_DIFFERENTIAL\_LSB}}
+\DoxyCodeLine{217 }
+\DoxyCodeLine{220 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_MODE\_LSB 19}}
+\DoxyCodeLine{221 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_MODE\_\_NO\_SHARING\_NO\_ROTATION (uint32\_t) 0x0 << THERMISTOR\_EXCITATION\_MODE\_LSB}}
+\DoxyCodeLine{222 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_MODE\_\_SHARING\_ROTATION (uint32\_t) 0x1 << THERMISTOR\_EXCITATION\_MODE\_LSB}}
+\DoxyCodeLine{223 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_MODE\_\_SHARING\_NO\_ROTATION (uint32\_t) 0x2 << THERMISTOR\_EXCITATION\_MODE\_LSB}}
+\DoxyCodeLine{225 }
+\DoxyCodeLine{228 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_LSB 15}}
+\DoxyCodeLine{229 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_INVALID (uint32\_t) 0x0 << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{230 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_250NA (uint32\_t) 0x1 << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{231 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_500NA (uint32\_t) 0x2 << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{232 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_1UA (uint32\_t) 0x3 << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{233 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_5UA (uint32\_t) 0x4 << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{234 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_10UA (uint32\_t) 0x5 << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{235 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_25UA (uint32\_t) 0x6 << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{236 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_50UA (uint32\_t) 0x7 << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{237 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_100UA (uint32\_t) 0x8 << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{238 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_250UA (uint32\_t) 0x9 << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{239 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_500UA (uint32\_t) 0xA << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{240 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_1MA (uint32\_t) 0xB << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{241 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_AUTORANGE (uint32\_t) 0xC << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{242 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_INVALID\_ (uint32\_t) 0xD << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{243 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_INVALID\_\_ (uint32\_t) 0xE << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{244 \textcolor{preprocessor}{\#define THERMISTOR\_EXCITATION\_CURRENT\_\_EXTERNAL (uint32\_t) 0xF << THERMISTOR\_EXCITATION\_CURRENT\_LSB}}
+\DoxyCodeLine{246 }
+\DoxyCodeLine{249 \textcolor{preprocessor}{\#define THERMISTOR\_CUSTOM\_ADDRESS\_LSB 6 }\textcolor{comment}{/* thermistor -\/ custom address*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{250 \textcolor{preprocessor}{\#define THERMISTOR\_CUSTOM\_LENGTH\_1\_LSB 0 }\textcolor{comment}{/*thermistor -\/ custom length-\/1*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{251 \textcolor{preprocessor}{\#define THERMISTOR\_CUSTOM\_VALUES\_LSB 31  }\textcolor{comment}{/*thermistor -\/ custom values*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{253 }
+\DoxyCodeLine{254 }
+\DoxyCodeLine{255 }
+\DoxyCodeLine{256 }
+\DoxyCodeLine{257 }
+\DoxyCodeLine{259 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_LSB 22}}
+\DoxyCodeLine{260 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_NONE (uint32\_t) 0x0 << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{261 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_1 (uint32\_t) 0x1 << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{262 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_2 (uint32\_t) 0x2 << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{263 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_3 (uint32\_t) 0x3 << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{264 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_4 (uint32\_t) 0x4 << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{265 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_5 (uint32\_t) 0x5 << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{266 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_6 (uint32\_t) 0x6 << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{267 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_7 (uint32\_t) 0x7 << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{268 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_8 (uint32\_t) 0x8 << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{269 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_9 (uint32\_t) 0x9 << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{270 \textcolor{preprocessor}{\#define TC\_COLD\_JUNCTION\_CH\_\_10 (uint32\_t) 0xA << TC\_COLD\_JUNCTION\_CH\_LSB}}
+\DoxyCodeLine{272 }
+\DoxyCodeLine{275 \textcolor{preprocessor}{\#define TC\_DIFFERENTIAL\_LSB 21}}
+\DoxyCodeLine{276 \textcolor{preprocessor}{\#define TC\_DIFFERENTIAL (uint32\_t) 0x0 << TC\_DIFFERENTIAL\_LSB}}
+\DoxyCodeLine{277 \textcolor{preprocessor}{\#define TC\_SINGLE\_ENDED (uint32\_t) 0x1 << TC\_DIFFERENTIAL\_LSB}}
+\DoxyCodeLine{279 }
+\DoxyCodeLine{282 \textcolor{preprocessor}{\#define TC\_OPEN\_CKT\_DETECT\_LSB 20}}
+\DoxyCodeLine{283 \textcolor{preprocessor}{\#define TC\_OPEN\_CKT\_DETECT\_\_NO (uint32\_t) 0x0 << TC\_OPEN\_CKT\_DETECT\_LSB}}
+\DoxyCodeLine{284 \textcolor{preprocessor}{\#define TC\_OPEN\_CKT\_DETECT\_\_YES (uint32\_t) 0x1 << TC\_OPEN\_CKT\_DETECT\_LSB}}
+\DoxyCodeLine{286 }
+\DoxyCodeLine{289 \textcolor{preprocessor}{\#define TC\_OPEN\_CKT\_DETECT\_CURRENT\_LSB 18}}
+\DoxyCodeLine{290 \textcolor{preprocessor}{\#define TC\_OPEN\_CKT\_DETECT\_CURRENT\_\_10UA (uint32\_t) 0x0 << TC\_OPEN\_CKT\_DETECT\_CURRENT\_LSB}}
+\DoxyCodeLine{291 \textcolor{preprocessor}{\#define TC\_OPEN\_CKT\_DETECT\_CURRENT\_\_100UA (uint32\_t) 0x1 << TC\_OPEN\_CKT\_DETECT\_CURRENT\_LSB}}
+\DoxyCodeLine{292 \textcolor{preprocessor}{\#define TC\_OPEN\_CKT\_DETECT\_CURRENT\_\_500UA (uint32\_t) 0x2 << TC\_OPEN\_CKT\_DETECT\_CURRENT\_LSB}}
+\DoxyCodeLine{293 \textcolor{preprocessor}{\#define TC\_OPEN\_CKT\_DETECT\_CURRENT\_\_1MA (uint32\_t) 0x3 << TC\_OPEN\_CKT\_DETECT\_CURRENT\_LSB}}
+\DoxyCodeLine{294 \textcolor{preprocessor}{\#define TC\_CUSTOM\_ADDRESS\_LSB 6 }\textcolor{comment}{/* tc -\/ custom address*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{295 \textcolor{preprocessor}{\#define TC\_CUSTOM\_LENGTH\_1\_LSB 0}\textcolor{comment}{/* tc -\/ custom length-\/1*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{296 \textcolor{preprocessor}{\#define TC\_CUSTOM\_VALUES\_LSB 31 }\textcolor{comment}{/*tc -\/ custom values*/}\textcolor{preprocessor}{}}
+\DoxyCodeLine{298 }
+\DoxyCodeLine{301 \textcolor{preprocessor}{\#define DIODE\_DIFFERENTIAL\_LSB 26}}
+\DoxyCodeLine{302 \textcolor{preprocessor}{\#define DIODE\_DIFFERENTIAL (uint32\_t) 0x0 << DIODE\_DIFFERENTIAL\_LSB}}
+\DoxyCodeLine{303 \textcolor{preprocessor}{\#define DIODE\_SINGLE\_ENDED (uint32\_t) 0x1 << DIODE\_DIFFERENTIAL\_LSB}}
+\DoxyCodeLine{307 \textcolor{preprocessor}{\#define DIODE\_NUM\_READINGS\_LSB 25}}
+\DoxyCodeLine{308 \textcolor{preprocessor}{\#define DIODE\_NUM\_READINGS\_\_2 (uint32\_t) 0x0 << DIODE\_NUM\_READINGS\_LSB}}
+\DoxyCodeLine{309 \textcolor{preprocessor}{\#define DIODE\_NUM\_READINGS\_\_3 (uint32\_t) 0x1 << DIODE\_NUM\_READINGS\_LSB}}
+\DoxyCodeLine{311 }
+\DoxyCodeLine{314 \textcolor{preprocessor}{\#define DIODE\_AVERAGING\_ON\_LSB 24}}
+\DoxyCodeLine{315 \textcolor{preprocessor}{\#define DIODE\_AVERAGING\_OFF (uint32\_t) 0x0 << DIODE\_AVERAGING\_ON\_LSB}}
+\DoxyCodeLine{316 \textcolor{preprocessor}{\#define DIODE\_AVERAGING\_ON (uint32\_t) 0x1 << DIODE\_AVERAGING\_ON\_LSB}}
+\DoxyCodeLine{318 }
+\DoxyCodeLine{321 \textcolor{preprocessor}{\#define DIODE\_CURRENT\_LSB 22}}
+\DoxyCodeLine{322 \textcolor{preprocessor}{\#define DIODE\_CURRENT\_\_10UA\_40UA\_80UA (uint32\_t) 0x0 << DIODE\_CURRENT\_LSB}}
+\DoxyCodeLine{323 \textcolor{preprocessor}{\#define DIODE\_CURRENT\_\_20UA\_80UA\_160UA (uint32\_t) 0x1 << DIODE\_CURRENT\_LSB}}
+\DoxyCodeLine{324 \textcolor{preprocessor}{\#define DIODE\_CURRENT\_\_40UA\_160UA\_320UA (uint32\_t) 0x2 << DIODE\_CURRENT\_LSB}}
+\DoxyCodeLine{325 \textcolor{preprocessor}{\#define DIODE\_CURRENT\_\_80UA\_320UA\_640UA (uint32\_t) 0x3 << DIODE\_CURRENT\_LSB}}
+\DoxyCodeLine{326 \textcolor{preprocessor}{\#define DIODE\_IDEALITY\_FACTOR\_LSB 0}}
+\DoxyCodeLine{328 }
+\DoxyCodeLine{331 \textcolor{preprocessor}{\#define REJECTION\_\_50\_60\_HZ (uint8\_t) 0x0}}
+\DoxyCodeLine{332 \textcolor{preprocessor}{\#define REJECTION\_\_60\_HZ    (uint8\_t) 0x1}}
+\DoxyCodeLine{333 \textcolor{preprocessor}{\#define REJECTION\_\_50\_HZ    (uint8\_t) 0x2}}
+\DoxyCodeLine{334 \textcolor{preprocessor}{\#define TEMP\_UNIT\_\_C        (uint8\_t) 0x0}}
+\DoxyCodeLine{335 \textcolor{preprocessor}{\#define TEMP\_UNIT\_\_F        (uint8\_t) 0x4}}
+\DoxyCodeLine{336 \textcolor{preprocessor}{\#define ENABLE\_KELVIN\_3\_WIRE\_RTD\_MODE                (uint8\_t) 0x10}}
+\DoxyCodeLine{337 \textcolor{preprocessor}{\#define ENABLE\_KELVIN\_2\_WIRE\_RTD\_MODE                (uint8\_t) 0x20}}
+\DoxyCodeLine{338 \textcolor{preprocessor}{\#define ENABLE\_KELVIN\_DIFFERENTIAL\_THERMISTOR\_MODE   (uint8\_t) 0x40}}
+\DoxyCodeLine{339 \textcolor{preprocessor}{\#define DISABLE\_MINUS\_999                            (uint8\_t) 0x80}}
+\DoxyCodeLine{341 }
+\DoxyCodeLine{344 \textcolor{preprocessor}{\#define SENSOR\_HARD\_FAILURE (uint8\_t) 0x80}}
+\DoxyCodeLine{345 \textcolor{preprocessor}{\#define ADC\_HARD\_FAILURE    (uint8\_t) 0x40}}
+\DoxyCodeLine{346 \textcolor{preprocessor}{\#define CJ\_HARD\_FAILURE     (uint8\_t) 0x20}}
+\DoxyCodeLine{347 \textcolor{preprocessor}{\#define CJ\_SOFT\_FAILURE     (uint8\_t) 0x10}}
+\DoxyCodeLine{348 \textcolor{preprocessor}{\#define SENSOR\_ABOVE        (uint8\_t) 0x8}}
+\DoxyCodeLine{349 \textcolor{preprocessor}{\#define SENSOR\_BELOW        (uint8\_t) 0x4}}
+\DoxyCodeLine{350 \textcolor{preprocessor}{\#define ADC\_RANGE\_ERROR     (uint8\_t) 0x2}}
+\DoxyCodeLine{351 \textcolor{preprocessor}{\#define VALID               (uint8\_t) 0x1}}
+\DoxyCodeLine{353 }
+\DoxyCodeLine{356 \textcolor{preprocessor}{\#define COMMAND\_STATUS\_REGISTER          (uint16\_t) 0x0000}}
+\DoxyCodeLine{357 \textcolor{preprocessor}{\#define CH\_ADDRESS\_BASE                  (uint16\_t) 0x0200}}
+\DoxyCodeLine{358 \textcolor{preprocessor}{\#define VOUT\_CH\_BASE                     (uint16\_t) 0x0060}}
+\DoxyCodeLine{359 \textcolor{preprocessor}{\#define READ\_CH\_BASE                     (uint16\_t) 0x0010}}
+\DoxyCodeLine{360 \textcolor{preprocessor}{\#define CONVERSION\_RESULT\_MEMORY\_BASE    (uint16\_t) 0x0010}}
+\DoxyCodeLine{362 }
+\DoxyCodeLine{365 \textcolor{preprocessor}{\#define WRITE\_TO\_RAM            (uint8\_t) 0x02}}
+\DoxyCodeLine{366 \textcolor{preprocessor}{\#define READ\_FROM\_RAM           (uint8\_t) 0x03}}
+\DoxyCodeLine{367 \textcolor{preprocessor}{\#define CONVERSION\_CONTROL\_BYTE (uint8\_t) 0x80}}
+\DoxyCodeLine{369 }
+\DoxyCodeLine{372 \textcolor{preprocessor}{\#define VOLTAGE                 (uint8\_t) 0x01}}
+\DoxyCodeLine{373 \textcolor{preprocessor}{\#define TEMPERATURE             (uint8\_t) 0x02}}
+\DoxyCodeLine{374 \textcolor{preprocessor}{\#define CODE                    (uint8\_t) 0x03}}
+\DoxyCodeLine{376 }
+\DoxyCodeLine{377 }
+\DoxyCodeLine{378 }
+\DoxyCodeLine{379 }
+\DoxyCodeLine{382 \textcolor{preprocessor}{\#define LTC\_DSPI\_MASTER\_BASEADDR SPI1}}
+\DoxyCodeLine{383 \textcolor{preprocessor}{\#define LTC\_DSPI\_MASTER\_DMA\_MUX\_BASE DMAMUX\_BASE}}
+\DoxyCodeLine{384 \textcolor{preprocessor}{\#define LTC\_DSPI\_MASTER\_DMA\_BASE DMA\_BASE}}
+\DoxyCodeLine{385 \textcolor{preprocessor}{\#define LTC\_DSPI\_MASTER\_DMA\_RX\_REQUEST\_SOURCE kDmaRequestMux0SPI1}}
+\DoxyCodeLine{386 \textcolor{preprocessor}{\#define LTC\_DSPI\_MASTER\_CLK\_SRC DSPI1\_CLK\_SRC}}
+\DoxyCodeLine{387 \textcolor{preprocessor}{\#define LTC\_DSPI\_MASTER\_CLK\_FREQ CLOCK\_GetFreq(DSPI1\_CLK\_SRC)}}
+\DoxyCodeLine{388 \textcolor{preprocessor}{\#define LTC\_DSPI\_MASTER\_PCS\_FOR\_INIT kDSPI\_Pcs0}}
+\DoxyCodeLine{389 \textcolor{preprocessor}{\#define LTC\_DSPI\_MASTER\_PCS\_FOR\_TRANSFER kDSPI\_MasterPcs0}}
+\DoxyCodeLine{390 \textcolor{preprocessor}{\#define LTC\_DSPI\_MASTER\_DMA\_MUX\_BASEADDR ((DMAMUX\_Type *)(LTC\_DSPI\_MASTER\_DMA\_MUX\_BASE))}}
+\DoxyCodeLine{391 \textcolor{preprocessor}{\#define LTC\_DSPI\_MASTER\_DMA\_BASEADDR ((DMA\_Type *)(LTC\_DSPI\_MASTER\_DMA\_BASE))}}
+\DoxyCodeLine{392 \textcolor{preprocessor}{\#define LTC\_TRANSFER\_SIZE 8U        }\textcolor{comment}{/* Transfer dataSize */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{393 \textcolor{preprocessor}{\#define LTC\_TRANSFER\_BAUDRATE 2000000U }\textcolor{comment}{/* Transfer baudrate -\/ 2M */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{395 }
+\DoxyCodeLine{396 }
+\DoxyCodeLine{399 \textcolor{preprocessor}{\#define NUM\_CHANNEL 8}}
+\DoxyCodeLine{400 \textcolor{preprocessor}{\#define ADS\_ADC\_RANGE 10.0F}}
+\DoxyCodeLine{401 \textcolor{preprocessor}{\#define ADS\_DSPI\_MASTER\_BASEADDR SPI0}}
+\DoxyCodeLine{402 \textcolor{preprocessor}{\#define ADS\_DSPI\_MASTER\_DMA\_MUX\_BASE DMAMUX\_BASE}}
+\DoxyCodeLine{403 \textcolor{preprocessor}{\#define ADS\_DSPI\_MASTER\_DMA\_BASE DMA\_BASE}}
+\DoxyCodeLine{404 \textcolor{preprocessor}{\#define ADS\_DSPI\_MASTER\_DMA\_RX\_REQUEST\_SOURCE kDmaRequestMux0SPI0Rx}}
+\DoxyCodeLine{405 \textcolor{preprocessor}{\#define ADS\_DSPI\_MASTER\_DMA\_TX\_REQUEST\_SOURCE kDmaRequestMux0SPI0Tx}}
+\DoxyCodeLine{406 \textcolor{preprocessor}{\#define ADS\_MASTER\_CLK\_SRC DSPI0\_CLK\_SRC}}
+\DoxyCodeLine{407 \textcolor{preprocessor}{\#define ADS\_MASTER\_CLK\_FREQ 20000000}}
+\DoxyCodeLine{408 \textcolor{preprocessor}{\#define ADS\_DSPI\_MASTER\_PCS\_FOR\_INIT kDSPI\_Pcs0}}
+\DoxyCodeLine{409 \textcolor{preprocessor}{\#define ADS\_DSPI\_MASTER\_PCS\_FOR\_TRANSFER kDSPI\_MasterPcs0}}
+\DoxyCodeLine{410 \textcolor{preprocessor}{\#define ADS\_TRANSFER\_SIZE 2U*NUM\_CHANNEL        }\textcolor{comment}{/* Transfer dataSize */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{411 \textcolor{preprocessor}{\#define ADS\_TRANSFER\_BAUDRATE 20000000U }\textcolor{comment}{/* Transfer baudrate -\/ 20M */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{412 \textcolor{preprocessor}{\#define ADS\_DSPI\_MASTER\_DMA\_MUX\_BASEADDR ((DMAMUX\_Type *)(ADS\_DSPI\_MASTER\_DMA\_MUX\_BASE))}}
+\DoxyCodeLine{413 \textcolor{preprocessor}{\#define ADS\_DSPI\_MASTER\_DMA\_BASEADDR ((DMA\_Type *)(ADS\_DSPI\_MASTER\_DMA\_BASE))}}
+\DoxyCodeLine{414 }
+\DoxyCodeLine{417 \textcolor{preprocessor}{\#define CMP\_BASE CMP0}}
+\DoxyCodeLine{418 \textcolor{preprocessor}{\#define CMP\_USER\_CHANNEL 1U}}
+\DoxyCodeLine{419 \textcolor{preprocessor}{\#define CMP\_DAC\_CHANNEL 7U}}
+\DoxyCodeLine{420 \textcolor{preprocessor}{\#define CMP\_THRESHOLD 31U}}
+\DoxyCodeLine{422 }
+\DoxyCodeLine{425 \textcolor{preprocessor}{\#define PT\_1000\_ADC16\_BASE          ADC0}}
+\DoxyCodeLine{426 \textcolor{preprocessor}{\#define PT\_1000\_ADC16\_CHANNEL\_GROUP 0U}}
+\DoxyCodeLine{427 \textcolor{preprocessor}{\#define PT\_1000\_ADC16\_USER\_CHANNEL  8U }\textcolor{comment}{/* PTB0, ADC0\_SE8 */}\textcolor{preprocessor}{}}
+\DoxyCodeLine{428 \textcolor{preprocessor}{\#define FSL\_FEATURE\_ADC16\_MAX\_RESOLUTION (16)}}
+\DoxyCodeLine{429 \textcolor{preprocessor}{\#define ALPHA 0.00385F}}
+\DoxyCodeLine{430 \textcolor{preprocessor}{\#define PT\_1000\_A    3.908300E-\/3F}}
+\DoxyCodeLine{431 \textcolor{preprocessor}{\#define PT\_1000\_B    -\/5.775E-\/7}}
+\DoxyCodeLine{432 \textcolor{preprocessor}{\#define PT\_1000\_C    –4.183000E-\/12}}
+\DoxyCodeLine{433 \textcolor{preprocessor}{\#define POTENTIAL\_DIVIDER\_INPUT 3.0F}}
+\DoxyCodeLine{434 \textcolor{preprocessor}{\#define RESISTANCE\_0\_DEG 1000.0F}}
+\DoxyCodeLine{435 \textcolor{preprocessor}{\#define POTENTIAL\_DIVIDER\_R1 6800.0F}}
+\DoxyCodeLine{437 }
+\DoxyCodeLine{438 \textcolor{comment}{/*******************************************************************************}}
+\DoxyCodeLine{439 \textcolor{comment}{ * Function prototypes}}
+\DoxyCodeLine{440 \textcolor{comment}{ ******************************************************************************/}}
+\DoxyCodeLine{441 }
+\DoxyCodeLine{442 }
+\DoxyCodeLine{449 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga936b95121740dcd9ea20c6ee9b8499c6}{ReadFromEncoder}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{450 }
+\DoxyCodeLine{459 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_gaa27bbde4889e0d0c2af88f971efc86eb}{PrintDebugInfo}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{460 }
+\DoxyCodeLine{469 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_gac2344da1a44115aa81946f614ee2998a}{DrivePOC\_Comm\_Handler\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{470 }
+\DoxyCodeLine{476 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga2c0e86960979f0c8d21b864925b06e71}{PWM\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{477 }
+\DoxyCodeLine{483 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga5cc42dcb8e006443870b611ca0cb68bf}{Comparator\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{484 }
+\DoxyCodeLine{485 }
+\DoxyCodeLine{493 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga19a5a24d8f5c2d00be06843a495ddd5c}{DrivePOC\_Comm\_Handler\_PWMDis}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{494 }
+\DoxyCodeLine{502 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_gae8a039e738a656864bef5815889913e8}{DrivePOC\_UpdateDutyCyc}}(GMCLIB\_3COOR\_T\_FLT dutyCycle);}
+\DoxyCodeLine{503 }
+\DoxyCodeLine{514 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_gac1107f5f6c72c9ab14ff6ea86f18c3af}{LTC\_DSPI\_MasterUserCallback}}(SPI\_Type *base, dspi\_master\_edma\_handle\_t *handle, status\_t status, \textcolor{keywordtype}{void} *userData);}
+\DoxyCodeLine{515 }
+\DoxyCodeLine{523 uint16\_t \mbox{\hyperlink{group__group1_ga9993a5d8443105bb5e2914d4ad4ddb1f}{ltc\_get\_start\_address}}(uint16\_t base\_address, uint8\_t channel\_number);}
+\DoxyCodeLine{524 }
+\DoxyCodeLine{535 uint32\_t \mbox{\hyperlink{group__group1_ga336dbaa064e6bba1fc575096133199da}{ltc\_transfer\_four\_bytes}}(uint8\_t ram\_read\_or\_write, uint16\_t start\_address, uint32\_t input\_data);}
+\DoxyCodeLine{536 }
+\DoxyCodeLine{547 uint8\_t *\mbox{\hyperlink{group__group1_ga66a1bba7620c1a67fd7fb4ae4bbd7c9f}{ltc\_spi\_transfer\_block}}(uint8\_t TRANSFER\_SIZEE, uint8\_t *ttxx, uint8\_t *rrxx);}
+\DoxyCodeLine{548 }
+\DoxyCodeLine{549 }
+\DoxyCodeLine{550 \textcolor{comment}{/*}}
+\DoxyCodeLine{551 \textcolor{comment}{ * @brief configures channel}}
+\DoxyCodeLine{552 \textcolor{comment}{ * @detail It is used in the Calibration phase of Motor state machine}}
+\DoxyCodeLine{553 \textcolor{comment}{ * @param channel\_number Channel number at which the sensor is connected}}
+\DoxyCodeLine{554 \textcolor{comment}{ * @param channel\_assignment\_data Channel specific data}}
+\DoxyCodeLine{555 \textcolor{comment}{ * @return None}}
+\DoxyCodeLine{556 \textcolor{comment}{ */}}
+\DoxyCodeLine{557 \textcolor{keywordtype}{void} ltc\_configure\_channels(uint8\_t channel\_number,uint32\_t channel\_assignment\_data);}
+\DoxyCodeLine{558 }
+\DoxyCodeLine{565 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_gaaea8539607f1d674bd030d8ef251f599}{delay}}(\textcolor{keywordtype}{int} delay\_in\_ms);}
+\DoxyCodeLine{566 }
+\DoxyCodeLine{574 uint8\_t \mbox{\hyperlink{group__group1_ga9a33778832e23a4ce65543112b784fa1}{ltc\_transfer\_byte}}(uint8\_t ram\_read\_or\_write, uint16\_t start\_address, uint8\_t input\_data);}
+\DoxyCodeLine{575 }
+\DoxyCodeLine{587 float\_t \mbox{\hyperlink{group__group1_gaa26f5a25edf4ca557dd24185d913cc0f}{ltc\_measure\_channel}}(uint8\_t channel\_number, uint8\_t channel\_output);}
+\DoxyCodeLine{588 }
+\DoxyCodeLine{597 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_gaca8184369749d0fb9f532f422d25d4c3}{ltc\_convert\_channel}}(uint8\_t channel\_number);}
+\DoxyCodeLine{598 }
+\DoxyCodeLine{605 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga447a441ee97f9760235110c6aa307108}{ltc\_wait\_for\_process\_to\_finish}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{606 }
+\DoxyCodeLine{614 uint32\_t \mbox{\hyperlink{group__group1_ga84730584378fdee2a73cabeae52d4379}{ltc\_get\_result}}( uint8\_t channel\_number, uint8\_t channel\_output);}
+\DoxyCodeLine{615 }
+\DoxyCodeLine{623 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga3163af2185016acf05814b0ee9612fee}{ltc\_print\_conversion\_result}}(uint32\_t raw\_conversion\_result, uint8\_t channel\_output);}
+\DoxyCodeLine{624 }
+\DoxyCodeLine{631 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_gab486a29142443fde0da3b9444d2492f4}{ltc\_read\_voltage\_or\_resistance\_results}}(uint8\_t channel\_number);}
+\DoxyCodeLine{632 }
+\DoxyCodeLine{638 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga155b5d4f8a5138b51b2c3ed45b9bf062}{ltc\_print\_fault\_data}}(uint8\_t fault\_byte);}
+\DoxyCodeLine{639 }
+\DoxyCodeLine{644 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga615dc6530f76b9e64add88b068bc294b}{ltc\_spi\_edma\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{645 }
+\DoxyCodeLine{650 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_gafae9a1d5efe50d7e2634e7da7f9fc844}{comparator\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{651 }
+\DoxyCodeLine{652 }
+\DoxyCodeLine{658 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga30ca3958eb9512ca2bab9c081a4f1afc}{InbuiltADC\_Init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{659 }
+\DoxyCodeLine{665 float\_t \mbox{\hyperlink{group__group1_gac11c6a9a24445569e9ce1dd74afa67d4}{Collect\_Data\_from\_PT\_1000}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{666 }
+\DoxyCodeLine{673 bool\_t \mbox{\hyperlink{group__group1_gad1a49a12ac2a47584d08073502f6ac47}{Measure\_from\_PTC\_150}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{674 }
+\DoxyCodeLine{675 }
+\DoxyCodeLine{681 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_gad18e426e6b33595650afa5d6f316c7a1}{ads\_spi\_edma\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{682 }
+\DoxyCodeLine{690 uint8\_t *\mbox{\hyperlink{group__group1_ga2907e74fbd54f58b87493c76a4064e4d}{ads\_spi\_transfer\_block}}(uint8\_t *rrxx);}
+\DoxyCodeLine{691 }
+\DoxyCodeLine{701 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga63a4ac611cc61804358df31db508d294}{ADS\_DSPI\_MasterUserCallback}}(SPI\_Type *base, dspi\_master\_edma\_handle\_t *handle, status\_t status, \textcolor{keywordtype}{void} *userData);}
+\DoxyCodeLine{702 }
+\DoxyCodeLine{706 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__group1_ga4500c15ee6b13637e00fd6b901b60224}{DAC\_init}}(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{707 }
+\DoxyCodeLine{708 \textcolor{comment}{/*}}
+\DoxyCodeLine{709 \textcolor{comment}{ *@brief Function defintion for updating DAC Value}}
+\DoxyCodeLine{710 \textcolor{comment}{ * */}}
+\DoxyCodeLine{711 \textcolor{keywordtype}{void} DAC\_Update(\textcolor{keywordtype}{void});}
+\DoxyCodeLine{712 }
+\DoxyCodeLine{713 \textcolor{comment}{//Closes the @defgroup block. Always kept last.}}
+\DoxyCodeLine{714 }
+
+\end{DoxyCode}

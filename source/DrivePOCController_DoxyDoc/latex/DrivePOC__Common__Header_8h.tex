@@ -1,0 +1,152 @@
+\hypertarget{DrivePOC__Common__Header_8h}{}\doxysection{Drive\+POC\+\_\+\+Common\+\_\+\+Header.\+h File Reference}
+\label{DrivePOC__Common__Header_8h}\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}
+
+
+\+: Common header containing structures and enumerations used across the entire project  
+
+
+{\ttfamily \#include \char`\"{}Drive\+POC\+\_\+\+Controller\+\_\+\+NXP.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}mlib\+\_\+\+FP.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gflib\+\_\+\+FP.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gdflib\+\_\+\+FP.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gmclib\+\_\+\+FP.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}amclib\+\_\+\+FP.\+h\char`\"{}}\newline
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structMain__SM__ControlSig}{Main\+\_\+\+SM\+\_\+\+Control\+Sig}}
+\item 
+struct \mbox{\hyperlink{structMotor__SM__ControlSig}{Motor\+\_\+\+SM\+\_\+\+Control\+Sig}}
+\item 
+struct \mbox{\hyperlink{structmcs__acim__open__loop__str}{mcs\+\_\+acim\+\_\+open\+\_\+loop\+\_\+str}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef enum \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}{Main\+\_\+\+SM\+\_\+\+States}} \mbox{\hyperlink{DrivePOC__Common__Header_8h_aa599f8316204e4ada28adb80a7449b16}{Main\+\_\+\+SM\+\_\+\+States}}
+\item 
+typedef enum \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}{Motor\+\_\+\+SM\+\_\+\+States}} \mbox{\hyperlink{DrivePOC__Common__Header_8h_a3aec10e4ec48dd4f56ab83210d6c13ad}{Motor\+\_\+\+SM\+\_\+\+States}}
+\item 
+typedef struct \mbox{\hyperlink{structMain__SM__ControlSig}{Main\+\_\+\+SM\+\_\+\+Control\+Sig}} \mbox{\hyperlink{DrivePOC__Common__Header_8h_a6adde33af397bff0026c48d7738182c0}{Main\+\_\+\+SM\+\_\+\+Control\+Sig}}
+\item 
+typedef struct \mbox{\hyperlink{structMotor__SM__ControlSig}{Motor\+\_\+\+SM\+\_\+\+Control\+Sig}} \mbox{\hyperlink{DrivePOC__Common__Header_8h_a87a1416796f57af74c58293a7307d0c3}{Motor\+\_\+\+SM\+\_\+\+Control\+Sig}}
+\item 
+typedef struct \mbox{\hyperlink{structmcs__acim__open__loop__str}{mcs\+\_\+acim\+\_\+open\+\_\+loop\+\_\+str}} \mbox{\hyperlink{DrivePOC__Common__Header_8h_a96ac77f4544e09cc950d160a835a57c3}{mcs\+\_\+acim\+\_\+open\+\_\+loop\+\_\+str}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}{Main\+\_\+\+SM\+\_\+\+States}} \{ \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da931c2045ab9bbb412ad3e96e09f8c063}{MAIN\+\_\+\+SM\+\_\+\+INIT}} = 0
+, \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da2b1220e3a4f9eeb9d469b235eccdde13}{MAIN\+\_\+\+SM\+\_\+\+FAULT}} = 1
+, \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da4427e7fdf21a686dc06954f644fbb51b}{MAIN\+\_\+\+SM\+\_\+\+STOP}} = 2
+, \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da9b24242ae2ca3fd3cc8892b3d71c8411}{MAIN\+\_\+\+SM\+\_\+\+RUN}} = 3
+ \}
+\item 
+enum \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}{Motor\+\_\+\+SM\+\_\+\+States}} \{ \newline
+\mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0a41d4258e93f35253697ae594a47697ef}{MOTOR\+\_\+\+SM\+\_\+\+CALIB}} = 0
+, \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0ae5618bb7cafce0afebea6f72c75330d3}{MOTOR\+\_\+\+SM\+\_\+\+READY}} = 1
+, \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0af6b678ed24834c4ecdb8b11b4eb14eda}{MOTOR\+\_\+\+SM\+\_\+\+START}} = 2
+, \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0ad43755cc2e3c894af718f229744500d0}{MOTOR\+\_\+\+SM\+\_\+\+SPIN}} = 3
+, \newline
+\mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0a8a44ceae51285a1c602449e1359b3ebd}{MOTOR\+\_\+\+SM\+\_\+\+DECELERATE}} =4
+ \}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Common header containing structures and enumerations used across the entire project 
+
+\begin{DoxyAuthor}{Author}
+\+: Sreedhar, Sangeerth @company \+: Agnikul Cosmos Private Limited
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) Agnikul Cosmos Private Limited All rights reserved.\end{center} }
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{DrivePOC__Common__Header_8h_a6adde33af397bff0026c48d7738182c0}\label{DrivePOC__Common__Header_8h_a6adde33af397bff0026c48d7738182c0}} 
+\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Main\_SM\_ControlSig@{Main\_SM\_ControlSig}}
+\index{Main\_SM\_ControlSig@{Main\_SM\_ControlSig}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}
+\doxysubsubsection{\texorpdfstring{Main\_SM\_ControlSig}{Main\_SM\_ControlSig}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structMain__SM__ControlSig}{Main\+\_\+\+SM\+\_\+\+Control\+Sig}} \mbox{\hyperlink{structMain__SM__ControlSig}{Main\+\_\+\+SM\+\_\+\+Control\+Sig}}}
+
+Main State machine\textquotesingle{}s control signals for state transition \mbox{\Hypertarget{DrivePOC__Common__Header_8h_aa599f8316204e4ada28adb80a7449b16}\label{DrivePOC__Common__Header_8h_aa599f8316204e4ada28adb80a7449b16}} 
+\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Main\_SM\_States@{Main\_SM\_States}}
+\index{Main\_SM\_States@{Main\_SM\_States}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}
+\doxysubsubsection{\texorpdfstring{Main\_SM\_States}{Main\_SM\_States}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}{Main\+\_\+\+SM\+\_\+\+States}} \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}{Main\+\_\+\+SM\+\_\+\+States}}}
+
+Motor control libraries headers Main state machine -\/ States \mbox{\Hypertarget{DrivePOC__Common__Header_8h_a96ac77f4544e09cc950d160a835a57c3}\label{DrivePOC__Common__Header_8h_a96ac77f4544e09cc950d160a835a57c3}} 
+\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!mcs\_acim\_open\_loop\_str@{mcs\_acim\_open\_loop\_str}}
+\index{mcs\_acim\_open\_loop\_str@{mcs\_acim\_open\_loop\_str}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}
+\doxysubsubsection{\texorpdfstring{mcs\_acim\_open\_loop\_str}{mcs\_acim\_open\_loop\_str}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structmcs__acim__open__loop__str}{mcs\+\_\+acim\+\_\+open\+\_\+loop\+\_\+str}} \mbox{\hyperlink{structmcs__acim__open__loop__str}{mcs\+\_\+acim\+\_\+open\+\_\+loop\+\_\+str}}}
+
+Structure for V/F Control Open Loop \mbox{\Hypertarget{DrivePOC__Common__Header_8h_a87a1416796f57af74c58293a7307d0c3}\label{DrivePOC__Common__Header_8h_a87a1416796f57af74c58293a7307d0c3}} 
+\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}}
+\index{Motor\_SM\_ControlSig@{Motor\_SM\_ControlSig}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}
+\doxysubsubsection{\texorpdfstring{Motor\_SM\_ControlSig}{Motor\_SM\_ControlSig}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structMotor__SM__ControlSig}{Motor\+\_\+\+SM\+\_\+\+Control\+Sig}} \mbox{\hyperlink{structMotor__SM__ControlSig}{Motor\+\_\+\+SM\+\_\+\+Control\+Sig}}}
+
+Motor State machine\textquotesingle{}s control signals for state transition \mbox{\Hypertarget{DrivePOC__Common__Header_8h_a3aec10e4ec48dd4f56ab83210d6c13ad}\label{DrivePOC__Common__Header_8h_a3aec10e4ec48dd4f56ab83210d6c13ad}} 
+\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Motor\_SM\_States@{Motor\_SM\_States}}
+\index{Motor\_SM\_States@{Motor\_SM\_States}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}
+\doxysubsubsection{\texorpdfstring{Motor\_SM\_States}{Motor\_SM\_States}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}{Motor\+\_\+\+SM\+\_\+\+States}} \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}{Motor\+\_\+\+SM\+\_\+\+States}}}
+
+Motor state machine -\/ Run sub-\/states 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}\label{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}} 
+\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Main\_SM\_States@{Main\_SM\_States}}
+\index{Main\_SM\_States@{Main\_SM\_States}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}
+\doxysubsubsection{\texorpdfstring{Main\_SM\_States}{Main\_SM\_States}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3d}{Main\+\_\+\+SM\+\_\+\+States}}}
+
+Motor control libraries headers Main state machine -\/ States \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAIN\_SM\_INIT@{MAIN\_SM\_INIT}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MAIN\_SM\_INIT@{MAIN\_SM\_INIT}}}\mbox{\Hypertarget{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da931c2045ab9bbb412ad3e96e09f8c063}\label{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da931c2045ab9bbb412ad3e96e09f8c063}} 
+MAIN\+\_\+\+SM\+\_\+\+INIT&Initialization state of Main State machine \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAIN\_SM\_FAULT@{MAIN\_SM\_FAULT}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MAIN\_SM\_FAULT@{MAIN\_SM\_FAULT}}}\mbox{\Hypertarget{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da2b1220e3a4f9eeb9d469b235eccdde13}\label{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da2b1220e3a4f9eeb9d469b235eccdde13}} 
+MAIN\+\_\+\+SM\+\_\+\+FAULT&Fault state of Main State machine \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAIN\_SM\_STOP@{MAIN\_SM\_STOP}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MAIN\_SM\_STOP@{MAIN\_SM\_STOP}}}\mbox{\Hypertarget{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da4427e7fdf21a686dc06954f644fbb51b}\label{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da4427e7fdf21a686dc06954f644fbb51b}} 
+MAIN\+\_\+\+SM\+\_\+\+STOP&Stop state of Main State machine \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MAIN\_SM\_RUN@{MAIN\_SM\_RUN}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MAIN\_SM\_RUN@{MAIN\_SM\_RUN}}}\mbox{\Hypertarget{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da9b24242ae2ca3fd3cc8892b3d71c8411}\label{DrivePOC__Common__Header_8h_a9f358c1ed2da23fcec2807537d0c8c3da9b24242ae2ca3fd3cc8892b3d71c8411}} 
+MAIN\+\_\+\+SM\+\_\+\+RUN&Run state of Main State machine \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}\label{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}} 
+\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!Motor\_SM\_States@{Motor\_SM\_States}}
+\index{Motor\_SM\_States@{Motor\_SM\_States}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}
+\doxysubsubsection{\texorpdfstring{Motor\_SM\_States}{Motor\_SM\_States}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0}{Motor\+\_\+\+SM\+\_\+\+States}}}
+
+Motor state machine -\/ Run sub-\/states \begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOTOR\_SM\_CALIB@{MOTOR\_SM\_CALIB}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MOTOR\_SM\_CALIB@{MOTOR\_SM\_CALIB}}}\mbox{\Hypertarget{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0a41d4258e93f35253697ae594a47697ef}\label{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0a41d4258e93f35253697ae594a47697ef}} 
+MOTOR\+\_\+\+SM\+\_\+\+CALIB&Calibration state of Motor State machine \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOTOR\_SM\_READY@{MOTOR\_SM\_READY}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MOTOR\_SM\_READY@{MOTOR\_SM\_READY}}}\mbox{\Hypertarget{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0ae5618bb7cafce0afebea6f72c75330d3}\label{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0ae5618bb7cafce0afebea6f72c75330d3}} 
+MOTOR\+\_\+\+SM\+\_\+\+READY&Ready state of Motor State machine \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOTOR\_SM\_START@{MOTOR\_SM\_START}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MOTOR\_SM\_START@{MOTOR\_SM\_START}}}\mbox{\Hypertarget{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0af6b678ed24834c4ecdb8b11b4eb14eda}\label{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0af6b678ed24834c4ecdb8b11b4eb14eda}} 
+MOTOR\+\_\+\+SM\+\_\+\+START&Start up state of Motor State machine \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOTOR\_SM\_SPIN@{MOTOR\_SM\_SPIN}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MOTOR\_SM\_SPIN@{MOTOR\_SM\_SPIN}}}\mbox{\Hypertarget{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0ad43755cc2e3c894af718f229744500d0}\label{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0ad43755cc2e3c894af718f229744500d0}} 
+MOTOR\+\_\+\+SM\+\_\+\+SPIN&Spin state of Motor State machine \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{MOTOR\_SM\_DECELERATE@{MOTOR\_SM\_DECELERATE}!DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}}\index{DrivePOC\_Common\_Header.h@{DrivePOC\_Common\_Header.h}!MOTOR\_SM\_DECELERATE@{MOTOR\_SM\_DECELERATE}}}\mbox{\Hypertarget{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0a8a44ceae51285a1c602449e1359b3ebd}\label{DrivePOC__Common__Header_8h_ad70e77e7ad3649704cd451b0cbb09cb0a8a44ceae51285a1c602449e1359b3ebd}} 
+MOTOR\+\_\+\+SM\+\_\+\+DECELERATE&Decelerate state of Motor State machine \\
+\hline
+
+\end{DoxyEnumFields}

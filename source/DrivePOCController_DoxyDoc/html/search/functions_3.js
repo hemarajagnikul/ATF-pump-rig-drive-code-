@@ -1,0 +1,9 @@
+var searchData=
+[
+  ['get_5fdeceleration_5fduty_5fcycle_0',['Get_Deceleration_Duty_Cycle',['../group__group2.html#ga75a218a14454fca58c8f13454795c6a0',1,'Get_Deceleration_Duty_Cycle(void):&#160;DrivePOC_MemHandler.c'],['../group__group2.html#ga75a218a14454fca58c8f13454795c6a0',1,'Get_Deceleration_Duty_Cycle(void):&#160;DrivePOC_MemHandler.c']]],
+  ['get_5fduty_5fcycle_1',['Get_Duty_Cycle',['../group__group3.html#gab15a0f985a5819c69574ff86075cff89',1,'Get_Duty_Cycle(void):&#160;DrivePOC_MemHandler.c'],['../group__group3.html#gab15a0f985a5819c69574ff86075cff89',1,'Get_Duty_Cycle(void):&#160;DrivePOC_MemHandler.c'],['../group__group2.html#gab15a0f985a5819c69574ff86075cff89',1,'Get_Duty_Cycle(void):&#160;DrivePOC_MemHandler.c']]],
+  ['get_5ffault_5fduty_5fcycle_2',['Get_Fault_Duty_Cycle',['../group__group4.html#ga160d16a2ecf36076f4c0755d9abaf97f',1,'Get_Fault_Duty_Cycle(void):&#160;DrivePOC_FaultHandler.c'],['../group__group4.html#ga160d16a2ecf36076f4c0755d9abaf97f',1,'Get_Fault_Duty_Cycle(void):&#160;DrivePOC_FaultHandler.c']]],
+  ['get_5fstart_5fup_5fstatus_3',['Get_Start_Up_status',['../group__group2.html#ga3f6aab173dea5206b86c03f250161ecd',1,'Get_Start_Up_status(void):&#160;DrivePOC_MemHandler.c'],['../group__group2.html#ga3f6aab173dea5206b86c03f250161ecd',1,'Get_Start_Up_status(void):&#160;DrivePOC_MemHandler.c']]],
+  ['get_5fstop_5fstatus_4',['Get_Stop_status',['../group__group2.html#ga1e88d389a98dbc4100b4d314b254c1b0',1,'Get_Stop_status(void):&#160;DrivePOC_MemHandler.c'],['../group__group2.html#ga1e88d389a98dbc4100b4d314b254c1b0',1,'Get_Stop_status(void):&#160;DrivePOC_MemHandler.c']]],
+  ['get_5fv_5ff_5fduty_5fcycle_5',['Get_V_F_Duty_Cycle',['../group__group2.html#ga431eb7a05ca65e8ddfd09ccc2a158d21',1,'Get_V_F_Duty_Cycle(void):&#160;DrivePOC_MemHandler.c'],['../group__group2.html#ga431eb7a05ca65e8ddfd09ccc2a158d21',1,'Get_V_F_Duty_Cycle(void):&#160;DrivePOC_MemHandler.c']]]
+];

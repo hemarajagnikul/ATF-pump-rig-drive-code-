@@ -1,0 +1,29 @@
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/CMSIS/core_cm4.h:1679:22:__NVIC_EnableIRQ	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_common.h:747:28:EnableIRQ	24	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_ftm.h:648:20:FTM_SetTimerPeriod	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_ftm.h:682:20:FTM_StartTimer	24	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_ftm.h:937:20:FTM_SetQuadDecoderModuloValue	24	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_cmp.h:154:20:CMP_Enable	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_dac.h:187:20:DAC_Enable	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_pit.h:159:20:PIT_EnableInterrupts	24	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_pit.h:246:20:PIT_SetTimerPeriod	24	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_pit.h:288:20:PIT_StartTimer	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_adc16.h:367:20:ADC16_EnableHardwareTrigger	16	static
+../board/peripherals.c:150:13:FTM0_init	8	static
+../board/peripherals.c:234:13:FTM1_init	8	static
+../board/peripherals.c:311:13:CMP0_init	8	static
+../board/peripherals.c:346:13:GPIOB_init	4	static
+../board/peripherals.c:407:13:SPI1_init	8	static
+../board/peripherals.c:469:13:SPI0_init	8	static
+../board/peripherals.c:500:13:GPIOA_init	4	static
+../board/peripherals.c:530:13:GPIOC_init	4	static
+../board/peripherals.c:560:13:GPIOD_init	4	static
+../board/peripherals.c:590:13:GPIOE_init	4	static
+../board/peripherals.c:622:13:DAC0_init	8	static
+../board/peripherals.c:672:13:PIT_init	48	static
+../board/peripherals.c:742:13:ADC0_init	8	static
+../board/peripherals.c:779:13:DAC1_init	8	static
+../board/peripherals.c:827:13:UART0_init	8	static
+../board/peripherals.c:888:13:ADC1_init	8	static
+../board/peripherals.c:900:6:BOARD_InitPeripherals	8	static
+../board/peripherals.c:928:6:BOARD_InitBootPeripherals	8	static

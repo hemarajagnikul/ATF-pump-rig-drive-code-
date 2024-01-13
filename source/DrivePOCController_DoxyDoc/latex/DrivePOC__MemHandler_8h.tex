@@ -1,0 +1,285 @@
+\hypertarget{DrivePOC__MemHandler_8h}{}\doxysection{Drive\+POC\+\_\+\+Mem\+Handler.\+h File Reference}
+\label{DrivePOC__MemHandler_8h}\index{DrivePOC\_MemHandler.h@{DrivePOC\_MemHandler.h}}
+
+
+\+: Functionalities pertaining to all Memory and storage operations of the Drive POC Controller implementation  
+
+
+{\ttfamily \#include \char`\"{}fsl\+\_\+debug\+\_\+console.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}gmclib\+\_\+types.\+h\char`\"{}}\newline
+\doxysubsection*{Macros}
+\begin{Indent}\textbf{ Sine Frequency}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries FSINE\+\_\+800}~800
+\item 
+\#define {\bfseries FSINE\+\_\+669}~669
+\item 
+\#define {\bfseries FSINE\+\_\+600}~600
+\item 
+\#define {\bfseries FSINE\+\_\+500}~500
+\item 
+\#define {\bfseries FSINE\+\_\+400}~400
+\item 
+\#define {\bfseries FSINE\+\_\+300}~300
+\item 
+\#define {\bfseries FSINE\+\_\+200}~200
+\item 
+\#define {\bfseries FSINE\+\_\+100}~100
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Switching Frequency 50k\+Hz Data}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries FSWITCHING\+\_\+800\+HZ\+\_\+50\+KHZ}~50400
+\item 
+\#define {\bfseries FSWITCHING\+\_\+669\+HZ\+\_\+50\+KHZ}~50175
+\item 
+\#define {\bfseries FSWITCHING\+\_\+600\+HZ\+\_\+50\+KHZ}~50400
+\item 
+\#define {\bfseries FSWITCHING\+\_\+500\+HZ\+\_\+50\+KHZ}~49500
+\item 
+\#define {\bfseries FSWITCHING\+\_\+400\+HZ\+\_\+50\+KHZ}~50400
+\item 
+\#define {\bfseries FSWITCHING\+\_\+300\+HZ\+\_\+50\+KHZ}~50400
+\item 
+\#define {\bfseries FSWITCHING\+\_\+200\+HZ\+\_\+50\+KHZ}~49800
+\item 
+\#define {\bfseries FSWITCHING\+\_\+100\+HZ\+\_\+50\+KHZ}~50100
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+50\+KHZ}~21
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+50\+KHZ}~25
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+600\+HZ\+\_\+50\+KHZ}~28
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+500\+HZ\+\_\+50\+KHZ}~33
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+400\+HZ\+\_\+50\+KHZ}~42
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+300\+HZ\+\_\+50\+KHZ}~56
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+200\+HZ\+\_\+50\+KHZ}~83
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+100\+HZ\+\_\+50\+KHZ}~167
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Switching Frequency 40k\+Hz Data}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries FSWITCHING\+\_\+800\+HZ\+\_\+40\+KHZ}~40800
+\item 
+\#define {\bfseries FSWITCHING\+\_\+669\+HZ\+\_\+40\+KHZ}~40140
+\item 
+\#define {\bfseries FSWITCHING\+\_\+600\+HZ\+\_\+40\+KHZ}~39600
+\item 
+\#define {\bfseries FSWITCHING\+\_\+500\+HZ\+\_\+40\+KHZ}~40500
+\item 
+\#define {\bfseries FSWITCHING\+\_\+400\+HZ\+\_\+40\+KHZ}~39600
+\item 
+\#define {\bfseries FSWITCHING\+\_\+300\+HZ\+\_\+40\+KHZ}~39600
+\item 
+\#define {\bfseries FSWITCHING\+\_\+200\+HZ\+\_\+40\+KHZ}~40200
+\item 
+\#define {\bfseries FSWITCHING\+\_\+100\+HZ\+\_\+40\+KHZ}~40200
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+40\+KHZ}~17
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+40\+KHZ}~20
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+600\+HZ\+\_\+40\+KHZ}~22
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+500\+HZ\+\_\+40\+KHZ}~27
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+400\+HZ\+\_\+40\+KHZ}~33
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+300\+HZ\+\_\+40\+KHZ}~44
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+200\+HZ\+\_\+40\+KHZ}~67
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+100\+HZ\+\_\+40\+KHZ}~134
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Switching Frequency 30k\+Hz Data}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries FSWITCHING\+\_\+800\+HZ\+\_\+30\+KHZ}~31200
+\item 
+\#define {\bfseries FSWITCHING\+\_\+669\+HZ\+\_\+30\+KHZ}~30105
+\item 
+\#define {\bfseries FSWITCHING\+\_\+600\+HZ\+\_\+30\+KHZ}~30600
+\item 
+\#define {\bfseries FSWITCHING\+\_\+500\+HZ\+\_\+30\+KHZ}~30000
+\item 
+\#define {\bfseries FSWITCHING\+\_\+400\+HZ\+\_\+30\+KHZ}~30000
+\item 
+\#define {\bfseries FSWITCHING\+\_\+300\+HZ\+\_\+30\+KHZ}~29700
+\item 
+\#define {\bfseries FSWITCHING\+\_\+200\+HZ\+\_\+30\+KHZ}~30000
+\item 
+\#define {\bfseries FSWITCHING\+\_\+100\+HZ\+\_\+30\+KHZ}~30000
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+30\+KHZ}~13
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+30\+KHZ}~15
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+600\+HZ\+\_\+30\+KHZ}~17
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+500\+HZ\+\_\+30\+KHZ}~20
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+400\+HZ\+\_\+30\+KHZ}~25
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+300\+HZ\+\_\+30\+KHZ}~33
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+200\+HZ\+\_\+30\+KHZ}~50
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+100\+HZ\+\_\+30\+KHZ}~100
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Switching Frequency 20k\+Hz Data}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries FSWITCHING\+\_\+1000\+HZ\+\_\+20\+KHZ}~18000
+\item 
+\#define {\bfseries FSWITCHING\+\_\+800\+HZ\+\_\+20\+KHZ}~19200
+\item 
+\#define {\bfseries FSWITCHING\+\_\+669\+HZ\+\_\+20\+KHZ}~20070
+\item 
+\#define {\bfseries FSWITCHING\+\_\+600\+HZ\+\_\+20\+KHZ}~19800
+\item 
+\#define {\bfseries FSWITCHING\+\_\+500\+HZ\+\_\+20\+KHZ}~19500
+\item 
+\#define {\bfseries FSWITCHING\+\_\+400\+HZ\+\_\+20\+KHZ}~20400
+\item 
+\#define {\bfseries FSWITCHING\+\_\+300\+HZ\+\_\+20\+KHZ}~19800
+\item 
+\#define {\bfseries FSWITCHING\+\_\+200\+HZ\+\_\+20\+KHZ}~20400
+\item 
+\#define {\bfseries FSWITCHING\+\_\+100\+HZ\+\_\+20\+KHZ}~20100
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+1000\+HZ\+\_\+20\+KHZ}~6
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+20\+KHZ}~8
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+20\+KHZ}~10
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+600\+HZ\+\_\+20\+KHZ}~11
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+500\+HZ\+\_\+20\+KHZ}~13
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+400\+HZ\+\_\+20\+KHZ}~17
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+300\+HZ\+\_\+20\+KHZ}~22
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+200\+HZ\+\_\+20\+KHZ}~37
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+100\+HZ\+\_\+20\+KHZ}~67
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Switching Frequency 10k\+Hz Data}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries FSWITCHING\+\_\+800\+HZ\+\_\+10\+KHZ}~9600
+\item 
+\#define {\bfseries FSWITCHING\+\_\+669\+HZ\+\_\+10\+KHZ}~10035
+\item 
+\#define {\bfseries FSWITCHING\+\_\+600\+HZ\+\_\+10\+KHZ}~10800
+\item 
+\#define {\bfseries FSWITCHING\+\_\+500\+HZ\+\_\+10\+KHZ}~10500
+\item 
+\#define {\bfseries FSWITCHING\+\_\+400\+HZ\+\_\+10\+KHZ}~9600
+\item 
+\#define {\bfseries FSWITCHING\+\_\+300\+HZ\+\_\+10\+KHZ}~9900
+\item 
+\#define {\bfseries FSWITCHING\+\_\+200\+HZ\+\_\+10\+KHZ}~10200
+\item 
+\#define {\bfseries FSWITCHING\+\_\+100\+HZ\+\_\+10\+KHZ}~10200
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+800\+HZ\+\_\+10\+KHZ}~4
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+669\+HZ\+\_\+10\+KHZ}~5
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+600\+HZ\+\_\+10\+KHZ}~6
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+500\+HZ\+\_\+10\+KHZ}~7
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+400\+HZ\+\_\+10\+KHZ}~8
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+300\+HZ\+\_\+10\+KHZ}~11
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+200\+HZ\+\_\+10\+KHZ}~17
+\item 
+\#define {\bfseries SINE\+\_\+\+LUT\+\_\+100\+HZ\+\_\+10\+KHZ}~34
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Interrupt Timing values}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries T\+\_\+\+SWITCHING\+\_\+50\+KHZ}~1000000/50000
+\item 
+\#define {\bfseries T\+\_\+\+SWITCHING\+\_\+40\+KHZ}~1000000/40000
+\item 
+\#define {\bfseries T\+\_\+\+SWITCHING\+\_\+30\+KHZ}~1000000/30000
+\item 
+\#define {\bfseries T\+\_\+\+SWITCHING\+\_\+20\+KHZ}~1000000/20000
+\item 
+\#define {\bfseries T\+\_\+\+SWITCHING\+\_\+10\+KHZ}~1000000/10000
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ LTC Interrupt Frequency}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+10\+KHZ}~10000
+\item 
+\#define {\bfseries LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+20\+KHZ}~20000
+\item 
+\#define {\bfseries LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+30\+KHZ}~30000
+\item 
+\#define {\bfseries LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+40\+KHZ}~40000
+\item 
+\#define {\bfseries LTC\+\_\+\+SWITCHING\+\_\+\+FREQ\+\_\+50\+KHZ}~50000
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ ADS Board Parameters}\par
+\begin{DoxyCompactItemize}
+\item 
+\#define {\bfseries ADS\+\_\+\+BOARD\+\_\+\+POSITIVE\+\_\+\+VOLTAGE\+\_\+\+LIMIT}~0x07\+FFF
+\item 
+\#define {\bfseries ADS\+\_\+\+BOARD\+\_\+\+ZERO\+\_\+\+VAL}~0.\+0F
+\end{DoxyCompactItemize}
+\end{Indent}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__group2_ga60432b48e4ac0d4794de84fdcaab3b8d}{Drive\+POC\+\_\+\+MH\+\_\+\+Update\+Encoder\+Speed}} (float rpm\+\_\+recd)
+\begin{DoxyCompactList}\small\item\em Function definition to update Encoder speed into Memory handler. \end{DoxyCompactList}\item 
+float \mbox{\hyperlink{group__group2_gae30c8a394f7bfc165b103fb11ecc69d2}{Drive\+POC\+\_\+\+MH\+\_\+\+Get\+Encoder\+Speed}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to return Encoder speed from Memory handler. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gad928b89acef519cdff35ab0fe73fedd3}{Store\+\_\+\+Temperature\+\_\+from\+\_\+\+PT\+\_\+1000}} (void)
+\begin{DoxyCompactList}\small\item\em stores the value of temperature measured using PT-\/1000 RTD in the memory \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gab15a0f985a5819c69574ff86075cff89}{Get\+\_\+\+Duty\+\_\+\+Cycle}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition that gets the value of duty cycle from the duty cycle array. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gaea167be1e1d6d337e3230372688ea9e7}{Drive\+POC\+\_\+\+MH\+\_\+\+Update\+VIvalues}} (void)
+\begin{DoxyCompactList}\small\item\em Function scales the value of Current using the Sensor scaling factors. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{group__group2_gaa49e4fe7dcfb8f2868b17b6903451408}{Drive\+POC\+\_\+\+MH\+\_\+\+Get\+VIvalues}} (void)
+\begin{DoxyCompactList}\small\item\em Function definition to allocate the variables to corresponding structures. \end{DoxyCompactList}\item 
+void {\bfseries Get\+\_\+\+V\+\_\+\+F\+\_\+\+Duty\+\_\+\+Cycle} (void)
+\begin{DoxyCompactList}\small\item\em Function Defintion to give duty cycle during ramp up. \end{DoxyCompactList}\item 
+void {\bfseries Get\+\_\+\+Deceleration\+\_\+\+Duty\+\_\+\+Cycle} (void)
+\begin{DoxyCompactList}\small\item\em Function Declaration for Deceleration case. \end{DoxyCompactList}\item 
+bool {\bfseries Get\+\_\+\+Start\+\_\+\+Up\+\_\+status} (void)
+\begin{DoxyCompactList}\small\item\em Function Declaration to get Start Up state. \end{DoxyCompactList}\item 
+bool {\bfseries Get\+\_\+\+Stop\+\_\+status} (void)
+\begin{DoxyCompactList}\small\item\em Function Declaration to get Stop done signal. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\+: Functionalities pertaining to all Memory and storage operations of the Drive POC Controller implementation 
+
+\begin{DoxyAuthor}{Author}
+\+: Sreedhar, Sangeerth @company \+: Agnikul Cosmos Private Limited
+\end{DoxyAuthor}
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+\doxysubsubsection*{\begin{center}\copyright{} Copyright (c) Agnikul Cosmos Private Limited All rights reserved.\end{center} }

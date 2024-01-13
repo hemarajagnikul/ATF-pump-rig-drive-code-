@@ -1,0 +1,26 @@
+var searchData=
+[
+  ['dac_5finit_0',['DAC_init',['../group__group1.html#ga4500c15ee6b13637e00fd6b901b60224',1,'DAC_init(void):&#160;DrivePOC_CommHandler.c'],['../group__group1.html#ga4500c15ee6b13637e00fd6b901b60224',1,'DAC_init(void):&#160;DrivePOC_CommHandler.c']]],
+  ['delay_1',['delay',['../group__group1.html#gaaea8539607f1d674bd030d8ef251f599',1,'delay(int delay_in_ms):&#160;DrivePOC_CommHandler.c'],['../group__group1.html#gaaea8539607f1d674bd030d8ef251f599',1,'delay(int delay_in_ms):&#160;DrivePOC_CommHandler.c']]],
+  ['drive_5fparameters_2eh_2',['Drive_Parameters.h',['../Drive__Parameters_8h.html',1,'']]],
+  ['drivepoc_5fcomm_5fhandler_5finit_3',['DrivePOC_Comm_Handler_Init',['../group__group1.html#gac2344da1a44115aa81946f614ee2998a',1,'DrivePOC_Comm_Handler_Init(void):&#160;DrivePOC_CommHandler.c'],['../group__group1.html#gac2344da1a44115aa81946f614ee2998a',1,'DrivePOC_Comm_Handler_Init(void):&#160;DrivePOC_CommHandler.c']]],
+  ['drivepoc_5fcomm_5fhandler_5fpwmdis_4',['DrivePOC_Comm_Handler_PWMDis',['../group__group1.html#ga19a5a24d8f5c2d00be06843a495ddd5c',1,'DrivePOC_Comm_Handler_PWMDis(void):&#160;DrivePOC_CommHandler.c'],['../group__group1.html#ga19a5a24d8f5c2d00be06843a495ddd5c',1,'DrivePOC_Comm_Handler_PWMDis(void):&#160;DrivePOC_CommHandler.c']]],
+  ['drivepoc_5fcommhandler_2ec_5',['DrivePOC_CommHandler.c',['../DrivePOC__CommHandler_8c.html',1,'']]],
+  ['drivepoc_5fcommhandler_2eh_6',['DrivePOC_CommHandler.h',['../DrivePOC__CommHandler_8h.html',1,'']]],
+  ['drivepoc_5fcommon_5fheader_2eh_7',['DrivePOC_Common_Header.h',['../DrivePOC__Common__Header_8h.html',1,'']]],
+  ['drivepoc_5fcontrol_5floop_2ec_8',['DrivePOC_Control_Loop.c',['../DrivePOC__Control__Loop_8c.html',1,'']]],
+  ['drivepoc_5fcontrol_5floop_2eh_9',['DrivePOC_Control_Loop.h',['../DrivePOC__Control__Loop_8h.html',1,'']]],
+  ['drivepoc_5fcontroller_5fnxp_2ec_10',['DrivePOC_Controller_NXP.c',['../DrivePOC__Controller__NXP_8c.html',1,'']]],
+  ['drivepoc_5fcontroller_5fnxp_2eh_11',['DrivePOC_Controller_NXP.h',['../DrivePOC__Controller__NXP_8h.html',1,'']]],
+  ['drivepoc_5ffaulthandler_2ec_12',['DrivePOC_FaultHandler.c',['../DrivePOC__FaultHandler_8c.html',1,'']]],
+  ['drivepoc_5ffaulthandler_2eh_13',['DrivePOC_FaultHandler.h',['../DrivePOC__FaultHandler_8h.html',1,'']]],
+  ['drivepoc_5fmemhandler_2ec_14',['DrivePOC_MemHandler.c',['../DrivePOC__MemHandler_8c.html',1,'']]],
+  ['drivepoc_5fmemhandler_2eh_15',['DrivePOC_MemHandler.h',['../DrivePOC__MemHandler_8h.html',1,'']]],
+  ['drivepoc_5fmh_5fgetencoderspeed_16',['DrivePOC_MH_GetEncoderSpeed',['../group__group2.html#gae30c8a394f7bfc165b103fb11ecc69d2',1,'DrivePOC_MH_GetEncoderSpeed(void):&#160;DrivePOC_MemHandler.c'],['../group__group2.html#gae30c8a394f7bfc165b103fb11ecc69d2',1,'DrivePOC_MH_GetEncoderSpeed(void):&#160;DrivePOC_MemHandler.c']]],
+  ['drivepoc_5fmh_5fgetvivalues_17',['DrivePOC_MH_GetVIvalues',['../group__group2.html#gaa49e4fe7dcfb8f2868b17b6903451408',1,'DrivePOC_MH_GetVIvalues(void):&#160;DrivePOC_MemHandler.c'],['../group__group2.html#gaa49e4fe7dcfb8f2868b17b6903451408',1,'DrivePOC_MH_GetVIvalues(void):&#160;DrivePOC_MemHandler.c']]],
+  ['drivepoc_5fmh_5fupdateencoderspeed_18',['DrivePOC_MH_UpdateEncoderSpeed',['../group__group2.html#ga60432b48e4ac0d4794de84fdcaab3b8d',1,'DrivePOC_MH_UpdateEncoderSpeed(float rpm_recd):&#160;DrivePOC_MemHandler.c'],['../group__group2.html#ga60432b48e4ac0d4794de84fdcaab3b8d',1,'DrivePOC_MH_UpdateEncoderSpeed(float rpm_recd):&#160;DrivePOC_MemHandler.c']]],
+  ['drivepoc_5fmh_5fupdatevivalues_19',['DrivePOC_MH_UpdateVIvalues',['../group__group2.html#gaea167be1e1d6d337e3230372688ea9e7',1,'DrivePOC_MH_UpdateVIvalues(void):&#160;DrivePOC_MemHandler.c'],['../group__group2.html#gaea167be1e1d6d337e3230372688ea9e7',1,'DrivePOC_MH_UpdateVIvalues(void):&#160;DrivePOC_MemHandler.c']]],
+  ['drivepoc_5fupdatedutycyc_20',['DrivePOC_UpdateDutyCyc',['../group__group1.html#gae8a039e738a656864bef5815889913e8',1,'DrivePOC_UpdateDutyCyc(GMCLIB_3COOR_T_FLT dutyCycle):&#160;DrivePOC_CommHandler.c'],['../group__group1.html#gae8a039e738a656864bef5815889913e8',1,'DrivePOC_UpdateDutyCyc(GMCLIB_3COOR_T_FLT dutyCycle):&#160;DrivePOC_CommHandler.c']]],
+  ['drivepoccontroller_21',['DrivePOCController',['../index.html',1,'']]],
+  ['duty_5fcycle_22',['duty_cycle',['../DrivePOC__MemHandler_8c.html#ac0c2ef1a03226048711384bbaaa6c8eb',1,'DrivePOC_MemHandler.c']]]
+];

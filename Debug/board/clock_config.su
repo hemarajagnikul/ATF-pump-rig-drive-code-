@@ -1,0 +1,11 @@
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_clock.h:634:20:CLOCK_SetTraceClock	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_clock.h:654:20:CLOCK_SetClkOutClock	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_clock.h:664:20:CLOCK_SetLpuartClock	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_clock.h:789:20:CLOCK_SetSimSafeDivs	4	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_clock.h:1122:20:CLOCK_SetXtal0Freq	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_smc.h:256:20:SMC_SetPowerModeProtection	16	static
+/home/sai_pavan/Documents/Agnite SVPWM UART-20230302T180339Z-001/Agnite SVPWM UART/DrivePOC_Controller_NXP/drivers/fsl_smc.h:275:33:SMC_GetPowerModeState	16	static
+../board/clock_config.c:77:13:CLOCK_CONFIG_SetFllExtRefDiv	16	static
+../board/clock_config.c:85:6:BOARD_InitBootClocks	8	static
+../board/clock_config.c:189:6:BOARD_BootClockHSRUN	8	static
+../board/clock_config.c:299:6:BOARD_BootClockVLPR	8	static
